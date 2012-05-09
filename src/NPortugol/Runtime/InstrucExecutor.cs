@@ -321,8 +321,6 @@ namespace NPortugol.Runtime
 
             var @new = new Operand(OperandType.Literal, operand.Value);
 
-            SymbolTable.EnsureExists(opResolver.At(0).SymbolId(), operand.Value.ToString());
-
             if (operand.Type == OperandType.Variable)
                 @new.Value = opResolver.At(0).Value();
 
