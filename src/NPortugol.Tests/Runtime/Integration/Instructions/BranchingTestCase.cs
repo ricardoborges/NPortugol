@@ -47,8 +47,8 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
             var context = GetContextWithMain(GetInstructionsFor(inst));
 
             context.Execute();
-
-            Assert.IsNull(context.Runnable.ScriptSymbolTable["main_x_0"]);
+            
+            Assert.IsNull(context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -60,7 +60,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.IsNull(context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.IsNull(context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -72,7 +72,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.AreEqual(10, context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.AreEqual(10, context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -84,7 +84,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.AreEqual(10, context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.AreEqual(10, context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -96,7 +96,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.IsNull(context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.IsNull(context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -108,7 +108,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.AreEqual(10, context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.AreEqual(10, context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -120,7 +120,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.IsNull(context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.IsNull(context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -132,7 +132,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.IsNull(context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.IsNull(context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -144,7 +144,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.IsNull(context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.IsNull(context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -156,7 +156,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.AreEqual(10, context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.AreEqual(10, context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -168,7 +168,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.AreEqual(10, context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.AreEqual(10, context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -180,7 +180,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.IsNull(context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.IsNull(context.GetSymbolValue("main_x_0"));
         }
 
         [Test]
@@ -192,7 +192,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             context.Execute();
 
-            Assert.AreEqual(10, context.Runnable.ScriptSymbolTable["main_x_0"]);
+            Assert.AreEqual(10, context.GetSymbolValue("main_x_0"));
         }
 
         public override Instruction[] GetInstructions()

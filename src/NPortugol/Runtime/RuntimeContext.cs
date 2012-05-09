@@ -102,14 +102,14 @@ namespace NPortugol.Runtime
             Completed = Runnable.InstrucStream.Size == 0 ? true : false;
         }
 
-        public object GetSymbolValue(string name)
+        public object GetSymbolValue(string id)
         {
-            return Runnable.GetSymbolValue(name);
+            return Runnable.GetSymbolValue(id);
         }
 
-        public object GetSymbolValue(string name, int index)
+        public object GetSymbolValue(string id, int index)
         {
-            return Runnable.GetSymbolValue(name, index);
+            return Runnable.GetSymbolValue(id, index);
         }
 
         private void Init(Function function, params object[] parameters)

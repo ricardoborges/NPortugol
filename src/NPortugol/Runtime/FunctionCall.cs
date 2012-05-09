@@ -14,7 +14,7 @@ namespace NPortugol.Runtime
 
         public override string ToString()
         {
-            return string.Format("Function {0}:{1}", Function.Name, Index);
+            return string.Format("{0}:{1}", Function.Name, Index);
         }
 
         public string Name

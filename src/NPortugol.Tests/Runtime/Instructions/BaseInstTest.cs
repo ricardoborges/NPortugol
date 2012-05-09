@@ -4,9 +4,9 @@ namespace NPortugol.Tests.Runtime.Instructions
 {
     public abstract class BaseInstTest
     {
-        public string SymbolName(string name)
+        public string SymbolId(string id)
         {
-            return SymbolTable.BuildSymbolName(Function.MainName, name, 0);
+            return SymbolTable.BuildSymbolId(Function.MainName, id, 0);
         }
 
         public virtual Runnable GetRunnable()

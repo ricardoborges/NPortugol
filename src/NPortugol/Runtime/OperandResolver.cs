@@ -38,9 +38,9 @@ namespace NPortugol.Runtime
             return targetName;
         }
 
-        public string SymbolName()
+        public string SymbolId()
         {
-            return Name().ToSymbolName(context);            
+            return Name().ToSymbolId(context);            
         }
 
         public object Value()
@@ -49,9 +49,9 @@ namespace NPortugol.Runtime
 
             if (IsVariable())
             {
-                context.Runnable.ScriptSymbolTable.EnsureExists(SymbolName());
+                context.Runnable.ScriptSymbolTable.EnsureExists(SymbolId(), Name());
 
-                value = context.Runnable.ScriptSymbolTable[SymbolName()];
+                value = context.Runnable.ScriptSymbolTable[SymbolId()].Value;
             }
 
             if (target.IndexOffSet != null)
@@ -76,7 +76,7 @@ namespace NPortugol.Runtime
 
         private int ResolveIndex(object value)
         {
-            var name = value.ToString().ToSymbolName(context);
+            var name = value.ToString().ToSymbolId(context);
 
             var _value = context.Runnable.ScriptSymbolTable[name];
 

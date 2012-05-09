@@ -79,7 +79,6 @@
     <Compile Include="Presenters\ExecPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Core\Symbol.cs" />
     <Compile Include="Core\ConfigRepo.cs" />
     <Compile Include="Views\Ast\AstForm.cs">
       <SubType>UserControl</SubType>

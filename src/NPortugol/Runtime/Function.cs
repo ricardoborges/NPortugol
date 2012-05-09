@@ -16,7 +16,7 @@ namespace NPortugol.Runtime
 
         public override string ToString()
         {
-            return string.Format("Function {0}", Name);
+            return string.Format("{0}", Name);
         }
     }
 }

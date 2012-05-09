@@ -182,7 +182,7 @@ namespace NPortugol.Runtime
                 Operand op = null;
                 object opValue = null;
 
-                var name = opResolver.At(0).SymbolName();
+                var name = opResolver.At(0).SymbolId();
 
                 var curValue = SymbolValue(name);
 
@@ -321,11 +321,13 @@ namespace NPortugol.Runtime
 
             var @new = new Operand(OperandType.Literal, operand.Value);
 
+            SymbolTable.EnsureExists(opResolver.At(0).SymbolId(), operand.Value.ToString());
+
             if (operand.Type == OperandType.Variable)
                 @new.Value = opResolver.At(0).Value();
 
             if (@new.Value == null) 
-                new Ops().ThrowNonDeclared(operand.Value.ToString());
+                new Ops().ThrowVarNonInit(operand.Value.ToString());
 
             context.Runnable.ParamStack.Push(@new);
         }
@@ -335,7 +337,7 @@ namespace NPortugol.Runtime
             if (Instruction.Operands[0].Type == OperandType.Literal)
                 new Ops().ThrowNotVariable(opResolver.At(0).Name());
 
-            var name = opResolver.At(0).SymbolName();
+            var name = opResolver.At(0).SymbolId();
 
             if (!context.Runnable.ScriptSymbolTable.ContainsKey(name))
                 new Ops().ThrowNonDeclared(opResolver.At(0).Name());
@@ -387,9 +389,12 @@ namespace NPortugol.Runtime
             }
         }
 
-        public object SymbolValue(string name)
+        public object SymbolValue(string id)
         {
-            return SymbolTable[name];
+            if (SymbolTable[id] == null)
+                throw new Exception("Não inicializada");
+
+            return SymbolTable[id].Value;
         }
 
         public object SetSymbolValue(Operand target, object value)
@@ -401,40 +406,12 @@ namespace NPortugol.Runtime
 
         public object SetSymbolValue(Operand target, Operand opvalue)
         {
-            var name = opResolver.In(target).SymbolName();
-            
-            if (opResolver.Indexed())
-            {
-                var array = SymbolTable.GetAsArray(name);
 
-                var _value = opResolver.In(opvalue).Value();
+            var id = opResolver.In(target).SymbolId();
+            var name = opResolver.Name();
+            var _value = opResolver.In(opvalue).Value();
 
-                int index = ResolveIndex(target.IndexOffSet);
-
-                if (index >= array.Length)
-                    Array.Resize(ref array, index + 1);
-
-                array[index] = _value;
-
-                SymbolTable[name] = array;
-                
-                return _value;
-            }
-
-            return SymbolTable[name] = opResolver.In(opvalue).Value();
-        }
-
-        private int ResolveIndex(object value)
-        {
-            int r;
-
-            if (int.TryParse(value.ToString(), out r)) return r;
-
-            var name = opResolver.In(new Operand(OperandType.Variable, value)).SymbolName();
-
-            var _value = SymbolTable[name];
-
-            return int.Parse(_value.ToString());
+            return SymbolTable.SetSymbolValue(name, id, context.CurrentFunction.Name, _value, target.IndexOffSet);
         }
     }
 }

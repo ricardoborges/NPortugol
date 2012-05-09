@@ -89,6 +89,7 @@
     <Compile Include="Runtime\RuntimeContext.cs" />
     <Compile Include="Runtime\RuntimeScript.cs" />
     <Compile Include="Runtime\RuntimeStack.cs" />
+    <Compile Include="Runtime\Symbol.cs" />
     <Compile Include="Runtime\SymbolTable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

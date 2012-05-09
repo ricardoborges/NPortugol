@@ -208,7 +208,12 @@ namespace GrammarIDE.Presenters
         {
             var stable = engine.RuntimeContext.Runnable.ScriptSymbolTable;
 
-            var list = (from item in stable let value = GetValue(item.Value) select new Symbol(item.Key, value)).ToList();
+            var list = new List<object>();
+
+            foreach (var item in stable)
+            {
+                list.Add(new { item.Value.Name, item.Value.Value, item.Value.Function });
+            }
 
             ExecView.Symbols.DataSource = list;            
         }
@@ -235,32 +240,6 @@ namespace GrammarIDE.Presenters
             }
 
             ExecView.RunStack.DataSource = list;
-        }
-
-        private object GetValue(object value)
-        {
-            if (value == null) return null;
-
-            var sb = new StringBuilder();
-
-            if (value.GetType() == typeof(object[]))
-            {
-                sb.Append("[");
-
-                foreach (var obj in (object[])value)
-                {
-                    if (sb.Length == 1)
-                        sb.Append(obj);
-                    else
-                        sb.Append("," + obj);
-                }
-
-                sb.Append("]");
-            }
-            else
-                return value;
-
-            return sb.ToString();
         }
 
         private void ClearLines()

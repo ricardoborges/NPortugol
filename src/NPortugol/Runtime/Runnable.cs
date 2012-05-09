@@ -55,17 +55,19 @@ namespace NPortugol.Runtime
 
         public int IP { get; set; }
 
-        public object GetSymbolValue(string name)
+        public object GetSymbolValue(string id)
         {
-            return ScriptSymbolTable[name];
+            return ScriptSymbolTable[id].Value;
         }
 
-        public object GetSymbolValue(string name, int index)
+        public object GetSymbolValue(string id, int index)
         {
-            var array = ScriptSymbolTable[name] as object[];
+            var symbol = ScriptSymbolTable[id];
 
-            if (array == null) 
-                throw new Exception(string.Format("Variable {0} is not an array", name));
+            if (symbol == null) 
+                throw new Exception(string.Format("Variable {0} is not an array", id));
+
+            var array = symbol.Value as object[];
     
             return array[index];
         }

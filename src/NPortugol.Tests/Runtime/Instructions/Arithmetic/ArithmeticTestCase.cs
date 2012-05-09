@@ -31,7 +31,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(11, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(11, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -44,7 +44,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(15, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(15, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -56,7 +56,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(9, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(9, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -69,7 +69,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(5, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(5, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -82,7 +82,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(2, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(2, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -94,7 +94,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(11, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(11, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -107,7 +107,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(1, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(1, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -120,7 +120,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(0, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(0, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -133,7 +133,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(20, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(20, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -146,7 +146,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(50, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(50, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -157,7 +157,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(-10, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(-10, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -170,7 +170,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(100, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(100, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -183,7 +183,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(100000, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(100000, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -196,7 +196,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(8, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(8, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         [Test]
@@ -209,15 +209,20 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             executor.ExecuteInstruction();
 
-            Assert.AreEqual(5, executor.SymbolTable[SymbolName("x")]);
+            Assert.AreEqual(5, executor.SymbolTable[SymbolId("x")].Value);
         }
 
         public override Runnable GetRunnable()
         {
+            var x = new Symbol {Value = 10};
+
+            var s1 = new Symbol {Value = 10};
+            var s2 = new Symbol {Value = 5};
+
             var stable = new SymbolTable(null)
                              {
-                                 {"main_x_0", 10},
-                                 {"main_y_0", 5}
+                                 {"main_x_0", s1},
+                                 {"main_y_0",  s2}
                              };
 
             return new Runnable(new InstrucStream(), new FunctionTable(), stable);

@@ -1,9 +1,10 @@
+using System;
 using System.Collections.Generic;
 using NPortugol.Runtime.Exceptions;
 
 namespace NPortugol.Runtime
 {
-    public class SymbolTable: Dictionary<string, object>
+    public class SymbolTable: Dictionary<string, Symbol>
     {
         public SymbolTable(SymbolTable parent)
         {
@@ -15,9 +16,9 @@ namespace NPortugol.Runtime
             }
         }
 
-        public void EnsureExists(string name)
+        public void EnsureExists(string id, string name)
         {
-            if (!ContainsKey(name))
+            if (!ContainsKey(id))
             {
                 new Ops().ThrowNonDeclared(name);
             }
@@ -28,19 +29,57 @@ namespace NPortugol.Runtime
             return new SymbolTable(parent);
         }
 
-        public static string BuildSymbolName(string function, string name, int index)
+        public static string BuildSymbolId(string function, string name, int index)
         {
             return string.Format("{0}_{1}_{2}", function, name, index).ToLower();
         }
 
-        public object[] GetAsArray(string name)
+        public object SetSymbolValue(string name, string id, string function, object value, object index)
         {
-            var variable = this[name];
+            if (!ContainsKey(id))
+                this[id] = new Symbol {Name = name, Value = value, Function = function};
 
-            if (variable == null || variable.GetType() != typeof(object[]))
-                variable = new[] { variable };
+            if (index != null)
+            {
+                int i = ResolveIndex(id, index);
 
-            return (object[]) variable;
+                var array = GetAsArray(id);
+
+                if (i >= array.Length)
+                    Array.Resize(ref array, i + 1);
+
+                array[i] = value;
+
+                this[id].Value = array;
+
+                return value;
+            }
+
+            return this[id].Value = value;
+        }
+
+        private int ResolveIndex(string id, object value)
+        {
+            int r;
+
+            if (int.TryParse(value.ToString(), out r)) return r;
+
+            var index = this[id];
+
+            return int.Parse(index.Value.ToString());
+        }
+
+        public object[] GetAsArray(string id)
+        {
+            var variable = this[id];
+
+            if (variable == null || variable.Value == null)
+                variable.Value = new[] { variable };
+
+            if (variable.Value.GetType() != typeof(object[]))
+                variable.Value = new[] { variable };
+
+            return (object[]) variable.Value;
         }
     }
 }

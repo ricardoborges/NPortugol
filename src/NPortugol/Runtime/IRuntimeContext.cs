@@ -24,7 +24,7 @@ namespace NPortugol.Runtime
         
         object Execute(string function, params object[] parameters);
         
-        object GetSymbolValue(string name);
+        object GetSymbolValue(string id);
         
         void InitWithMain();
         

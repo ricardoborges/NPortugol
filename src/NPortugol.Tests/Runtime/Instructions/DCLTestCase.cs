@@ -24,7 +24,7 @@ namespace NPortugol.Tests.Runtime.Instructions
 
             executor.ExecuteInstruction();
 
-            Assert.IsTrue(executor.SymbolTable.ContainsKey(SymbolName("x")));
+            Assert.IsTrue(executor.SymbolTable.ContainsKey(SymbolId("x")));
         }
     }
 }
