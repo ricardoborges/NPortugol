@@ -35,7 +35,6 @@ namespace GrammarIDE.Views.Exec
             }
             catch (Exception ex)
             {
-                BtRun.Enabled = false;
                ExecPresenter.MainPresenter.Error(ex);
             }
         }
