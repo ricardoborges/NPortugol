@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPortugol", "src\NPortugol\NPortugol.csproj", "{93E5D4EF-0D95-4FE5-AA63-4B9BC997607D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPortugol", "NPortugol\NPortugol.csproj", "{93E5D4EF-0D95-4FE5-AA63-4B9BC997607D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPortugol.Tests", "src\NPortugol.Tests\NPortugol.Tests.csproj", "{40C491A3-6DF9-4995-B7F4-7353EE864FB7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{F918A9F0-0772-49CF-A322-4113A0E04733}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPortugol.Tests", "NPortugol.Tests\NPortugol.Tests.csproj", "{40C491A3-6DF9-4995-B7F4-7353EE864FB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{40C491A3-6DF9-4995-B7F4-7353EE864FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40C491A3-6DF9-4995-B7F4-7353EE864FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40C491A3-6DF9-4995-B7F4-7353EE864FB7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F918A9F0-0772-49CF-A322-4113A0E04733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F918A9F0-0772-49CF-A322-4113A0E04733}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F918A9F0-0772-49CF-A322-4113A0E04733}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F918A9F0-0772-49CF-A322-4113A0E04733}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
