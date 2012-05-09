@@ -1,0 +1,318 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using GrammarIDE.Core;
+using GrammarIDE.Views.Exec;
+using NPortugol;
+using NPortugol.Runtime;
+
+namespace GrammarIDE.Presenters
+{
+    public interface IExecPresenter
+    {
+        IExecView ExecView { get; set; }
+        IMainPresenter MainPresenter { get; set; }
+
+        Config Config { get; }
+        
+        bool Debugging { get; }
+
+        void Build();
+        void Run();
+        void Debug();
+        void Step();
+        void Stop();
+    }
+
+    public class ExecPresenter : IExecPresenter
+    {
+        private Npc psc = new Npc();
+        private Engine engine = new Engine {EnableGC = false};
+        private readonly IConfigRepo configRepo;
+
+        public ExecPresenter(IConfigRepo configRepo, IMainPresenter mainPresenter)
+        {
+            this.configRepo = configRepo;
+            this.MainPresenter = mainPresenter;
+
+            BindFunctions();
+        }
+
+        #region Properties
+
+        public IMainPresenter MainPresenter { get; set; }
+        public IExecView ExecView { get; set; }
+
+        public Config Config
+        {
+            get { return configRepo.GetConfig(); }
+        }
+
+        public bool Debugging
+        {
+            get { return engine.Debugging; }
+        }
+
+        #endregion
+
+        #region Host Functions
+
+        private void BindFunctions()
+        {
+            engine.HostContainer.Register("imprima", x => MainPresenter.MainView.WriteOutput(((Operand)x[0]).Value.ToString()));
+            engine.HostContainer.Register("imprimaVetor", x => ImprimaVetor(x) );
+            engine.HostContainer.Register("leia", x => Leia(x));
+            engine.HostContainer.Register("tamanho", x => Tamanho(x));
+        }
+
+        private object ImprimaVetor(object[] parameters)
+        {
+            var list = ((Operand) parameters[0]).Value as object[];
+
+            if (list == null) return string.Empty;
+
+            var sb = new StringBuilder();
+            
+            sb.Append("{");
+
+            foreach (var item in list)
+            {
+                if (sb.Length == 1)
+                    sb.Append(item);
+                else
+                    sb.Append(", " + item);
+            }
+
+            sb.Append("}");
+
+            MainPresenter.MainView.WriteOutput(sb.ToString());
+
+            return sb.ToString();
+        }
+
+        private object Tamanho(object[] parameters)
+        {
+            var parameter = (Operand)parameters[0];
+
+            return ((object[])parameter.Value).Length;
+
+        }
+
+        private object Leia(object[] objects)
+        {
+            return Prompt.ShowDialog("Entrada1:", "Entrada2:");
+        }
+
+        #endregion
+
+        #region Actions
+
+        public void Build()
+        {
+            configRepo.SaveScript(ExecView.Script.Text);
+
+            ExecView.Asm.Text = string.Empty;
+
+            psc.DebugInfo = true;
+
+            var script = psc.Compile(ExecView.Script.Text);
+
+            ShowAsm(script);
+
+            MainPresenter.MainView.WriteLine();
+            MainPresenter.MainView.WriteOutput("Construído com sucesso");
+        }
+
+        public void Run()
+        {
+            //Build();
+
+            MainPresenter.MainView.ClearOutput();
+
+            engine.LoadAsm(ExecView.Asm.Text);
+
+            engine.Execute();
+
+            Fill();
+
+            MainPresenter.MainView.WriteLine();
+            MainPresenter.MainView.WriteOutput("Executado com sucesso");
+        }
+
+        public void Debug()
+        {
+            Build();
+
+            engine.Debug = true;
+
+            engine.LoadAsm(ExecView.Asm.Text);
+
+            MainPresenter.MainView.ClearOutput();
+
+            engine.EnableGC = false;
+        }
+
+        public void Step()
+        {
+            engine.Execute();
+
+            if (engine.RuntimeContext.Completed)
+            {
+                ClearLines();
+                return;
+            }
+
+            SelectLine();
+
+            Fill();
+        }
+
+        public void Stop()
+        {
+            engine.Debugging = false;
+            ClearLines();
+            ClearStacks();
+        }
+
+        #endregion
+
+        #region IDE
+
+        private void ShowAsm(IList<string> script)
+        {
+            if (script == null) return;
+
+            foreach (var line in script)
+            {
+                ExecView.Asm.Text += line + "\r\n";
+            }
+        }
+
+        private void Fill()
+        {
+            PopulateSymbols();
+            PopulateStack();
+            PopulateRunStack();
+        }
+
+        private void ClearStacks()
+        {
+            ExecView.Symbols.DataSource = null;
+            ExecView.EvalStack.DataSource = null;
+            ExecView.RunStack.DataSource = null;
+        }
+
+        private void PopulateSymbols()
+        {
+            var stable = engine.RuntimeContext.Runnable.ScriptSymbolTable;
+
+            var list = (from item in stable let value = GetValue(item.Value) select new Symbol(item.Key, value)).ToList();
+
+            ExecView.Symbols.DataSource = list;            
+        }
+
+        private void PopulateStack()
+        {
+            var list = new List<object>();
+
+            foreach (IStackItem item in engine.RuntimeContext.Runnable.ParamStack)
+            {
+                list.Add(new { StackItem = item.ToString() });
+            }
+
+            ExecView.EvalStack.DataSource = list;
+        }
+
+        private void PopulateRunStack()
+        {
+            var list = new List<object>();
+
+            foreach (IStackItem item in engine.RuntimeContext.Runnable.RuntimeStack)
+            {
+                list.Add(new { StackCall = item.ToString() });
+            }
+
+            ExecView.RunStack.DataSource = list;
+        }
+
+        private object GetValue(object value)
+        {
+            if (value == null) return null;
+
+            var sb = new StringBuilder();
+
+            if (value.GetType() == typeof(object[]))
+            {
+                sb.Append("[");
+
+                foreach (var obj in (object[])value)
+                {
+                    if (sb.Length == 1)
+                        sb.Append(obj);
+                    else
+                        sb.Append("," + obj);
+                }
+
+                sb.Append("]");
+            }
+            else
+                return value;
+
+            return sb.ToString();
+        }
+
+        private void ClearLines()
+        {
+            ExecView.Asm.SelectAll();
+            ExecView.Asm.SelectionBackColor = Color.Black;
+            ExecView.Asm.SelectionColor = Color.Lime;
+
+            ExecView.Script.SelectAll();
+            ExecView.Script.SelectionBackColor = Color.White;
+            ExecView.Script.SelectionColor = Color.Black;
+        }
+
+        private void SelectLine()
+        {
+            ExecView.Asm.SelectAll();
+            ExecView.Asm.SelectionBackColor = Color.Black;
+            ExecView.Asm.SelectionColor = Color.Lime;
+
+            var line = engine.RuntimeContext.CurrentInst.Index;
+
+            int start = ExecView.Asm.GetFirstCharIndexFromLine(line);
+
+            int length = ExecView.Asm.Lines[line].Length;
+
+            ExecView.Asm.Select(start, length);
+            ExecView.Asm.SelectionBackColor = Color.Yellow;
+            ExecView.Asm.SelectionColor = Color.Black;
+
+            if (!psc.SourceMap.ContainsKey(line)) return;
+
+            SelectSourceLine(line);
+        }
+
+        private void SelectSourceLine(int line)
+        {
+            var sline = psc.SourceMap[line];
+
+            if (sline < 0) return;
+
+            ExecView.Script.SelectAll();
+            ExecView.Script.SelectionBackColor = Color.White;
+            ExecView.Script.SelectionColor = Color.Black;
+
+            var sstart = ExecView.Script.GetFirstCharIndexFromLine(sline);
+
+            var slength = ExecView.Script.Lines[sline].Length;
+
+            ExecView.Script.Select(sstart, slength);
+            ExecView.Script.SelectionBackColor = Color.Yellow;
+        }
+
+        #endregion
+    }
+}
