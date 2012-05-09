@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93E5D4EF-0D95-4FE5-AA63-4B9BC997607D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NPortugol</RootNamespace>
+    <AssemblyName>NPortugol</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsmTemplate.cs" />
+    <Compile Include="Emitter.cs" />
+    <Compile Include="NPortugolLexer.cs" />
+    <Compile Include="NPortugolParser.cs" />
+    <Compile Include="NPortugolWalker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Npc.cs" />
+    <Compile Include="Runtime\Asm\AntlrRunnableBuilder.cs" />
+    <Compile Include="Runtime\Asm\ASMLexer.cs" />
+    <Compile Include="Runtime\Asm\ASMParser.cs" />
+    <Compile Include="Runtime\Asm\IRunnableBuilder.cs" />
+    <Compile Include="Runtime\Engine.cs" />
+    <Compile Include="Runtime\Exceptions\FunctionNotFoundException.cs" />
+    <Compile Include="Runtime\Exceptions\MainNotFoundException.cs" />
+    <Compile Include="Runtime\Exceptions\Ops.cs" />
+    <Compile Include="Runtime\Exceptions\RuntimeException.cs" />
+    <Compile Include="Runtime\Extensions\StringExtensions.cs" />
+    <Compile Include="Runtime\Function.cs" />
+    <Compile Include="Runtime\FunctionCall.cs" />
+    <Compile Include="Runtime\FunctionTable.cs" />
+    <Compile Include="Runtime\ICompiler.cs" />
+    <Compile Include="Runtime\ILoader.cs" />
+    <Compile Include="Runtime\InstrucExecutor.cs" />
+    <Compile Include="Runtime\InstrucStream.cs" />
+    <Compile Include="Runtime\Instruction.cs" />
+    <Compile Include="Runtime\Interop\HostContainer.cs" />
+    <Compile Include="Runtime\Interop\IHostContainer.cs" />
+    <Compile Include="Runtime\Interop\IHostFunction.cs" />
+    <Compile Include="Runtime\IRuntimeContext.cs" />
+    <Compile Include="Runtime\IStackItem.cs" />
+    <Compile Include="Runtime\Loader.cs" />
+    <Compile Include="Runtime\OpCode.cs" />
+    <Compile Include="Runtime\Operand.cs" />
+    <Compile Include="Runtime\OperandResolver.cs" />
+    <Compile Include="Runtime\OperandType.cs" />
+    <Compile Include="Runtime\ParamStack.cs" />
+    <Compile Include="Runtime\Runnable.cs" />
+    <Compile Include="Runtime\RuntimeContext.cs" />
+    <Compile Include="Runtime\RuntimeScript.cs" />
+    <Compile Include="Runtime\RuntimeStack.cs" />
+    <Compile Include="Runtime\SymbolTable.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
