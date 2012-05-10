@@ -8,7 +8,7 @@ backtrack=true;
 k=3;
 }
 
-@namespace{PSharp.Compiler}
+@namespace{NPortugol}
 
 @header{using System.Collections;}
 
@@ -36,6 +36,7 @@ statement: declare_local
 	| function_call 
 	| assign_var
 	| return_stat
+	| asm_code
 	;
 	
 	
@@ -101,6 +102,12 @@ function_arg_list
 	
 	:	^(ARG plus_expression*)
 	;	
+	
+	
+asm_code:	^(ASM s+=STRING*)
+		{emitter.EmitAsmCode($s);}
+        ;
+	
 
 assign_var returns[string id]
     :  

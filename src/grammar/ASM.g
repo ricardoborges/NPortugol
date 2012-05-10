@@ -35,6 +35,7 @@ tokens {
     RET='RET' ;
     EXIT='EXIT' ;
     HOST='HOST';
+    SCNT='SCNT';
 }
 
 @namespace{NPortugol.Runtime.Asm}
@@ -163,6 +164,7 @@ opcode_no_op returns [OpCode value]
 	| SSUB {$value = OpCode.SSUB;}
 	| SMUL {$value = OpCode.SMUL;}
 	| SDIV {$value = OpCode.SDIV;}			
+	| SCNT {$value = OpCode.SCNT;}				
 	;
 	
 operand	returns [Operand value]

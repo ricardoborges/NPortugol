@@ -352,5 +352,13 @@ namespace NPortugol
         {
 
         }
+
+        public void EmitAsmCode(List<CommonTree> tree)
+        {
+            foreach (var item in tree)
+            {
+                function.Add(item.Text.Substring(1, item.Text.Length - 2));
+            }
+        }
     }
 }

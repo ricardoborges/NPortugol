@@ -28,6 +28,7 @@ tokens{
 	ILIST;
 	MCALL;
 	PCALL;
+	ASM;
 }
 
 @namespace{NPortugol}
@@ -69,7 +70,7 @@ tokens{
 	}
 }
 
-public script	: declare_function*;
+public script	: declare_function* ;
 
 declare_function
 	:	'funcao' i=ID '(' function_param_list* ')' statement* 'fim'
@@ -87,6 +88,7 @@ statement	@init { paraphrases.Push("na sentença"); } @after { paraphrases.Pop();
 	| function_call 
 	| assign_var 
 	| return_stat
+	| asm_code
 	;
 	
 function_param_list     @init { paraphrases.Push("na lista de parâmetros"); }   @after { paraphrases.Pop(); }
@@ -163,15 +165,14 @@ assign_var	@init { paraphrases.Push("na atribuição de variável"); }   @after { p
 	|	ID '[' index ']' '=' assign_expression  -> ^(ASGN ^(AR index) ID assign_expression)
         |	ID '=' assign_expression  -> ^(ASGN ID assign_expression)
 	;	
-	/*
-assign_prop
-	:	
-	;	
-		*/
 
 return_stat
 	: 'retorne' assign_expression  -> ^(RET assign_expression)
 	;
+
+
+asm_code:	'#' STRING* '#' -> ^(ASM STRING*)
+        ;
 
 // ##########################################################################################################################
 // Expressions
@@ -217,10 +218,10 @@ index	: INT | ID;
 
 number	: INT | FLOAT;
 
-
+               
 // ##########################################################################################################################    
 // Lexer    
-
+    
 ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 
 INT : ('0'..'9')+ ;

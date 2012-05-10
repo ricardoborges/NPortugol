@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 E:\\Git\\NPortugol\\src\\grammar\\ASM.g 2012-05-09 11:02:58
+// $ANTLR 3.4 E:\\Git\\NPortugol\\src\\grammar\\ASM.g 2012-05-10 10:40:45
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -29,9 +29,9 @@ using Antlr.Runtime.Misc;
 public partial class ASMLexer : Antlr.Runtime.Lexer
 {
 	public const int EOF=-1;
-	public const int T__45=45;
 	public const int T__46=46;
 	public const int T__47=47;
+	public const int T__48=48;
 	public const int ADD=4;
 	public const int CALL=5;
 	public const int CNT=6;
@@ -66,13 +66,14 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	public const int PUSH=35;
 	public const int RET=36;
 	public const int SADD=37;
-	public const int SDIV=38;
-	public const int SMUL=39;
-	public const int SSUB=40;
-	public const int STRING=41;
-	public const int SUB=42;
-	public const int UNICODE_ESC=43;
-	public const int WS=44;
+	public const int SCNT=38;
+	public const int SDIV=39;
+	public const int SMUL=40;
+	public const int SSUB=41;
+	public const int STRING=42;
+	public const int SUB=43;
+	public const int UNICODE_ESC=44;
+	public const int WS=45;
 
     // delegates
     // delegators
@@ -1000,6 +1001,42 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "SADD"
 
+	partial void EnterRule_SCNT();
+	partial void LeaveRule_SCNT();
+
+	// $ANTLR start "SCNT"
+	[GrammarRule("SCNT")]
+	private void mSCNT()
+	{
+		EnterRule_SCNT();
+		EnterRule("SCNT", 26);
+		TraceIn("SCNT", 26);
+		try
+		{
+			int _type = SCNT;
+			int _channel = DefaultTokenChannel;
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:32:6: ( 'SCNT' )
+			DebugEnterAlt(1);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:32:8: 'SCNT'
+			{
+			DebugLocation(32, 8);
+			Match("SCNT"); 
+
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("SCNT", 26);
+			LeaveRule("SCNT", 26);
+			LeaveRule_SCNT();
+		}
+	}
+	// $ANTLR end "SCNT"
+
 	partial void EnterRule_SDIV();
 	partial void LeaveRule_SDIV();
 
@@ -1008,17 +1045,17 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mSDIV()
 	{
 		EnterRule_SDIV();
-		EnterRule("SDIV", 26);
-		TraceIn("SDIV", 26);
+		EnterRule("SDIV", 27);
+		TraceIn("SDIV", 27);
 		try
 		{
 			int _type = SDIV;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:32:6: ( 'SDIV' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:33:6: ( 'SDIV' )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:32:8: 'SDIV'
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:33:8: 'SDIV'
 			{
-			DebugLocation(32, 8);
+			DebugLocation(33, 8);
 			Match("SDIV"); 
 
 
@@ -1029,8 +1066,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SDIV", 26);
-			LeaveRule("SDIV", 26);
+			TraceOut("SDIV", 27);
+			LeaveRule("SDIV", 27);
 			LeaveRule_SDIV();
 		}
 	}
@@ -1044,17 +1081,17 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mSMUL()
 	{
 		EnterRule_SMUL();
-		EnterRule("SMUL", 27);
-		TraceIn("SMUL", 27);
+		EnterRule("SMUL", 28);
+		TraceIn("SMUL", 28);
 		try
 		{
 			int _type = SMUL;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:33:6: ( 'SMUL' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:34:6: ( 'SMUL' )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:33:8: 'SMUL'
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:34:8: 'SMUL'
 			{
-			DebugLocation(33, 8);
+			DebugLocation(34, 8);
 			Match("SMUL"); 
 
 
@@ -1065,8 +1102,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SMUL", 27);
-			LeaveRule("SMUL", 27);
+			TraceOut("SMUL", 28);
+			LeaveRule("SMUL", 28);
 			LeaveRule_SMUL();
 		}
 	}
@@ -1080,17 +1117,17 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mSSUB()
 	{
 		EnterRule_SSUB();
-		EnterRule("SSUB", 28);
-		TraceIn("SSUB", 28);
+		EnterRule("SSUB", 29);
+		TraceIn("SSUB", 29);
 		try
 		{
 			int _type = SSUB;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:34:6: ( 'SSUB' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:35:6: ( 'SSUB' )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:34:8: 'SSUB'
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:35:8: 'SSUB'
 			{
-			DebugLocation(34, 8);
+			DebugLocation(35, 8);
 			Match("SSUB"); 
 
 
@@ -1101,8 +1138,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SSUB", 28);
-			LeaveRule("SSUB", 28);
+			TraceOut("SSUB", 29);
+			LeaveRule("SSUB", 29);
 			LeaveRule_SSUB();
 		}
 	}
@@ -1116,17 +1153,17 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mSUB()
 	{
 		EnterRule_SUB();
-		EnterRule("SUB", 29);
-		TraceIn("SUB", 29);
+		EnterRule("SUB", 30);
+		TraceIn("SUB", 30);
 		try
 		{
 			int _type = SUB;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:35:5: ( 'SUB' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:36:5: ( 'SUB' )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:35:7: 'SUB'
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:36:7: 'SUB'
 			{
-			DebugLocation(35, 7);
+			DebugLocation(36, 7);
 			Match("SUB"); 
 
 
@@ -1137,47 +1174,12 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SUB", 29);
-			LeaveRule("SUB", 29);
+			TraceOut("SUB", 30);
+			LeaveRule("SUB", 30);
 			LeaveRule_SUB();
 		}
 	}
 	// $ANTLR end "SUB"
-
-	partial void EnterRule_T__45();
-	partial void LeaveRule_T__45();
-
-	// $ANTLR start "T__45"
-	[GrammarRule("T__45")]
-	private void mT__45()
-	{
-		EnterRule_T__45();
-		EnterRule("T__45", 30);
-		TraceIn("T__45", 30);
-		try
-		{
-			int _type = T__45;
-			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:36:7: ( ',' )
-			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:36:9: ','
-			{
-			DebugLocation(36, 9);
-			Match(','); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally
-		{
-			TraceOut("T__45", 30);
-			LeaveRule("T__45", 30);
-			LeaveRule_T__45();
-		}
-	}
-	// $ANTLR end "T__45"
 
 	partial void EnterRule_T__46();
 	partial void LeaveRule_T__46();
@@ -1193,12 +1195,12 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__46;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:37:7: ( '.' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:37:7: ( ',' )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:37:9: '.'
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:37:9: ','
 			{
 			DebugLocation(37, 9);
-			Match('.'); 
+			Match(','); 
 
 			}
 
@@ -1228,12 +1230,12 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__47;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:38:7: ( ':' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:38:7: ( '.' )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:38:9: ':'
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:38:9: '.'
 			{
 			DebugLocation(38, 9);
-			Match(':'); 
+			Match('.'); 
 
 			}
 
@@ -1249,6 +1251,41 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "T__47"
 
+	partial void EnterRule_T__48();
+	partial void LeaveRule_T__48();
+
+	// $ANTLR start "T__48"
+	[GrammarRule("T__48")]
+	private void mT__48()
+	{
+		EnterRule_T__48();
+		EnterRule("T__48", 33);
+		TraceIn("T__48", 33);
+		try
+		{
+			int _type = T__48;
+			int _channel = DefaultTokenChannel;
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:39:7: ( ':' )
+			DebugEnterAlt(1);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:39:9: ':'
+			{
+			DebugLocation(39, 9);
+			Match(':'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__48", 33);
+			LeaveRule("T__48", 33);
+			LeaveRule_T__48();
+		}
+	}
+	// $ANTLR end "T__48"
+
 	partial void EnterRule_ID();
 	partial void LeaveRule_ID();
 
@@ -1257,17 +1294,17 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mID()
 	{
 		EnterRule_ID();
-		EnterRule("ID", 33);
-		TraceIn("ID", 33);
+		EnterRule("ID", 34);
+		TraceIn("ID", 34);
 		try
 		{
 			int _type = ID;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:182:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:184:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:182:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:184:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
-			DebugLocation(182, 7);
+			DebugLocation(184, 7);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -1280,8 +1317,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(182, 31);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:182:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			DebugLocation(184, 31);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:184:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -1302,7 +1339,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 					{
-					DebugLocation(182, 31);
+					DebugLocation(184, 31);
 					input.Consume();
 
 
@@ -1327,8 +1364,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ID", 33);
-			LeaveRule("ID", 33);
+			TraceOut("ID", 34);
+			LeaveRule("ID", 34);
 			LeaveRule_ID();
 		}
 	}
@@ -1342,18 +1379,18 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mINT()
 	{
 		EnterRule_INT();
-		EnterRule("INT", 34);
-		TraceIn("INT", 34);
+		EnterRule("INT", 35);
+		TraceIn("INT", 35);
 		try
 		{
 			int _type = INT;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:185:5: ( ( '0' .. '9' )+ )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:187:5: ( ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:185:7: ( '0' .. '9' )+
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:187:7: ( '0' .. '9' )+
 			{
-			DebugLocation(185, 7);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:185:7: ( '0' .. '9' )+
+			DebugLocation(187, 7);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:187:7: ( '0' .. '9' )+
 			int cnt2=0;
 			try { DebugEnterSubRule(2);
 			while (true)
@@ -1375,7 +1412,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 					{
-					DebugLocation(185, 7);
+					DebugLocation(187, 7);
 					input.Consume();
 
 
@@ -1405,8 +1442,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("INT", 34);
-			LeaveRule("INT", 34);
+			TraceOut("INT", 35);
+			LeaveRule("INT", 35);
 			LeaveRule_INT();
 		}
 	}
@@ -1420,13 +1457,13 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mFLOAT()
 	{
 		EnterRule_FLOAT();
-		EnterRule("FLOAT", 35);
-		TraceIn("FLOAT", 35);
+		EnterRule("FLOAT", 36);
+		TraceIn("FLOAT", 36);
 		try
 		{
 			int _type = FLOAT;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:189:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:191:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
 			int alt9=3;
 			try { DebugEnterDecision(9, false);
 			try
@@ -1443,10 +1480,10 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:189:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:191:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
 				{
-				DebugLocation(189, 9);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:189:9: ( '0' .. '9' )+
+				DebugLocation(191, 9);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:191:9: ( '0' .. '9' )+
 				int cnt3=0;
 				try { DebugEnterSubRule(3);
 				while (true)
@@ -1468,7 +1505,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 						{
-						DebugLocation(189, 9);
+						DebugLocation(191, 9);
 						input.Consume();
 
 
@@ -1490,10 +1527,10 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(3); }
 
-				DebugLocation(189, 21);
+				DebugLocation(191, 21);
 				Match('.'); 
-				DebugLocation(189, 25);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:189:25: ( '0' .. '9' )*
+				DebugLocation(191, 25);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:191:25: ( '0' .. '9' )*
 				try { DebugEnterSubRule(4);
 				while (true)
 				{
@@ -1514,7 +1551,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 						{
-						DebugLocation(189, 25);
+						DebugLocation(191, 25);
 						input.Consume();
 
 
@@ -1531,8 +1568,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(4); }
 
-				DebugLocation(189, 37);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:189:37: ( EXPONENT )?
+				DebugLocation(191, 37);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:191:37: ( EXPONENT )?
 				int alt5=2;
 				try { DebugEnterSubRule(5);
 				try { DebugEnterDecision(5, false);
@@ -1547,9 +1584,9 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:189:37: EXPONENT
+					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:191:37: EXPONENT
 					{
-					DebugLocation(189, 37);
+					DebugLocation(191, 37);
 					mEXPONENT(); 
 
 					}
@@ -1563,12 +1600,12 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:190:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:192:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
 				{
-				DebugLocation(190, 9);
+				DebugLocation(192, 9);
 				Match('.'); 
-				DebugLocation(190, 13);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:190:13: ( '0' .. '9' )+
+				DebugLocation(192, 13);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:192:13: ( '0' .. '9' )+
 				int cnt6=0;
 				try { DebugEnterSubRule(6);
 				while (true)
@@ -1590,7 +1627,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 						{
-						DebugLocation(190, 13);
+						DebugLocation(192, 13);
 						input.Consume();
 
 
@@ -1612,8 +1649,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(6); }
 
-				DebugLocation(190, 25);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:190:25: ( EXPONENT )?
+				DebugLocation(192, 25);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:192:25: ( EXPONENT )?
 				int alt7=2;
 				try { DebugEnterSubRule(7);
 				try { DebugEnterDecision(7, false);
@@ -1628,9 +1665,9 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:190:25: EXPONENT
+					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:192:25: EXPONENT
 					{
-					DebugLocation(190, 25);
+					DebugLocation(192, 25);
 					mEXPONENT(); 
 
 					}
@@ -1644,10 +1681,10 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:191:9: ( '0' .. '9' )+ EXPONENT
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:193:9: ( '0' .. '9' )+ EXPONENT
 				{
-				DebugLocation(191, 9);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:191:9: ( '0' .. '9' )+
+				DebugLocation(193, 9);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:193:9: ( '0' .. '9' )+
 				int cnt8=0;
 				try { DebugEnterSubRule(8);
 				while (true)
@@ -1669,7 +1706,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 						{
-						DebugLocation(191, 9);
+						DebugLocation(193, 9);
 						input.Consume();
 
 
@@ -1691,7 +1728,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(8); }
 
-				DebugLocation(191, 21);
+				DebugLocation(193, 21);
 				mEXPONENT(); 
 
 				}
@@ -1703,8 +1740,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("FLOAT", 35);
-			LeaveRule("FLOAT", 35);
+			TraceOut("FLOAT", 36);
+			LeaveRule("FLOAT", 36);
 			LeaveRule_FLOAT();
 		}
 	}
@@ -1718,18 +1755,18 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mNEWLINE()
 	{
 		EnterRule_NEWLINE();
-		EnterRule("NEWLINE", 36);
-		TraceIn("NEWLINE", 36);
+		EnterRule("NEWLINE", 37);
+		TraceIn("NEWLINE", 37);
 		try
 		{
 			int _type = NEWLINE;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:194:8: ( ( '\\r' )? '\\n' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:196:8: ( ( '\\r' )? '\\n' )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:194:9: ( '\\r' )? '\\n'
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:196:9: ( '\\r' )? '\\n'
 			{
-			DebugLocation(194, 9);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:194:9: ( '\\r' )?
+			DebugLocation(196, 9);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:196:9: ( '\\r' )?
 			int alt10=2;
 			try { DebugEnterSubRule(10);
 			try { DebugEnterDecision(10, false);
@@ -1744,9 +1781,9 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:194:9: '\\r'
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:196:9: '\\r'
 				{
-				DebugLocation(194, 9);
+				DebugLocation(196, 9);
 				Match('\r'); 
 
 				}
@@ -1755,7 +1792,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(10); }
 
-			DebugLocation(194, 15);
+			DebugLocation(196, 15);
 			Match('\n'); 
 
 			}
@@ -1765,8 +1802,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NEWLINE", 36);
-			LeaveRule("NEWLINE", 36);
+			TraceOut("NEWLINE", 37);
+			LeaveRule("NEWLINE", 37);
 			LeaveRule_NEWLINE();
 		}
 	}
@@ -1780,13 +1817,13 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mCOMMENT()
 	{
 		EnterRule_COMMENT();
-		EnterRule("COMMENT", 37);
-		TraceIn("COMMENT", 37);
+		EnterRule("COMMENT", 38);
+		TraceIn("COMMENT", 38);
 		try
 		{
 			int _type = COMMENT;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:197:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:199:5: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' | '/*' ( options {greedy=false; } : . )* '*/' )
 			int alt14=2;
 			try { DebugEnterDecision(14, false);
 			int LA14_0 = input.LA(1);
@@ -1821,13 +1858,13 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:197:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:199:9: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 				{
-				DebugLocation(197, 9);
+				DebugLocation(199, 9);
 				Match("//"); 
 
-				DebugLocation(197, 14);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:197:14: (~ ( '\\n' | '\\r' ) )*
+				DebugLocation(199, 14);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:199:14: (~ ( '\\n' | '\\r' ) )*
 				try { DebugEnterSubRule(11);
 				while (true)
 				{
@@ -1848,7 +1885,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 						DebugEnterAlt(1);
 						// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 						{
-						DebugLocation(197, 14);
+						DebugLocation(199, 14);
 						input.Consume();
 
 
@@ -1865,8 +1902,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(11); }
 
-				DebugLocation(197, 28);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:197:28: ( '\\r' )?
+				DebugLocation(199, 28);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:199:28: ( '\\r' )?
 				int alt12=2;
 				try { DebugEnterSubRule(12);
 				try { DebugEnterDecision(12, false);
@@ -1881,9 +1918,9 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:197:28: '\\r'
+					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:199:28: '\\r'
 					{
-					DebugLocation(197, 28);
+					DebugLocation(199, 28);
 					Match('\r'); 
 
 					}
@@ -1892,22 +1929,22 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				}
 				} finally { DebugExitSubRule(12); }
 
-				DebugLocation(197, 34);
+				DebugLocation(199, 34);
 				Match('\n'); 
-				DebugLocation(197, 39);
+				DebugLocation(199, 39);
 				_channel=Hidden;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:198:9: '/*' ( options {greedy=false; } : . )* '*/'
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:200:9: '/*' ( options {greedy=false; } : . )* '*/'
 				{
-				DebugLocation(198, 9);
+				DebugLocation(200, 9);
 				Match("/*"); 
 
-				DebugLocation(198, 14);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:198:14: ( options {greedy=false; } : . )*
+				DebugLocation(200, 14);
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:200:14: ( options {greedy=false; } : . )*
 				try { DebugEnterSubRule(13);
 				while (true)
 				{
@@ -1941,9 +1978,9 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:198:42: .
+						// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:200:42: .
 						{
-						DebugLocation(198, 42);
+						DebugLocation(200, 42);
 						MatchAny(); 
 
 						}
@@ -1959,10 +1996,10 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 
 				} finally { DebugExitSubRule(13); }
 
-				DebugLocation(198, 47);
+				DebugLocation(200, 47);
 				Match("*/"); 
 
-				DebugLocation(198, 52);
+				DebugLocation(200, 52);
 				_channel=Hidden;
 
 				}
@@ -1974,8 +2011,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("COMMENT", 37);
-			LeaveRule("COMMENT", 37);
+			TraceOut("COMMENT", 38);
+			LeaveRule("COMMENT", 38);
 			LeaveRule_COMMENT();
 		}
 	}
@@ -1989,17 +2026,17 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mWS()
 	{
 		EnterRule_WS();
-		EnterRule("WS", 38);
-		TraceIn("WS", 38);
+		EnterRule("WS", 39);
+		TraceIn("WS", 39);
 		try
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:201:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:203:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:201:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:203:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
-			DebugLocation(201, 9);
+			DebugLocation(203, 9);
 			if ((input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ')
 			{
 				input.Consume();
@@ -2012,7 +2049,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(205, 11);
+			DebugLocation(207, 11);
 			_channel=Hidden;
 
 			}
@@ -2022,8 +2059,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("WS", 38);
-			LeaveRule("WS", 38);
+			TraceOut("WS", 39);
+			LeaveRule("WS", 39);
 			LeaveRule_WS();
 		}
 	}
@@ -2037,20 +2074,20 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mSTRING()
 	{
 		EnterRule_STRING();
-		EnterRule("STRING", 39);
-		TraceIn("STRING", 39);
+		EnterRule("STRING", 40);
+		TraceIn("STRING", 40);
 		try
 		{
 			int _type = STRING;
 			int _channel = DefaultTokenChannel;
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:210:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:212:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:210:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:212:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
 			{
-			DebugLocation(210, 8);
+			DebugLocation(212, 8);
 			Match('\"'); 
-			DebugLocation(210, 12);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:210:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+			DebugLocation(212, 12);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:212:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
 			try { DebugEnterSubRule(15);
 			while (true)
 			{
@@ -2073,18 +2110,18 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:210:14: ESC_SEQ
+					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:212:14: ESC_SEQ
 					{
-					DebugLocation(210, 14);
+					DebugLocation(212, 14);
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:210:24: ~ ( '\\\\' | '\"' )
+					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:212:24: ~ ( '\\\\' | '\"' )
 					{
-					DebugLocation(210, 24);
+					DebugLocation(212, 24);
 					input.Consume();
 
 
@@ -2101,7 +2138,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(15); }
 
-			DebugLocation(210, 39);
+			DebugLocation(212, 39);
 			Match('\"'); 
 
 			}
@@ -2111,8 +2148,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("STRING", 39);
-			LeaveRule("STRING", 39);
+			TraceOut("STRING", 40);
+			LeaveRule("STRING", 40);
 			LeaveRule_STRING();
 		}
 	}
@@ -2126,15 +2163,15 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mEXPONENT()
 	{
 		EnterRule_EXPONENT();
-		EnterRule("EXPONENT", 40);
-		TraceIn("EXPONENT", 40);
+		EnterRule("EXPONENT", 41);
+		TraceIn("EXPONENT", 41);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:215:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:217:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:215:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:217:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
-			DebugLocation(215, 12);
+			DebugLocation(217, 12);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2147,8 +2184,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(215, 22);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:215:22: ( '+' | '-' )?
+			DebugLocation(217, 22);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:217:22: ( '+' | '-' )?
 			int alt16=2;
 			try { DebugEnterSubRule(16);
 			try { DebugEnterDecision(16, false);
@@ -2165,7 +2202,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				DebugEnterAlt(1);
 				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 				{
-				DebugLocation(215, 22);
+				DebugLocation(217, 22);
 				input.Consume();
 
 
@@ -2175,8 +2212,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(16); }
 
-			DebugLocation(215, 33);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:215:33: ( '0' .. '9' )+
+			DebugLocation(217, 33);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:217:33: ( '0' .. '9' )+
 			int cnt17=0;
 			try { DebugEnterSubRule(17);
 			while (true)
@@ -2198,7 +2235,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 					{
-					DebugLocation(215, 33);
+					DebugLocation(217, 33);
 					input.Consume();
 
 
@@ -2226,8 +2263,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("EXPONENT", 40);
-			LeaveRule("EXPONENT", 40);
+			TraceOut("EXPONENT", 41);
+			LeaveRule("EXPONENT", 41);
 			LeaveRule_EXPONENT();
 		}
 	}
@@ -2241,15 +2278,15 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mHEX_DIGIT()
 	{
 		EnterRule_HEX_DIGIT();
-		EnterRule("HEX_DIGIT", 41);
-		TraceIn("HEX_DIGIT", 41);
+		EnterRule("HEX_DIGIT", 42);
+		TraceIn("HEX_DIGIT", 42);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:218:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:220:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			DebugEnterAlt(1);
 			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:
 			{
-			DebugLocation(218, 11);
+			DebugLocation(220, 11);
 			if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
 			{
 				input.Consume();
@@ -2268,8 +2305,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("HEX_DIGIT", 41);
-			LeaveRule("HEX_DIGIT", 41);
+			TraceOut("HEX_DIGIT", 42);
+			LeaveRule("HEX_DIGIT", 42);
 			LeaveRule_HEX_DIGIT();
 		}
 	}
@@ -2283,11 +2320,11 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mESC_SEQ()
 	{
 		EnterRule_ESC_SEQ();
-		EnterRule("ESC_SEQ", 42);
-		TraceIn("ESC_SEQ", 42);
+		EnterRule("ESC_SEQ", 43);
+		TraceIn("ESC_SEQ", 43);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:222:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:224:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
 			int alt18=3;
 			try { DebugEnterDecision(18, false);
 			int LA18_0 = input.LA(1);
@@ -2345,11 +2382,11 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:222:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:224:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 				{
-				DebugLocation(222, 9);
+				DebugLocation(224, 9);
 				Match('\\'); 
-				DebugLocation(222, 14);
+				DebugLocation(224, 14);
 				input.Consume();
 
 
@@ -2357,18 +2394,18 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:223:9: UNICODE_ESC
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:225:9: UNICODE_ESC
 				{
-				DebugLocation(223, 9);
+				DebugLocation(225, 9);
 				mUNICODE_ESC(); 
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:224:9: OCTAL_ESC
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:226:9: OCTAL_ESC
 				{
-				DebugLocation(224, 9);
+				DebugLocation(226, 9);
 				mOCTAL_ESC(); 
 
 				}
@@ -2378,8 +2415,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ESC_SEQ", 42);
-			LeaveRule("ESC_SEQ", 42);
+			TraceOut("ESC_SEQ", 43);
+			LeaveRule("ESC_SEQ", 43);
 			LeaveRule_ESC_SEQ();
 		}
 	}
@@ -2393,11 +2430,11 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mOCTAL_ESC()
 	{
 		EnterRule_OCTAL_ESC();
-		EnterRule("OCTAL_ESC", 43);
-		TraceIn("OCTAL_ESC", 43);
+		EnterRule("OCTAL_ESC", 44);
+		TraceIn("OCTAL_ESC", 44);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:229:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:231:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt19=3;
 			try { DebugEnterDecision(19, false);
 			int LA19_0 = input.LA(1);
@@ -2459,17 +2496,17 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:229:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:231:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 				{
-				DebugLocation(229, 9);
+				DebugLocation(231, 9);
 				Match('\\'); 
-				DebugLocation(229, 14);
+				DebugLocation(231, 14);
 				input.Consume();
 
-				DebugLocation(229, 25);
+				DebugLocation(231, 25);
 				input.Consume();
 
-				DebugLocation(229, 36);
+				DebugLocation(231, 36);
 				input.Consume();
 
 
@@ -2477,14 +2514,14 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:230:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:232:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
 				{
-				DebugLocation(230, 9);
+				DebugLocation(232, 9);
 				Match('\\'); 
-				DebugLocation(230, 14);
+				DebugLocation(232, 14);
 				input.Consume();
 
-				DebugLocation(230, 25);
+				DebugLocation(232, 25);
 				input.Consume();
 
 
@@ -2492,11 +2529,11 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:231:9: '\\\\' ( '0' .. '7' )
+				// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:233:9: '\\\\' ( '0' .. '7' )
 				{
-				DebugLocation(231, 9);
+				DebugLocation(233, 9);
 				Match('\\'); 
-				DebugLocation(231, 14);
+				DebugLocation(233, 14);
 				input.Consume();
 
 
@@ -2507,8 +2544,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("OCTAL_ESC", 43);
-			LeaveRule("OCTAL_ESC", 43);
+			TraceOut("OCTAL_ESC", 44);
+			LeaveRule("OCTAL_ESC", 44);
 			LeaveRule_OCTAL_ESC();
 		}
 	}
@@ -2522,25 +2559,25 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private void mUNICODE_ESC()
 	{
 		EnterRule_UNICODE_ESC();
-		EnterRule("UNICODE_ESC", 44);
-		TraceIn("UNICODE_ESC", 44);
+		EnterRule("UNICODE_ESC", 45);
+		TraceIn("UNICODE_ESC", 45);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:236:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:238:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:236:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:238:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
 			{
-			DebugLocation(236, 9);
+			DebugLocation(238, 9);
 			Match('\\'); 
-			DebugLocation(236, 14);
+			DebugLocation(238, 14);
 			Match('u'); 
-			DebugLocation(236, 18);
+			DebugLocation(238, 18);
 			mHEX_DIGIT(); 
-			DebugLocation(236, 28);
+			DebugLocation(238, 28);
 			mHEX_DIGIT(); 
-			DebugLocation(236, 38);
+			DebugLocation(238, 38);
 			mHEX_DIGIT(); 
-			DebugLocation(236, 48);
+			DebugLocation(238, 48);
 			mHEX_DIGIT(); 
 
 			}
@@ -2548,8 +2585,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("UNICODE_ESC", 44);
-			LeaveRule("UNICODE_ESC", 44);
+			TraceOut("UNICODE_ESC", 45);
+			LeaveRule("UNICODE_ESC", 45);
 			LeaveRule_UNICODE_ESC();
 		}
 	}
@@ -2557,8 +2594,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:8: ( ADD | CALL | CNT | DCL | DEC | DIV | EXIT | HOST | INC | JE | JG | JGE | JL | JLE | JMP | JNE | MOD | MOV | MUL | NEG | POP | POW | PUSH | RET | SADD | SDIV | SMUL | SSUB | SUB | T__45 | T__46 | T__47 | ID | INT | FLOAT | NEWLINE | COMMENT | WS | STRING )
-		int alt20=39;
+		// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:8: ( ADD | CALL | CNT | DCL | DEC | DIV | EXIT | HOST | INC | JE | JG | JGE | JL | JLE | JMP | JNE | MOD | MOV | MUL | NEG | POP | POW | PUSH | RET | SADD | SCNT | SDIV | SMUL | SSUB | SUB | T__46 | T__47 | T__48 | ID | INT | FLOAT | NEWLINE | COMMENT | WS | STRING )
+		int alt20=40;
 		try { DebugEnterDecision(20, false);
 		try
 		{
@@ -2799,126 +2836,135 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			break;
 		case 26:
 			DebugEnterAlt(26);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:112: SDIV
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:112: SCNT
 			{
 			DebugLocation(1, 112);
-			mSDIV(); 
+			mSCNT(); 
 
 			}
 			break;
 		case 27:
 			DebugEnterAlt(27);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:117: SMUL
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:117: SDIV
 			{
 			DebugLocation(1, 117);
-			mSMUL(); 
+			mSDIV(); 
 
 			}
 			break;
 		case 28:
 			DebugEnterAlt(28);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:122: SSUB
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:122: SMUL
 			{
 			DebugLocation(1, 122);
-			mSSUB(); 
+			mSMUL(); 
 
 			}
 			break;
 		case 29:
 			DebugEnterAlt(29);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:127: SUB
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:127: SSUB
 			{
 			DebugLocation(1, 127);
-			mSUB(); 
+			mSSUB(); 
 
 			}
 			break;
 		case 30:
 			DebugEnterAlt(30);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:131: T__45
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:132: SUB
 			{
-			DebugLocation(1, 131);
-			mT__45(); 
+			DebugLocation(1, 132);
+			mSUB(); 
 
 			}
 			break;
 		case 31:
 			DebugEnterAlt(31);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:137: T__46
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:136: T__46
 			{
-			DebugLocation(1, 137);
+			DebugLocation(1, 136);
 			mT__46(); 
 
 			}
 			break;
 		case 32:
 			DebugEnterAlt(32);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:143: T__47
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:142: T__47
 			{
-			DebugLocation(1, 143);
+			DebugLocation(1, 142);
 			mT__47(); 
 
 			}
 			break;
 		case 33:
 			DebugEnterAlt(33);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:149: ID
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:148: T__48
 			{
-			DebugLocation(1, 149);
-			mID(); 
+			DebugLocation(1, 148);
+			mT__48(); 
 
 			}
 			break;
 		case 34:
 			DebugEnterAlt(34);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:152: INT
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:154: ID
 			{
-			DebugLocation(1, 152);
-			mINT(); 
+			DebugLocation(1, 154);
+			mID(); 
 
 			}
 			break;
 		case 35:
 			DebugEnterAlt(35);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:156: FLOAT
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:157: INT
 			{
-			DebugLocation(1, 156);
-			mFLOAT(); 
+			DebugLocation(1, 157);
+			mINT(); 
 
 			}
 			break;
 		case 36:
 			DebugEnterAlt(36);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:162: NEWLINE
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:161: FLOAT
 			{
-			DebugLocation(1, 162);
-			mNEWLINE(); 
+			DebugLocation(1, 161);
+			mFLOAT(); 
 
 			}
 			break;
 		case 37:
 			DebugEnterAlt(37);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:170: COMMENT
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:167: NEWLINE
 			{
-			DebugLocation(1, 170);
-			mCOMMENT(); 
+			DebugLocation(1, 167);
+			mNEWLINE(); 
 
 			}
 			break;
 		case 38:
 			DebugEnterAlt(38);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:178: WS
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:175: COMMENT
 			{
-			DebugLocation(1, 178);
-			mWS(); 
+			DebugLocation(1, 175);
+			mCOMMENT(); 
 
 			}
 			break;
 		case 39:
 			DebugEnterAlt(39);
-			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:181: STRING
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:183: WS
 			{
-			DebugLocation(1, 181);
+			DebugLocation(1, 183);
+			mWS(); 
+
+			}
+			break;
+		case 40:
+			DebugEnterAlt(40);
+			// E:\\Git\\NPortugol\\src\\grammar\\ASM.g:1:186: STRING
+			{
+			DebugLocation(1, 186);
 			mSTRING(); 
 
 			}
@@ -2994,7 +3040,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			this.transition = DFA9_transition;
 		}
 
-		public override string Description { get { return "188:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
+		public override string Description { get { return "190:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -3005,41 +3051,41 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 	private class DFA20 : DFA
 	{
 		private const string DFA20_eotS =
-			"\x1\xFFFF\xC\x10\x1\xFFFF\x1\x30\x2\xFFFF\x1\x32\x1\x15\x4\xFFFF\x9\x10"+
-			"\x1\x3D\x1\x3F\x1\x41\xD\x10\x4\xFFFF\x1\x51\x1\x10\x1\x53\x1\x54\x1"+
-			"\x55\x1\x56\x2\x10\x1\x59\x1\xFFFF\x1\x5A\x1\xFFFF\x1\x5B\x1\xFFFF\x1"+
-			"\x5C\x1\x5D\x1\x5E\x1\x5F\x1\x60\x1\x61\x1\x62\x1\x63\x1\x10\x1\x65\x4"+
-			"\x10\x1\x6A\x1\xFFFF\x1\x6B\x4\xFFFF\x1\x6C\x1\x6D\xB\xFFFF\x1\x6E\x1"+
-			"\xFFFF\x1\x6F\x1\x70\x1\x71\x1\x72\x9\xFFFF";
+			"\x1\xFFFF\xC\x10\x1\xFFFF\x1\x31\x2\xFFFF\x1\x33\x1\x15\x4\xFFFF\x9\x10"+
+			"\x1\x3E\x1\x40\x1\x42\xE\x10\x4\xFFFF\x1\x53\x1\x10\x1\x55\x1\x56\x1"+
+			"\x57\x1\x58\x2\x10\x1\x5B\x1\xFFFF\x1\x5C\x1\xFFFF\x1\x5D\x1\xFFFF\x1"+
+			"\x5E\x1\x5F\x1\x60\x1\x61\x1\x62\x1\x63\x1\x64\x1\x65\x1\x10\x1\x67\x5"+
+			"\x10\x1\x6D\x1\xFFFF\x1\x6E\x4\xFFFF\x1\x6F\x1\x70\xB\xFFFF\x1\x71\x1"+
+			"\xFFFF\x1\x72\x1\x73\x1\x74\x1\x75\x1\x76\xA\xFFFF";
 		private const string DFA20_eofS =
-			"\x73\xFFFF";
+			"\x77\xFFFF";
 		private const string DFA20_minS =
 			"\x1\x9\x1\x44\x1\x41\x1\x43\x1\x58\x1\x4F\x1\x4E\x1\x45\x1\x4F\x1\x45"+
 			"\x1\x4F\x1\x45\x1\x41\x1\xFFFF\x1\x30\x2\xFFFF\x1\x2E\x1\xA\x4\xFFFF"+
 			"\x1\x44\x1\x4C\x1\x54\x1\x4C\x1\x43\x1\x56\x1\x49\x1\x53\x1\x43\x3\x30"+
-			"\x1\x50\x1\x45\x1\x44\x1\x4C\x1\x47\x1\x50\x1\x53\x1\x54\x1\x44\x1\x49"+
-			"\x2\x55\x1\x42\x4\xFFFF\x1\x30\x1\x4C\x4\x30\x2\x54\x1\x30\x1\xFFFF\x1"+
-			"\x30\x1\xFFFF\x1\x30\x1\xFFFF\x8\x30\x1\x48\x1\x30\x1\x44\x1\x56\x1\x4C"+
-			"\x1\x42\x1\x30\x1\xFFFF\x1\x30\x4\xFFFF\x2\x30\xB\xFFFF\x1\x30\x1\xFFFF"+
-			"\x4\x30\x9\xFFFF";
+			"\x1\x50\x1\x45\x1\x44\x1\x4C\x1\x47\x1\x50\x1\x53\x1\x54\x1\x44\x1\x4E"+
+			"\x1\x49\x2\x55\x1\x42\x4\xFFFF\x1\x30\x1\x4C\x4\x30\x2\x54\x1\x30\x1"+
+			"\xFFFF\x1\x30\x1\xFFFF\x1\x30\x1\xFFFF\x8\x30\x1\x48\x1\x30\x1\x44\x1"+
+			"\x54\x1\x56\x1\x4C\x1\x42\x1\x30\x1\xFFFF\x1\x30\x4\xFFFF\x2\x30\xB\xFFFF"+
+			"\x1\x30\x1\xFFFF\x5\x30\xA\xFFFF";
 		private const string DFA20_maxS =
 			"\x1\x7A\x1\x44\x1\x4E\x1\x49\x1\x58\x1\x4F\x2\x4E\x1\x55\x1\x45\x1\x55"+
 			"\x1\x45\x1\x55\x1\xFFFF\x1\x39\x2\xFFFF\x1\x65\x1\xA\x4\xFFFF\x1\x44"+
 			"\x1\x4C\x1\x54\x1\x4C\x1\x43\x1\x56\x1\x49\x1\x53\x1\x43\x3\x7A\x1\x50"+
-			"\x1\x45\x1\x56\x1\x4C\x1\x47\x1\x57\x1\x53\x1\x54\x1\x44\x1\x49\x2\x55"+
-			"\x1\x42\x4\xFFFF\x1\x7A\x1\x4C\x4\x7A\x2\x54\x1\x7A\x1\xFFFF\x1\x7A\x1"+
-			"\xFFFF\x1\x7A\x1\xFFFF\x8\x7A\x1\x48\x1\x7A\x1\x44\x1\x56\x1\x4C\x1\x42"+
-			"\x1\x7A\x1\xFFFF\x1\x7A\x4\xFFFF\x2\x7A\xB\xFFFF\x1\x7A\x1\xFFFF\x4\x7A"+
-			"\x9\xFFFF";
+			"\x1\x45\x1\x56\x1\x4C\x1\x47\x1\x57\x1\x53\x1\x54\x1\x44\x1\x4E\x1\x49"+
+			"\x2\x55\x1\x42\x4\xFFFF\x1\x7A\x1\x4C\x4\x7A\x2\x54\x1\x7A\x1\xFFFF\x1"+
+			"\x7A\x1\xFFFF\x1\x7A\x1\xFFFF\x8\x7A\x1\x48\x1\x7A\x1\x44\x1\x54\x1\x56"+
+			"\x1\x4C\x1\x42\x1\x7A\x1\xFFFF\x1\x7A\x4\xFFFF\x2\x7A\xB\xFFFF\x1\x7A"+
+			"\x1\xFFFF\x5\x7A\xA\xFFFF";
 		private const string DFA20_acceptS =
-			"\xD\xFFFF\x1\x1E\x1\xFFFF\x1\x20\x1\x21\x2\xFFFF\x1\x24\x1\x25\x1\x26"+
-			"\x1\x27\x19\xFFFF\x1\x1F\x1\x23\x1\x22\x1\x24\x9\xFFFF\x1\xA\x1\xFFFF"+
-			"\x1\xB\x1\xFFFF\x1\xD\xF\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\x4\x1\x5\x1\x6"+
+			"\xD\xFFFF\x1\x1F\x1\xFFFF\x1\x21\x1\x22\x2\xFFFF\x1\x25\x1\x26\x1\x27"+
+			"\x1\x28\x1A\xFFFF\x1\x20\x1\x24\x1\x23\x1\x25\x9\xFFFF\x1\xA\x1\xFFFF"+
+			"\x1\xB\x1\xFFFF\x1\xD\x10\xFFFF\x1\x1\x1\xFFFF\x1\x3\x1\x4\x1\x5\x1\x6"+
 			"\x2\xFFFF\x1\x9\x1\xC\x1\xE\x1\xF\x1\x10\x1\x11\x1\x12\x1\x13\x1\x14"+
-			"\x1\x15\x1\x16\x1\xFFFF\x1\x18\x4\xFFFF\x1\x1D\x1\x2\x1\x7\x1\x8\x1\x17"+
-			"\x1\x19\x1\x1A\x1\x1B\x1\x1C";
+			"\x1\x15\x1\x16\x1\xFFFF\x1\x18\x5\xFFFF\x1\x1E\x1\x2\x1\x7\x1\x8\x1\x17"+
+			"\x1\x19\x1\x1A\x1\x1B\x1\x1C\x1\x1D";
 		private const string DFA20_specialS =
-			"\x73\xFFFF}>";
+			"\x77\xFFFF}>";
 		private static readonly string[] DFA20_transitionS =
 			{
 				"\x1\x15\x1\x13\x2\xFFFF\x1\x12\x12\xFFFF\x1\x15\x1\xFFFF\x1\x16\x9\xFFFF"+
@@ -3057,19 +3103,18 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				"\x1\x27",
 				"\x1\x28\x5\xFFFF\x1\x29",
 				"\x1\x2A",
-				"\x1\x2B\x2\xFFFF\x1\x2C\x8\xFFFF\x1\x2D\x5\xFFFF\x1\x2E\x1\xFFFF\x1"+
-				"\x2F",
+				"\x1\x2B\x1\xFFFF\x1\x2C\x1\x2D\x8\xFFFF\x1\x2E\x5\xFFFF\x1\x2F\x1\xFFFF"+
+				"\x1\x30",
 				"",
-				"\xA\x31",
-				"",
-				"",
-				"\x1\x31\x1\xFFFF\xA\x11\xB\xFFFF\x1\x31\x1F\xFFFF\x1\x31",
-				"\x1\x33",
+				"\xA\x32",
 				"",
 				"",
-				"",
-				"",
+				"\x1\x32\x1\xFFFF\xA\x11\xB\xFFFF\x1\x32\x1F\xFFFF\x1\x32",
 				"\x1\x34",
+				"",
+				"",
+				"",
+				"",
 				"\x1\x35",
 				"\x1\x36",
 				"\x1\x37",
@@ -3078,36 +3123,38 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				"\x1\x3A",
 				"\x1\x3B",
 				"\x1\x3C",
+				"\x1\x3D",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
-				"\xA\x10\x7\xFFFF\x4\x10\x1\x3E\x15\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A"+
+				"\xA\x10\x7\xFFFF\x4\x10\x1\x3F\x15\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A"+
 				"\x10",
-				"\xA\x10\x7\xFFFF\x4\x10\x1\x40\x15\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A"+
+				"\xA\x10\x7\xFFFF\x4\x10\x1\x41\x15\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A"+
 				"\x10",
-				"\x1\x42",
 				"\x1\x43",
-				"\x1\x44\x11\xFFFF\x1\x45",
-				"\x1\x46",
+				"\x1\x44",
+				"\x1\x45\x11\xFFFF\x1\x46",
 				"\x1\x47",
-				"\x1\x48\x6\xFFFF\x1\x49",
-				"\x1\x4A",
+				"\x1\x48",
+				"\x1\x49\x6\xFFFF\x1\x4A",
 				"\x1\x4B",
 				"\x1\x4C",
 				"\x1\x4D",
 				"\x1\x4E",
 				"\x1\x4F",
 				"\x1\x50",
-				"",
-				"",
-				"",
-				"",
-				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
+				"\x1\x51",
 				"\x1\x52",
+				"",
+				"",
+				"",
+				"",
+				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
+				"\x1\x54",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
-				"\x1\x57",
-				"\x1\x58",
+				"\x1\x59",
+				"\x1\x5A",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
@@ -3121,13 +3168,14 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
-				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
-				"\x1\x64",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\x1\x66",
-				"\x1\x67",
+				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\x1\x68",
 				"\x1\x69",
+				"\x1\x6A",
+				"\x1\x6B",
+				"\x1\x6C",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
@@ -3154,6 +3202,8 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
 				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
+				"\xA\x10\x7\xFFFF\x1A\x10\x4\xFFFF\x1\x10\x1\xFFFF\x1A\x10",
+				"",
 				"",
 				"",
 				"",
@@ -3196,7 +3246,7 @@ public partial class ASMLexer : Antlr.Runtime.Lexer
 			this.transition = DFA20_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( ADD | CALL | CNT | DCL | DEC | DIV | EXIT | HOST | INC | JE | JG | JGE | JL | JLE | JMP | JNE | MOD | MOV | MUL | NEG | POP | POW | PUSH | RET | SADD | SDIV | SMUL | SSUB | SUB | T__45 | T__46 | T__47 | ID | INT | FLOAT | NEWLINE | COMMENT | WS | STRING );"; } }
+		public override string Description { get { return "1:1: Tokens : ( ADD | CALL | CNT | DCL | DEC | DIV | EXIT | HOST | INC | JE | JG | JGE | JL | JLE | JMP | JNE | MOD | MOV | MUL | NEG | POP | POW | PUSH | RET | SADD | SCNT | SDIV | SMUL | SSUB | SUB | T__46 | T__47 | T__48 | ID | INT | FLOAT | NEWLINE | COMMENT | WS | STRING );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

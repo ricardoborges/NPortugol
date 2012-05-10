@@ -46,6 +46,7 @@ namespace NPortugol.Runtime
         //#region String Processing
 
         CNT,
+        SCNT,
         //GCh,
         //SCh,
 

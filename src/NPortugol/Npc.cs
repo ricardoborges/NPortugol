@@ -3,7 +3,6 @@ using System.IO;
 using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 using NPortugol.Runtime;
-using PSharp.Compiler;
 
 namespace NPortugol
 {
@@ -32,9 +31,20 @@ namespace NPortugol
 
             SourceMap = walker.SourceMap;
 
+            EnsureFunction(asm, parser.Functions.Count == 0);
+
             return asm;
         }
-        
+
+        private void EnsureFunction(IList<string> asm, bool create)
+        {
+            if (!create) return;
+
+            asm.Insert(0, "main:");
+            asm.Add("EXIT");
+        }
+
+
         public IList<string> CompileFile(string scriptfile)
         {
             using (var reader = new StreamReader(scriptfile))

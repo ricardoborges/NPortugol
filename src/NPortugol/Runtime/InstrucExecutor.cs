@@ -68,6 +68,7 @@ namespace NPortugol.Runtime
 			
                     // String
                 case OpCode.CNT: ProcessCNT(); break;
+                case OpCode.SCNT: ProcessSCNT(); break;
 
                     // Branching
                 case OpCode.JMP: ProcessBranching(); break;
@@ -98,6 +99,16 @@ namespace NPortugol.Runtime
             var second = opResolver.At(1).StringValue();
 
             SetSymbolValue(Instruction.Operands[0], string.Concat(first, second));
+        }
+
+        private void ProcessSCNT()
+        {
+            var second = ParamStack.Pop() as Operand;
+            var first = ParamStack.Pop() as Operand;
+
+            var value = string.Concat(first.Value, second.Value);
+            
+            ParamStack.Push(new Operand(OperandType.Literal, value));
         }
 
         private void ProcessBranching()
