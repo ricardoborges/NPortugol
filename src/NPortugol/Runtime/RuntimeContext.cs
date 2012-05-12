@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using NPortugol.Runtime.Exceptions;
 using NPortugol.Runtime.Interop;
 
@@ -8,6 +10,8 @@ namespace NPortugol.Runtime
         private readonly RuntimeScript runtimeScript;
 
         private readonly InstrucExecutor executor;
+
+        private Dictionary<int, int> sourceMap;
 
         public RuntimeContext(RuntimeScript script)
         {
@@ -63,10 +67,18 @@ namespace NPortugol.Runtime
                 if (!Debug) continue;
 
                 Debugging = true;
+
+                if (sourceMap == null) return;
+
+                if (!sourceMap.ContainsKey(CurrentInst.Index)) continue;
+
                 return;
             }
 
+            Runnable.ParamStack.Clear();
+
             Debugging = false;
+            
         }
 
         public object Execute(string function, params object[] parameters)
@@ -88,10 +100,8 @@ namespace NPortugol.Runtime
                 {
                     return GetSymbolValue(operand.Value.ToString());
                 }
-                else
-                {
-                    return operand.Value;
-                }
+                
+                return operand.Value;
             }
 
             return null;
@@ -145,6 +155,11 @@ namespace NPortugol.Runtime
             var target = Runnable.RetrieveFunction(function);
 
             Init(target, null);
+        }
+
+        public void LoadDebugInfo(Dictionary<int, int> info)
+        {
+            sourceMap = info;
         }
 
         private void Init(string function, params object[] parameters)

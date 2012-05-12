@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using NPortugol.Runtime.Interop;
 
 namespace NPortugol.Runtime
@@ -29,5 +30,7 @@ namespace NPortugol.Runtime
         void InitWithMain();
         
         void Init(string function);
+        
+        void LoadDebugInfo(Dictionary<int, int> info);
     }
 }

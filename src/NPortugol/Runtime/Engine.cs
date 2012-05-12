@@ -54,6 +54,11 @@ namespace NPortugol.Runtime
                                  };
         }
 
+        public void LoadDebugInfo(Dictionary<int, int> info)
+        {
+            RuntimeContext.LoadDebugInfo(info);
+        }
+
         public void Execute()
         {
             RuntimeContext.Debug = Debug;
