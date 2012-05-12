@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using TurboNPortugol.Presenters;
+using TurboNPortugol.Views.About;
 using TurboNPortugol.Views.Exec;
 
 namespace TurboNPortugol.Views
@@ -43,6 +44,11 @@ namespace TurboNPortugol.Views
         public void CloseTab(string name)
         {
             tabControl1.TabPages.RemoveByKey(name);
+        }
+
+        private void tutoriaisToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            new AboutForm().ShowDialog();
         }
     }
 }

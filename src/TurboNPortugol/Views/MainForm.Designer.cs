@@ -92,6 +92,7 @@
             this.tutoriaisToolStripMenuItem.Name = "tutoriaisToolStripMenuItem";
             this.tutoriaisToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.tutoriaisToolStripMenuItem.Text = "Sobre Turbo NPortugol";
+            this.tutoriaisToolStripMenuItem.Click += new System.EventHandler(this.tutoriaisToolStripMenuItem_Click);
             // 
             // MainForm
             // 
