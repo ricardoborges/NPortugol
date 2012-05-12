@@ -10,8 +10,6 @@ namespace TurboNPortugol.Presenters
 
         void CreateWindow(string filepath);
         void CloseWindow(string key);
-        void Error(Exception ex);
-        void Error(string text);
     }
 
     public class MainPresenter : IMainPresenter
@@ -36,18 +34,6 @@ namespace TurboNPortugol.Presenters
         public void CloseWindow(string key)
         {
             MainView.CloseTab(key);
-        }
-
-        public void Error(Exception ex)
-        {
-            //MainView.ClearOutput();
-            //MainView.WriteOutput(ex.Message);
-        }
-
-        public void Error(string text)
-        {
-            //MainView.ClearOutput();
-            //MainView.WriteOutput(text);
         }
     }
 }

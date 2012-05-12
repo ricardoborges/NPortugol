@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 using NPortugol;
@@ -20,6 +21,9 @@ namespace TurboNPortugol.Presenters
         void Debug();
         void Step();
         void Stop();
+
+        void Error(Exception ex);
+        void Error(string text);
     }
 
     public class ExecPresenter : IExecPresenter
@@ -238,6 +242,18 @@ namespace TurboNPortugol.Presenters
 
             ExecView.Script.Select(sstart, slength);
             ExecView.Script.SelectionBackColor = Color.Yellow;
+        }
+
+        public void Error(Exception ex)
+        {
+            ExecView.ClearOutput();
+            ExecView.WriteOutput(ex.Message);
+        }
+
+        public void Error(string text)
+        {
+            ExecView.ClearOutput();
+            ExecView.WriteOutput(text);
         }
 
         #endregion

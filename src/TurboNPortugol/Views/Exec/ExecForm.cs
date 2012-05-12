@@ -59,7 +59,7 @@ namespace TurboNPortugol.Views.Exec
             }
             catch (Exception ex)
             {
-               ExecPresenter.MainPresenter.Error(ex);
+               ExecPresenter.Error(ex);
             }
         }
 
@@ -71,7 +71,7 @@ namespace TurboNPortugol.Views.Exec
             }
             catch (Exception ex)
             {
-                ExecPresenter.MainPresenter.Error(ex);
+                ExecPresenter.Error(ex);
             }
         }
 
@@ -94,7 +94,7 @@ namespace TurboNPortugol.Views.Exec
                 
                 BuildButton.Enabled = true;
                 BtRun.Enabled = true;
-                ExecPresenter.MainPresenter.Error(ex);
+                ExecPresenter.Error(ex);
             }
         }
 
@@ -110,7 +110,7 @@ namespace TurboNPortugol.Views.Exec
             catch (Exception ex)
             {
                 StepBtn.Enabled = false;
-                ExecPresenter.MainPresenter.Error(ex);
+                ExecPresenter.Error(ex);
             }
         }
 
