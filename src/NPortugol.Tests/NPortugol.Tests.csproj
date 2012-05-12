@@ -82,7 +82,6 @@
     <Compile Include="CompilerTestCase.cs" />
     <Compile Include="GrammarTestCase.cs" />
     <Compile Include="Integration\InteropTestCase.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime\Asm\Generated\ANTLRParserTestCase.cs" />
     <Compile Include="Runtime\Bootstrap\RuntimeContextTestCase.cs" />
     <Compile Include="Runtime\Instructions\Arithmetic\ArithmeticTestCase.cs" />
@@ -138,6 +137,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
