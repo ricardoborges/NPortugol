@@ -134,7 +134,7 @@
             this.groupBox2.Size = new System.Drawing.Size(614, 129);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Output";
+            this.groupBox2.Text = "Saída";
             // 
             // Output
             // 
@@ -154,7 +154,7 @@
             this.FecharBtn.Name = "FecharBtn";
             this.FecharBtn.Size = new System.Drawing.Size(75, 23);
             this.FecharBtn.TabIndex = 15;
-            this.FecharBtn.Text = "X";
+            this.FecharBtn.Text = "FECHAR";
             this.FecharBtn.UseVisualStyleBackColor = true;
             this.FecharBtn.Click += new System.EventHandler(this.FecharBtn_Click);
             // 

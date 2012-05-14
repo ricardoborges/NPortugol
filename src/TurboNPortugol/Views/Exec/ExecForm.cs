@@ -49,6 +49,12 @@ namespace TurboNPortugol.Views.Exec
 
         public DataGridView Symbols { get { return SymbolsGrid; } }
 
+        public string FilePath
+        {
+            get { return filePath; }
+            set { filePath = value; }
+        }
+
         private void BuildButton_Click(object sender, EventArgs e)
         {
             try

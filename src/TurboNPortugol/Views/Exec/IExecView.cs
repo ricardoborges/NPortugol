@@ -9,6 +9,8 @@ namespace TurboNPortugol.Views.Exec
         RichTextBox Script { get; }
 
         DataGridView Symbols { get; }
+        
+        string FilePath { get; set; }
 
         void ClearOutput();
 

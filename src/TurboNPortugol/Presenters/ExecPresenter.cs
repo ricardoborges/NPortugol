@@ -14,6 +14,9 @@ namespace TurboNPortugol.Presenters
         IExecView ExecView { get; set; }
         IMainPresenter MainPresenter { get; set; }
 
+        string ProgramName { get; set; }
+        string FilePath { get; set; }
+
         bool Debugging { get; }
 
         IList<string> Build(bool msg);
@@ -41,6 +44,11 @@ namespace TurboNPortugol.Presenters
         #region Properties
 
         public IMainPresenter MainPresenter { get; set; }
+
+        public string ProgramName { get; set; }
+
+        public string FilePath { get; set; }
+
         public IExecView ExecView { get; set; }
 
         public bool Debugging

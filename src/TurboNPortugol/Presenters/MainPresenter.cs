@@ -18,13 +18,21 @@ namespace TurboNPortugol.Presenters
 
         public int WindowCount { get; set; }
 
-        private string name = "Programa {0}";
+        private string name = "Programa {0}.p";
 
         public void CreateWindow(string filepath)
         {
-            var view = new ExecForm(filepath, string.Format(name, ++WindowCount));
+            name = string.Format(name, ++WindowCount);
 
-            var presenter = new ExecPresenter(this) { ExecView = view };
+            if (!string.IsNullOrEmpty(filepath))
+            {
+                var parts = filepath.Split('\\');
+                name = parts[parts.Length - 1];
+            }
+
+            var view = new ExecForm(filepath, name);
+
+            var presenter = new ExecPresenter(this) { ExecView = view, ProgramName = view.ProgramName, FilePath = view.FilePath};
 
             view.ExecPresenter = presenter;
 
