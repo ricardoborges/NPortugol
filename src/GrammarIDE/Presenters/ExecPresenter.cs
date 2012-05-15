@@ -133,12 +133,15 @@ namespace GrammarIDE.Presenters
 
             engine.LoadAsm(ExecView.Asm.Text);
 
+            MainPresenter.MainView.WriteOutput("Saída:");
+            MainPresenter.MainView.WriteLine();
+
             engine.Execute();
 
             Fill();
 
-            MainPresenter.MainView.WriteLine();
-            MainPresenter.MainView.WriteOutput("Executado com sucesso");
+            //MainPresenter.MainView.WriteLine();
+            //MainPresenter.MainView.WriteOutput("Executado com sucesso");
         }
 
         public void Debug()
