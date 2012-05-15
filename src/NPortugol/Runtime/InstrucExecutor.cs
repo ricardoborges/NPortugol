@@ -419,8 +419,26 @@ namespace NPortugol.Runtime
             var id = opResolver.In(target).SymbolId();
             var name = opResolver.Name();
             var _value = opResolver.In(opvalue).Value();
-
-            return SymbolTable.SetSymbolValue(name, id, context.CurrentFunction.Name, _value, target.IndexOffSet);
+			
+			int? index = null;
+			
+			if (target.IndexOffSet != null) 
+			    index = ResolveIndex(target.IndexOffSet);
+					
+            return SymbolTable.SetSymbolValue(name, id, context.CurrentFunction.Name, _value, index);
         }
+		
+        private int ResolveIndex(object value)
+        {
+            int r;
+
+            if (int.TryParse(value.ToString(), out r)) return r;
+
+            var name = opResolver.In(new Operand(OperandType.Variable, value)).SymbolId();
+
+            var _value = SymbolTable[name];
+
+            return int.Parse(_value.ToString());
+        }		
     }
 }

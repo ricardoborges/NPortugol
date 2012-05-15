@@ -82,5 +82,20 @@ namespace TurboNPortugol.Views
                 writer.Write(text);
             }
         }
+
+        private void novoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void fecharToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void novoToolStripMenuItem_Click_1(object sender, System.EventArgs e)
+        {
+            mainPresenter.CreateWindow(string.Empty);
+        }
     }
 }

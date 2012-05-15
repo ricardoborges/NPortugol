@@ -18,11 +18,11 @@ namespace TurboNPortugol.Presenters
 
         public int WindowCount { get; set; }
 
-        private string name = "Programa {0}.p";
+        private string templateName = "Programa {0}.p";
 
         public void CreateWindow(string filepath)
         {
-            name = string.Format(name, ++WindowCount);
+            string name = string.Format(templateName, ++WindowCount);
 
             if (!string.IsNullOrEmpty(filepath))
             {

@@ -34,21 +34,19 @@ namespace NPortugol.Runtime
             return string.Format("{0}_{1}_{2}", function, name, index).ToLower();
         }
 
-        public object SetSymbolValue(string name, string id, string function, object value, object index)
+        public object SetSymbolValue(string name, string id, string function, object value, int? index)
         {
             if (!ContainsKey(id))
                 this[id] = new Symbol {Name = name, Value = value, Function = function};
 
             if (index != null)
             {
-                int i = ResolveIndex(id, index);
-
                 var array = GetAsArray(id);
 
-                if (i >= array.Length)
-                    Array.Resize(ref array, i + 1);
+                if (index.Value >= array.Length)
+                    Array.Resize(ref array, index.Value + 1);
 
-                array[i] = value;
+                array[index.Value] = value;
 
                 this[id].Value = array;
 
@@ -56,17 +54,6 @@ namespace NPortugol.Runtime
             }
 
             return this[id].Value = value;
-        }
-
-        private int ResolveIndex(string id, object value)
-        {
-            int r;
-
-            if (int.TryParse(value.ToString(), out r)) return r;
-
-            var index = this[id];
-
-            return int.Parse(index.Value.ToString());
         }
 
         public object[] GetAsArray(string id)
@@ -77,8 +64,7 @@ namespace NPortugol.Runtime
             {
                 variable.Value = new object[1];
                 return (object[]) variable.Value;
-            }
-                
+            }  
 
             if (variable.Value.GetType() != typeof(object[]))
                 variable.Value = new[] { variable };
