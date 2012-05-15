@@ -74,7 +74,11 @@ namespace NPortugol.Runtime
             var variable = this[id];
 
             if (variable == null || variable.Value == null)
-                variable.Value = new[] { variable };
+            {
+                variable.Value = new object[1];
+                return (object[]) variable.Value;
+            }
+                
 
             if (variable.Value.GetType() != typeof(object[]))
                 variable.Value = new[] { variable };

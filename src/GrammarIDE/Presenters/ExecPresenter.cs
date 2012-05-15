@@ -212,7 +212,7 @@ namespace GrammarIDE.Presenters
 
             foreach (var item in stable)
             {
-                list.Add(new { item.Value.Name, item.Value.Value, item.Value.Function });
+                list.Add(new { item.Value.Name, Value = GetValue(item.Value.Value), item.Value.Function });
             }
 
             ExecView.Symbols.DataSource = list;            
@@ -290,6 +290,32 @@ namespace GrammarIDE.Presenters
 
             ExecView.Script.Select(sstart, slength);
             ExecView.Script.SelectionBackColor = Color.Yellow;
+        }
+
+        private object GetValue(object value)
+        {
+            if (value == null) return null;
+
+            var sb = new StringBuilder();
+
+            if (value.GetType() == typeof(object[]))
+            {
+                sb.Append("[");
+
+                foreach (var obj in (object[])value)
+                {
+                    if (sb.Length == 1)
+                        sb.Append(obj);
+                    else
+                        sb.Append("," + obj);
+                }
+
+                sb.Append("]");
+            }
+            else
+                return value;
+
+            return sb.ToString();
         }
 
         #endregion
