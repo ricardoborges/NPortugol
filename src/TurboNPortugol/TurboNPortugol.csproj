@@ -80,6 +80,12 @@
     <Compile Include="Presenters\ExecPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Views\About\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\About\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Exec\ExecForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +110,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\About\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Exec\ExecForm.resx">
       <DependentUpon>ExecForm.cs</DependentUpon>
     </EmbeddedResource>

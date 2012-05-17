@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Windows.Forms;
 using TurboNPortugol.Presenters;
+using TurboNPortugol.Views.About;
 using TurboNPortugol.Views.Exec;
 
 namespace TurboNPortugol.Views
@@ -48,7 +49,7 @@ namespace TurboNPortugol.Views
 
         private void tutoriaisToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            //new AboutForm().ShowDialog();
+            new AboutForm().ShowDialog();
         }
 
         private void salvarToolStripMenuItem_Click(object sender, System.EventArgs e)
