@@ -87,14 +87,14 @@ namespace GrammarIDE.Presenters
             writer.Write(dotgraph);
             writer.Close();
 
-            if (File.Exists("graph.gif")) File.Delete("graph.gif");
+            if (File.Exists("graph.png")) File.Delete("graph.png");
 
-            var psi = new ProcessStartInfo(dotpath, "-Tgif graph.dot -o graph.gif");
+            var psi = new ProcessStartInfo(dotpath, "-Tpng graph.dot -o graph.png");
             var p = new Process { StartInfo = psi };
             p.Start();
             p.WaitForExit();
 
-            AstView.LoadAstImage("graph.gif");
+            AstView.LoadAstImage("graph.png");
         }
     }
 }

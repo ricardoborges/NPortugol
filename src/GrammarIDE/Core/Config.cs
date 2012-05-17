@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -23,7 +24,10 @@ namespace GrammarIDE.Core
 
         public static Config Load()
         {
-            if (!File.Exists(name)) return new Config();
+            if (!File.Exists(name)) return new Config
+                                               {
+                                                   DotPath = AppDomain.CurrentDomain.BaseDirectory + "dot\\"
+                                               };
 
             using (var reader = new StreamReader(name))
             {

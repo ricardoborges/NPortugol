@@ -8,7 +8,7 @@ namespace GrammarIDE.Views
         {
             InitializeComponent();
 
-            ASTPicture.Load("graph.gif");
+            ASTPicture.Load("graph.png");
         }
     }
 }
