@@ -103,7 +103,7 @@ namespace TurboNPortugol.Presenters
 
         private object Leia(object[] objects)
         {
-            return Prompt.ShowDialog("Entrada1:", "Entrada2:");
+            return Prompt.ShowDialog("Digite a entrada:", "Leia");
         }
 
         #endregion

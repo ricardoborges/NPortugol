@@ -1,8 +1,10 @@
 ﻿funcao principal()
-  imprima(fat(5))
+  variavel x
+  x = leia()
+  imprima(fat(x))
 fim
 
-funcao fat(x)
-  se x == 0 retorne 1 fim
-  retorne x * fat(x-1)
+funcao fat(i)
+  se i == 0 retorne 1 fim
+  retorne i * fat(i-1)
 fim
