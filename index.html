@@ -17,42 +17,53 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Nportugol</h1>
-        <p>Simple structured .NET language based on pseudo-code-portuguese syntax</p>
+        <h1>NPortugol</h1>
+        <p>Compilador, runtime e ferramentas.</p>
         <p class="view"><a href="https://github.com/ricardoborges/NPortugol">View the Project on GitHub <small>ricardoborges/NPortugol</small></a></p>
         <ul>
-          <li><a href="https://github.com/ricardoborges/NPortugol/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/ricardoborges/NPortugol/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/downloads/ricardoborges/NPortugol/NPortugol-0.1.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="http://teamcity.codebetter.com/project.html?projectId=project197&tab=projectOverview">Build <strong>Server</strong></a></li>
           <li><a href="https://github.com/ricardoborges/NPortugol">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
+        <h3>Bem vindo!</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>NPortugol é uma biblioteca de linguagem estruturada baseada numa variação da sintaxe popularmente conhecida como Portugol (utilizada para representação e ensino de algoritmos sem o rigor de uma linguagem formal).</p>
+<p>Para um começo rápido, leia o <a href="https://github.com/ricardoborges/NPortugol/wiki/linguagem/">Tutorial da Linguagem</a> para conhecer as regras e sintaxes. Você pode editar e executar programas com a ferramenta <a href="TurboNPortugol.html">TurboNPortugol</a>.</p>
+<p>Para interessados no processo de compilação e execução, utilize a ferramenta <a href="GrammarIDE.html">GrammarIDE</a> para executar programas, visualizar AST gerada no parser e o bytecode gerado para a máquina virtual.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h3>Hello World!</h3>
+<pre><code>funcao principal()
+    imprima("Olá Mundo")
+fim</code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 
-<h3>Designer Templates</h3>
+<h3>Usando NPortugol como Scripting Language</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>O NPortugol pode ser utilizado como scripting language hospedando o runtime em qualquer aplicação .NET, aproveitando o recurso de interoperabilidade. 
+Isso possibilita, por exemplo, ter a linguagem como base para uma external DSL. Veja como no <a href="https://github.com/ricardoborges/NPortugol/wiki/Tutorial%20Scripting/">Tutorial Scripting</a></p>
 
-<h3>Rather Drive Stick?</h3>
+<h4>Exemplo C# => NPortugol</h4>
+<pre><code>var engine = new Engine();
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+engine.Compile("funcao soma(a, b) retorne a + b fim");
 
-<h3>Authors and Contributors</h3>
+var result = engine.Execute("soma", 2, 2);</code></pre>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h4>Exemplo NPortugol => C#</h4>
+<pre><code>var engine = new Engine();
 
-<h3>Support or Contact</h3>
+engine.HostContainer.Register("hoje", x => DateTime.Now.ToShortDateString());
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+engine.Compile(@"funcao principal() 
+                        variavel data
+                        data = hoje()
+                 fim");
+
+engine.Execute();</code></pre>
+
+
       </section>
     </div>
     <footer>
