@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using NPortugol.Runtime.Asm;
 using NPortugol.Runtime.Interop;
@@ -10,7 +11,7 @@ namespace NPortugol.Runtime
 
         public Engine()
         {
-            
+            compiler = new Npc();
         }
 
         public Engine(ICompiler compiler)
@@ -77,6 +78,9 @@ namespace NPortugol.Runtime
 
         public void Compile(string script)
         {
+            if (compiler == null)
+                throw new Exception("Nenhum compilador configurado para o engine.");
+
             LoadAsm(compiler.Compile(script));
         }
     }
