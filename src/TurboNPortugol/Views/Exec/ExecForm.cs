@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using AutocompleteMenuNS;
 using TurboNPortugol.Presenters;
 
 namespace TurboNPortugol.Views.Exec
@@ -13,6 +15,20 @@ namespace TurboNPortugol.Views.Exec
         public ExecForm()
         {
             InitializeComponent();
+
+            InitAutoComplete();
+        }
+
+        private void InitAutoComplete()
+        {
+            string[] snippets = { "se\nfim", "se\nsenao\nfim", "para var = num ate num\nfim", "para var = num ate num dec\nfim", "funcao principal()\nfim", "funcao ()\nfim", "retorne ", "variavel " };
+
+            var items = new List<AutocompleteItem>();
+
+            foreach (var item in snippets)
+                items.Add(new SnippetAutocompleteItem(item) { ImageIndex = 1 });
+
+            autocompleteMenu1.SetAutocompleteItems(items);
         }
 
         public ExecForm(string filePath, string name)
@@ -22,6 +38,8 @@ namespace TurboNPortugol.Views.Exec
 
             InitializeComponent();
             Init(filePath);
+            InitAutoComplete();
+            Script.Focus();
         }
 
         private void Init(string file)
@@ -42,7 +60,7 @@ namespace TurboNPortugol.Views.Exec
 
         private void CreateTemplate()
         {
-            Script.Text = "funcao principal()\r\n \r\nfim";
+            //Script.Text = "funcao principal()\r\n \r\nfim";
         }
 
         public IExecPresenter ExecPresenter { get; set; }

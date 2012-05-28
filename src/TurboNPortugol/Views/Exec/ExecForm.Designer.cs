@@ -34,11 +34,12 @@
             this.BtRun = new System.Windows.Forms.Button();
             this.StepBtn = new System.Windows.Forms.Button();
             this.BuildButton = new System.Windows.Forms.Button();
-            this.ScriptRun = new System.Windows.Forms.RichTextBox();
             this.StopBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Output = new System.Windows.Forms.RichTextBox();
             this.FecharBtn = new System.Windows.Forms.Button();
+            this.ScriptRun = new System.Windows.Forms.RichTextBox();
+            this.autocompleteMenu1 = new AutocompleteMenuNS.AutocompleteMenu();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SymbolsGrid)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -104,17 +105,6 @@
             this.BuildButton.UseVisualStyleBackColor = true;
             this.BuildButton.Click += new System.EventHandler(this.BuildButton_Click);
             // 
-            // ScriptRun
-            // 
-            this.ScriptRun.BackColor = System.Drawing.Color.White;
-            this.ScriptRun.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ScriptRun.ForeColor = System.Drawing.Color.Black;
-            this.ScriptRun.Location = new System.Drawing.Point(3, 34);
-            this.ScriptRun.Name = "ScriptRun";
-            this.ScriptRun.Size = new System.Drawing.Size(995, 457);
-            this.ScriptRun.TabIndex = 5;
-            this.ScriptRun.Text = "";
-            // 
             // StopBtn
             // 
             this.StopBtn.Enabled = false;
@@ -138,6 +128,7 @@
             // 
             // Output
             // 
+            this.autocompleteMenu1.SetAutocompleteMenu(this.Output, null);
             this.Output.BackColor = System.Drawing.Color.LightGray;
             this.Output.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Output.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,6 +148,29 @@
             this.FecharBtn.Text = "FECHAR";
             this.FecharBtn.UseVisualStyleBackColor = true;
             this.FecharBtn.Click += new System.EventHandler(this.FecharBtn_Click);
+            // 
+            // ScriptRun
+            // 
+            this.autocompleteMenu1.SetAutocompleteMenu(this.ScriptRun, this.autocompleteMenu1);
+            this.ScriptRun.BackColor = System.Drawing.Color.White;
+            this.ScriptRun.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScriptRun.ForeColor = System.Drawing.Color.Black;
+            this.ScriptRun.Location = new System.Drawing.Point(3, 34);
+            this.ScriptRun.Name = "ScriptRun";
+            this.ScriptRun.Size = new System.Drawing.Size(995, 457);
+            this.ScriptRun.TabIndex = 5;
+            this.ScriptRun.Text = "";
+            // 
+            // autocompleteMenu1
+            // 
+            this.autocompleteMenu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.autocompleteMenu1.ImageList = null;
+            this.autocompleteMenu1.Items = new string[] {
+        "funcao",
+        "se",
+        "para",
+        "fim"};
+            this.autocompleteMenu1.TargetControlWrapper = null;
             // 
             // ExecForm
             // 
@@ -193,5 +207,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox Output;
         private System.Windows.Forms.Button FecharBtn;
+        private AutocompleteMenuNS.AutocompleteMenu autocompleteMenu1;
     }
 }
