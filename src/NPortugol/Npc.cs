@@ -12,6 +12,8 @@ namespace NPortugol
 
         public Dictionary<int, int> SourceMap { get; set; }
 
+        public IList<string> FunctionNames { get; set; }
+
         public IList<string> Compile(string script)
         {
             var input = new ANTLRStringStream(script);
@@ -20,6 +22,8 @@ namespace NPortugol
             var parser = new NPortugolParser(tokens);
 
             var ast = parser.script();
+
+            FunctionNames = parser.Functions;
 
             var tree = (CommonTree)ast.Tree;
 
@@ -43,7 +47,6 @@ namespace NPortugol
             asm.Insert(0, "main:");
             asm.Add("EXIT");
         }
-
 
         public IList<string> CompileFile(string scriptfile)
         {

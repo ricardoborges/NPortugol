@@ -121,7 +121,7 @@ namespace TurboNPortugol.Presenters
             ExecView.WriteLine();
             ExecView.WriteOutput("Construído com sucesso");
 
-            return script;
+            return npc.FunctionNames;
         }
 
         public void Run()

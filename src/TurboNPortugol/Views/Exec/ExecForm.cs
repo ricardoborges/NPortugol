@@ -77,7 +77,12 @@ namespace TurboNPortugol.Views.Exec
         {
             try
             {
-                ExecPresenter.Build(true);
+                var fnames = ExecPresenter.Build(true);
+
+                foreach (var fname in fnames)
+                {
+                    autocompleteMenu1.AddItem(fname + "()");    
+                }
 
                 BtRun.Enabled = true;
             }
