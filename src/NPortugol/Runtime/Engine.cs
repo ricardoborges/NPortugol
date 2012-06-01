@@ -35,16 +35,19 @@ namespace NPortugol.Runtime
             set { hostContainer = value; }
         }
 
-        public void LoadAsm(string asm)
+        
+        public void Load(string asm)
         {
-            LoadAsm(asm.Split('\n'));
+            var bytecode = new Bytecode(asm.Split('\n'), null);
+            
+            Load(bytecode);
         }
 
-        public void LoadAsm(IList<string> lines)
+        public void Load(Bytecode bytecode)
         {
             var loader = new Loader(new AntlrRunnableBuilder {DebugInfo = Debug});
 
-            var runnable = loader.Load(lines);
+            var runnable = loader.Load(bytecode.Script);
 
             var script = new RuntimeScript(runnable);
 
@@ -81,7 +84,7 @@ namespace NPortugol.Runtime
             if (compiler == null)
                 throw new Exception("Nenhum compilador configurado para o engine.");
 
-            LoadAsm(compiler.Compile(script));
+            Load(compiler.Compile(script));
         }
     }
 }

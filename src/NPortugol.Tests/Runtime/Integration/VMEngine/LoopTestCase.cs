@@ -12,7 +12,7 @@ namespace NPortugol.Tests.Runtime.Integration.VMEngine
         {
             var engine = new Engine();
 
-            engine.LoadAsm(GetLines());
+            engine.Load(new Bytecode(GetLines()));
 
             Assert.AreEqual(1, engine.Execute("fat", 0));
             Assert.AreEqual(6, engine.Execute("fat", 3));

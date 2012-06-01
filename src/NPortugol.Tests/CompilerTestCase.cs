@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace NPortugol.Tests
@@ -13,10 +14,15 @@ namespace NPortugol.Tests
             compiler = new Npc();
         }
 
+        public IList<string> Compile(string code)
+        {
+            return compiler.Compile(code).Script;
+        }
+
         [Test]
         public void Build_Main_Function()
         {
-            var script = compiler.Compile("funcao principal() fim");
+            var script = Compile("funcao principal() fim");
 
             Assert.AreEqual("main:", script[0]);
             Assert.AreEqual("RET", script[1]);
@@ -25,7 +31,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Multi_Functions()
         {
-            var script = compiler.Compile("funcao principal() fim funcao do() fim funcao other() fim");
+            var script = Compile("funcao principal() fim funcao do() fim funcao other() fim");
 
             Assert.AreEqual("main:", script[0]);
             Assert.AreEqual("do:", script[2]);
@@ -35,7 +41,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Function_Params()
         {
-            var script = compiler.Compile("funcao do(x) fim");
+            var script = Compile("funcao do(x) fim");
 
             Assert.AreEqual("do:", script[0]);
             Assert.AreEqual("DCL x", script[1]);
@@ -45,7 +51,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Function_Call()
         {
-            var script = compiler.Compile("funcao main() do(10) fim");
+            var script = Compile("funcao main() do(10) fim");
 
             Assert.AreEqual("main:", script[0]);
             Assert.AreEqual("PUSH 10", script[1]);
@@ -57,29 +63,29 @@ namespace NPortugol.Tests
         {
             var template = "funcao main() se 1 {0} 1 entao fim fim";
 
-            var script = compiler.Compile(string.Format(template, "=="));
+            var script = Compile(string.Format(template, "=="));
             Assert.AreEqual("JNE label_0", script[3]);
 
-            script = compiler.Compile(string.Format(template, ">"));
+            script = Compile(string.Format(template, ">"));
             Assert.AreEqual("JLE label_0", script[3]);
 
-            script = compiler.Compile(string.Format(template, "<"));
+            script = Compile(string.Format(template, "<"));
             Assert.AreEqual("JGE label_0", script[3]);
 
-            script = compiler.Compile(string.Format(template, ">="));
+            script = Compile(string.Format(template, ">="));
             Assert.AreEqual("JL label_0", script[3]);
 
-            script = compiler.Compile(string.Format(template, "<="));
+            script = Compile(string.Format(template, "<="));
             Assert.AreEqual("JG label_0", script[3]);
 
-            script = compiler.Compile(string.Format(template, "!="));
+            script = Compile(string.Format(template, "!="));
             Assert.AreEqual("JE label_0", script[3]);
         }
 
         [Test]
         public void Build_Branching_Else()
         {
-            var script = compiler.Compile("funcao main() se 1 == 1 entao variavel x senao variavel y fim fim");
+            var script = Compile("funcao main() se 1 == 1 entao variavel x senao variavel y fim fim");
 
             Assert.AreEqual("JNE label_0", script[3]);
             Assert.AreEqual("JMP label_1", script[5]);
@@ -90,13 +96,13 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Loop_For()
         {
-            var script = compiler.Compile("funcao main() para x = 1 ate 10 fim fim");
+            var script = Compile("funcao main() para x = 1 ate 10 fim fim");
             Assert.AreEqual(".label_0", script[2]);
             Assert.AreEqual("JG label_1", script[5]);
             Assert.AreEqual("JMP label_0", script[7]);
             Assert.AreEqual(".label_1", script[8]);
 
-            script = compiler.Compile("funcao main() para x = 1 ate 10 dec fim fim");
+            script = Compile("funcao main() para x = 1 ate 10 dec fim fim");
             Assert.AreEqual("JL label_1", script[5]);
         }
     }

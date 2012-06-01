@@ -12,7 +12,7 @@ namespace NPortugol.Tests.Runtime.Integration.VMEngine
         {
             var engine = new Engine();
 
-            engine.LoadAsm(GetLines());
+            engine.Load(new Bytecode(GetLines()));
 
             Assert.AreEqual(9, engine.Execute("pow", 3, 2));
             Assert.AreEqual(27, engine.Execute("pow", 3, 3));

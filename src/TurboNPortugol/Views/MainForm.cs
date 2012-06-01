@@ -98,5 +98,10 @@ namespace TurboNPortugol.Views
         {
             mainPresenter.CreateWindow(string.Empty);
         }
+
+        private void wikiToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

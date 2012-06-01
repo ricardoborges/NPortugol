@@ -77,9 +77,9 @@ namespace TurboNPortugol.Views.Exec
         {
             try
             {
-                var fnames = ExecPresenter.Build(true);
+                var bytecode = ExecPresenter.Build(true);
 
-                foreach (var fname in fnames)
+                foreach (var fname in bytecode.FunctionNames)
                 {
                     autocompleteMenu1.AddItem(fname + "()");    
                 }

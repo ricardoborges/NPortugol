@@ -32,6 +32,8 @@ namespace GrammarIDE.Presenters
         private Engine engine = new Engine {EnableGC = false};
         private readonly IConfigRepo configRepo;
 
+        private Dictionary<int, int> sourceMap;
+
         public ExecPresenter(IConfigRepo configRepo, IMainPresenter mainPresenter)
         {
             this.configRepo = configRepo;
@@ -117,12 +119,14 @@ namespace GrammarIDE.Presenters
 
             psc.DebugInfo = true;
 
-            var script = psc.Compile(ExecView.Script.Text);
+            var bytecode = psc.Compile(ExecView.Script.Text);
 
-            ShowAsm(script);
+            ShowAsm(bytecode.Script);
 
             MainPresenter.MainView.WriteLine();
             MainPresenter.MainView.WriteOutput("Construído com sucesso");
+
+            sourceMap = bytecode.SourceMap;
         }
 
         public void Run()
@@ -131,7 +135,7 @@ namespace GrammarIDE.Presenters
 
             MainPresenter.MainView.ClearOutput();
 
-            engine.LoadAsm(ExecView.Asm.Text);
+            engine.Load(ExecView.Asm.Text);
 
             MainPresenter.MainView.WriteOutput("Saída:");
             MainPresenter.MainView.WriteLine();
@@ -150,7 +154,7 @@ namespace GrammarIDE.Presenters
 
             engine.Debug = true;
 
-            engine.LoadAsm(ExecView.Asm.Text);
+            engine.Load(ExecView.Asm.Text);
 
             MainPresenter.MainView.ClearOutput();
 
@@ -272,14 +276,14 @@ namespace GrammarIDE.Presenters
             ExecView.Asm.SelectionBackColor = Color.Yellow;
             ExecView.Asm.SelectionColor = Color.Black;
 
-            if (!psc.SourceMap.ContainsKey(line)) return;
+            if (!sourceMap.ContainsKey(line)) return;
 
             SelectSourceLine(line);
         }
 
         private void SelectSourceLine(int line)
         {
-            var sline = psc.SourceMap[line];
+            var sline = sourceMap[line];
 
             if (sline < 0) return;
 

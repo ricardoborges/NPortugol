@@ -19,7 +19,7 @@ namespace TurboNPortugol.Presenters
 
         bool Debugging { get; }
 
-        IList<string> Build(bool msg);
+        Bytecode Build(bool msg);
         void Run();
         void Debug();
         void Step();
@@ -33,6 +33,7 @@ namespace TurboNPortugol.Presenters
     {
         private Npc npc = new Npc();
         private Engine engine = new Engine {EnableGC = false};
+        private Dictionary<int, int> sourceMap;
 
         public ExecPresenter(IMainPresenter mainPresenter)
         {
@@ -110,25 +111,27 @@ namespace TurboNPortugol.Presenters
 
         #region Actions
 
-        public IList<string> Build(bool msg)
+        public Bytecode Build(bool msg)
         {
             npc.DebugInfo = true;
 
-            var script = npc.Compile(ExecView.Script.Text);
+            var bytecode = npc.Compile(ExecView.Script.Text);
 
-            if (!msg) return script;
+            if (!msg) return bytecode;
             
             ExecView.WriteLine();
             ExecView.WriteOutput("Construído com sucesso");
 
-            return npc.FunctionNames;
+            sourceMap = bytecode.SourceMap;
+
+            return bytecode;
         }
 
         public void Run()
         {
             ExecView.ClearOutput();
 
-            engine.LoadAsm(Build(false));
+            engine.Load(Build(false));
 
             ExecView.WriteOutput("Saída:");
             ExecView.WriteLine();
@@ -144,7 +147,7 @@ namespace TurboNPortugol.Presenters
         {
             engine.Debug = true;
 
-            engine.LoadAsm(Build(false));
+            engine.Load(Build(false));
 
             LoadDebugInfo();
 
@@ -157,7 +160,7 @@ namespace TurboNPortugol.Presenters
         {
             var dict = new Dictionary<int, int>();
 
-            foreach (var item in npc.SourceMap)
+            foreach (var item in sourceMap)
             {
                 if (!dict.ContainsValue(item.Value) && item.Value > 0)
                     dict.Add(item.Key, item.Value);
@@ -216,8 +219,6 @@ namespace TurboNPortugol.Presenters
             ExecView.Symbols.DataSource = list;            
         }
 
-
-
         private void ClearLines()
         {
             ExecView.Script.SelectAll();
@@ -229,14 +230,14 @@ namespace TurboNPortugol.Presenters
         {
             var line = engine.RuntimeContext.CurrentInst.Index;
 
-            if (!npc.SourceMap.ContainsKey(line)) return;
+            if (!sourceMap.ContainsKey(line)) return;
 
             SelectSourceLine(line);
         }
 
         private void SelectSourceLine(int line)
         {
-            var sline = npc.SourceMap[line];
+            var sline = sourceMap[line];
 
             if (sline < 0) return;
 
