@@ -7,28 +7,22 @@ namespace NPortugol.Runtime
 {
     public class RuntimeContext : IRuntimeContext
     {
-        private readonly RuntimeScript runtimeScript;
-
         private readonly InstrucExecutor executor;
 
         private Dictionary<int, int> sourceMap;
 
-        public RuntimeContext(RuntimeScript script)
+        public RuntimeContext(Runnable runnable)
         {
-            Runnable = script.Runnable;
-
-            runtimeScript = script;
+            Runnable = runnable;
 
             HostContainer = new HostContainer();
 
             executor = new InstrucExecutor(this);
         }
-        
-        public RuntimeContext(RuntimeScript script, IHostContainer hostContainer)
-        {
-            Runnable = script.Runnable;
 
-            runtimeScript = script;
+        public RuntimeContext(Runnable runnable, IHostContainer hostContainer)
+        {
+            Runnable = runnable;
 
             HostContainer = hostContainer;
 

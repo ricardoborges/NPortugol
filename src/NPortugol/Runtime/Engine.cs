@@ -49,9 +49,7 @@ namespace NPortugol.Runtime
 
             var runnable = loader.Load(bytecode.Script);
 
-            var script = new RuntimeScript(runnable);
-
-            RuntimeContext = new RuntimeContext(script)
+            RuntimeContext = new RuntimeContext(runnable)
                                  {
                                      HostContainer = HostContainer, 
                                      EnableGC = EnableGC

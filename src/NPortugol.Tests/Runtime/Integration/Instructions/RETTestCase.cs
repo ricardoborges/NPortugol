@@ -23,9 +23,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             var runn = new Runnable(stream, ftable);
 
-            var script = new RuntimeScript(runn);
-
-            var context = new RuntimeContext(script);
+            var context = new RuntimeContext(runn);
 
             context.Execute();
 

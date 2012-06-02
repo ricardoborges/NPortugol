@@ -13,9 +13,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             var runnable = GetRunnableWithMainFor(GetInstructions());
 
-            var script = new RuntimeScript(runnable);
-
-            var context = new RuntimeContext(script);
+            var context = new RuntimeContext(runnable);
 
             context.Execute();
 
@@ -29,7 +27,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             var runnable = GetRunnableWithMainFor(GetInstructions2());
 
-            var script = new RuntimeScript(runnable);
+            var script = runnable;
 
             var context = new RuntimeContext(script);
 
@@ -45,7 +43,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             var runnable = GetRunnableWithMainFor(GetIlegalInstructions()); 
 
-            var script = new RuntimeScript(runnable);
+            var script = runnable;
 
             var context = new RuntimeContext(script);
 
@@ -57,7 +55,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             var runnable = GetRunnableWithMainFor(GetInstructions3());
 
-            var script = new RuntimeScript(runnable);
+            var script = runnable;
 
             var context = new RuntimeContext(script);
 
@@ -73,7 +71,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             var runnable = GetRunnableWithMainFor(GetInstructions4());
 
-            var script = new RuntimeScript(runnable);
+            var script = runnable;
 
             var context = new RuntimeContext(script);
 

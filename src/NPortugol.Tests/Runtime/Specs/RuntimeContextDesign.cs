@@ -9,12 +9,7 @@ namespace NPortugol.Tests.Runtime.Specs
         [Test]
         public void CreateContext()
         {
-            var context = new RuntimeContext(CreateRuntimeScript());
-        }
-
-        public RuntimeScript CreateRuntimeScript()
-        {
-            return new RuntimeScript(CreateRunnable());
+            var context = new RuntimeContext(CreateRunnable());
         }
 
         public Runnable CreateRunnable()

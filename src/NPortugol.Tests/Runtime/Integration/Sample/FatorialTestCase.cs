@@ -12,9 +12,7 @@ namespace NPortugol.Tests.Runtime.Integration.Sample
         {
             var runnable = GetRunnableFor("fat", GetInstructions());
 
-            var script = new RuntimeScript(runnable);
-
-            var context = new RuntimeContext(script);
+            var context = new RuntimeContext(runnable);
 
             var total = context.Execute("fat", 3);
 

@@ -29,9 +29,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             var runnable = GetRunnableWithMainFor(GetInstructions());
 
-            var script = new RuntimeScript(runnable);
-
-            var context = new RuntimeContext(script);
+            var context = new RuntimeContext(runnable);
 
             context.HostContainer.Register("Msg", new MensagemFunc());
 
@@ -45,7 +43,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             var runnable = GetRunnableWithMainFor(GetInstructions());
 
-            var script = new RuntimeScript(runnable);
+            var script = runnable;
 
             var context = new RuntimeContext(script);
 

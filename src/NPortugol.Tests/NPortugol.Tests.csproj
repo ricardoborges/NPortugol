@@ -78,7 +78,6 @@
     <Compile Include="BaseTest.cs" />
     <Compile Include="CompilerTestCase.cs" />
     <Compile Include="GrammarTestCase.cs" />
-    <Compile Include="ILEmitterTestCase.cs" />
     <Compile Include="Integration\InteropTestCase.cs" />
     <Compile Include="Runtime\Asm\Generated\ANTLRParserTestCase.cs" />
     <Compile Include="Runtime\Bootstrap\RuntimeContextTestCase.cs" />
@@ -111,7 +110,6 @@
     <Compile Include="Runtime\Specs\InstructionDesign.cs" />
     <Compile Include="Runtime\Specs\RunnableDesign.cs" />
     <Compile Include="Runtime\Specs\RuntimeContextDesign.cs" />
-    <Compile Include="Runtime\Specs\RuntimeScriptDesign.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NPortugol\NPortugol.csproj">

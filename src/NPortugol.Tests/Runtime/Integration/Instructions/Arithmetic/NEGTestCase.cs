@@ -12,7 +12,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions.Arithmetic
         {
             var runnable = GetRunnableWithMainFor(GetInstructions());
 
-            var context = new RuntimeContext(new RuntimeScript(runnable));
+            var context = new RuntimeContext(runnable);
 
             context.Execute();
 

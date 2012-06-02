@@ -10,9 +10,9 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         [Test]
         public void Process_Should_Invoke_Defined_Function()
         {
-            var script = BuildNoParamsScript();
+            var runnable = BuildNoParamsScript();
 
-            var context = new RuntimeContext(script);
+            var context = new RuntimeContext(runnable);
             
             context.Execute();
 
@@ -23,9 +23,9 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         [Test]
         public void Process_Should_Invoke_Defined_Function_With_Params()
         {
-            var script = BuildWithParamsScript();
+            var runnable = BuildWithParamsScript();
 
-            var context = new RuntimeContext(script);
+            var context = new RuntimeContext(runnable);
             
             context.Execute();
 
@@ -35,7 +35,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
             Assert.AreEqual("Ola", context.GetSymbolValue("main_msg_0"));
         }
 
-        public RuntimeScript BuildNoParamsScript()
+        public Runnable BuildNoParamsScript()
         {
             var list = new List<Instruction>
                            {
@@ -56,7 +56,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
             return GetScript(list.ToArray(), 4);
         }
 
-        public RuntimeScript BuildWithParamsScript()
+        public Runnable BuildWithParamsScript()
         {
             var list = new List<Instruction>
                            {
@@ -86,7 +86,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
             return GetScript(list.ToArray(), 8);
         }
 
-        public RuntimeScript GetScript(Instruction[] instructions, int secondIndex)
+        public Runnable GetScript(Instruction[] instructions, int secondIndex)
         {
             var stream = new InstrucStream(instructions);
 
@@ -99,9 +99,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
                                  { "Do", dofunction}
                              };
 
-            var runn = new Runnable(stream, ftable);
-
-            return new RuntimeScript(runn);
+            return new Runnable(stream, ftable);
         }
     }
 }

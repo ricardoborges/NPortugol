@@ -10,9 +10,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             var runnable = GetRunnableWithMainFor(instructions);
 
-            var script = new RuntimeScript(runnable);
-
-            return new RuntimeContext(script);            
+            return new RuntimeContext(runnable);            
         }
     }
 }

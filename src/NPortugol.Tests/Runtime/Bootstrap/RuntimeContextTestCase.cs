@@ -50,7 +50,7 @@ namespace NPortugol.Tests.Runtime.Bootstrap
 
         public RuntimeContext CreateContext(Runnable runnable)
         {
-            var script = new RuntimeScript(runnable);
+            var script = runnable;
 
             return  new RuntimeContext(script);
         }
