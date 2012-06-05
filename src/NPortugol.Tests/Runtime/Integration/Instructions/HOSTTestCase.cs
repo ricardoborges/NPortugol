@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using NPortugol.Runtime;
 using NPortugol.Runtime.Interop;
@@ -11,6 +12,8 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             return "Esta é uma mensagem from C#";
         }
+
+        public string Name { get; set; }
     }
 
     public class PlusFunc : IHostFunction
@@ -19,6 +22,8 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
         {
             return (int)parameters[0] + (int)parameters[1];
         }
+
+        public string Name { get; set; }
     }
 
     [TestFixture]

@@ -1,16 +1,21 @@
+using System.Collections.Generic;
+
 namespace NPortugol.Runtime
 {
     public class Function
     {
+        public const string MainName = "main";
+
         public Function(string name, int entryPoint)
         {
             Name = name;
             EntryPoint = entryPoint;
+            Parameters = new List<string>();
         }
 
-        public const string MainName = "main";
-
         public string Name { get; private set; }
+
+        public IList<string> Parameters { get; private set; }
 
         public int EntryPoint { get; private set; }
 

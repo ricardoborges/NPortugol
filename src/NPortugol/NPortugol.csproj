@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="AsmTemplate.cs" />
     <Compile Include="Emitter.cs" />
+    <Compile Include="Modules\DefaultModule.cs" />
     <Compile Include="NPortugolLexer.cs" />
     <Compile Include="NPortugolParser.cs" />
     <Compile Include="NPortugolWalker.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Runtime\Interop\HostContainer.cs" />
     <Compile Include="Runtime\Interop\IHostContainer.cs" />
     <Compile Include="Runtime\Interop\IHostFunction.cs" />
+    <Compile Include="Runtime\Interop\IModule.cs" />
     <Compile Include="Runtime\IRuntimeContext.cs" />
     <Compile Include="Runtime\IStackItem.cs" />
     <Compile Include="Runtime\Loader.cs" />

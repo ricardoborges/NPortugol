@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NPortugol.Modules;
 using NPortugol.Runtime.Asm;
 using NPortugol.Runtime.Interop;
 
@@ -7,16 +8,26 @@ namespace NPortugol.Runtime
 {
     public class Engine
     {
-        private readonly ICompiler compiler;
+        private ICompiler compiler;
+        private IHostContainer hostContainer;
 
         public Engine()
         {
-            compiler = new Npc();
+            Init(new Npc());
         }
 
         public Engine(ICompiler compiler)
         {
+            Init(compiler);
+        }
+
+        public void Init(ICompiler compiler)
+        {
             this.compiler = compiler;
+
+            hostContainer = new HostContainer();
+            
+            Install(new DefaultModule());
         }
 
         public bool Debug { get; set; }
@@ -27,14 +38,11 @@ namespace NPortugol.Runtime
 
         public IRuntimeContext RuntimeContext { get; set; }
 
-        private IHostContainer hostContainer;
-
         public IHostContainer HostContainer 
         { 
-            get { return hostContainer ?? (hostContainer = new HostContainer()); }
+            get { return hostContainer; }
             set { hostContainer = value; }
         }
-
         
         public void Load(string asm)
         {
@@ -83,6 +91,14 @@ namespace NPortugol.Runtime
                 throw new Exception("Nenhum compilador configurado para o engine.");
 
             Load(compiler.Compile(script));
+        }
+
+        public void Install(IModule module)
+        {
+            foreach (var function in module.Functions)
+            {
+                HostContainer.Register(function.Key, function.Value);
+            }
         }
     }
 }

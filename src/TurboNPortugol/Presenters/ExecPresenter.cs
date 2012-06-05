@@ -63,15 +63,15 @@ namespace TurboNPortugol.Presenters
 
         private void BindFunctions()
         {
-            engine.HostContainer.Register("imprima", x => ExecView.WriteOutput(((Operand)x[0]).Value.ToString()));
-            engine.HostContainer.Register("imprimaVetor", x => ImprimaVetor(x) );
-            engine.HostContainer.Register("leia", x => Leia(x));
-            engine.HostContainer.Register("tamanho", x => Tamanho(x));
+            engine.HostContainer.Register("imprima", parameters => ExecView.WriteOutput((parameters[0]).ToString()));
+            engine.HostContainer.Register("imprimaVetor", ImprimaVetor );
+            engine.HostContainer.Register("leia", Leia);
+            engine.HostContainer.Register("tamanho", Tamanho);
         }
 
         private object ImprimaVetor(object[] parameters)
         {
-            var list = ((Operand) parameters[0]).Value as object[];
+            var list = parameters[0] as object[];
 
             if (list == null) return string.Empty;
 
@@ -96,9 +96,9 @@ namespace TurboNPortugol.Presenters
 
         private object Tamanho(object[] parameters)
         {
-            var parameter = (Operand)parameters[0];
+            var parameter = parameters[0];
 
-            return ((object[])parameter.Value).Length;
+            return ((object[])parameter).Length;
 
         }
 
