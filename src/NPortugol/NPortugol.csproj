@@ -81,6 +81,7 @@
     <Compile Include="Runtime\Asm\ASMParser.cs" />
     <Compile Include="Runtime\Asm\IRunnableBuilder.cs" />
     <Compile Include="Runtime\Bytecode.cs" />
+    <Compile Include="Runtime\BytecodeSerializer.cs" />
     <Compile Include="Runtime\Engine.cs" />
     <Compile Include="Runtime\Exceptions\FunctionNotFoundException.cs" />
     <Compile Include="Runtime\Exceptions\MainNotFoundException.cs" />

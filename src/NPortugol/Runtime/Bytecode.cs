@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 
 namespace NPortugol.Runtime
 {
+    [Serializable]
     public class Bytecode
     {
         private readonly IList<string> script;

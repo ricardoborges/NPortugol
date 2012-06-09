@@ -36,5 +36,28 @@ namespace NPortugol
                 return Compile(file);
             }
         }
+
+        public void WriteToDisk(string filename)
+        {
+            var bytecode = CompileFile(filename);
+
+            new BytecodeSerializer().Create(ExtractName(filename), bytecode);
+        }
+
+        public Bytecode ReadFromDisk(string filename)
+        {
+            return new BytecodeSerializer().Read(filename);
+        }
+
+        private static string ExtractName(string filename)
+        {
+            var parts = filename.Split('\\');
+
+            var cname = parts[parts.Length - 1];
+
+            var name = cname.Split('.')[0];
+
+            return string.Format("{0}.{1}", name, "npx");
+        }
     }
 }
