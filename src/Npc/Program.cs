@@ -48,6 +48,8 @@ namespace Npc
                 Console.WriteLine("-c    Compila o codigo fonte para o formato binario. Ex: npc -c ola.txt");
                 Console.WriteLine("-b    Gera o bytecode em arquivo texto para visualização. Ex: npc ola.txt -b");
                 Console.WriteLine("-e    Executa um programa compilado. Ex: npc -e ola.npx");
+                Console.WriteLine("-f    Especifica a funcao. Ex: npc ola.npx -f ola");
+                Console.WriteLine("-p    Informa parametros. Ex: npc ola.npx -f soma -p 2,2");
                 Console.WriteLine("-a    Ajuda.");
                 return;
             }
