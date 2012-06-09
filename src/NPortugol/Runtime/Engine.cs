@@ -78,7 +78,12 @@ namespace NPortugol.Runtime
             Debugging = RuntimeContext.Debugging;
         }
 
-        public object Execute(string function, params object[] parameters)
+        public object Execute(string function, object parameter)
+        {
+            return Execute(function, new[] {parameter});
+        }
+
+        public object Execute(string function, object[] parameters)
         {
             RuntimeContext.Debug = Debug;
 

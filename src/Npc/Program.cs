@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using CommandLine.Utility;
 using Npc.Modules;
 using NPortugol.Runtime;
@@ -10,19 +12,45 @@ namespace Npc
     {
         static void Main(string[] args)
         {
-            bool compile, execute, bytecode;
+            try
+            {
+                Do(args);
+            }
+            catch (Exception ex)
+            {
+                Console.Write("Erro: programa inválido.");
+            }
+        }
+
+        private static void Do(string[] args)
+        {
+            bool compile, execute, bytecode, help;
             string function;
             string parameters;
 
-            if (args.Length == 0) return;
-
             var arguments = new Arguments(args);
 
+            help = arguments.Contains("a");
             compile = arguments.Contains("c");
             bytecode = arguments.Contains("b");
             execute = arguments.Contains("e");
             function = arguments.Contains("f") ? arguments["f"] : string.Empty;
             parameters = arguments.Contains("p") ? arguments["p"] : string.Empty;
+
+            if (help || args.Length == 0)
+            {
+                Console.WriteLine("--- Ajuda ---");
+                Console.WriteLine("");
+                Console.WriteLine("Para executar interpretando um programa: npc.exe _arquivo_");
+                Console.WriteLine("");
+                Console.WriteLine("Outras opções: ");
+                Console.WriteLine("");
+                Console.WriteLine("-c    Compila o codigo fonte para o formato binario. Ex: npc -c ola.txt");
+                Console.WriteLine("-b    Gera o bytecode em arquivo texto para visualização. Ex: npc ola.txt -b");
+                Console.WriteLine("-e    Executa um programa compilado. Ex: npc -e ola.npx");
+                Console.WriteLine("-a    Ajuda.");
+                return;
+            }
 
             if (bytecode)
             {
@@ -38,7 +66,8 @@ namespace Npc
 
             if (execute)
             {
-                Execute(args[0]);
+                Execute(args[0], function, parameters);
+                return;
             }
 
             Run(args[0], function, parameters);
@@ -87,7 +116,14 @@ namespace Npc
                 engine.Execute();
             else
             {
-               // engine.Execute("")
+                var list = new List<object>();
+                
+                foreach (var parameter in parameters.Split(','))
+                {
+                    list.Add(parameter.Trim());
+                }
+
+                engine.Execute(function, list.ToArray());
             }
 
             Console.WriteLine("");
@@ -96,12 +132,25 @@ namespace Npc
             Console.WriteLine(string.Format("{0} executado com sucesso. <ENTER>", filename));
         }
 
-        private static void Execute(string filename)
+        private static void Execute(string filename, string function, string parameters)
         {
             var engine = new Engine();
             engine.Load(new NPortugol.Npc().ReadFromDisk(filename));
             engine.Install(new ConsoleModule());
-            engine.Execute();
+
+            if (string.IsNullOrEmpty(function))
+                engine.Execute();
+            else
+            {
+                var list = new List<object>();
+
+                foreach (var parameter in parameters.Split(','))
+                {
+                    list.Add(parameter.Trim());
+                }
+
+                engine.Execute(function, list.ToArray());
+            }
 
             Console.WriteLine("");
             Console.WriteLine("");

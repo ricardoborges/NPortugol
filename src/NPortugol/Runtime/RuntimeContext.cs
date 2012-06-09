@@ -75,7 +75,12 @@ namespace NPortugol.Runtime
             
         }
 
-        public object Execute(string function, params object[] parameters)
+        public object Execute(string function, object parameter)
+        {
+            return Execute(function, new[] {parameter});
+        }
+
+        public object Execute(string function, object[] parameters)
         {
             Init(function, parameters);
 
@@ -116,7 +121,7 @@ namespace NPortugol.Runtime
             return Runnable.GetSymbolValue(id, index);
         }
 
-        private void Init(Function function, params object[] parameters)
+        private void Init(Function function, object[] parameters)
         {
             Runnable.RuntimeStack.Clear();
 
@@ -138,7 +143,7 @@ namespace NPortugol.Runtime
             if (!Runnable.HasMainFunction())
                 throw new MainNotFoundException();
 
-            Init(Runnable.MainFunction);
+            Init(Runnable.MainFunction, null);
         }
 
         public void Init(string function)
@@ -156,7 +161,7 @@ namespace NPortugol.Runtime
             sourceMap = info;
         }
 
-        private void Init(string function, params object[] parameters)
+        private void Init(string function, object[] parameters)
         {
             if (!Runnable.HasFunction(function))
                 throw new FunctionNotFoundException(function);

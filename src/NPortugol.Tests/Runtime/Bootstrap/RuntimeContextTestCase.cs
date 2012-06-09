@@ -21,7 +21,7 @@ namespace NPortugol.Tests.Runtime.Bootstrap
         {
             var context = CreateContext(GetRunnableFor("DoSomething", GetDeclareXInstructions()));
 
-            Assert.Throws(typeof (FunctionNotFoundException), () => context.Execute("DoOther"));
+            Assert.Throws(typeof (FunctionNotFoundException), () => context.Execute("DoOther", null));
         }
 
         [Test]
