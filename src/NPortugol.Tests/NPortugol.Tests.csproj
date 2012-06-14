@@ -110,6 +110,7 @@
     <Compile Include="Runtime\Specs\InstructionDesign.cs" />
     <Compile Include="Runtime\Specs\RunnableDesign.cs" />
     <Compile Include="Runtime\Specs\RuntimeContextDesign.cs" />
+    <Compile Include="TranslationTestCase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NPortugol\NPortugol.csproj">

@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="AsmTemplate.cs" />
     <Compile Include="Emitter.cs" />
+    <Compile Include="ILTranslator.cs" />
     <Compile Include="Modules\DefaultModule.cs" />
     <Compile Include="NPortugolLexer.cs" />
     <Compile Include="NPortugolParser.cs" />
