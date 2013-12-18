@@ -63,10 +63,10 @@ namespace TurboNPortugol.Presenters
 
         private void BindFunctions()
         {
-            engine.HostContainer.Register("imprima", parameters => ExecView.WriteOutput((parameters[0]).ToString()));
-            engine.HostContainer.Register("imprimaVetor", ImprimaVetor );
-            engine.HostContainer.Register("leia", Leia);
-            engine.HostContainer.Register("tamanho", Tamanho);
+            engine.HostContainer.Register("imprima", parameters => ExecView.WriteOutput((parameters[0]).ToString()), true);
+            engine.HostContainer.Register("imprimaVetor", ImprimaVetor, true);
+            engine.HostContainer.Register("leia", Leia, false);
+            engine.HostContainer.Register("tamanho", Tamanho, true);
         }
 
         private object ImprimaVetor(object[] parameters)
@@ -116,6 +116,7 @@ namespace TurboNPortugol.Presenters
             npc.DebugInfo = true;
 
             var bytecode = npc.Compile(ExecView.Script.Text);
+            sourceMap = bytecode.SourceMap;
 
             if (!msg) return bytecode;
             
