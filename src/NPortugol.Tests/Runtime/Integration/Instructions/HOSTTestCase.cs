@@ -36,7 +36,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             var context = new RuntimeContext(runnable);
 
-            context.HostContainer.Register("Msg", new MensagemFunc());
+            context.HostContainer.Register("Msg", new MensagemFunc(), false);
 
             context.Execute();
 
@@ -52,7 +52,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             var context = new RuntimeContext(script);
 
-            context.HostContainer.Register("Msg", (parameters) => "Hello from C#!");
+            context.HostContainer.Register("Msg", (parameters) => "Hello from C#!", false);
 
             context.Execute();
 

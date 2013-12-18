@@ -102,7 +102,7 @@ namespace NPortugol.Runtime
         {
             foreach (var function in module.Functions)
             {
-                HostContainer.Register(function.Key, function.Value);
+                HostContainer.Register(function.Key, function.Value, false);
             }
         }
     }

@@ -266,7 +266,9 @@ namespace NPortugol.Runtime
             var operand = new Operand(OperandType.Literal, result);
 
             ParamStack.Clear();
-            ParamStack.Push(operand);
+
+            if (!Container.IsVoid(name))
+                ParamStack.Push(operand);
         }
 
         private void ProcessHOST()
