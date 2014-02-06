@@ -256,9 +256,14 @@ namespace NPortugol.Runtime
             foreach (Operand item in ParamStack)
             {
                 if (item.Type == OperandType.Literal)
-                    parameters.Add(item.Value);
+                {
+                    if (item.Value != null)
+                        parameters.Add(item.Value);
+                }
                 else
+                {
                     parameters.Add(SymbolValue(item.Value.ToString()));
+                }
             }
 
             var result = handler != null ? handler.Invoke(parameters.Reverse().ToArray()) : function.Execute(parameters.Reverse().ToArray());

@@ -4,6 +4,9 @@ using NPortugol.Runtime.Asm;
 
 namespace NPortugol
 {
+    /// <summary>
+    /// Prova de conceito. Motivação para criação do projeto https://github.com/ricardoborges/NPortugol2
+    /// </summary>
     public class ILTranslator
     {
         private readonly Runnable runnable;
