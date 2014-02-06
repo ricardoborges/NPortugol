@@ -1,21 +1,18 @@
-using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Web;
 using NPortugol.Runtime;
+using NPortugol.Runtime.Interop;
+using NPortugol.Web.Modules;
+using NPortugol.Web.Script;
 
-namespace NPortugol.Web
+namespace NPortugol.Web.Core
 {
-    public interface IDefaultDispatcher
-    {
-        void Process(HttpContext context);
-    }
-
     /// <summary>
     /// Prova de Conceito
     /// </summary>
-    /// TODO: Criar uma camada de aplicação MVC que organize rotas de URL's e separação de responsabilidades
-    public class DefaultDispatcher : IDefaultDispatcher
+    /// TODO: Criar uma camada de aplicação MVC
+    public class DefaultAppLayer : IAppLayer
     {
         public void Process(HttpContext context)
         {
@@ -33,11 +30,22 @@ namespace NPortugol.Web
         {
             var engine = new Engine();
 
-            engine.HostContainer.Register("escreva", new EscrevaFunc(), true);
+            engine.Install(new WebModule());
+
+            var modules = RetrieveModules();
+
+            foreach (var module in modules)
+                engine.Install(module);
 
             engine.Compile(script);
 
-            engine.Execute();
+            engine.Execute("page", new Infra(HttpContext.Current));
+        }
+
+        private static List<IModule> RetrieveModules()
+        {
+            return ((INPortugolWebApp) HttpContext.Current.ApplicationInstance)
+                .Container.Modules;
         }
 
         private static string ExtractContent(string path)

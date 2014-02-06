@@ -46,11 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultDispatcher.cs" />
-    <Compile Include="DefaultScriptBuilder.cs" />
-    <Compile Include="NPortugolHttpHandler.cs" />
+    <Compile Include="Core\DefaultContainer.cs" />
+    <Compile Include="Core\NPWebApp.cs" />
+    <Compile Include="Core\DefaultAppLayer.cs" />
+    <Compile Include="Core\IAppLayer.cs" />
+    <Compile Include="Core\Infra.cs" />
+    <Compile Include="Script\DefaultScriptBuilder.cs" />
+    <Compile Include="Modules\HtmlModule.cs" />
+    <Compile Include="NPHttpHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebModule.cs" />
+    <Compile Include="Modules\WebModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\NPortugol\NPortugol.csproj">
