@@ -53,6 +53,7 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +68,12 @@
       <Project>{93E5D4EF-0D95-4FE5-AA63-4B9BC997607D}</Project>
       <Name>NPortugol</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Utilidades.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
