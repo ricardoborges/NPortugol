@@ -1,15 +1,18 @@
 ﻿<html>
-<body>
-<ul>
-    <% variavel i %>
+    <head></head>
+    <body>
+    <ul>
+        <% variavel i %>
 
-    <% para i = 0 ate 10 %>
+        <% para i = 0 ate 10 %>
 
-    <li><%escreva("Fatorial de ", i, " = ") %> <input type='text' value='<% escreva(fat(i))%>'></li>
+        <li>
+            <%escreva("Fatorial de ", i, " = ") %> <input type='text' value='<% escreva(fat(i))%>' />
+        </li>
 
-    <% fim %>
-</ul>
-</body>
+        <% fim %>
+    </ul>
+    </body>
 </html>
 
 <%
@@ -18,4 +21,4 @@ funcao fat(x)
   
   retorne fat(x - 1) * x
 fim
- %>
+%>
