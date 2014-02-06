@@ -111,13 +111,8 @@
     <Compile Include="Runtime\Specs\RunnableDesign.cs" />
     <Compile Include="Runtime\Specs\RuntimeContextDesign.cs" />
     <Compile Include="TranslationTestCase.cs" />
-    <Compile Include="Web\ScriptBuilderTestCase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NPortugolWeb\NPortugol.Web\NPortugol.Web.csproj">
-      <Project>{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}</Project>
-      <Name>NPortugol.Web</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NPortugol\NPortugol.csproj">
       <Project>{93E5D4EF-0D95-4FE5-AA63-4B9BC997607D}</Project>
       <Name>NPortugol</Name>

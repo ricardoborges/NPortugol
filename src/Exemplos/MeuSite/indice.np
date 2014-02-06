@@ -26,3 +26,6 @@ funcao fatorial(x)
     retorne fatorial(x - 1) * x
 fim
 %>
+
+
+
