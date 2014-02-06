@@ -96,7 +96,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Loop_For()
         {
-            var script = Compile("funcao main() variavel x para x = 1 ate 10 fim fim");
+            var script = Compile("funcao main() para x = 1 ate 10 fim fim");
             Assert.AreEqual(".label_0", script[2]);
             Assert.AreEqual("JG label_1", script[5]);
             Assert.AreEqual("JMP label_0", script[7]);
