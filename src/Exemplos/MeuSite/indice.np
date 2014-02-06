@@ -1,5 +1,28 @@
 ﻿<html>
     <body>
-        <% lista("Focus", "Palio", "Celta", "New Fiesta") %>
+        <% lista("C#", "Lua", "Ruby", "Javascript") %>
+        
+        <br />
+        
+        <% variavel i %>
+        
+        <% para i = 0 ate 10 %>
+            <ul>
+                <li>
+                    <% escreva("Fatorial de ", i, " = ") %> 
+                    <% campo("valor", fatorial(i)) %>  
+                </li>
+            </ul>
+        <% fim %>
+        
     </body>
 </html>
+
+<%
+funcao fatorial(x)
+
+    se x == 0 retorne 1 fim
+    
+    retorne fatorial(x - 1) * x
+fim
+%>

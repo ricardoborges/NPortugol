@@ -31,6 +31,7 @@ namespace NPortugol.Web.Core
             var engine = new Engine();
 
             engine.Install(new WebModule());
+            engine.Install(new HtmlModule());
 
             var modules = RetrieveModules();
 
