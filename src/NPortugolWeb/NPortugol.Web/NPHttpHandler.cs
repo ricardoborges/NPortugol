@@ -1,5 +1,6 @@
 using System.Web;
 using NPortugol.Web.Core;
+using NPortugol.Web.Mvc;
 
 namespace NPortugol.Web
 {
@@ -7,9 +8,10 @@ namespace NPortugol.Web
     {
         public void ProcessRequest(HttpContext context)
         {
-            if (!context.Request.Path.Contains(".np")) return;
-
-            new DefaultAppLayer().Process(context);
+            if (context.Request.Path.Contains(".np"))
+                new DefaultAppLayer().Process(context);
+            else 
+                new MvcLayer().Process(context);
         }
 
         public bool IsReusable

@@ -17,12 +17,17 @@ namespace NPortugol.Web.Script
 
         public string Parse(string page)
         {
-            int cmd = 2;
+            return Parse(page, "page");
+        }
+
+        public string Parse(string page, string name)
+        {
+            var cmd = 2;
 
             var sb = new StringBuilder();
             var sf = new StringBuilder();
 
-            sb.AppendLine("funcao page(infra)");
+            sb.AppendLine("funcao " + name + "(infra)");
 
             if (page.IndexOf("<%") < 0)
                 sb.AppendLine(ToScript(page).Trim());
@@ -36,11 +41,15 @@ namespace NPortugol.Web.Script
 
                 sb.AppendLine(_tab + html.Trim());
 
-                if (!slice.StartsWith("funcao"))
-                    sb.AppendLine(_tab + slice.Trim());
-                else
+                if (slice.StartsWith("funcao"))
                     sf.AppendLine(_tab + slice.Trim());
 
+
+                if (slice.StartsWith("="))
+                    sb.AppendLine(slice.Replace("=", "escreva(") + ")");
+                else
+                    sb.AppendLine(_tab + slice.Trim());
+                
                 page = page.Remove(0, end + cmd);
             }
 

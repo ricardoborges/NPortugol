@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPortugol.Tests", "..\NPort
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{477E3EF3-9094-4997-8F94-32593D2FB193}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuSiteMvc", "MeuSiteMvc\MeuSiteMvc.csproj", "{7CC82403-5C70-49BF-A93A-77319C49CB2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,13 +35,17 @@ Global
 		{40C491A3-6DF9-4995-B7F4-7353EE864FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40C491A3-6DF9-4995-B7F4-7353EE864FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40C491A3-6DF9-4995-B7F4-7353EE864FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC82403-5C70-49BF-A93A-77319C49CB2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC82403-5C70-49BF-A93A-77319C49CB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC82403-5C70-49BF-A93A-77319C49CB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC82403-5C70-49BF-A93A-77319C49CB2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{93E5D4EF-0D95-4FE5-AA63-4B9BC997607D} = {477E3EF3-9094-4997-8F94-32593D2FB193}
-		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA} = {477E3EF3-9094-4997-8F94-32593D2FB193}
 		{40C491A3-6DF9-4995-B7F4-7353EE864FB7} = {477E3EF3-9094-4997-8F94-32593D2FB193}
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA} = {477E3EF3-9094-4997-8F94-32593D2FB193}
 	EndGlobalSection
 EndGlobal

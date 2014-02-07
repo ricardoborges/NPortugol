@@ -37,7 +37,7 @@ namespace NPortugol.Runtime
             ParamStack = new ParamStack();
         }
 
-        public SymbolTable ScriptSymbolTable { get; private set; }
+        public SymbolTable ScriptSymbolTable { get; set; }
 
         public RuntimeStack RuntimeStack { get; private set; }
 

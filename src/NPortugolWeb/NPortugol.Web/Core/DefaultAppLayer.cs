@@ -12,10 +12,12 @@ namespace NPortugol.Web.Core
     /// Prova de Conceito
     /// </summary>
     /// TODO: Criar uma camada de aplicação MVC
-    public class DefaultAppLayer : IAppLayer
+    public class DefaultAppLayer : BaseLayer, IAppLayer
     {
         public void Process(HttpContext context)
         {
+            if (context.Request.Path == "/favicon.ico") return;
+
             var content = ExtractContent(context.Request.PhysicalPath);
 
             var script = new DefaultScriptBuilder().Parse(content);
@@ -41,20 +43,6 @@ namespace NPortugol.Web.Core
             engine.Compile(script);
 
             engine.Execute("page", new Infra(HttpContext.Current));
-        }
-
-        private static List<IModule> RetrieveModules()
-        {
-            return ((INPortugolWebApp) HttpContext.Current.ApplicationInstance)
-                .Container.Modules;
-        }
-
-        private static string ExtractContent(string path)
-        {
-            using (var reader = new StreamReader(path))
-            {
-                return reader.ReadToEnd();
-            }
         }
     }
 }

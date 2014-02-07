@@ -46,11 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\BaseLayer.cs" />
     <Compile Include="Core\DefaultContainer.cs" />
     <Compile Include="Core\NPWebApp.cs" />
     <Compile Include="Core\DefaultAppLayer.cs" />
     <Compile Include="Core\IAppLayer.cs" />
     <Compile Include="Core\Infra.cs" />
+    <Compile Include="Mvc\MvcLayer.cs" />
+    <Compile Include="Mvc\Router.cs" />
     <Compile Include="Script\DefaultScriptBuilder.cs" />
     <Compile Include="Modules\HtmlModule.cs" />
     <Compile Include="NPHttpHandler.cs" />
