@@ -36,8 +36,9 @@ namespace NPortugol.Web.Core
 
         protected static List<IModule> RetrieveModules()
         {
-            return ((INPortugolWebApp)HttpContext.Current.ApplicationInstance)
-                .Container.Modules;
+            var appInst = HttpContext.Current.ApplicationInstance as INPortugolWebApp;
+
+            return appInst == null ? new List<IModule>() : appInst.Container.Modules;
         }
 
         protected static string ExtractContent(string path)

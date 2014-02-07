@@ -53,6 +53,9 @@ namespace NPortugol.Web.Script
                 page = page.Remove(0, end + cmd);
             }
 
+            if (!string.IsNullOrEmpty(page))
+                sb.AppendLine(ToScript(page));
+
             sb.AppendLine("fim");
 
             return sb.ToString() + sf;
