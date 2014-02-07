@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace NPortugol.Runtime
@@ -10,12 +11,13 @@ namespace NPortugol.Runtime
         {
             Name = name;
             EntryPoint = entryPoint;
-            Parameters = new List<string>();
+            //Parameters = new List<string>();
         }
 
         public string Name { get; private set; }
 
-        public IList<string> Parameters { get; private set; }
+        [Obsolete]
+        public IList<string> Parameters { get; set; }
 
         public int EntryPoint { get; private set; }
 

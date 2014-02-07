@@ -6,6 +6,7 @@ options{
 }
 
 tokens {
+    EMP='EMP' ;
     MOV='MOV' ;
     DCL='DCL' ;
     ADD='ADD' ;
@@ -164,7 +165,8 @@ opcode_no_op returns [OpCode value]
 	| SSUB {$value = OpCode.SSUB;}
 	| SMUL {$value = OpCode.SMUL;}
 	| SDIV {$value = OpCode.SDIV;}			
-	| SCNT {$value = OpCode.SCNT;}				
+	| SCNT {$value = OpCode.SCNT;}	
+	| EMP {$value = OpCode.EMP;}			
 	;
 	
 operand	returns [Operand value]

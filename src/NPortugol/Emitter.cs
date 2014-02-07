@@ -68,6 +68,8 @@ namespace NPortugol
 
         private void EmitParam()
         {
+            function.Insert(0, "EMP");
+
             foreach (var param in @params)
             {
                 function.Insert(0, AsmTemplate.Pop(param));
