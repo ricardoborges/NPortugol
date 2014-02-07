@@ -53,9 +53,6 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,7 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="home\controle\indice.np" />
-    <Content Include="Global.asax" />
     <Content Include="home\visao\indice.html" />
   </ItemGroup>
   <ItemGroup>

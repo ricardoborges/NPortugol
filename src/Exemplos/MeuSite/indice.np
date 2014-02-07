@@ -1,9 +1,5 @@
 ﻿<html>
     <body>
-        <% lista("C#", "Lua", "Ruby", "Javascript") %>
-        
-        <br />
-        
         <% variavel i %>
         
         <% para i = 0 ate 10 %>

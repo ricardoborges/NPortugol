@@ -1,8 +1,7 @@
-﻿funcao indice()
-    variavel nome
+﻿funcao indice(nome, email, cep)
     
-    nome = "Ricardo"
+    se nome == "Ricardo"
+       nome = "Ricardo Borges"
+    fim
+    
 fim
-
-
-
