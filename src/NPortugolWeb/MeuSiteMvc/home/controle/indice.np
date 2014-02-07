@@ -1,8 +1,0 @@
-﻿funcao indice()
-    variavel nome
-    
-    nome = "Ricardo"
-fim
-
-
-

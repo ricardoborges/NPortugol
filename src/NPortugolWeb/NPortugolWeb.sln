@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPortugol.Tests", "..\NPort
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{477E3EF3-9094-4997-8F94-32593D2FB193}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuSiteMvc", "MeuSiteMvc\MeuSiteMvc.csproj", "{7CC82403-5C70-49BF-A93A-77319C49CB2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeuSiteMvc", "..\Exemplos\MeuSiteMvc\MeuSiteMvc.csproj", "{7CC82403-5C70-49BF-A93A-77319C49CB2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
