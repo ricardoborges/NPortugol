@@ -1,6 +1,6 @@
 using System.Web;
 
-namespace NPortugol.Web.Core
+namespace NPortugol.Web.App
 {
     public interface INPortugolWebApp
     {

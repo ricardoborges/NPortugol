@@ -57,6 +57,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="indice2.asm" />
     <None Include="indice.np" />
   </ItemGroup>
   <ItemGroup>

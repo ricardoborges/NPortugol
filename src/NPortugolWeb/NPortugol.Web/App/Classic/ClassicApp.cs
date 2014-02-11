@@ -1,20 +1,13 @@
-using System.Collections.Generic;
-using System.IO;
 using System.Web;
 using NPortugol.Runtime;
-using NPortugol.Runtime.Interop;
 using NPortugol.Web.Modules;
 using NPortugol.Web.Script;
 
-namespace NPortugol.Web.Core
+namespace NPortugol.Web.App.Classic
 {
-    /// <summary>
-    /// Prova de Conceito
-    /// </summary>
-    /// TODO: Criar uma camada de aplicação MVC
-    public class DefaultAppLayer : BaseLayer, IAppLayer
+    public class ClassicApp : BaseApp
     {
-        public void Process(HttpContext context)
+        public override void ProcessRequest(HttpContext context)
         {
             if (context.Request.Path == "/favicon.ico") return;
 
@@ -23,9 +16,26 @@ namespace NPortugol.Web.Core
             var script = new DefaultScriptBuilder().Parse(content);
 
             if (context.Request.Url.Query.Contains("script"))
-                context.Response.Write("<pre>" +  HttpUtility.HtmlEncode(script) + "</pre>");
+            {
+                context.Response.Write(
+                    string.Format(
+                        @"<table>
+                            <tr><td>Script</td><td>VM code</td></tr>
+                            <tr><td><pre>{0}</pre></td><td><pre>{1}</pre></td></tr>
+                        </table>",
+                        HttpUtility.HtmlEncode(script),
+                        HttpUtility.HtmlEncode(GetAsm(script))));
+            }
             else
                 Execute(script);
+        }
+
+        private static string GetAsm(string script)
+        {
+            var engine = new Engine();
+            engine.Compile(script);
+
+            return engine.RuntimeContext.Runnable.InstrucStream.ToString();
         }
 
         private static void Execute(string script)

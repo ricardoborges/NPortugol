@@ -2,41 +2,9 @@
     <head></head>
     <body>
     
-        <form method='post'>
-        
-            Nome: <% campo("nome", "") %> <br />
-            e-Mail: <% campo("email", "") %> <br />
-            CEP: <% campo("cep", "") %> <br />
-            
-            <input type='submit' value='Enviar' />
-
-            <% variavel i %>
-            
-            <hr />
-            
-            <% 
-            se nome != "" 
-                para i = 0 ate 5 %>
-                
-                    <table border='1'>
-                        <tr>
-                            <td>Nome</td>
-                            <td><%=nome %></td>
-                        </tr>
-                        <tr>
-                            <td>e-Mail</td>
-                            <td><%=email %></td>
-                        </tr>
-                        <tr>
-                            <td>CEP</td>
-                            <td><%=cep %></td>
-                        </tr>                        
-                    </table>
-                
-        <%    fim
-           fim     %>
- 
-        </form>
+    <ul>
+        <li><a href='<%=url("fatorial", "calcular") %>'>Calcular Fatorial</a></li>
+    </ul>
     
     </body>
 </html>

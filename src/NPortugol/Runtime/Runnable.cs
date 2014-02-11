@@ -57,7 +57,7 @@ namespace NPortugol.Runtime
 
         public object GetSymbolValue(string id)
         {
-            return ScriptSymbolTable[id].Value;
+            return !ScriptSymbolTable.ContainsKey(id) ? null : ScriptSymbolTable[id].Value;
         }
 
         public object GetSymbolValue(string id, int index)

@@ -1,5 +1,6 @@
 ﻿<html>
     <body>
+    <% escreva(param("x")) %>
         <% variavel i %>
         
         <% para i = 0 ate 10 %>

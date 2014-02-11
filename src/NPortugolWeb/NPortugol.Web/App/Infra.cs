@@ -1,7 +1,7 @@
 using System;
 using System.Web;
 
-namespace NPortugol.Web.Core
+namespace NPortugol.Web.App
 {
     public class Infra
     {

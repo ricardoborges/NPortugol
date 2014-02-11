@@ -1,7 +1,4 @@
-﻿funcao indice(nome, email, cep)
-    
-    se nome == "Ricardo"
-       nome = "Ricardo Borges"
-    fim
-    
+﻿funcao indice()
+   
+   
 fim

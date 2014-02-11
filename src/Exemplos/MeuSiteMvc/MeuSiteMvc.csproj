@@ -59,7 +59,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="fatorial\controle\calcular.np" />
     <None Include="home\controle\indice.np" />
+    <Content Include="fatorial\visao\resultado.html" />
+    <Content Include="fatorial\visao\indice.html" />
+    <Content Include="home\visao\teste.html" />
     <Content Include="home\visao\indice.html" />
   </ItemGroup>
   <ItemGroup>

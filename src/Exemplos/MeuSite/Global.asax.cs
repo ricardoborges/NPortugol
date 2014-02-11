@@ -1,5 +1,5 @@
-﻿using MeuSite.Modulos;
-using NPortugol.Web.Core;
+using MeuSite.Modulos;
+using NPortugol.Web.App;
 
 namespace MeuSite
 {

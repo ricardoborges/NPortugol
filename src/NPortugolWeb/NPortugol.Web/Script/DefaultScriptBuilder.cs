@@ -7,10 +7,7 @@ namespace NPortugol.Web.Script
         string Parse(string page);
     }
 
-    /// <summary>
-    /// Prova de conceito
-    /// </summary>
-    /// TODO: Criar um parser utilizando ANTLR que transforme o arquivo np em funções NPortugol
+    // TODO: Criar um parser de verdade utilizando ANTLR
     public class DefaultScriptBuilder : IDefaultScriptBuilder
     {
         private string _tab = "    ";
@@ -53,7 +50,7 @@ namespace NPortugol.Web.Script
                 page = page.Remove(0, end + cmd);
             }
 
-            if (!string.IsNullOrEmpty(page))
+            if (page.Length > 1 )
                 sb.AppendLine(ToScript(page));
 
             sb.AppendLine("fim");

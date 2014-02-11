@@ -1,17 +1,43 @@
+using System;
 using System.Web;
-using NPortugol.Web.Core;
-using NPortugol.Web.Mvc;
+using NPortugol.Web.App.Asm;
+using NPortugol.Web.App.Classic;
+using NPortugol.Web.App.Mvc;
 
 namespace NPortugol.Web
 {
+    public enum AppType
+    {
+        Asm,
+        Classic,
+        MVC
+    }
+
     public class NPHttpHandler: IHttpHandler
     {
         public void ProcessRequest(HttpContext context)
         {
-            if (context.Request.Path.Contains(".np"))
-                new DefaultAppLayer().Process(context);
-            else 
-                new MvcLayer().Process(context);
+            switch (FigureOutAppType(context.Request.Path))
+            {
+                case AppType.Classic:
+                    new ClassicApp().ProcessRequest(context);
+                    break;
+                case AppType.MVC:
+                    new MvcApp().ProcessRequest(context);
+                    break;
+                case AppType.Asm:
+                    new AsmApp().ProcessRequest(context);
+                    break;
+            }
+        }
+
+        private static AppType FigureOutAppType(string path)
+        {
+            return path.Contains(".np")
+                       ? AppType.Classic
+                       : (path.Contains(".asm")
+                              ? AppType.Asm
+                              : AppType.MVC);
         }
 
         public bool IsReusable

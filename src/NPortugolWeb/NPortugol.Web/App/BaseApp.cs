@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web;
@@ -5,9 +6,9 @@ using NPortugol.Runtime;
 using NPortugol.Runtime.Interop;
 using NPortugol.Web.Modules;
 
-namespace NPortugol.Web.Core
+namespace NPortugol.Web.App
 {
-    public class BaseLayer
+    public abstract class BaseApp : IHttpHandler
     {
         protected Engine CreateEngine(string script)
         {
@@ -43,10 +44,26 @@ namespace NPortugol.Web.Core
 
         protected static string ExtractContent(string path)
         {
+            if (!File.Exists(path))
+            {
+                var parts = path.Split('\\');
+
+                var file = parts[parts.Length - 1];
+
+                if (path.EndsWith(".html"))
+                    throw new Exception("Visão não encontrada. " + file);
+                
+                throw new Exception("Controle não encontrado. " + file);
+            }
+
             using (var reader = new StreamReader(path))
             {
                 return reader.ReadToEnd();
             }
         }
+
+        public abstract void ProcessRequest(HttpContext context);
+
+        public bool IsReusable { get { return false; } }
     }
 }

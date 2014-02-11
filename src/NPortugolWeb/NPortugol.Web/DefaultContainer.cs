@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using NPortugol.Runtime.Interop;
 
-namespace NPortugol.Web.Core
+namespace NPortugol.Web
 {
     public interface IContainer
     {
