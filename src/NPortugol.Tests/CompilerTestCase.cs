@@ -25,7 +25,7 @@ namespace NPortugol.Tests
             var script = Compile("funcao principal() fim");
 
             Assert.AreEqual("main:", script[0]);
-            Assert.AreEqual("RET", script[1]);
+            Assert.AreEqual("RET", script[2]);
         }
 
         [Test]
@@ -34,8 +34,8 @@ namespace NPortugol.Tests
             var script = Compile("funcao principal() fim funcao do() fim funcao other() fim");
 
             Assert.AreEqual("main:", script[0]);
-            Assert.AreEqual("do:", script[2]);
-            Assert.AreEqual("other:", script[4]);
+            Assert.AreEqual("do:", script[3]);
+            Assert.AreEqual("other:", script[6]);
         }
 
         [Test]
@@ -54,8 +54,8 @@ namespace NPortugol.Tests
             var script = Compile("funcao main() do(10) fim");
 
             Assert.AreEqual("main:", script[0]);
-            Assert.AreEqual("PUSH 10", script[1]);
-            Assert.AreEqual("CALL do", script[2]);
+            Assert.AreEqual("PUSH 10", script[2]);
+            Assert.AreEqual("CALL do", script[3]);
         }
 
         [Test]
@@ -64,22 +64,22 @@ namespace NPortugol.Tests
             var template = "funcao main() se 1 {0} 1 entao fim fim";
 
             var script = Compile(string.Format(template, "=="));
-            Assert.AreEqual("JNE label_0", script[3]);
+            Assert.AreEqual("JNE label_0", script[4]);
 
             script = Compile(string.Format(template, ">"));
-            Assert.AreEqual("JLE label_0", script[3]);
+            Assert.AreEqual("JLE label_0", script[4]);
 
             script = Compile(string.Format(template, "<"));
-            Assert.AreEqual("JGE label_0", script[3]);
+            Assert.AreEqual("JGE label_0", script[4]);
 
             script = Compile(string.Format(template, ">="));
-            Assert.AreEqual("JL label_0", script[3]);
+            Assert.AreEqual("JL label_0", script[4]);
 
             script = Compile(string.Format(template, "<="));
-            Assert.AreEqual("JG label_0", script[3]);
+            Assert.AreEqual("JG label_0", script[4]);
 
             script = Compile(string.Format(template, "!="));
-            Assert.AreEqual("JE label_0", script[3]);
+            Assert.AreEqual("JE label_0", script[4]);
         }
 
         [Test]
@@ -87,23 +87,23 @@ namespace NPortugol.Tests
         {
             var script = Compile("funcao main() se 1 == 1 entao variavel x senao variavel y fim fim");
 
-            Assert.AreEqual("JNE label_0", script[3]);
-            Assert.AreEqual("JMP label_1", script[5]);
-            Assert.AreEqual(".label_0", script[6]);
-            Assert.AreEqual(".label_1", script[8]);
+            Assert.AreEqual("JNE label_0", script[4]);
+            Assert.AreEqual("JMP label_1", script[6]);
+            Assert.AreEqual(".label_0", script[7]);
+            Assert.AreEqual(".label_1", script[9]);
         }
 
         [Test]
         public void Build_Loop_For()
         {
             var script = Compile("funcao main() para x = 1 ate 10 fim fim");
-            Assert.AreEqual(".label_0", script[2]);
-            Assert.AreEqual("JG label_1", script[5]);
-            Assert.AreEqual("JMP label_0", script[7]);
-            Assert.AreEqual(".label_1", script[8]);
+            Assert.AreEqual(".label_0", script[3]);
+            Assert.AreEqual("JG label_1", script[6]);
+            Assert.AreEqual("JMP label_0", script[8]);
+            Assert.AreEqual(".label_1", script[9]);
 
             script = Compile("funcao main() para x = 1 ate 10 dec fim fim");
-            Assert.AreEqual("JL label_1", script[5]);
+            Assert.AreEqual("JL label_1", script[6]);
         }
     }
 }
