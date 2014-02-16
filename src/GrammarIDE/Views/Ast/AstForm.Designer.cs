@@ -97,7 +97,7 @@
             this.ParseBtn.Name = "ParseBtn";
             this.ParseBtn.Size = new System.Drawing.Size(75, 23);
             this.ParseBtn.TabIndex = 10;
-            this.ParseBtn.Text = "PARSE";
+            this.ParseBtn.Text = "AST";
             this.ParseBtn.UseVisualStyleBackColor = true;
             this.ParseBtn.Click += new System.EventHandler(this.ParseBtn_Click);
             // 

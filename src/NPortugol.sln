@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Npc", "Npc\Npc.csproj", "{7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{8556F9D4-9234-4F2E-B1A2-2B0DAC3525C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPortugol.Web.2010", "NPortugolWeb\NPortugol.Web\NPortugol.Web.2010.csproj", "{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,14 +81,24 @@ Global
 		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Release|Mixed Platforms.Build.0 = Release|x86
 		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Release|x86.ActiveCfg = Release|x86
 		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Release|x86.Build.0 = Release|x86
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E1372004-154E-493B-BA4E-2CEE5924C7DE} = {8556F9D4-9234-4F2E-B1A2-2B0DAC3525C5}
-		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF} = {8556F9D4-9234-4F2E-B1A2-2B0DAC3525C5}
 		{65674D3D-48B1-4A5F-A593-C31C2F99B5AC} = {8556F9D4-9234-4F2E-B1A2-2B0DAC3525C5}
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF} = {8556F9D4-9234-4F2E-B1A2-2B0DAC3525C5}
+		{E1372004-154E-493B-BA4E-2CEE5924C7DE} = {8556F9D4-9234-4F2E-B1A2-2B0DAC3525C5}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = TurboNPortugol\TurboNPortugol.csproj

@@ -1,0 +1,9 @@
+﻿funcao indice()
+   variavel titulo, visao, lista
+
+   titulo = "Listar Contatos Cadastrados."
+
+   lista = listar()
+
+   visao = "consulta"
+fim

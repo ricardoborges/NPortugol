@@ -1,0 +1,38 @@
+﻿<html>
+<head>
+    <title><%=titulo %></title>
+    <link href='../../Site.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <form method='POST' action='<%=url("contatos", "registro", "inserir") %>'>
+    <div class='page'>
+        <div id='header'>
+            <div id='title'>
+                <h1><%=msg %></h1>
+            </div>
+            <div id='menucontainer'>
+                <ul id='menu'>
+                    <li><a href='<%=url("contatos", "listagem") %>'>Listar</a> </li>
+                    <li><a href='<%=url("contatos", "registro") %>'>Cadastrar</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div id='main'>
+            <table>
+                <tr>
+                    <td>Nome:</td>
+                    <td>Telefone:</td>
+                </tr>
+                <tr>
+                    <td><% campo("nome", nome) %></td>
+                    <td><% campo("telefone", telefone) %></td>
+                </tr>
+            </table>
+            <input type='submit' value='SALVAR' />
+            <div id='footer'>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

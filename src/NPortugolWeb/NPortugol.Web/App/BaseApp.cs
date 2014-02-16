@@ -42,7 +42,7 @@ namespace NPortugol.Web.App
             return appInst == null ? new List<IModule>() : appInst.Container.Modules;
         }
 
-        protected static string ExtractContent(string path)
+        public static string ExtractContent(string path)
         {
             if (!File.Exists(path))
             {

@@ -1,0 +1,36 @@
+﻿<html>
+<head>
+    <title><%=titulo %></title>
+    <link href='../../Site.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div class='page'>
+        <div id='header'>
+            <div id='menucontainer'>
+                <ul id='menu'>
+                    <li><a href='<%=url("contatos", "listagem") %>'>Listar</a> </li>
+                    <li><a href='<%=url("contatos", "registro") %>'>Cadastrar</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div id='main'>
+            Relação de Contatos:
+            <ul>
+                <% variavel i, t
+                t = total(lista)       
+                %>
+
+                <% para i = 0 ate t %>
+
+                <li> <%=lista[i] %> </li>
+        
+                <% fim %>
+            </ul>
+
+            <hr/>
+            <div id='footer'>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
