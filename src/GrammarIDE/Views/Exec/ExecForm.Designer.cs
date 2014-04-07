@@ -112,7 +112,7 @@
             this.DebugBtn.Name = "DebugBtn";
             this.DebugBtn.Size = new System.Drawing.Size(75, 23);
             this.DebugBtn.TabIndex = 10;
-            this.DebugBtn.Text = "DEBUG";
+            this.DebugBtn.Text = "Debug";
             this.DebugBtn.UseVisualStyleBackColor = true;
             this.DebugBtn.Click += new System.EventHandler(this.DebugBtn_Click);
             // 
@@ -122,7 +122,7 @@
             this.BtRun.Name = "BtRun";
             this.BtRun.Size = new System.Drawing.Size(75, 23);
             this.BtRun.TabIndex = 9;
-            this.BtRun.Text = "RUN";
+            this.BtRun.Text = "Executar";
             this.BtRun.UseVisualStyleBackColor = true;
             this.BtRun.Click += new System.EventHandler(this.BtRun_Click);
             // 
@@ -133,7 +133,7 @@
             this.StepBtn.Name = "StepBtn";
             this.StepBtn.Size = new System.Drawing.Size(46, 23);
             this.StepBtn.TabIndex = 7;
-            this.StepBtn.Text = "STEP";
+            this.StepBtn.Text = "Passo";
             this.StepBtn.UseVisualStyleBackColor = true;
             this.StepBtn.Click += new System.EventHandler(this.StepBtn_Click);
             // 
@@ -143,7 +143,7 @@
             this.BuildButton.Name = "BuildButton";
             this.BuildButton.Size = new System.Drawing.Size(75, 23);
             this.BuildButton.TabIndex = 8;
-            this.BuildButton.Text = "BUILD";
+            this.BuildButton.Text = "Compilar";
             this.BuildButton.UseVisualStyleBackColor = true;
             this.BuildButton.Click += new System.EventHandler(this.BuildButton_Click);
             // 
@@ -168,7 +168,7 @@
             this.ScriptRun.Size = new System.Drawing.Size(284, 439);
             this.ScriptRun.TabIndex = 5;
             this.ScriptRun.Text = "funcao principal()\n  imprima(fat(5))\nfim\n\nfuncao fat(x)\n  se x == 0 retorne 1 fim" +
-                "\n  retorne x * fat(x-1)\nfim";
+    "\n  retorne x * fat(x-1)\nfim";
             // 
             // StopBtn
             // 
@@ -177,7 +177,7 @@
             this.StopBtn.Name = "StopBtn";
             this.StopBtn.Size = new System.Drawing.Size(45, 23);
             this.StopBtn.TabIndex = 7;
-            this.StopBtn.Text = "STOP";
+            this.StopBtn.Text = "Parar";
             this.StopBtn.UseVisualStyleBackColor = true;
             this.StopBtn.Click += new System.EventHandler(this.StopBtn_Click);
             // 

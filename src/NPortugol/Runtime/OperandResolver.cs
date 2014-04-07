@@ -63,7 +63,16 @@ namespace NPortugol.Runtime
                     index = ResolveIndex(target.IndexOffSet);
                 }
 
-                var array = (object[]) value;
+                object[] array;
+
+                if (value is Symbol)
+                {
+                    array = (object[])  ((Symbol)value).Value;
+                }
+                else 
+                {
+                    array = (object[])value;
+                }
 
                 if (array == null)
                     new Ops().ThrowArrayNonInit(Name());

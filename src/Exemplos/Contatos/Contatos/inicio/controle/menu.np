@@ -1,0 +1,7 @@
+﻿funcao indice()
+   variavel titulo, msg
+
+   titulo = "Demonstração Web MVC"
+
+   msg = "Olá, bem vindo!"
+fim

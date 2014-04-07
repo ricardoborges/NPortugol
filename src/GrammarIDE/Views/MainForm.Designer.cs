@@ -145,7 +145,7 @@ namespace GrammarIDE.Views
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
-            this.Text = "Gramática NPortugol";
+            this.Text = "NPortugol IDE";
             this.tabControl1.ResumeLayout(false);
             this.ScriptTab.ResumeLayout(false);
             this.RunTab.ResumeLayout(false);

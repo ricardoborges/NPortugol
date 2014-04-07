@@ -63,10 +63,19 @@ namespace GrammarIDE.Presenters
 
         private void BindFunctions()
         {
-            _motor.Hospedagem.Registrar("imprima", x => MainPresenter.MainView.WriteOutput((x[0]).ToString()), true);
-            _motor.Hospedagem.Registrar("imprimaVetor", ImprimaVetor, true );
+            _motor.Hospedagem.Registrar("imprima", Imprima, true);
+            _motor.Hospedagem.Registrar("imprimaVetor", ImprimaVetor, true);
             _motor.Hospedagem.Registrar("leia", Leia, false);
             _motor.Hospedagem.Registrar("tamanho", Tamanho, true);
+        }
+
+        private object Imprima(object[] parameters)
+        {
+            var value = parameters[0].ToString();
+
+            MainPresenter.MainView.WriteOutput(value);
+
+            return null;
         }
 
         private object ImprimaVetor(object[] parameters)
@@ -137,8 +146,8 @@ namespace GrammarIDE.Presenters
 
             _motor.Load(ExecView.Asm.Text);
 
-            MainPresenter.MainView.WriteOutput("Saída:");
-            MainPresenter.MainView.WriteLine();
+            //MainPresenter.MainView.WriteOutput("Saída:");
+            //MainPresenter.MainView.WriteLine();
 
             _motor.Execute();
 
