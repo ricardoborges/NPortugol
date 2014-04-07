@@ -6,24 +6,24 @@ using NUnit.Framework;
 
 namespace NPortugol.Tests.Runtime.Integration.Instructions
 {
-    public class MensagemFunc : IHostFunction
+    public class MensagemFunc : IFuncaoHospedada
     {
-        public object Execute(params object[] parameters)
+        public object Executar(params object[] parameters)
         {
             return "Esta é uma mensagem from C#";
         }
 
-        public string Name { get; set; }
+        public string Nome { get; set; }
     }
 
-    public class PlusFunc : IHostFunction
+    public class PlusFunc : IFuncaoHospedada
     {
-        public object Execute(params object[] parameters)
+        public object Executar(params object[] parameters)
         {
             return (int)parameters[0] + (int)parameters[1];
         }
 
-        public string Name { get; set; }
+        public string Nome { get; set; }
     }
 
     [TestFixture]
@@ -36,7 +36,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             var context = new RuntimeContext(runnable);
 
-            context.HostContainer.Register("Msg", new MensagemFunc(), false);
+            context.Hospedagem.Registrar("Msg", new MensagemFunc(), false);
 
             context.Execute();
 
@@ -52,7 +52,7 @@ namespace NPortugol.Tests.Runtime.Integration.Instructions
 
             var context = new RuntimeContext(script);
 
-            context.HostContainer.Register("Msg", (parameters) => "Hello from C#!", false);
+            context.Hospedagem.Registrar("Msg", (parameters) => "Hello from C#!", false);
 
             context.Execute();
 

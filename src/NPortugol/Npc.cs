@@ -5,11 +5,11 @@ using NPortugol.Runtime;
 
 namespace NPortugol
 {
-    public class Npc : ICompiler
+    public class Npc : ICompilador
     {
         public bool DebugInfo { get; set; }
 
-        public Bytecode Compile(string script)
+        public Bytecode Compilar(string script)
         {
             var input  = new ANTLRStringStream(script);
             var lexer  = new NPortugolLexer(input);
@@ -27,29 +27,29 @@ namespace NPortugol
             return new Bytecode(asm, parser.Functions, walker.SourceMap);
         }
 
-        public Bytecode CompileFile(string scriptfile)
+        public Bytecode CompilarArquivo(string scriptfile)
         {
             using (var reader = new StreamReader(scriptfile))
             {
                 var file = reader.ReadToEnd();
 
-                return Compile(file);
+                return Compilar(file);
             }
         }
 
-        public void WriteToDisk(string filename)
+        public void SalvarEmDisco(string filename)
         {
-            var bytecode = CompileFile(filename);
+            var bytecode = CompilarArquivo(filename);
 
-            new BytecodeSerializer().Create(ExtractName(filename), bytecode);
+            new BytecodeSerializer().Create(ExtrairNome(filename), bytecode);
         }
 
-        public Bytecode ReadFromDisk(string filename)
+        public Bytecode LerNoDisco(string filename)
         {
             return new BytecodeSerializer().Read(filename);
         }
 
-        private static string ExtractName(string filename)
+        private static string ExtrairNome(string filename)
         {
             var parts = filename.Split('\\');
 

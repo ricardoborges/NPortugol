@@ -21,12 +21,12 @@ namespace NPortugol.Tests.Integration
         {
             var script =
                 @"
-  funcao calcular(venda)
-     variavel total
+  função calcular(venda)
+     variável total
      total = venda.valor + 10
   fim
 ";
-            var engine = new Engine(new Npc());
+            var engine = new Motor(new Npc());
 
             engine.Compile(script);
 
@@ -40,12 +40,12 @@ namespace NPortugol.Tests.Integration
         {
             var script =
                 @"
-  funcao email(usuario)
-    variavel m
+  função email(usuario)
+    variável m
     m = usuario.Email
   fim
 ";
-            var engine = new Engine(new Npc());
+            var engine = new Motor(new Npc());
             engine.Compile(script);
 
             engine.Execute("email", new Usuario {Email = "ricardoborgesAtGmailDotCom"});

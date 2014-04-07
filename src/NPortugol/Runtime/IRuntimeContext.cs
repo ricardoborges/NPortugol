@@ -11,7 +11,7 @@ namespace NPortugol.Runtime
 
         Runnable Runnable { get; }
 
-        IHostContainer HostContainer { get; set;  }
+        IHospedagem Hospedagem { get; set;  }
 
         bool Debug { get; set; }
 

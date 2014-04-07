@@ -16,13 +16,13 @@ namespace NPortugol.Tests
 
         public IList<string> Compile(string code)
         {
-            return compiler.Compile(code).Script;
+            return compiler.Compilar(code).Script;
         }
 
         [Test]
         public void Build_Main_Function()
         {
-            var script = Compile("funcao principal() fim");
+            var script = Compile("função principal() fim");
 
             Assert.AreEqual("main:", script[0]);
             Assert.AreEqual("RET", script[2]);
@@ -31,7 +31,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Multi_Functions()
         {
-            var script = Compile("funcao principal() fim funcao do() fim funcao other() fim");
+            var script = Compile("função principal() fim função do() fim função other() fim");
 
             Assert.AreEqual("main:", script[0]);
             Assert.AreEqual("do:", script[3]);
@@ -41,7 +41,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Function_Params()
         {
-            var script = Compile("funcao do(x) fim");
+            var script = Compile("função do(x) fim");
 
             Assert.AreEqual("do:", script[0]);
             Assert.AreEqual("DCL x", script[1]);
@@ -51,7 +51,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Function_Call()
         {
-            var script = Compile("funcao main() do(10) fim");
+            var script = Compile("função main() do(10) fim");
 
             Assert.AreEqual("main:", script[0]);
             Assert.AreEqual("PUSH 10", script[2]);
@@ -61,7 +61,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Branching()
         {
-            var template = "funcao main() se 1 {0} 1 entao fim fim";
+            var template = "função main() se 1 {0} 1 então fim fim";
 
             var script = Compile(string.Format(template, "=="));
             Assert.AreEqual("JNE label_0", script[4]);
@@ -85,7 +85,7 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Branching_Else()
         {
-            var script = Compile("funcao main() se 1 == 1 entao variavel x senao variavel y fim fim");
+            var script = Compile("função main() se 1 == 1 então variável x senão variável y fim fim");
 
             Assert.AreEqual("JNE label_0", script[4]);
             Assert.AreEqual("JMP label_1", script[6]);
@@ -96,13 +96,13 @@ namespace NPortugol.Tests
         [Test]
         public void Build_Loop_For()
         {
-            var script = Compile("funcao main() para x = 1 ate 10 fim fim");
+            var script = Compile("função main() para x = 1 até 10 fim fim");
             Assert.AreEqual(".label_0", script[3]);
             Assert.AreEqual("JG label_1", script[6]);
             Assert.AreEqual("JMP label_0", script[8]);
             Assert.AreEqual(".label_1", script[9]);
 
-            script = Compile("funcao main() para x = 1 ate 10 dec fim fim");
+            script = Compile("função main() para x = 1 até 10 dec fim fim");
             Assert.AreEqual("JL label_1", script[6]);
         }
     }

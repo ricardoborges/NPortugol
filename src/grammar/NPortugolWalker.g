@@ -13,7 +13,7 @@ k=3;
 @header{using System.Collections;}
 
 @members{
-	Emitter emitter = new Emitter();
+	Emissor emitter = new Emissor();
 	
 	bool inExpression;
 	

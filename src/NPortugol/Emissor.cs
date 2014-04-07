@@ -6,7 +6,7 @@ using NPortugol;
 
 namespace NPortugol
 {
-    public class Emitter
+    public class Emissor
     {
         #region fields
 

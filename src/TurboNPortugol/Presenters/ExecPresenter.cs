@@ -32,7 +32,7 @@ namespace TurboNPortugol.Presenters
     public class ExecPresenter : IExecPresenter
     {
         private Npc npc = new Npc();
-        private Engine engine = new Engine {EnableGC = false};
+        private Motor _motor = new Motor {EnableGC = false};
         private Dictionary<int, int> sourceMap;
 
         public ExecPresenter(IMainPresenter mainPresenter)
@@ -54,7 +54,7 @@ namespace TurboNPortugol.Presenters
 
         public bool Debugging
         {
-            get { return engine.Debugging; }
+            get { return _motor.Debugging; }
         }
 
         #endregion
@@ -63,10 +63,10 @@ namespace TurboNPortugol.Presenters
 
         private void BindFunctions()
         {
-            engine.HostContainer.Register("imprima", parameters => ExecView.WriteOutput((parameters[0]).ToString()), true);
-            engine.HostContainer.Register("imprimaVetor", ImprimaVetor, true);
-            engine.HostContainer.Register("leia", Leia, false);
-            engine.HostContainer.Register("tamanho", Tamanho, true);
+            _motor.Hospedagem.Registrar("imprima", parameters => ExecView.WriteOutput((parameters[0]).ToString()), true);
+            _motor.Hospedagem.Registrar("imprimaVetor", ImprimaVetor, true);
+            _motor.Hospedagem.Registrar("leia", Leia, false);
+            _motor.Hospedagem.Registrar("tamanho", Tamanho, true);
         }
 
         private object ImprimaVetor(object[] parameters)
@@ -115,7 +115,7 @@ namespace TurboNPortugol.Presenters
         {
             npc.DebugInfo = true;
 
-            var bytecode = npc.Compile(ExecView.Script.Text);
+            var bytecode = npc.Compilar(ExecView.Script.Text);
             sourceMap = bytecode.SourceMap;
 
             if (!msg) return bytecode;
@@ -132,12 +132,12 @@ namespace TurboNPortugol.Presenters
         {
             ExecView.ClearOutput();
 
-            engine.Load(Build(false));
+            _motor.Load(Build(false));
 
             ExecView.WriteOutput("Saída:");
             ExecView.WriteLine();
 
-            engine.Execute();
+            _motor.Execute();
 
             Fill();
 
@@ -146,15 +146,15 @@ namespace TurboNPortugol.Presenters
 
         public void Debug()
         {
-            engine.Debug = true;
+            _motor.Debug = true;
 
-            engine.Load(Build(false));
+            _motor.Load(Build(false));
 
             LoadDebugInfo();
 
             ExecView.ClearOutput();
 
-            engine.EnableGC = false;
+            _motor.EnableGC = false;
         }
 
         private void LoadDebugInfo()
@@ -167,14 +167,14 @@ namespace TurboNPortugol.Presenters
                     dict.Add(item.Key, item.Value);
             }
 
-            engine.LoadDebugInfo(dict);
+            _motor.LoadDebugInfo(dict);
         }
 
         public void Step()
         {
-            engine.Execute();
+            _motor.Execute();
 
-            if (engine.RuntimeContext.Completed)
+            if (_motor.RuntimeContext.Completed)
             {
                 ClearLines();
                 return;
@@ -187,7 +187,7 @@ namespace TurboNPortugol.Presenters
 
         public void Stop()
         {
-            engine.Debugging = false;
+            _motor.Debugging = false;
             ClearLines();
             ClearStacks();
         }
@@ -208,7 +208,7 @@ namespace TurboNPortugol.Presenters
 
         private void PopulateSymbols()
         {
-            var stable = engine.RuntimeContext.Runnable.ScriptSymbolTable;
+            var stable = _motor.RuntimeContext.Runnable.ScriptSymbolTable;
 
             var list = new List<object>();
 
@@ -229,7 +229,7 @@ namespace TurboNPortugol.Presenters
 
         private void SelectLine()
         {
-            var line = engine.RuntimeContext.CurrentInst.Index;
+            var line = _motor.RuntimeContext.CurrentInst.Index;
 
             if (!sourceMap.ContainsKey(line)) return;
 

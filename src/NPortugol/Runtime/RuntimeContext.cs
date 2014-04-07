@@ -7,7 +7,7 @@ namespace NPortugol.Runtime
 {
     public class RuntimeContext : IRuntimeContext
     {
-        private readonly InstrucExecutor executor;
+        private readonly Executor executor;
 
         private Dictionary<int, int> sourceMap;
 
@@ -15,18 +15,18 @@ namespace NPortugol.Runtime
         {
             Runnable = runnable;
 
-            HostContainer = new HostContainer();
+            Hospedagem = new Hospedagem();
 
-            executor = new InstrucExecutor(this);
+            executor = new Executor(this);
         }
 
-        public RuntimeContext(Runnable runnable, IHostContainer hostContainer)
+        public RuntimeContext(Runnable runnable, IHospedagem hospedagem)
         {
             Runnable = runnable;
 
-            HostContainer = hostContainer;
+            Hospedagem = hospedagem;
 
-            executor = new InstrucExecutor(this);
+            executor = new Executor(this);
         }
 
         public bool Debug { get; set; }
@@ -43,7 +43,7 @@ namespace NPortugol.Runtime
 
         public Runnable Runnable { get; private set; }
 
-        public IHostContainer HostContainer { get; set; }
+        public IHospedagem Hospedagem { get; set; }
 
         public void Execute()
         {

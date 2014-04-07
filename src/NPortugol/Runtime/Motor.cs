@@ -6,26 +6,26 @@ using NPortugol.Runtime.Interop;
 
 namespace NPortugol.Runtime
 {
-    public class Engine
+    public class Motor
     {
-        private ICompiler compiler;
-        private IHostContainer hostContainer;
+        private ICompilador _compilador;
+        private IHospedagem hospedagem;
 
-        public Engine()
+        public Motor()
         {
             Init(new Npc());
         }
 
-        public Engine(ICompiler compiler)
+        public Motor(ICompilador _compilador)
         {
-            Init(compiler);
+            Init(_compilador);
         }
 
-        public void Init(ICompiler compiler)
+        public void Init(ICompilador _compilador)
         {
-            this.compiler = compiler;
+            this._compilador = _compilador;
 
-            hostContainer = new HostContainer();
+            hospedagem = new Hospedagem();
             
             Install(new DefaultModule());
         }
@@ -38,10 +38,10 @@ namespace NPortugol.Runtime
 
         public IRuntimeContext RuntimeContext { get; set; }
 
-        public IHostContainer HostContainer 
+        public IHospedagem Hospedagem 
         { 
-            get { return hostContainer; }
-            set { hostContainer = value; }
+            get { return hospedagem; }
+            set { hospedagem = value; }
         }
         
         public void Load(string asm)
@@ -59,7 +59,7 @@ namespace NPortugol.Runtime
 
             RuntimeContext = new RuntimeContext(runnable)
                                  {
-                                     HostContainer = HostContainer, 
+                                     Hospedagem = Hospedagem, 
                                      EnableGC = EnableGC
                                  };
         }
@@ -92,17 +92,17 @@ namespace NPortugol.Runtime
 
         public void Compile(string script)
         {
-            if (compiler == null)
+            if (_compilador == null)
                 throw new Exception("Nenhum compilador configurado para o engine.");
 
-            Load(compiler.Compile(script));
+            Load(_compilador.Compilar(script));
         }
 
         public void Install(IModule module)
         {
             foreach (var function in module.Functions)
             {
-                HostContainer.Register(function.Key, function.Value, false);
+                Hospedagem.Registrar(function.Key, function.Value, false);
             }
         }
     }

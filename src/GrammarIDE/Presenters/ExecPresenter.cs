@@ -29,7 +29,7 @@ namespace GrammarIDE.Presenters
     public class ExecPresenter : IExecPresenter
     {
         private Npc psc = new Npc();
-        private Engine engine = new Engine {EnableGC = false};
+        private Motor _motor = new Motor {EnableGC = false};
         private readonly IConfigRepo configRepo;
 
         private Dictionary<int, int> sourceMap;
@@ -54,7 +54,7 @@ namespace GrammarIDE.Presenters
 
         public bool Debugging
         {
-            get { return engine.Debugging; }
+            get { return _motor.Debugging; }
         }
 
         #endregion
@@ -63,10 +63,10 @@ namespace GrammarIDE.Presenters
 
         private void BindFunctions()
         {
-            engine.HostContainer.Register("imprima", x => MainPresenter.MainView.WriteOutput((x[0]).ToString()), true);
-            engine.HostContainer.Register("imprimaVetor", ImprimaVetor, true );
-            engine.HostContainer.Register("leia", Leia, false);
-            engine.HostContainer.Register("tamanho", Tamanho, true);
+            _motor.Hospedagem.Registrar("imprima", x => MainPresenter.MainView.WriteOutput((x[0]).ToString()), true);
+            _motor.Hospedagem.Registrar("imprimaVetor", ImprimaVetor, true );
+            _motor.Hospedagem.Registrar("leia", Leia, false);
+            _motor.Hospedagem.Registrar("tamanho", Tamanho, true);
         }
 
         private object ImprimaVetor(object[] parameters)
@@ -119,7 +119,7 @@ namespace GrammarIDE.Presenters
 
             psc.DebugInfo = true;
 
-            var bytecode = psc.Compile(ExecView.Script.Text);
+            var bytecode = psc.Compilar(ExecView.Script.Text);
 
             ShowAsm(bytecode.Script);
 
@@ -135,12 +135,12 @@ namespace GrammarIDE.Presenters
 
             MainPresenter.MainView.ClearOutput();
 
-            engine.Load(ExecView.Asm.Text);
+            _motor.Load(ExecView.Asm.Text);
 
             MainPresenter.MainView.WriteOutput("Saída:");
             MainPresenter.MainView.WriteLine();
 
-            engine.Execute();
+            _motor.Execute();
 
             Fill();
 
@@ -152,20 +152,20 @@ namespace GrammarIDE.Presenters
         {
             Build();
 
-            engine.Debug = true;
+            _motor.Debug = true;
 
-            engine.Load(ExecView.Asm.Text);
+            _motor.Load(ExecView.Asm.Text);
 
             MainPresenter.MainView.ClearOutput();
 
-            engine.EnableGC = false;
+            _motor.EnableGC = false;
         }
 
         public void Step()
         {
-            engine.Execute();
+            _motor.Execute();
 
-            if (engine.RuntimeContext.Completed)
+            if (_motor.RuntimeContext.Completed)
             {
                 ClearLines();
                 return;
@@ -178,7 +178,7 @@ namespace GrammarIDE.Presenters
 
         public void Stop()
         {
-            engine.Debugging = false;
+            _motor.Debugging = false;
             ClearLines();
             ClearStacks();
         }
@@ -213,7 +213,7 @@ namespace GrammarIDE.Presenters
 
         private void PopulateSymbols()
         {
-            var stable = engine.RuntimeContext.Runnable.ScriptSymbolTable;
+            var stable = _motor.RuntimeContext.Runnable.ScriptSymbolTable;
 
             var list = new List<object>();
 
@@ -229,7 +229,7 @@ namespace GrammarIDE.Presenters
         {
             var list = new List<object>();
 
-            foreach (IStackItem item in engine.RuntimeContext.Runnable.ParamStack)
+            foreach (IStackItem item in _motor.RuntimeContext.Runnable.ParamStack)
             {
                 list.Add(new { StackItem = item.ToString() });
             }
@@ -241,7 +241,7 @@ namespace GrammarIDE.Presenters
         {
             var list = new List<object>();
 
-            foreach (IStackItem item in engine.RuntimeContext.Runnable.RuntimeStack)
+            foreach (IStackItem item in _motor.RuntimeContext.Runnable.RuntimeStack)
             {
                 list.Add(new { StackCall = item.ToString() });
             }
@@ -266,7 +266,7 @@ namespace GrammarIDE.Presenters
             ExecView.Asm.SelectionBackColor = Color.Black;
             ExecView.Asm.SelectionColor = Color.Lime;
 
-            var line = engine.RuntimeContext.CurrentInst.Index;
+            var line = _motor.RuntimeContext.CurrentInst.Index;
 
             int start = ExecView.Asm.GetFirstCharIndexFromLine(line);
 

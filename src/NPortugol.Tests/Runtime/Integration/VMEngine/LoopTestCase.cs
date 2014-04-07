@@ -10,7 +10,7 @@ namespace NPortugol.Tests.Runtime.Integration.VMEngine
         [Test]
         public void Loop_Process()
         {
-            var engine = new Engine();
+            var engine = new Motor();
 
             engine.Load(new Bytecode(GetLines()));
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g 2012-05-10 18:42:09
+// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g 2014-04-07 15:16:32
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -34,7 +34,7 @@ namespace NPortugol
 public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AR", "ARG", "ASGN", "ASM", "CALL", "CHAR", "DEC", "ESC_SEQ", "EXP", "EXPONENT", "FLOAT", "FUNC", "HEX_DIGIT", "ID", "ILIST", "INDEX", "INIT", "INT", "JMP", "LEXP", "LOOP", "MCALL", "NEWLINE", "OCTAL_ESC", "PARAM", "PCALL", "RET", "SJMP", "SLIST", "STRING", "UNICODE_ESC", "VAR", "WS", "'!='", "'#'", "'%'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'/'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'['", "']'", "'ate'", "'dec'", "'e'", "'enquanto'", "'entao'", "'fim'", "'funcao'", "'ou'", "'para'", "'repita'", "'retorne'", "'se'", "'senao'", "'variavel'", "'{'", "'}'", "'falso'", "'nulo'", "'verdadeiro'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AR", "ARG", "ASGN", "ASM", "CALL", "CHAR", "DEC", "ESC_SEQ", "EXP", "EXPONENT", "FLOAT", "FUNC", "HEX_DIGIT", "ID", "ILIST", "INDEX", "INIT", "INT", "JMP", "LEXP", "LOOP", "MCALL", "NEWLINE", "OCTAL_ESC", "PARAM", "PCALL", "RET", "SJMP", "SLIST", "STRING", "UNICODE_ESC", "VAR", "WS", "'!='", "'#'", "'%'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'/'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'['", "']'", "'até'", "'dec'", "'e'", "'enquanto'", "'então'", "'fim'", "'função'", "'ou'", "'para'", "'repita'", "'retorne'", "'se'", "'senão'", "'variável'", "'{'", "'}'", "'falso'", "'nulo'", "'verdadeiro'"
 	};
 	public const int EOF=-1;
 	public const int T__37=37;
@@ -121,10 +121,10 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	}
 
 	public override string[] TokenNames { get { return NPortugolWalker.tokenNames; } }
-	public override string GrammarFileName { get { return "E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g"; } }
+	public override string GrammarFileName { get { return "C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g"; } }
 
 
-		Emitter emitter = new Emitter();
+		Emissor emitter = new Emissor();
 		
 		bool inExpression;
 		
@@ -142,7 +142,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_script();
 
 	// $ANTLR start "script"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:8: public script returns [IList<string> scriptLines] : ( declare_function )* ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:8: public script returns [IList<string> scriptLines] : ( declare_function )* ;
 	[GrammarRule("script")]
 	public IList<string> script()
 	{
@@ -156,12 +156,12 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(25, 0);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:50: ( ( declare_function )* )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:50: ( ( declare_function )* )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:52: ( declare_function )*
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:52: ( declare_function )*
 			{
 			DebugLocation(25, 52);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:52: ( declare_function )*
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:52: ( declare_function )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -180,7 +180,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:52: declare_function
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:25:52: declare_function
 					{
 					DebugLocation(25, 52);
 					PushFollow(Follow._declare_function_in_script62);
@@ -232,7 +232,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_declare_function();
 
 	// $ANTLR start "declare_function"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:1: declare_function : ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:1: declare_function : ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) ) ;
 	[GrammarRule("declare_function")]
 	private void declare_function()
 	{
@@ -245,9 +245,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(29, 0);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:18: ( ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:18: ( ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:20: ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:20: ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) )
 			{
 			DebugLocation(29, 20);
 			DebugLocation(29, 22);
@@ -257,7 +257,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			DebugLocation(29, 27);
 			ID1=(CommonTree)Match(input,ID,Follow._ID_in_declare_function78); if (state.failed) return;
 			DebugLocation(29, 30);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:30: ( function_param_list )*
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:30: ( function_param_list )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -276,7 +276,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:30: function_param_list
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:30: function_param_list
 					{
 					DebugLocation(29, 30);
 					PushFollow(Follow._function_param_list_in_declare_function80);
@@ -305,7 +305,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(29, 59);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:59: ( statement )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:59: ( statement )*
 				try { DebugEnterSubRule(3);
 				while (true)
 				{
@@ -324,7 +324,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:59: statement
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:29:59: statement
 						{
 						DebugLocation(29, 59);
 						PushFollow(Follow._statement_in_declare_function86);
@@ -383,7 +383,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_statement();
 
 	// $ANTLR start "statement"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:33:1: statement : ( declare_local | if_stat | for_stat | function_call | assign_var | return_stat | asm_code );
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:33:1: statement : ( declare_local | if_stat | for_stat | function_call | assign_var | return_stat | asm_code );
 	[GrammarRule("statement")]
 	private void statement()
 	{
@@ -394,7 +394,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(33, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:33:10: ( declare_local | if_stat | for_stat | function_call | assign_var | return_stat | asm_code )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:33:10: ( declare_local | if_stat | for_stat | function_call | assign_var | return_stat | asm_code )
 			int alt4=7;
 			try { DebugEnterDecision(4, false);
 			switch (input.LA(1))
@@ -449,7 +449,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:33:12: declare_local
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:33:12: declare_local
 				{
 				DebugLocation(33, 12);
 				PushFollow(Follow._declare_local_in_statement102);
@@ -461,7 +461,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:34:4: if_stat
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:34:4: if_stat
 				{
 				DebugLocation(34, 4);
 				PushFollow(Follow._if_stat_in_statement107);
@@ -473,7 +473,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:35:4: for_stat
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:35:4: for_stat
 				{
 				DebugLocation(35, 4);
 				PushFollow(Follow._for_stat_in_statement113);
@@ -485,7 +485,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:36:4: function_call
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:36:4: function_call
 				{
 				DebugLocation(36, 4);
 				PushFollow(Follow._function_call_in_statement118);
@@ -497,7 +497,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:37:4: assign_var
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:37:4: assign_var
 				{
 				DebugLocation(37, 4);
 				PushFollow(Follow._assign_var_in_statement124);
@@ -509,7 +509,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:38:4: return_stat
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:38:4: return_stat
 				{
 				DebugLocation(38, 4);
 				PushFollow(Follow._return_stat_in_statement129);
@@ -521,7 +521,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:39:4: asm_code
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:39:4: asm_code
 				{
 				DebugLocation(39, 4);
 				PushFollow(Follow._asm_code_in_statement134);
@@ -556,7 +556,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_function_param_list();
 
 	// $ANTLR start "function_param_list"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:43:1: function_param_list : ^( PARAM (p+= ID )* ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:43:1: function_param_list : ^( PARAM (p+= ID )* ) ;
 	[GrammarRule("function_param_list")]
 	private void function_param_list()
 	{
@@ -570,9 +570,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(43, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:44:2: ( ^( PARAM (p+= ID )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:44:2: ( ^( PARAM (p+= ID )* ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:44:5: ^( PARAM (p+= ID )* )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:44:5: ^( PARAM (p+= ID )* )
 			{
 			DebugLocation(44, 5);
 			DebugLocation(44, 7);
@@ -582,7 +582,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(44, 14);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:44:14: (p+= ID )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:44:14: (p+= ID )*
 				try { DebugEnterSubRule(5);
 				while (true)
 				{
@@ -601,7 +601,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:44:14: p+= ID
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:44:14: p+= ID
 						{
 						DebugLocation(44, 14);
 						p=(CommonTree)Match(input,ID,Follow._ID_in_function_param_list158); if (state.failed) return;
@@ -657,7 +657,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_declare_local();
 
 	// $ANTLR start "declare_local"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:47:1: declare_local : ^( VAR (i+= ID )* ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:47:1: declare_local : ^( VAR (i+= ID )* ) ;
 	[GrammarRule("declare_local")]
 	private void declare_local()
 	{
@@ -671,9 +671,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(47, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:48:2: ( ^( VAR (i+= ID )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:48:2: ( ^( VAR (i+= ID )* ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:48:5: ^( VAR (i+= ID )* )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:48:5: ^( VAR (i+= ID )* )
 			{
 			DebugLocation(48, 5);
 			DebugLocation(48, 7);
@@ -683,7 +683,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(48, 12);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:48:12: (i+= ID )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:48:12: (i+= ID )*
 				try { DebugEnterSubRule(6);
 				while (true)
 				{
@@ -702,7 +702,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:48:12: i+= ID
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:48:12: i+= ID
 						{
 						DebugLocation(48, 12);
 						i=(CommonTree)Match(input,ID,Follow._ID_in_declare_local181); if (state.failed) return;
@@ -758,7 +758,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_if_stat();
 
 	// $ANTLR start "if_stat"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:57:1: if_stat : ( ^( SJMP ^( LEXP logic_expression ) ^( SLIST ( statement )* senao_stat ) ) | ^( JMP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) ) );
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:57:1: if_stat : ( ^( SJMP ^( LEXP logic_expression ) ^( SLIST ( statement )* senao_stat ) ) | ^( JMP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) ) );
 	[GrammarRule("if_stat")]
 	private void if_stat()
 	{
@@ -769,7 +769,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(57, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:58:2: ( ^( SJMP ^( LEXP logic_expression ) ^( SLIST ( statement )* senao_stat ) ) | ^( JMP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:58:2: ( ^( SJMP ^( LEXP logic_expression ) ^( SLIST ( statement )* senao_stat ) ) | ^( JMP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) ) )
 			int alt9=2;
 			try { DebugEnterDecision(9, false);
 			int LA9_0 = input.LA(1);
@@ -794,7 +794,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:58:5: ^( SJMP ^( LEXP logic_expression ) ^( SLIST ( statement )* senao_stat ) )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:58:5: ^( SJMP ^( LEXP logic_expression ) ^( SLIST ( statement )* senao_stat ) )
 				{
 				DebugLocation(58, 5);
 				DebugLocation(58, 7);
@@ -820,7 +820,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(58, 45);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:58:45: ( statement )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:58:45: ( statement )*
 				try { DebugEnterSubRule(7);
 				while (true)
 				{
@@ -839,7 +839,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:58:45: statement
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:58:45: statement
 						{
 						DebugLocation(58, 45);
 						PushFollow(Follow._statement_in_if_stat212);
@@ -881,7 +881,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:59:5: ^( JMP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:59:5: ^( JMP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) )
 				{
 				DebugLocation(59, 5);
 				DebugLocation(59, 7);
@@ -909,7 +909,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 					Match(input, TokenTypes.Down, null); if (state.failed) return;
 					DebugLocation(59, 44);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:59:44: ( statement )*
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:59:44: ( statement )*
 					try { DebugEnterSubRule(8);
 					while (true)
 					{
@@ -928,7 +928,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:59:44: statement
+							// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:59:44: statement
 							{
 							DebugLocation(59, 44);
 							PushFollow(Follow._statement_in_if_stat237);
@@ -989,7 +989,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_senao_stat();
 
 	// $ANTLR start "senao_stat"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:63:1: senao_stat : ^( SLIST ( statement )* ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:63:1: senao_stat : ^( SLIST ( statement )* ) ;
 	[GrammarRule("senao_stat")]
 	private void senao_stat()
 	{
@@ -1000,9 +1000,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(63, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:64:2: ( ^( SLIST ( statement )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:64:2: ( ^( SLIST ( statement )* ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:64:4: ^( SLIST ( statement )* )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:64:4: ^( SLIST ( statement )* )
 			{
 			DebugLocation(64, 4);
 			DebugLocation(64, 6);
@@ -1012,7 +1012,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(64, 12);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:64:12: ( statement )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:64:12: ( statement )*
 				try { DebugEnterSubRule(10);
 				while (true)
 				{
@@ -1031,7 +1031,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:64:12: statement
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:64:12: statement
 						{
 						DebugLocation(64, 12);
 						PushFollow(Follow._statement_in_senao_stat258);
@@ -1087,7 +1087,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_for_stat();
 
 	// $ANTLR start "for_stat"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:1: for_stat : ( ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) ) | ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) ) | ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) ) | ^( LOOP DEC a= assign_var i= ID ^( SLIST ( statement )* ) ) );
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:1: for_stat : ( ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) ) | ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) ) | ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) ) | ^( LOOP DEC a= assign_var i= ID ^( SLIST ( statement )* ) ) );
 	[GrammarRule("for_stat")]
 	private void for_stat()
 	{
@@ -1101,7 +1101,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(69, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:9: ( ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) ) | ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) ) | ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) ) | ^( LOOP DEC a= assign_var i= ID ^( SLIST ( statement )* ) ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:9: ( ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) ) | ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) ) | ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) ) | ^( LOOP DEC a= assign_var i= ID ^( SLIST ( statement )* ) ) )
 			int alt15=4;
 			try { DebugEnterDecision(15, false);
 			int LA15_0 = input.LA(1);
@@ -1182,7 +1182,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:11: ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:11: ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) )
 				{
 				DebugLocation(69, 11);
 				DebugLocation(69, 13);
@@ -1215,7 +1215,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 					Match(input, TokenTypes.Down, null); if (state.failed) return;
 					DebugLocation(69, 111);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:111: ( statement )*
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:111: ( statement )*
 					try { DebugEnterSubRule(11);
 					while (true)
 					{
@@ -1234,7 +1234,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:111: statement
+							// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:111: statement
 							{
 							DebugLocation(69, 111);
 							PushFollow(Follow._statement_in_for_stat299);
@@ -1272,7 +1272,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:4: ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:4: ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) )
 				{
 				DebugLocation(70, 4);
 				DebugLocation(70, 6);
@@ -1307,7 +1307,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 					Match(input, TokenTypes.Down, null); if (state.failed) return;
 					DebugLocation(70, 108);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:108: ( statement )*
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:108: ( statement )*
 					try { DebugEnterSubRule(12);
 					while (true)
 					{
@@ -1326,7 +1326,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:108: statement
+							// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:108: statement
 							{
 							DebugLocation(70, 108);
 							PushFollow(Follow._statement_in_for_stat331);
@@ -1364,7 +1364,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:4: ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:4: ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) )
 				{
 				DebugLocation(71, 4);
 				DebugLocation(71, 6);
@@ -1397,7 +1397,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 					Match(input, TokenTypes.Down, null); if (state.failed) return;
 					DebugLocation(71, 103);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:103: ( statement )*
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:103: ( statement )*
 					try { DebugEnterSubRule(13);
 					while (true)
 					{
@@ -1416,7 +1416,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:103: statement
+							// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:103: statement
 							{
 							DebugLocation(71, 103);
 							PushFollow(Follow._statement_in_for_stat361);
@@ -1454,7 +1454,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:72:4: ^( LOOP DEC a= assign_var i= ID ^( SLIST ( statement )* ) )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:72:4: ^( LOOP DEC a= assign_var i= ID ^( SLIST ( statement )* ) )
 				{
 				DebugLocation(72, 4);
 				DebugLocation(72, 6);
@@ -1489,7 +1489,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 					Match(input, TokenTypes.Down, null); if (state.failed) return;
 					DebugLocation(72, 107);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:72:107: ( statement )*
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:72:107: ( statement )*
 					try { DebugEnterSubRule(14);
 					while (true)
 					{
@@ -1508,7 +1508,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:72:107: statement
+							// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:72:107: statement
 							{
 							DebugLocation(72, 107);
 							PushFollow(Follow._statement_in_for_stat393);
@@ -1569,7 +1569,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_function_call();
 
 	// $ANTLR start "function_call"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:86:1: function_call : ^( CALL ID ( function_arg_list )* ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:86:1: function_call : ^( CALL ID ( function_arg_list )* ) ;
 	[GrammarRule("function_call")]
 	private void function_call()
 	{
@@ -1582,9 +1582,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(86, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:87:2: ( ^( CALL ID ( function_arg_list )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:87:2: ( ^( CALL ID ( function_arg_list )* ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:87:5: ^( CALL ID ( function_arg_list )* )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:87:5: ^( CALL ID ( function_arg_list )* )
 			{
 			DebugLocation(87, 5);
 			DebugLocation(87, 7);
@@ -1594,7 +1594,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			DebugLocation(87, 12);
 			ID2=(CommonTree)Match(input,ID,Follow._ID_in_function_call424); if (state.failed) return;
 			DebugLocation(87, 15);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:87:15: ( function_arg_list )*
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:87:15: ( function_arg_list )*
 			try { DebugEnterSubRule(16);
 			while (true)
 			{
@@ -1613,7 +1613,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:87:15: function_arg_list
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:87:15: function_arg_list
 					{
 					DebugLocation(87, 15);
 					PushFollow(Follow._function_arg_list_in_function_call426);
@@ -1668,7 +1668,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_property_call();
 
 	// $ANTLR start "property_call"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:91:1: property_call : ^( PCALL o= ID p= ID ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:91:1: property_call : ^( PCALL o= ID p= ID ) ;
 	[GrammarRule("property_call")]
 	private void property_call()
 	{
@@ -1682,9 +1682,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(91, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:92:2: ( ^( PCALL o= ID p= ID ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:92:2: ( ^( PCALL o= ID p= ID ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:92:5: ^( PCALL o= ID p= ID )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:92:5: ^( PCALL o= ID p= ID )
 			{
 			DebugLocation(92, 5);
 			DebugLocation(92, 7);
@@ -1729,7 +1729,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_method_call();
 
 	// $ANTLR start "method_call"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:96:1: method_call : ^( MCALL o= ID p= ID ( function_arg_list )* ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:96:1: method_call : ^( MCALL o= ID p= ID ( function_arg_list )* ) ;
 	[GrammarRule("method_call")]
 	private void method_call()
 	{
@@ -1743,9 +1743,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(96, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:97:2: ( ^( MCALL o= ID p= ID ( function_arg_list )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:97:2: ( ^( MCALL o= ID p= ID ( function_arg_list )* ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:97:5: ^( MCALL o= ID p= ID ( function_arg_list )* )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:97:5: ^( MCALL o= ID p= ID ( function_arg_list )* )
 			{
 			DebugLocation(97, 5);
 			DebugLocation(97, 7);
@@ -1757,7 +1757,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			DebugLocation(97, 19);
 			p=(CommonTree)Match(input,ID,Follow._ID_in_method_call488); if (state.failed) return;
 			DebugLocation(97, 23);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:97:23: ( function_arg_list )*
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:97:23: ( function_arg_list )*
 			try { DebugEnterSubRule(17);
 			while (true)
 			{
@@ -1776,7 +1776,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:97:23: function_arg_list
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:97:23: function_arg_list
 					{
 					DebugLocation(97, 23);
 					PushFollow(Follow._function_arg_list_in_method_call490);
@@ -1831,7 +1831,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_function_arg_list();
 
 	// $ANTLR start "function_arg_list"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:101:1: function_arg_list : ^( ARG ( plus_expression )* ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:101:1: function_arg_list : ^( ARG ( plus_expression )* ) ;
 	[GrammarRule("function_arg_list")]
 	private void function_arg_list()
 	{
@@ -1842,9 +1842,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(101, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:103:2: ( ^( ARG ( plus_expression )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:103:2: ( ^( ARG ( plus_expression )* ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:103:4: ^( ARG ( plus_expression )* )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:103:4: ^( ARG ( plus_expression )* )
 			{
 			DebugLocation(103, 4);
 			DebugLocation(103, 6);
@@ -1854,7 +1854,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(103, 10);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:103:10: ( plus_expression )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:103:10: ( plus_expression )*
 				try { DebugEnterSubRule(18);
 				while (true)
 				{
@@ -1873,7 +1873,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:103:10: plus_expression
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:103:10: plus_expression
 						{
 						DebugLocation(103, 10);
 						PushFollow(Follow._plus_expression_in_function_arg_list519);
@@ -1924,7 +1924,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_asm_code();
 
 	// $ANTLR start "asm_code"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:1: asm_code : ^( ASM (s+= STRING )* ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:1: asm_code : ^( ASM (s+= STRING )* ) ;
 	[GrammarRule("asm_code")]
 	private void asm_code()
 	{
@@ -1938,9 +1938,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(107, 8);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:9: ( ^( ASM (s+= STRING )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:9: ( ^( ASM (s+= STRING )* ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:11: ^( ASM (s+= STRING )* )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:11: ^( ASM (s+= STRING )* )
 			{
 			DebugLocation(107, 11);
 			DebugLocation(107, 13);
@@ -1950,7 +1950,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(107, 18);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:18: (s+= STRING )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:18: (s+= STRING )*
 				try { DebugEnterSubRule(19);
 				while (true)
 				{
@@ -1969,7 +1969,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:18: s+= STRING
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:107:18: s+= STRING
 						{
 						DebugLocation(107, 18);
 						s=(CommonTree)Match(input,STRING,Follow._STRING_in_asm_code539); if (state.failed) return;
@@ -2025,7 +2025,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_assign_var();
 
 	// $ANTLR start "assign_var"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:112:1: assign_var returns [string id] : ( ^( ASGN ID a= atom ) | ^( ASGN ^( AR INT ) ID plus_expression ) | ^( ASGN ^( AR i= ID ) p= ID plus_expression ) | ^( ASGN ID plus_expression ) | ^( ASGN ID 'nulo' ) | ^( ASGN ID 'falso' ) | ^( ASGN ID 'verdadeiro' ) | ^( ASGN ID l= INT r= INT ) | ^( ASGN ID ^( ILIST (i= INT )* ) ) );
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:112:1: assign_var returns [string id] : ( ^( ASGN ID a= atom ) | ^( ASGN ^( AR INT ) ID plus_expression ) | ^( ASGN ^( AR i= ID ) p= ID plus_expression ) | ^( ASGN ID plus_expression ) | ^( ASGN ID 'nulo' ) | ^( ASGN ID 'falso' ) | ^( ASGN ID 'verdadeiro' ) | ^( ASGN ID l= INT r= INT ) | ^( ASGN ID ^( ILIST (i= INT )* ) ) );
 	[GrammarRule("assign_var")]
 	private string assign_var()
 	{
@@ -2054,7 +2054,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(112, 4);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:113:5: ( ^( ASGN ID a= atom ) | ^( ASGN ^( AR INT ) ID plus_expression ) | ^( ASGN ^( AR i= ID ) p= ID plus_expression ) | ^( ASGN ID plus_expression ) | ^( ASGN ID 'nulo' ) | ^( ASGN ID 'falso' ) | ^( ASGN ID 'verdadeiro' ) | ^( ASGN ID l= INT r= INT ) | ^( ASGN ID ^( ILIST (i= INT )* ) ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:113:5: ( ^( ASGN ID a= atom ) | ^( ASGN ^( AR INT ) ID plus_expression ) | ^( ASGN ^( AR i= ID ) p= ID plus_expression ) | ^( ASGN ID plus_expression ) | ^( ASGN ID 'nulo' ) | ^( ASGN ID 'falso' ) | ^( ASGN ID 'verdadeiro' ) | ^( ASGN ID l= INT r= INT ) | ^( ASGN ID ^( ILIST (i= INT )* ) ) )
 			int alt21=9;
 			try { DebugEnterDecision(21, false);
 			int LA21_0 = input.LA(1);
@@ -2155,7 +2155,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:114:7: ^( ASGN ID a= atom )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:114:7: ^( ASGN ID a= atom )
 				{
 				DebugLocation(114, 7);
 				DebugLocation(114, 9);
@@ -2182,7 +2182,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:115:7: ^( ASGN ^( AR INT ) ID plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:115:7: ^( ASGN ^( AR INT ) ID plus_expression )
 				{
 				DebugLocation(115, 7);
 				DebugLocation(115, 9);
@@ -2219,7 +2219,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:116:7: ^( ASGN ^( AR i= ID ) p= ID plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:116:7: ^( ASGN ^( AR i= ID ) p= ID plus_expression )
 				{
 				DebugLocation(116, 7);
 				DebugLocation(116, 9);
@@ -2256,7 +2256,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:117:7: ^( ASGN ID plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:117:7: ^( ASGN ID plus_expression )
 				{
 				DebugLocation(117, 7);
 				DebugLocation(117, 9);
@@ -2283,7 +2283,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:118:7: ^( ASGN ID 'nulo' )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:118:7: ^( ASGN ID 'nulo' )
 				{
 				DebugLocation(118, 7);
 				DebugLocation(118, 9);
@@ -2307,7 +2307,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:119:7: ^( ASGN ID 'falso' )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:119:7: ^( ASGN ID 'falso' )
 				{
 				DebugLocation(119, 7);
 				DebugLocation(119, 9);
@@ -2331,7 +2331,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:120:7: ^( ASGN ID 'verdadeiro' )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:120:7: ^( ASGN ID 'verdadeiro' )
 				{
 				DebugLocation(120, 7);
 				DebugLocation(120, 9);
@@ -2355,7 +2355,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:121:7: ^( ASGN ID l= INT r= INT )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:121:7: ^( ASGN ID l= INT r= INT )
 				{
 				DebugLocation(121, 7);
 				DebugLocation(121, 9);
@@ -2381,7 +2381,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:122:7: ^( ASGN ID ^( ILIST (i= INT )* ) )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:122:7: ^( ASGN ID ^( ILIST (i= INT )* ) )
 				{
 				DebugLocation(122, 7);
 				DebugLocation(122, 9);
@@ -2398,7 +2398,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 					Match(input, TokenTypes.Down, null); if (state.failed) return id;
 					DebugLocation(122, 26);
-					// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:122:26: (i= INT )*
+					// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:122:26: (i= INT )*
 					try { DebugEnterSubRule(20);
 					while (true)
 					{
@@ -2417,7 +2417,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:122:26: i= INT
+							// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:122:26: i= INT
 							{
 							DebugLocation(122, 26);
 							i=(CommonTree)Match(input,INT,Follow._INT_in_assign_var769); if (state.failed) return id;
@@ -2475,7 +2475,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_return_stat();
 
 	// $ANTLR start "return_stat"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:125:1: return_stat : ^( RET plus_expression ) ;
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:125:1: return_stat : ^( RET plus_expression ) ;
 	[GrammarRule("return_stat")]
 	private void return_stat()
 	{
@@ -2488,9 +2488,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(125, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:126:2: ( ^( RET plus_expression ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:126:2: ( ^( RET plus_expression ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:126:5: ^( RET plus_expression )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:126:5: ^( RET plus_expression )
 			{
 			DebugLocation(126, 5);
 			DebugLocation(126, 7);
@@ -2536,7 +2536,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_plus_expression();
 
 	// $ANTLR start "plus_expression"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:131:1: plus_expression : ( ^( '+' plus_expression plus_expression ) | ^( '-' plus_expression plus_expression ) | ^( '*' plus_expression plus_expression ) | ^( '/' plus_expression plus_expression ) | ^( INDEX INT ) ID | ^( INDEX i2= ID ) i1= ID | function_call | method_call | property_call | atom );
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:131:1: plus_expression : ( ^( '+' plus_expression plus_expression ) | ^( '-' plus_expression plus_expression ) | ^( '*' plus_expression plus_expression ) | ^( '/' plus_expression plus_expression ) | ^( INDEX INT ) ID | ^( INDEX i2= ID ) i1= ID | function_call | method_call | property_call | atom );
 	[GrammarRule("plus_expression")]
 	private void plus_expression()
 	{
@@ -2553,7 +2553,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(131, 0);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:134:3: ( ^( '+' plus_expression plus_expression ) | ^( '-' plus_expression plus_expression ) | ^( '*' plus_expression plus_expression ) | ^( '/' plus_expression plus_expression ) | ^( INDEX INT ) ID | ^( INDEX i2= ID ) i1= ID | function_call | method_call | property_call | atom )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:134:3: ( ^( '+' plus_expression plus_expression ) | ^( '-' plus_expression plus_expression ) | ^( '*' plus_expression plus_expression ) | ^( '/' plus_expression plus_expression ) | ^( INDEX INT ) ID | ^( INDEX i2= ID ) i1= ID | function_call | method_call | property_call | atom )
 			int alt22=10;
 			try { DebugEnterDecision(22, false);
 			switch (input.LA(1))
@@ -2648,7 +2648,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:134:3: ^( '+' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:134:3: ^( '+' plus_expression plus_expression )
 				{
 				DebugLocation(134, 3);
 				DebugLocation(134, 5);
@@ -2678,7 +2678,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:135:3: ^( '-' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:135:3: ^( '-' plus_expression plus_expression )
 				{
 				DebugLocation(135, 3);
 				DebugLocation(135, 5);
@@ -2708,7 +2708,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:136:3: ^( '*' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:136:3: ^( '*' plus_expression plus_expression )
 				{
 				DebugLocation(136, 3);
 				DebugLocation(136, 5);
@@ -2738,7 +2738,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:137:3: ^( '/' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:137:3: ^( '/' plus_expression plus_expression )
 				{
 				DebugLocation(137, 3);
 				DebugLocation(137, 5);
@@ -2768,7 +2768,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:138:3: ^( INDEX INT ) ID
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:138:3: ^( INDEX INT ) ID
 				{
 				DebugLocation(138, 3);
 				DebugLocation(138, 5);
@@ -2792,7 +2792,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:139:3: ^( INDEX i2= ID ) i1= ID
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:139:3: ^( INDEX i2= ID ) i1= ID
 				{
 				DebugLocation(139, 3);
 				DebugLocation(139, 5);
@@ -2816,7 +2816,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:140:3: function_call
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:140:3: function_call
 				{
 				DebugLocation(140, 3);
 				PushFollow(Follow._function_call_in_plus_expression894);
@@ -2828,7 +2828,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:141:3: method_call
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:141:3: method_call
 				{
 				DebugLocation(141, 3);
 				PushFollow(Follow._method_call_in_plus_expression898);
@@ -2840,7 +2840,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:142:3: property_call
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:142:3: property_call
 				{
 				DebugLocation(142, 3);
 				PushFollow(Follow._property_call_in_plus_expression902);
@@ -2852,7 +2852,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 10:
 				DebugEnterAlt(10);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:143:3: atom
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:143:3: atom
 				{
 				DebugLocation(143, 3);
 				PushFollow(Follow._atom_in_plus_expression906);
@@ -2891,7 +2891,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_logic_expression();
 
 	// $ANTLR start "logic_expression"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:146:1: logic_expression : ( ^( '<' plus_expression plus_expression ) | ^( '>' plus_expression plus_expression ) | ^( '<=' plus_expression plus_expression ) | ^( '>=' plus_expression plus_expression ) | ^( '==' plus_expression plus_expression ) | ^( '!=' plus_expression plus_expression ) | ^( 'e' plus_expression plus_expression ) | ^( 'ou' plus_expression plus_expression ) | plus_expression );
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:146:1: logic_expression : ( ^( '<' plus_expression plus_expression ) | ^( '>' plus_expression plus_expression ) | ^( '<=' plus_expression plus_expression ) | ^( '>=' plus_expression plus_expression ) | ^( '==' plus_expression plus_expression ) | ^( '!=' plus_expression plus_expression ) | ^( 'e' plus_expression plus_expression ) | ^( 'ou' plus_expression plus_expression ) | plus_expression );
 	[GrammarRule("logic_expression")]
 	private void logic_expression()
 	{
@@ -2902,7 +2902,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(146, 1);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:147:2: ( ^( '<' plus_expression plus_expression ) | ^( '>' plus_expression plus_expression ) | ^( '<=' plus_expression plus_expression ) | ^( '>=' plus_expression plus_expression ) | ^( '==' plus_expression plus_expression ) | ^( '!=' plus_expression plus_expression ) | ^( 'e' plus_expression plus_expression ) | ^( 'ou' plus_expression plus_expression ) | plus_expression )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:147:2: ( ^( '<' plus_expression plus_expression ) | ^( '>' plus_expression plus_expression ) | ^( '<=' plus_expression plus_expression ) | ^( '>=' plus_expression plus_expression ) | ^( '==' plus_expression plus_expression ) | ^( '!=' plus_expression plus_expression ) | ^( 'e' plus_expression plus_expression ) | ^( 'ou' plus_expression plus_expression ) | plus_expression )
 			int alt23=9;
 			try { DebugEnterDecision(23, false);
 			switch (input.LA(1))
@@ -2977,7 +2977,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:147:6: ^( '<' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:147:6: ^( '<' plus_expression plus_expression )
 				{
 				DebugLocation(147, 6);
 				DebugLocation(147, 8);
@@ -3007,7 +3007,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:148:6: ^( '>' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:148:6: ^( '>' plus_expression plus_expression )
 				{
 				DebugLocation(148, 6);
 				DebugLocation(148, 8);
@@ -3037,7 +3037,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:149:6: ^( '<=' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:149:6: ^( '<=' plus_expression plus_expression )
 				{
 				DebugLocation(149, 6);
 				DebugLocation(149, 8);
@@ -3067,7 +3067,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:150:6: ^( '>=' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:150:6: ^( '>=' plus_expression plus_expression )
 				{
 				DebugLocation(150, 6);
 				DebugLocation(150, 8);
@@ -3097,7 +3097,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:151:6: ^( '==' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:151:6: ^( '==' plus_expression plus_expression )
 				{
 				DebugLocation(151, 6);
 				DebugLocation(151, 8);
@@ -3127,7 +3127,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:152:6: ^( '!=' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:152:6: ^( '!=' plus_expression plus_expression )
 				{
 				DebugLocation(152, 6);
 				DebugLocation(152, 8);
@@ -3157,7 +3157,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:153:6: ^( 'e' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:153:6: ^( 'e' plus_expression plus_expression )
 				{
 				DebugLocation(153, 6);
 				DebugLocation(153, 8);
@@ -3182,7 +3182,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:154:6: ^( 'ou' plus_expression plus_expression )
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:154:6: ^( 'ou' plus_expression plus_expression )
 				{
 				DebugLocation(154, 6);
 				DebugLocation(154, 8);
@@ -3207,7 +3207,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:155:4: plus_expression
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:155:4: plus_expression
 				{
 				DebugLocation(155, 4);
 				PushFollow(Follow._plus_expression_in_logic_expression1038);
@@ -3242,7 +3242,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	partial void LeaveRule_atom();
 
 	// $ANTLR start "atom"
-	// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:160:1: atom returns [object value] : (a= ID |a= INT |a= FLOAT |a= STRING );
+	// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:160:1: atom returns [object value] : (a= ID |a= INT |a= FLOAT |a= STRING );
 	[GrammarRule("atom")]
 	private object atom()
 	{
@@ -3258,7 +3258,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		DebugLocation(160, 4);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:160:27: (a= ID |a= INT |a= FLOAT |a= STRING )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:160:27: (a= ID |a= INT |a= FLOAT |a= STRING )
 			int alt24=4;
 			try { DebugEnterDecision(24, false);
 			switch (input.LA(1))
@@ -3297,7 +3297,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:161:7: a= ID
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:161:7: a= ID
 				{
 				DebugLocation(161, 8);
 				a=(CommonTree)Match(input,ID,Follow._ID_in_atom1066); if (state.failed) return value;
@@ -3311,7 +3311,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:162:7: a= INT
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:162:7: a= INT
 				{
 				DebugLocation(162, 8);
 				a=(CommonTree)Match(input,INT,Follow._INT_in_atom1078); if (state.failed) return value;
@@ -3325,7 +3325,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:163:7: a= FLOAT
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:163:7: a= FLOAT
 				{
 				DebugLocation(163, 8);
 				a=(CommonTree)Match(input,FLOAT,Follow._FLOAT_in_atom1089); if (state.failed) return value;
@@ -3339,7 +3339,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:164:7: a= STRING
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:164:7: a= STRING
 				{
 				DebugLocation(164, 8);
 				a=(CommonTree)Match(input,STRING,Follow._STRING_in_atom1100); if (state.failed) return value;
@@ -3386,9 +3386,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred17_NPortugolWalker_fragment", 35);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:11: ( ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:11: ( ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:11: ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:11: ^( LOOP a= assign_var i= INT ^( SLIST ( statement )* ) )
 			{
 			DebugLocation(69, 11);
 			DebugLocation(69, 13);
@@ -3410,7 +3410,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(69, 111);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:111: ( statement )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:111: ( statement )*
 				try { DebugEnterSubRule(26);
 				while (true)
 				{
@@ -3429,7 +3429,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:111: statement
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:69:111: statement
 						{
 						DebugLocation(69, 111);
 						PushFollow(Follow._statement_in_synpred17_NPortugolWalker299);
@@ -3484,9 +3484,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred19_NPortugolWalker_fragment", 37);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:4: ( ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:4: ( ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:4: ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:4: ^( LOOP DEC a= assign_var i= INT ^( SLIST ( statement )* ) )
 			{
 			DebugLocation(70, 4);
 			DebugLocation(70, 6);
@@ -3510,7 +3510,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(70, 108);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:108: ( statement )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:108: ( statement )*
 				try { DebugEnterSubRule(27);
 				while (true)
 				{
@@ -3529,7 +3529,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:108: statement
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:70:108: statement
 						{
 						DebugLocation(70, 108);
 						PushFollow(Follow._statement_in_synpred19_NPortugolWalker331);
@@ -3584,9 +3584,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred21_NPortugolWalker_fragment", 39);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:4: ( ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:4: ( ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:4: ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:4: ^( LOOP a= assign_var i= ID ^( SLIST ( statement )* ) )
 			{
 			DebugLocation(71, 4);
 			DebugLocation(71, 6);
@@ -3608,7 +3608,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			{
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(71, 103);
-				// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:103: ( statement )*
+				// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:103: ( statement )*
 				try { DebugEnterSubRule(28);
 				while (true)
 				{
@@ -3627,7 +3627,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:103: statement
+						// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:71:103: statement
 						{
 						DebugLocation(71, 103);
 						PushFollow(Follow._statement_in_synpred21_NPortugolWalker361);
@@ -3681,9 +3681,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred27_NPortugolWalker_fragment", 45);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:114:7: ( ^( ASGN ID a= atom ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:114:7: ( ^( ASGN ID a= atom ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:114:7: ^( ASGN ID a= atom )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:114:7: ^( ASGN ID a= atom )
 			{
 			DebugLocation(114, 7);
 			DebugLocation(114, 9);
@@ -3724,9 +3724,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred28_NPortugolWalker_fragment", 46);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:115:7: ( ^( ASGN ^( AR INT ) ID plus_expression ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:115:7: ( ^( ASGN ^( AR INT ) ID plus_expression ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:115:7: ^( ASGN ^( AR INT ) ID plus_expression )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:115:7: ^( ASGN ^( AR INT ) ID plus_expression )
 			{
 			DebugLocation(115, 7);
 			DebugLocation(115, 9);
@@ -3780,9 +3780,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred29_NPortugolWalker_fragment", 47);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:116:7: ( ^( ASGN ^( AR i= ID ) p= ID plus_expression ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:116:7: ( ^( ASGN ^( AR i= ID ) p= ID plus_expression ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:116:7: ^( ASGN ^( AR i= ID ) p= ID plus_expression )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:116:7: ^( ASGN ^( AR i= ID ) p= ID plus_expression )
 			{
 			DebugLocation(116, 7);
 			DebugLocation(116, 9);
@@ -3833,9 +3833,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred30_NPortugolWalker_fragment", 48);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:117:7: ( ^( ASGN ID plus_expression ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:117:7: ( ^( ASGN ID plus_expression ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:117:7: ^( ASGN ID plus_expression )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:117:7: ^( ASGN ID plus_expression )
 			{
 			DebugLocation(117, 7);
 			DebugLocation(117, 9);
@@ -3876,9 +3876,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred31_NPortugolWalker_fragment", 49);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:118:7: ( ^( ASGN ID 'nulo' ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:118:7: ( ^( ASGN ID 'nulo' ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:118:7: ^( ASGN ID 'nulo' )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:118:7: ^( ASGN ID 'nulo' )
 			{
 			DebugLocation(118, 7);
 			DebugLocation(118, 9);
@@ -3916,9 +3916,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred32_NPortugolWalker_fragment", 50);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:119:7: ( ^( ASGN ID 'falso' ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:119:7: ( ^( ASGN ID 'falso' ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:119:7: ^( ASGN ID 'falso' )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:119:7: ^( ASGN ID 'falso' )
 			{
 			DebugLocation(119, 7);
 			DebugLocation(119, 9);
@@ -3956,9 +3956,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred33_NPortugolWalker_fragment", 51);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:120:7: ( ^( ASGN ID 'verdadeiro' ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:120:7: ( ^( ASGN ID 'verdadeiro' ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:120:7: ^( ASGN ID 'verdadeiro' )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:120:7: ^( ASGN ID 'verdadeiro' )
 			{
 			DebugLocation(120, 7);
 			DebugLocation(120, 9);
@@ -3999,9 +3999,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		TraceIn("synpred34_NPortugolWalker_fragment", 52);
 		try
 		{
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:121:7: ( ^( ASGN ID l= INT r= INT ) )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:121:7: ( ^( ASGN ID l= INT r= INT ) )
 			DebugEnterAlt(1);
-			// E:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:121:7: ^( ASGN ID l= INT r= INT )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g:121:7: ^( ASGN ID l= INT r= INT )
 			{
 			DebugLocation(121, 7);
 			DebugLocation(121, 9);

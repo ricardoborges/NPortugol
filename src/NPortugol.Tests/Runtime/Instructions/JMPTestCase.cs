@@ -20,7 +20,7 @@ namespace NPortugol.Tests.Runtime.Instructions
 
             contextMock.Setup(x => x.Runnable).Returns(GetRunnable());
 
-            var executor = new InstrucExecutor(contextMock.Object);
+            var executor = new Executor(contextMock.Object);
 
             executor.ExecuteInstruction();
 

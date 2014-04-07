@@ -73,7 +73,7 @@ tokens{
 public script	: declare_function* ;
 
 declare_function
-	:	'funcao' i=ID '(' function_param_list* ')' statement* 'fim'
+	:	'função' i=ID '(' function_param_list* ')' statement* 'fim'
 		{DefineFunction($i.text);}
 		-> ^(FUNC ID function_param_list* ^(SLIST statement*))
 	;
@@ -103,7 +103,7 @@ declare_local            @init { paraphrases.Push("na definição de variável"); }
 	*/
 
 declare_local            @init { paraphrases.Push("na definição de variável"); }   @after { paraphrases.Pop(); }
-	:	'variavel' i+=ID (',' i+=ID)* 
+	:	'variável' i+=ID (',' i+=ID)* 
 			{DefineID($i);}
 	-> ^(VAR ID*)
 	;
@@ -115,17 +115,17 @@ initialize_local
 	
 if_stat @init { paraphrases.Push("se"); }   @after { paraphrases.Pop(); }
 
-	: 'se' p=logic_expression 'entao' s1+=statement*
+	: 'se' p=logic_expression 'então' s1+=statement*
 	( s2=senao_stat -> ^(SJMP ^(LEXP $p) ^(SLIST $s1 $s2))
 	| 'fim' -> ^(JMP ^(LEXP $p) ^(SLIST $s1*))
 	)
 	;
 	
 senao_stat
-	:	'senao' s2+=statement* 'fim' ->	^(SLIST statement*)
+	:	'senão' s2+=statement* 'fim' ->	^(SLIST statement*)
 	;	
 	
-for_stat:	'para' assign_var 'ate' index 
+for_stat:	'para' assign_var 'até' index 
 
 		( 'dec' statement* 'fim' -> ^(LOOP DEC assign_var index ^(SLIST statement*))
 		| statement* 'fim' -> ^(LOOP assign_var index ^(SLIST statement*))
@@ -137,7 +137,7 @@ while_stat
 		-> ^(LOOP ^(LEXP logic_expression) ^(SLIST statement*))
 	;
 	
-repeat_stat	:	'repita' statement* 'ate' logic_expression
+repeat_stat	:	'repita' statement* 'até' logic_expression
 		-> ^(LOOP ^(SLIST statement*) ^(LEXP logic_expression))
 	;
 

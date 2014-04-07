@@ -3,29 +3,29 @@ using System.Collections.Generic;
 
 namespace NPortugol.Runtime.Interop
 {
-    public class HostContainer: IHostContainer
+    public class Hospedagem: IHospedagem
     {
-        private readonly Dictionary<string, IHostFunction> hostTable;
+        private readonly Dictionary<string, IFuncaoHospedada> hostTable;
         private readonly Dictionary<string, Func<object[], object>> handlerTable;
         private readonly Dictionary<string, bool> voidmap;
 
-        public HostContainer()
+        public Hospedagem()
         {
-            hostTable = new Dictionary<string, IHostFunction>();
+            hostTable = new Dictionary<string, IFuncaoHospedada>();
             handlerTable = new Dictionary<string, Func<object[], object>>();
             voidmap = new Dictionary<string, bool>();
         }
 
-        public void Register(string name, IHostFunction hostFunction, bool isVoid)
+        public void Registrar(string name, IFuncaoHospedada funcaoHospedada, bool isVoid)
         {
             if (hostTable.ContainsKey(name))
                 throw new Exception("Função já registrada.");
 
-            hostTable[name] = hostFunction;
+            hostTable[name] = funcaoHospedada;
             voidmap[name] = isVoid;
         }
 
-        public IHostFunction Resolve(string name)
+        public IFuncaoHospedada Resolve(string name)
         {
             return !hostTable.ContainsKey(name) ? null : hostTable[name];
         }
@@ -35,7 +35,7 @@ namespace NPortugol.Runtime.Interop
             return !handlerTable.ContainsKey(name)? null : handlerTable[name];
         }
 
-        public void Register(string name, Func<object[], object> handler, bool isVoid)
+        public void Registrar(string name, Func<object[], object> handler, bool isVoid)
         {
             if (hostTable.ContainsKey(name) || handlerTable.ContainsKey(name))
                 throw new Exception("Função já registrada.");

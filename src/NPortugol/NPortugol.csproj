@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsmTemplate.cs" />
-    <Compile Include="Emitter.cs" />
+    <Compile Include="Emissor.cs" />
     <Compile Include="ILTranslator.cs" />
     <Compile Include="Modules\DefaultModule.cs" />
     <Compile Include="NPortugolLexer.cs" />
@@ -83,7 +83,7 @@
     <Compile Include="Runtime\Asm\IRunnableBuilder.cs" />
     <Compile Include="Runtime\Bytecode.cs" />
     <Compile Include="Runtime\BytecodeSerializer.cs" />
-    <Compile Include="Runtime\Engine.cs" />
+    <Compile Include="Runtime\Motor.cs" />
     <Compile Include="Runtime\Exceptions\FunctionNotFoundException.cs" />
     <Compile Include="Runtime\Exceptions\MainNotFoundException.cs" />
     <Compile Include="Runtime\Exceptions\Ops.cs" />
@@ -92,14 +92,14 @@
     <Compile Include="Runtime\Function.cs" />
     <Compile Include="Runtime\FunctionCall.cs" />
     <Compile Include="Runtime\FunctionTable.cs" />
-    <Compile Include="Runtime\ICompiler.cs" />
+    <Compile Include="Runtime\ICompilador.cs" />
     <Compile Include="Runtime\ILoader.cs" />
-    <Compile Include="Runtime\InstrucExecutor.cs" />
+    <Compile Include="Runtime\Executor.cs" />
     <Compile Include="Runtime\InstrucStream.cs" />
     <Compile Include="Runtime\Instruction.cs" />
-    <Compile Include="Runtime\Interop\HostContainer.cs" />
-    <Compile Include="Runtime\Interop\IHostContainer.cs" />
-    <Compile Include="Runtime\Interop\IHostFunction.cs" />
+    <Compile Include="Runtime\Interop\Hospedagem.cs" />
+    <Compile Include="Runtime\Interop\IHospedagem.cs" />
+    <Compile Include="Runtime\Interop\IFuncaoHospedada.cs" />
     <Compile Include="Runtime\Interop\IModule.cs" />
     <Compile Include="Runtime\IRuntimeContext.cs" />
     <Compile Include="Runtime\IStackItem.cs" />

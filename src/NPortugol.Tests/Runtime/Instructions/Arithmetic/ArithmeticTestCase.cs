@@ -8,7 +8,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
     public class ArithmeticTestCase: BaseInstTest
     {
         private Mock<IRuntimeContext> contextMock;
-        private InstrucExecutor executor;
+        private Executor executor;
 
         [SetUp]
         public void Init()
@@ -19,7 +19,7 @@ namespace NPortugol.Tests.Runtime.Instructions.Arithmetic
 
             contextMock.Setup(x => x.Runnable).Returns(GetRunnable());
 
-            executor = new InstrucExecutor(contextMock.Object);
+            executor = new Executor(contextMock.Object);
         }
 
         [Test]

@@ -8,9 +8,9 @@ namespace NPortugol.Tests
         [Test]
         public void Should_Translate_Add_Expression()
         {
-            var script = "funcao soma() retorne 2 + 2 fim";
+            var script = "função soma() retorne 2 + 2 fim";
 
-            var bytecode = new Npc().Compile(script);
+            var bytecode = new Npc().Compilar(script);
 
             var dm = new ILTranslator(bytecode).Translate();
 

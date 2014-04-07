@@ -6,13 +6,13 @@ using NPortugol.Runtime.Interop;
 
 namespace NPortugol.Runtime
 {
-    public class InstrucExecutor
+    public class Executor
     {
         private readonly IRuntimeContext context;
 
         private readonly OperandResolver opResolver;
 
-        public InstrucExecutor(IRuntimeContext context)
+        public Executor(IRuntimeContext context)
         {
             this.context = context;
 
@@ -21,9 +21,9 @@ namespace NPortugol.Runtime
 
         public Instruction Instruction { get { return context.CurrentInst; } }
 
-        public IHostContainer Container
+        public IHospedagem Container
         {
-            get { return context.HostContainer; }
+            get { return context.Hospedagem; }
         }
 
         public ParamStack ParamStack
@@ -266,7 +266,7 @@ namespace NPortugol.Runtime
                 }
             }
 
-            var result = handler != null ? handler.Invoke(parameters.Reverse().ToArray()) : function.Execute(parameters.Reverse().ToArray());
+            var result = handler != null ? handler.Invoke(parameters.Reverse().ToArray()) : function.Executar(parameters.Reverse().ToArray());
 
             var operand = new Operand(OperandType.Literal, result);
 
