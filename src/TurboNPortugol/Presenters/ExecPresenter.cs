@@ -74,6 +74,9 @@ namespace TurboNPortugol.Presenters
         {
             var value = parameters[0].ToString();
 
+            value = value.Replace("True", "Verdadeiro");
+            value = value.Replace("False", "Falso");
+
             ExecView.WriteOutput(value);
 
             return null;

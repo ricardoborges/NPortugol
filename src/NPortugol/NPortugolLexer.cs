@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-14 01:59:56
+// $ANTLR 3.4 E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-14 02:49:12
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -1419,11 +1419,11 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:227:4: ( 'verdadeiro' )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:231:4: ( 'verdadeiro' )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:227:7: 'verdadeiro'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:231:7: 'verdadeiro'
 			{
-			DebugLocation(227, 7);
+			DebugLocation(231, 7);
 			Match("verdadeiro"); 
 
 
@@ -1455,11 +1455,11 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = F;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:228:3: ( 'falso' )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:232:3: ( 'falso' )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:228:5: 'falso'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:232:5: 'falso'
 			{
-			DebugLocation(228, 5);
+			DebugLocation(232, 5);
 			Match("falso"); 
 
 
@@ -1491,11 +1491,11 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = ID;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:229:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:233:4: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:229:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:233:6: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
-			DebugLocation(229, 6);
+			DebugLocation(233, 6);
 			if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
 			{
 				input.Consume();
@@ -1508,8 +1508,8 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(229, 30);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:229:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			DebugLocation(233, 30);
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:233:30: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -1530,7 +1530,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 					{
-					DebugLocation(229, 30);
+					DebugLocation(233, 30);
 					input.Consume();
 
 
@@ -1576,12 +1576,12 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = INT;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:231:5: ( ( '0' .. '9' )+ )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:235:5: ( ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:231:7: ( '0' .. '9' )+
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:235:7: ( '0' .. '9' )+
 			{
-			DebugLocation(231, 7);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:231:7: ( '0' .. '9' )+
+			DebugLocation(235, 7);
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:235:7: ( '0' .. '9' )+
 			int cnt2=0;
 			try { DebugEnterSubRule(2);
 			while (true)
@@ -1603,7 +1603,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 					{
-					DebugLocation(231, 7);
+					DebugLocation(235, 7);
 					input.Consume();
 
 
@@ -1654,15 +1654,15 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = FLOAT;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:233:7: ( INT '.' INT )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:237:7: ( INT '.' INT )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:233:8: INT '.' INT
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:237:8: INT '.' INT
 			{
-			DebugLocation(233, 8);
+			DebugLocation(237, 8);
 			mINT(); 
-			DebugLocation(233, 12);
+			DebugLocation(237, 12);
 			Match('.'); 
-			DebugLocation(233, 16);
+			DebugLocation(237, 16);
 			mINT(); 
 
 			}
@@ -1693,12 +1693,12 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = NEWLINE;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:235:9: ( ( '\\r' )? '\\n' )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:239:9: ( ( '\\r' )? '\\n' )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:235:11: ( '\\r' )? '\\n'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:239:11: ( '\\r' )? '\\n'
 			{
-			DebugLocation(235, 11);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:235:11: ( '\\r' )?
+			DebugLocation(239, 11);
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:239:11: ( '\\r' )?
 			int alt3=2;
 			try { DebugEnterSubRule(3);
 			try { DebugEnterDecision(3, false);
@@ -1713,9 +1713,9 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:235:11: '\\r'
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:239:11: '\\r'
 				{
-				DebugLocation(235, 11);
+				DebugLocation(239, 11);
 				Match('\r'); 
 
 				}
@@ -1724,9 +1724,9 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(3); }
 
-			DebugLocation(235, 16);
+			DebugLocation(239, 16);
 			Match('\n'); 
-			DebugLocation(235, 22);
+			DebugLocation(239, 22);
 			 _channel = Hidden; 
 
 			}
@@ -1757,12 +1757,12 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = WS;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:237:4: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:241:4: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:237:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:241:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			{
-			DebugLocation(237, 6);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:237:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
+			DebugLocation(241, 6);
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:241:6: ( ' ' | '\\t' | '\\r' | '\\n' )+
 			int cnt4=0;
 			try { DebugEnterSubRule(4);
 			while (true)
@@ -1784,7 +1784,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 					{
-					DebugLocation(237, 6);
+					DebugLocation(241, 6);
 					input.Consume();
 
 
@@ -1806,7 +1806,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(4); }
 
-			DebugLocation(237, 36);
+			DebugLocation(241, 36);
 			 _channel = Hidden; 
 
 			}
@@ -1837,14 +1837,14 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = STRING;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:240:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:244:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:240:7: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:244:7: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
 			{
-			DebugLocation(240, 7);
+			DebugLocation(244, 7);
 			Match('\"'); 
-			DebugLocation(240, 11);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:240:11: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+			DebugLocation(244, 11);
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:244:11: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
 			try { DebugEnterSubRule(5);
 			while (true)
 			{
@@ -1867,18 +1867,18 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:240:13: ESC_SEQ
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:244:13: ESC_SEQ
 					{
-					DebugLocation(240, 13);
+					DebugLocation(244, 13);
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:240:23: ~ ( '\\\\' | '\"' )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:244:23: ~ ( '\\\\' | '\"' )
 					{
-					DebugLocation(240, 23);
+					DebugLocation(244, 23);
 					input.Consume();
 
 
@@ -1895,7 +1895,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 
 			} finally { DebugExitSubRule(5); }
 
-			DebugLocation(240, 38);
+			DebugLocation(244, 38);
 			Match('\"'); 
 
 			}
@@ -1926,14 +1926,14 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = CHAR;
 			int _channel = DefaultTokenChannel;
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:243:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:247:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:243:7: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:247:7: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
 			{
-			DebugLocation(243, 7);
+			DebugLocation(247, 7);
 			Match('\''); 
-			DebugLocation(243, 12);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:243:12: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
+			DebugLocation(247, 12);
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:247:12: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
 			int alt6=2;
 			try { DebugEnterSubRule(6);
 			try { DebugEnterDecision(6, false);
@@ -1958,18 +1958,18 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:243:14: ESC_SEQ
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:247:14: ESC_SEQ
 				{
-				DebugLocation(243, 14);
+				DebugLocation(247, 14);
 				mESC_SEQ(); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:243:24: ~ ( '\\'' | '\\\\' )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:247:24: ~ ( '\\'' | '\\\\' )
 				{
-				DebugLocation(243, 24);
+				DebugLocation(247, 24);
 				input.Consume();
 
 
@@ -1979,7 +1979,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(6); }
 
-			DebugLocation(243, 39);
+			DebugLocation(247, 39);
 			Match('\''); 
 
 			}
@@ -2008,11 +2008,11 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		TraceIn("EXPONENT", 46);
 		try
 		{
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:248:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:252:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:248:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:252:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
-			DebugLocation(248, 12);
+			DebugLocation(252, 12);
 			if (input.LA(1)=='E'||input.LA(1)=='e')
 			{
 				input.Consume();
@@ -2025,8 +2025,8 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 				throw mse;
 			}
 
-			DebugLocation(248, 22);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:248:22: ( '+' | '-' )?
+			DebugLocation(252, 22);
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:252:22: ( '+' | '-' )?
 			int alt7=2;
 			try { DebugEnterSubRule(7);
 			try { DebugEnterDecision(7, false);
@@ -2043,7 +2043,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 				DebugEnterAlt(1);
 				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 				{
-				DebugLocation(248, 22);
+				DebugLocation(252, 22);
 				input.Consume();
 
 
@@ -2053,8 +2053,8 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 			}
 			} finally { DebugExitSubRule(7); }
 
-			DebugLocation(248, 33);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:248:33: ( '0' .. '9' )+
+			DebugLocation(252, 33);
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:252:33: ( '0' .. '9' )+
 			int cnt8=0;
 			try { DebugEnterSubRule(8);
 			while (true)
@@ -2076,7 +2076,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 					DebugEnterAlt(1);
 					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 					{
-					DebugLocation(248, 33);
+					DebugLocation(252, 33);
 					input.Consume();
 
 
@@ -2123,11 +2123,11 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		TraceIn("HEX_DIGIT", 47);
 		try
 		{
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:251:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:255:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			DebugEnterAlt(1);
 			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 			{
-			DebugLocation(251, 11);
+			DebugLocation(255, 11);
 			if ((input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f'))
 			{
 				input.Consume();
@@ -2165,7 +2165,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		TraceIn("ESC_SEQ", 48);
 		try
 		{
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:255:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:259:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
 			int alt9=3;
 			try { DebugEnterDecision(9, false);
 			int LA9_0 = input.LA(1);
@@ -2223,11 +2223,11 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:255:7: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:259:7: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 				{
-				DebugLocation(255, 7);
+				DebugLocation(259, 7);
 				Match('\\'); 
-				DebugLocation(255, 12);
+				DebugLocation(259, 12);
 				input.Consume();
 
 
@@ -2235,18 +2235,18 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:256:7: UNICODE_ESC
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:260:7: UNICODE_ESC
 				{
-				DebugLocation(256, 7);
+				DebugLocation(260, 7);
 				mUNICODE_ESC(); 
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:257:7: OCTAL_ESC
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:261:7: OCTAL_ESC
 				{
-				DebugLocation(257, 7);
+				DebugLocation(261, 7);
 				mOCTAL_ESC(); 
 
 				}
@@ -2275,7 +2275,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		TraceIn("OCTAL_ESC", 49);
 		try
 		{
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:262:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:266:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt10=3;
 			try { DebugEnterDecision(10, false);
 			int LA10_0 = input.LA(1);
@@ -2337,17 +2337,17 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:262:7: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:266:7: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 				{
-				DebugLocation(262, 7);
+				DebugLocation(266, 7);
 				Match('\\'); 
-				DebugLocation(262, 12);
+				DebugLocation(266, 12);
 				input.Consume();
 
-				DebugLocation(262, 23);
+				DebugLocation(266, 23);
 				input.Consume();
 
-				DebugLocation(262, 34);
+				DebugLocation(266, 34);
 				input.Consume();
 
 
@@ -2355,14 +2355,14 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:263:7: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:267:7: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
 				{
-				DebugLocation(263, 7);
+				DebugLocation(267, 7);
 				Match('\\'); 
-				DebugLocation(263, 12);
+				DebugLocation(267, 12);
 				input.Consume();
 
-				DebugLocation(263, 23);
+				DebugLocation(267, 23);
 				input.Consume();
 
 
@@ -2370,11 +2370,11 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:264:7: '\\\\' ( '0' .. '7' )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:268:7: '\\\\' ( '0' .. '7' )
 				{
-				DebugLocation(264, 7);
+				DebugLocation(268, 7);
 				Match('\\'); 
-				DebugLocation(264, 12);
+				DebugLocation(268, 12);
 				input.Consume();
 
 
@@ -2404,21 +2404,21 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		TraceIn("UNICODE_ESC", 50);
 		try
 		{
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:269:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:273:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
 			DebugEnterAlt(1);
-			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:269:7: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:273:7: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
 			{
-			DebugLocation(269, 7);
+			DebugLocation(273, 7);
 			Match('\\'); 
-			DebugLocation(269, 12);
+			DebugLocation(273, 12);
 			Match('u'); 
-			DebugLocation(269, 16);
+			DebugLocation(273, 16);
 			mHEX_DIGIT(); 
-			DebugLocation(269, 26);
+			DebugLocation(273, 26);
 			mHEX_DIGIT(); 
-			DebugLocation(269, 36);
+			DebugLocation(273, 36);
 			mHEX_DIGIT(); 
-			DebugLocation(269, 46);
+			DebugLocation(273, 46);
 			mHEX_DIGIT(); 
 
 			}

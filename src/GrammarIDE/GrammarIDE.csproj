@@ -150,6 +150,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Examples\Bolha.ps" />
+    <None Include="Examples\CPF.ps" />
     <None Include="Examples\Fatorial.ps" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

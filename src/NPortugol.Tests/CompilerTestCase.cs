@@ -97,13 +97,13 @@ namespace NPortugol.Tests
         public void Build_Loop_For()
         {
             var script = Compile("função main() para x = 1 até 10 fim fim");
-            Assert.AreEqual(".label_0", script[3]);
-            Assert.AreEqual("JG label_1", script[6]);
-            Assert.AreEqual("JMP label_0", script[8]);
-            Assert.AreEqual(".label_1", script[9]);
+            Assert.AreEqual(".label_0", script[4]);
+            Assert.AreEqual("JGE label_1", script[7]);
+            Assert.AreEqual("JMP label_0", script[9]);
+            Assert.AreEqual(".label_1", script[10]);
 
-            script = Compile("função main() para x = 1 até 10 dec fim fim");
-            Assert.AreEqual("JL label_1", script[6]);
+            script = Compile("função main() para x = 1 até 10 decrescente fim fim");
+            Assert.AreEqual("JLE label_1", script[7]);
         }
     }
 }

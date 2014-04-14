@@ -33,20 +33,24 @@ tokens{
 
 @namespace{NPortugol}
 
-@header{using System.Collections;}
+@header{
+using System.Collections;
+using System;
+
+}
 
 @members{
 
 	Stack<string> paraphrases = new Stack<string>();
 	
-        public string GetErrorMessage(RecognitionException e)
+	public string GetErrorMessage(RecognitionException e)
         {
-            string msg = "Erro na linha {0} posição {1}: '{2}'";
+            string msg = "Erro na linha {0} posição {1}: '{2}'. Certifique-se de acentuar as palvras.";
 	    msg = string.Format(msg, e.Line, e.CharPositionInLine, e.Token.Text);
-            if (paraphrases.Count > 0){
+            /*if (paraphrases.Count > 0){
                 string paraphrase = (string)paraphrases.Pop();
                 msg = msg + " " + paraphrase;
-            }
+            }*/
             return msg;
         }
 	protected void mismatch(IIntStream input, int ttype, BitSet follow)	{
@@ -66,7 +70,7 @@ tokens{
 
 @rulecatch {
 	catch (RecognitionException e) {
-		throw e;
+		throw new Exception(GetErrorMessage(e));
 	}
 }
 
