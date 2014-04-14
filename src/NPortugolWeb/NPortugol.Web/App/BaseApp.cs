@@ -10,17 +10,17 @@ namespace NPortugol.Web.App
 {
     public abstract class BaseApp : IHttpHandler
     {
-        protected Engine CreateEngine(string script)
+        protected Motor CreateEngine(string script)
         {
             return CreateEngine(script, null);
         }
 
-        protected Engine CreateEngine(string script, SymbolTable model)
+        protected Motor CreateEngine(string script, SymbolTable model)
         {
-            var engine = new Engine();
+            var engine = new Motor();
 
-            engine.Install(new WebModule());
-            engine.Install(new HtmlModule());
+            engine.Install(new WebModulo());
+            engine.Install(new HtmlModulo());
 
             var modules = RetrieveModules();
 
@@ -35,11 +35,11 @@ namespace NPortugol.Web.App
             return engine;
         }
 
-        protected static List<IModule> RetrieveModules()
+        protected static List<IModulo> RetrieveModules()
         {
             var appInst = HttpContext.Current.ApplicationInstance as INPortugolWebApp;
 
-            return appInst == null ? new List<IModule>() : appInst.Container.Modules;
+            return appInst == null ? new List<IModulo>() : appInst.Container.Modules;
         }
 
         public static string ExtractContent(string path)

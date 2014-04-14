@@ -1,0 +1,13 @@
+﻿<html>
+	<body>
+		<% variavel i %>
+
+		<ul>
+
+		<% para i = 0 ate 10 %>
+			<li> <%=lista[i] %> </li>
+		<% fim %>
+
+		</ul>
+	</body>
+</html>

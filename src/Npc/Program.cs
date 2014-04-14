@@ -79,7 +79,7 @@ namespace Npc
         {
             var compiler = new NPortugol.Npc();
 
-            var bc = compiler.CompileFile(filename);
+            var bc = compiler.CompilarArquivo(filename);
 
             using(var bcfile = new StreamWriter("bytecode.txt"))
             {
@@ -109,10 +109,10 @@ namespace Npc
         {
             if (!FileExists(filename)) return;
 
-            var engine = new Engine();
-            engine.Load(new NPortugol.Npc().CompileFile(filename));
+            var engine = new Motor();
+            engine.Load(new NPortugol.Npc().CompilarArquivo(filename));
 
-            engine.Install(new ConsoleModule());
+            engine.Install(new ConsoleModulo());
 
             if (string.IsNullOrEmpty(function))
                 engine.Execute();
@@ -136,9 +136,9 @@ namespace Npc
 
         private static void Execute(string filename, string function, string parameters)
         {
-            var engine = new Engine();
-            engine.Load(new NPortugol.Npc().ReadFromDisk(filename));
-            engine.Install(new ConsoleModule());
+            var engine = new Motor();
+            engine.Load(new NPortugol.Npc().LerNoDisco(filename));
+            engine.Install(new ConsoleModulo());
 
             if (string.IsNullOrEmpty(function))
                 engine.Execute();
@@ -163,7 +163,7 @@ namespace Npc
         private static void Compile(string filename)
         {
             var compiler = new NPortugol.Npc();
-            compiler.WriteToDisk(filename);
+            compiler.SalvarEmDisco(filename);
 
             Console.WriteLine("");
             Console.WriteLine("");

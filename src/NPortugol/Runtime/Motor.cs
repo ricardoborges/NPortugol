@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using NPortugol.Modules;
+using NPortugol.Modulos;
 using NPortugol.Runtime.Asm;
 using NPortugol.Runtime.Interop;
 
@@ -21,13 +21,13 @@ namespace NPortugol.Runtime
             Init(_compilador);
         }
 
-        public void Init(ICompilador _compilador)
+        private void Init(ICompilador compilador)
         {
-            this._compilador = _compilador;
+            this._compilador = compilador;
 
             hospedagem = new Hospedagem();
             
-            Install(new DefaultModule());
+            Install(new ModuloPadrao());
         }
 
         public bool Debug { get; set; }
@@ -98,9 +98,9 @@ namespace NPortugol.Runtime
             Load(_compilador.Compilar(script));
         }
 
-        public void Install(IModule module)
+        public void Install(IModulo modulo)
         {
-            foreach (var function in module.Functions)
+            foreach (var function in modulo.Functions)
             {
                 Hospedagem.Registrar(function.Key, function.Value, false);
             }

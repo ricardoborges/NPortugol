@@ -5,17 +5,18 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{93E5D4EF-0D95-4FE5-AA63-4B9BC997607D}</ProjectGuid>
+    <ProjectGuid>{6ADAA8F1-FFC1-4920-8DBA-553CA37095BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NPortugol</RootNamespace>
-    <AssemblyName>NPortugol</AssemblyName>
+    <RootNamespace>NPortugol.Web</RootNamespace>
+    <AssemblyName>NPortugol.Web</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -56,6 +57,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -64,56 +66,22 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Antlr3.Runtime">
-      <HintPath>..\..\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsmTemplate.cs" />
-    <Compile Include="Emissor.cs" />
-    <Compile Include="ILTranslator.cs" />
-    <Compile Include="Modulos\ModuloPadrao.cs" />
-    <Compile Include="NPortugolLexer.cs" />
-    <Compile Include="NPortugolParser.cs" />
-    <Compile Include="NPortugolWalker.cs" />
-    <Compile Include="Npc.cs" />
-    <Compile Include="Runtime\Asm\AntlrRunnableBuilder.cs" />
-    <Compile Include="Runtime\Asm\ASMLexer.cs" />
-    <Compile Include="Runtime\Asm\ASMParser.cs" />
-    <Compile Include="Runtime\Asm\IRunnableBuilder.cs" />
-    <Compile Include="Runtime\Bytecode.cs" />
-    <Compile Include="Runtime\BytecodeSerializer.cs" />
-    <Compile Include="Runtime\Motor.cs" />
-    <Compile Include="Runtime\Exceptions\FunctionNotFoundException.cs" />
-    <Compile Include="Runtime\Exceptions\MainNotFoundException.cs" />
-    <Compile Include="Runtime\Exceptions\Ops.cs" />
-    <Compile Include="Runtime\Exceptions\RuntimeException.cs" />
-    <Compile Include="Runtime\Extensions\StringExtensions.cs" />
-    <Compile Include="Runtime\Function.cs" />
-    <Compile Include="Runtime\FunctionCall.cs" />
-    <Compile Include="Runtime\FunctionTable.cs" />
-    <Compile Include="Runtime\ICompilador.cs" />
-    <Compile Include="Runtime\ILoader.cs" />
-    <Compile Include="Runtime\Executor.cs" />
-    <Compile Include="Runtime\InstrucStream.cs" />
-    <Compile Include="Runtime\Instruction.cs" />
-    <Compile Include="Runtime\Interop\Hospedagem.cs" />
-    <Compile Include="Runtime\Interop\IHospedagem.cs" />
-    <Compile Include="Runtime\Interop\IFuncaoHospedada.cs" />
-    <Compile Include="Runtime\Interop\IModulo.cs" />
-    <Compile Include="Runtime\IRuntimeContext.cs" />
-    <Compile Include="Runtime\IStackItem.cs" />
-    <Compile Include="Runtime\Loader.cs" />
-    <Compile Include="Runtime\OpCode.cs" />
-    <Compile Include="Runtime\Operand.cs" />
-    <Compile Include="Runtime\OperandResolver.cs" />
-    <Compile Include="Runtime\OperandType.cs" />
-    <Compile Include="Runtime\ParamStack.cs" />
-    <Compile Include="Runtime\Runnable.cs" />
-    <Compile Include="Runtime\RuntimeContext.cs" />
-    <Compile Include="Runtime\RuntimeStack.cs" />
-    <Compile Include="Runtime\Symbol.cs" />
-    <Compile Include="Runtime\SymbolTable.cs" />
+    <Compile Include="App\Asm\AsmApp.cs" />
+    <Compile Include="App\BaseApp.cs" />
+    <Compile Include="DefaultContainer.cs" />
+    <Compile Include="App\NPWebApp.cs" />
+    <Compile Include="App\Classic\ClassicApp.cs" />
+    <Compile Include="App\Infra.cs" />
+    <Compile Include="App\Mvc\EngineExtensions.cs" />
+    <Compile Include="App\Mvc\MvcApp.cs" />
+    <Compile Include="App\Mvc\Route.cs" />
+    <Compile Include="Script\DefaultScriptBuilder.cs" />
+    <Compile Include="Modules\HtmlModulo.cs" />
+    <Compile Include="NPHttpHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Modules\WebModulo.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -133,7 +101,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <ProjectReference Include="..\..\NPortugol\NPortugol.csproj">
+      <Project>{93E5D4EF-0D95-4FE5-AA63-4B9BC997607D}</Project>
+      <Name>NPortugol</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

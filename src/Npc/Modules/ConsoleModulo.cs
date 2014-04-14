@@ -4,11 +4,11 @@ using NPortugol.Runtime.Interop;
 
 namespace Npc.Modules
 {
-    public class ConsoleModule: IModule
+    public class ConsoleModulo: IModulo
     {
         private readonly Dictionary<string, Func<object[], object>> handlers;
 
-        public ConsoleModule()
+        public ConsoleModulo()
         {
             handlers = new Dictionary<string, Func<object[], object>>
                            {

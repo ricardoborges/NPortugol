@@ -31,7 +31,7 @@ namespace NPortugol.Web.App.Mvc
 
     public static class EngineExtensions
     {
-        public static void DataBind(this Engine engine, Route route)
+        public static void DataBind(this Motor engine, Route route)
         {
             var list = new Dictionary<string, object>();
 

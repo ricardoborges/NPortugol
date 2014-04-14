@@ -5,7 +5,7 @@ using NPortugol.Runtime.Interop;
 
 namespace NPortugol.Web.Modules
 {
-    public class HtmlModule : IModule
+    public class HtmlModulo : IModulo
     {
         private readonly Dictionary<string, Func<object[], object>> _handlers;
 
@@ -14,7 +14,7 @@ namespace NPortugol.Web.Modules
             get { return _handlers; }
         }
 
-        public HtmlModule()
+        public HtmlModulo()
         {
             _handlers = new Dictionary<string, Func<object[], object>>
                            {

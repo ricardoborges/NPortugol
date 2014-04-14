@@ -56,6 +56,7 @@ namespace NPortugol.Runtime
                 case OpCode.SSUB: ProcessArithmetic(true); break;
                 case OpCode.SMUL: ProcessArithmetic(true); break;
                 case OpCode.SDIV: ProcessArithmetic(true); break;
+                case OpCode.SMOD: ProcessArithmetic(true); break;
                 case OpCode.ADD: ProcessArithmetic(false); break;
                 case OpCode.SUB: ProcessArithmetic(false); break;
                 case OpCode.MUL: ProcessArithmetic(false); break;
@@ -223,6 +224,7 @@ namespace NPortugol.Runtime
                 case OpCode.MUL: f1 *= f2; break;
                 case OpCode.SDIV:
                 case OpCode.DIV: f1 /= f2; break;
+                case OpCode.SMOD:
                 case OpCode.MOD: f1 %= f2; break;
                 case OpCode.POW: f1 = (float)Math.Pow(f1, f2); break;
                 case OpCode.INC: f1++; break;

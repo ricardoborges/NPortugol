@@ -96,8 +96,10 @@ namespace NPortugol
 
         public void EmitAssign(IToken token, object value)
         {
-            function.Add(AsmTemplate.Assign(token.Text, value));
-            MapFunction(token);
+            EmitPop(token);
+
+            //function.Add(AsmTemplate.Assign(token.Text, value));
+           // MapFunction(token);
         }
 
         public void EmitAssign(IToken token, int start, int end)
@@ -181,6 +183,11 @@ namespace NPortugol
         public void EmitStackDiv()
         {
             function.Add(AsmTemplate.StackDiv());
+        }
+
+        public void EmitStackMod()
+        {
+            function.Add(AsmTemplate.StackMod());
         }
 
         public void EmitCall(IToken token)
@@ -290,8 +297,8 @@ namespace NPortugol
 
             forIncId.Push(id);
 
-            function.Add(inc ? AsmTemplate.JumpGreater(CreateAndPushLabel())
-                             : AsmTemplate.JumpLess(CreateAndPushLabel()));
+            function.Add(inc ? AsmTemplate.JumpGreaterEquals(CreateAndPushLabel())
+                             : AsmTemplate.JumpLessEquals(CreateAndPushLabel()));
         }
 
         public void EmitEndFor(IToken token, bool inc)

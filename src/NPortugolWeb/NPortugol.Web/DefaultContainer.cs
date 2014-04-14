@@ -5,26 +5,26 @@ namespace NPortugol.Web
 {
     public interface IContainer
     {
-        void Install(IModule instance);
+        void Install(IModulo instance);
 
-        List<IModule> Modules { get; }
+        List<IModulo> Modules { get; }
     }
 
     public class DefaultContainer : IContainer
     {
-        private readonly List<IModule> _list;
+        private readonly List<IModulo> _list;
 
         public DefaultContainer()
         {
-            _list =  new List<IModule>();
+            _list =  new List<IModulo>();
         }
 
-        public void Install(IModule instance)
+        public void Install(IModulo instance)
         {
             _list.Add(instance);
         }
 
-        public List<IModule> Modules
+        public List<IModulo> Modules
         {
             get { return _list; }
         }

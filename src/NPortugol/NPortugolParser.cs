@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-07 15:15:36
+// $ANTLR 3.4 E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-14 01:59:56
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -36,11 +36,9 @@ namespace NPortugol
 public partial class NPortugolParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AR", "ARG", "ASGN", "ASM", "CALL", "CHAR", "DEC", "ESC_SEQ", "EXP", "EXPONENT", "FLOAT", "FUNC", "HEX_DIGIT", "ID", "ILIST", "INDEX", "INIT", "INT", "JMP", "LEXP", "LOOP", "MCALL", "NEWLINE", "OCTAL_ESC", "PARAM", "PCALL", "RET", "SJMP", "SLIST", "STRING", "UNICODE_ESC", "VAR", "WS", "'!='", "'#'", "'%'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'/'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'['", "']'", "'até'", "'dec'", "'e'", "'enquanto'", "'então'", "'fim'", "'função'", "'ou'", "'para'", "'repita'", "'retorne'", "'se'", "'senão'", "'variável'", "'{'", "'}'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AR", "ARG", "ASGN", "ASM", "CALL", "CHAR", "DEC", "ESC_SEQ", "EXP", "EXPONENT", "F", "FLOAT", "FUNC", "HEX_DIGIT", "ID", "ILIST", "INDEX", "INIT", "INT", "JMP", "LEXP", "LOOP", "MCALL", "NEWLINE", "OCTAL_ESC", "PARAM", "PCALL", "RET", "SJMP", "SLIST", "STRING", "T", "UNICODE_ESC", "VAR", "WS", "'!='", "'#'", "'%'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'/'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'['", "']'", "'até'", "'decrescente'", "'e'", "'enquanto'", "'então'", "'fim'", "'função'", "'ou'", "'para'", "'repita'", "'retorne'", "'se'", "'senão'", "'variável'", "'{'", "'}'"
 	};
 	public const int EOF=-1;
-	public const int T__37=37;
-	public const int T__38=38;
 	public const int T__39=39;
 	public const int T__40=40;
 	public const int T__41=41;
@@ -75,6 +73,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	public const int T__70=70;
 	public const int T__71=71;
 	public const int T__72=72;
+	public const int T__73=73;
+	public const int T__74=74;
 	public const int AR=4;
 	public const int ARG=5;
 	public const int ASGN=6;
@@ -85,29 +85,31 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	public const int ESC_SEQ=11;
 	public const int EXP=12;
 	public const int EXPONENT=13;
-	public const int FLOAT=14;
-	public const int FUNC=15;
-	public const int HEX_DIGIT=16;
-	public const int ID=17;
-	public const int ILIST=18;
-	public const int INDEX=19;
-	public const int INIT=20;
-	public const int INT=21;
-	public const int JMP=22;
-	public const int LEXP=23;
-	public const int LOOP=24;
-	public const int MCALL=25;
-	public const int NEWLINE=26;
-	public const int OCTAL_ESC=27;
-	public const int PARAM=28;
-	public const int PCALL=29;
-	public const int RET=30;
-	public const int SJMP=31;
-	public const int SLIST=32;
-	public const int STRING=33;
-	public const int UNICODE_ESC=34;
-	public const int VAR=35;
-	public const int WS=36;
+	public const int F=14;
+	public const int FLOAT=15;
+	public const int FUNC=16;
+	public const int HEX_DIGIT=17;
+	public const int ID=18;
+	public const int ILIST=19;
+	public const int INDEX=20;
+	public const int INIT=21;
+	public const int INT=22;
+	public const int JMP=23;
+	public const int LEXP=24;
+	public const int LOOP=25;
+	public const int MCALL=26;
+	public const int NEWLINE=27;
+	public const int OCTAL_ESC=28;
+	public const int PARAM=29;
+	public const int PCALL=30;
+	public const int RET=31;
+	public const int SJMP=32;
+	public const int SLIST=33;
+	public const int STRING=34;
+	public const int T=35;
+	public const int UNICODE_ESC=36;
+	public const int VAR=37;
+	public const int WS=38;
 
 	public NPortugolParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
@@ -140,7 +142,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	}
 
 	public override string[] TokenNames { get { return NPortugolParser.tokenNames; } }
-	public override string GrammarFileName { get { return "C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g"; } }
+	public override string GrammarFileName { get { return "E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g"; } }
 
 
 
@@ -180,7 +182,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_script();
 
 	// $ANTLR start "script"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:8: public script : ( declare_function )* ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:8: public script : ( declare_function )* ;
 	[GrammarRule("script")]
 	public AstParserRuleReturnScope<object, IToken> script()
 	{
@@ -198,14 +200,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(73, 34);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:15: ( ( declare_function )* )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:15: ( ( declare_function )* )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:17: ( declare_function )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:17: ( declare_function )*
 			{
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(73, 17);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:17: ( declare_function )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:17: ( declare_function )*
 			try { DebugEnterSubRule(1);
 			while (true)
 			{
@@ -213,7 +215,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(1, false);
 				int LA1_0 = input.LA(1);
 
-				if ((LA1_0==63))
+				if ((LA1_0==65))
 				{
 					alt1 = 1;
 				}
@@ -224,7 +226,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:17: declare_function
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:73:17: declare_function
 					{
 					DebugLocation(73, 17);
 					PushFollow(Follow._declare_function_in_script148);
@@ -278,7 +280,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_declare_function();
 
 	// $ANTLR start "declare_function"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:75:1: declare_function : 'função' i= ID '(' ( function_param_list )* ')' ( statement )* 'fim' -> ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:75:1: declare_function : 'função' i= ID '(' ( function_param_list )* ')' ( statement )* 'fim' -> ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) ) ;
 	[GrammarRule("declare_function")]
 	private AstParserRuleReturnScope<object, IToken> declare_function()
 	{
@@ -303,35 +305,35 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object char_literal3_tree = default(object);
 		object char_literal5_tree = default(object);
 		object string_literal7_tree = default(object);
-		RewriteRuleITokenStream stream_41=new RewriteRuleITokenStream(adaptor,"token 41");
-		RewriteRuleITokenStream stream_40=new RewriteRuleITokenStream(adaptor,"token 40");
+		RewriteRuleITokenStream stream_43=new RewriteRuleITokenStream(adaptor,"token 43");
+		RewriteRuleITokenStream stream_42=new RewriteRuleITokenStream(adaptor,"token 42");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
-		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleITokenStream stream_65=new RewriteRuleITokenStream(adaptor,"token 65");
 		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
 		RewriteRuleSubtreeStream stream_function_param_list=new RewriteRuleSubtreeStream(adaptor,"rule function_param_list");
 		try { DebugEnterRule(GrammarFileName, "declare_function");
 		DebugLocation(75, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:2: ( 'função' i= ID '(' ( function_param_list )* ')' ( statement )* 'fim' -> ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:2: ( 'função' i= ID '(' ( function_param_list )* ')' ( statement )* 'fim' -> ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:4: 'função' i= ID '(' ( function_param_list )* ')' ( statement )* 'fim'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:4: 'função' i= ID '(' ( function_param_list )* ')' ( statement )* 'fim'
 			{
 			DebugLocation(76, 4);
-			string_literal2=(IToken)Match(input,63,Follow._63_in_declare_function159); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_63.Add(string_literal2);
+			string_literal2=(IToken)Match(input,65,Follow._65_in_declare_function159); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_65.Add(string_literal2);
 
 			DebugLocation(76, 14);
 			i=(IToken)Match(input,ID,Follow._ID_in_declare_function163); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_ID.Add(i);
 
 			DebugLocation(76, 18);
-			char_literal3=(IToken)Match(input,40,Follow._40_in_declare_function165); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_40.Add(char_literal3);
+			char_literal3=(IToken)Match(input,42,Follow._42_in_declare_function165); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_42.Add(char_literal3);
 
 			DebugLocation(76, 22);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:22: ( function_param_list )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:22: ( function_param_list )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -350,7 +352,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:22: function_param_list
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:22: function_param_list
 					{
 					DebugLocation(76, 22);
 					PushFollow(Follow._function_param_list_in_declare_function167);
@@ -373,11 +375,11 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(2); }
 
 			DebugLocation(76, 43);
-			char_literal5=(IToken)Match(input,41,Follow._41_in_declare_function170); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_41.Add(char_literal5);
+			char_literal5=(IToken)Match(input,43,Follow._43_in_declare_function170); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_43.Add(char_literal5);
 
 			DebugLocation(76, 47);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:47: ( statement )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:47: ( statement )*
 			try { DebugEnterSubRule(3);
 			while (true)
 			{
@@ -385,7 +387,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(3, false);
 				int LA3_0 = input.LA(1);
 
-				if ((LA3_0==ID||LA3_0==38||LA3_0==60||(LA3_0>=65 && LA3_0<=68)||LA3_0==70))
+				if ((LA3_0==ID||LA3_0==40||LA3_0==62||(LA3_0>=67 && LA3_0<=70)||LA3_0==72))
 				{
 					alt3 = 1;
 				}
@@ -396,7 +398,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:47: statement
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:76:47: statement
 					{
 					DebugLocation(76, 47);
 					PushFollow(Follow._statement_in_declare_function172);
@@ -419,8 +421,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(3); }
 
 			DebugLocation(76, 58);
-			string_literal7=(IToken)Match(input,62,Follow._62_in_declare_function175); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_62.Add(string_literal7);
+			string_literal7=(IToken)Match(input,64,Follow._64_in_declare_function175); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_64.Add(string_literal7);
 
 			DebugLocation(77, 3);
 			if (state.backtracking == 0)
@@ -431,7 +433,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: statement, ID, function_param_list
+			// elements: ID, function_param_list, statement
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -445,7 +447,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 78:3: -> ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) )
 			{
 				DebugLocation(78, 6);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:78:6: ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:78:6: ^( FUNC ID ( function_param_list )* ^( SLIST ( statement )* ) )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(78, 8);
@@ -454,7 +456,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				DebugLocation(78, 13);
 				adaptor.AddChild(root_1, stream_ID.NextNode());
 				DebugLocation(78, 16);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:78:16: ( function_param_list )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:78:16: ( function_param_list )*
 				while ( stream_function_param_list.HasNext )
 				{
 					DebugLocation(78, 16);
@@ -463,14 +465,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				}
 				stream_function_param_list.Reset();
 				DebugLocation(78, 37);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:78:37: ^( SLIST ( statement )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:78:37: ^( SLIST ( statement )* )
 				{
 				object root_2 = (object)adaptor.Nil();
 				DebugLocation(78, 39);
 				root_2 = (object)adaptor.BecomeRoot((object)adaptor.Create(SLIST, "SLIST"), root_2);
 
 				DebugLocation(78, 45);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:78:45: ( statement )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:78:45: ( statement )*
 				while ( stream_statement.HasNext )
 				{
 					DebugLocation(78, 45);
@@ -522,7 +524,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_statement();
 
 	// $ANTLR start "statement"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:81:1: statement : ( declare_local | if_stat | for_stat | while_stat | repeat_stat | function_call | assign_var | return_stat | asm_code );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:81:1: statement : ( declare_local | if_stat | for_stat | while_stat | repeat_stat | function_call | assign_var | return_stat | asm_code );
 	[GrammarRule("statement")]
 	private AstParserRuleReturnScope<object, IToken> statement()
 	{
@@ -549,32 +551,32 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(81, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:83:2: ( declare_local | if_stat | for_stat | while_stat | repeat_stat | function_call | assign_var | return_stat | asm_code )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:83:2: ( declare_local | if_stat | for_stat | while_stat | repeat_stat | function_call | assign_var | return_stat | asm_code )
 			int alt4=9;
 			try { DebugEnterDecision(4, false);
 			switch (input.LA(1))
 			{
-			case 70:
+			case 72:
 				{
 				alt4 = 1;
 				}
 				break;
-			case 68:
+			case 70:
 				{
 				alt4 = 2;
 				}
 				break;
-			case 65:
+			case 67:
 				{
 				alt4 = 3;
 				}
 				break;
-			case 60:
+			case 62:
 				{
 				alt4 = 4;
 				}
 				break;
-			case 66:
+			case 68:
 				{
 				alt4 = 5;
 				}
@@ -583,11 +585,11 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				int LA4_6 = input.LA(2);
 
-				if ((LA4_6==40))
+				if ((LA4_6==42))
 				{
 					alt4 = 6;
 				}
-				else if ((LA4_6==51||LA4_6==55))
+				else if ((LA4_6==53||LA4_6==57))
 				{
 					alt4 = 7;
 				}
@@ -600,12 +602,12 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				}
 				}
 				break;
-			case 67:
+			case 69:
 				{
 				alt4 = 8;
 				}
 				break;
-			case 38:
+			case 40:
 				{
 				alt4 = 9;
 				}
@@ -624,7 +626,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:83:4: declare_local
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:83:4: declare_local
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -639,7 +641,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:84:4: if_stat
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:84:4: if_stat
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -654,7 +656,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:85:4: for_stat
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:85:4: for_stat
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -669,7 +671,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:86:4: while_stat
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:86:4: while_stat
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -684,7 +686,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:87:4: repeat_stat
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:87:4: repeat_stat
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -699,7 +701,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:88:4: function_call
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:88:4: function_call
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -714,7 +716,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:89:4: assign_var
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:89:4: assign_var
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -729,7 +731,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:90:4: return_stat
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:90:4: return_stat
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -744,7 +746,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:91:4: asm_code
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:91:4: asm_code
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -792,7 +794,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_function_param_list();
 
 	// $ANTLR start "function_param_list"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:94:1: function_param_list : ID ( ',' ID )* -> ^( PARAM ( ID )* ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:94:1: function_param_list : ID ( ',' ID )* -> ^( PARAM ( ID )* ) ;
 	[GrammarRule("function_param_list")]
 	private AstParserRuleReturnScope<object, IToken> function_param_list()
 	{
@@ -811,23 +813,23 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object ID17_tree = default(object);
 		object char_literal18_tree = default(object);
 		object ID19_tree = default(object);
-		RewriteRuleITokenStream stream_44=new RewriteRuleITokenStream(adaptor,"token 44");
+		RewriteRuleITokenStream stream_46=new RewriteRuleITokenStream(adaptor,"token 46");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		 paraphrases.Push("na lista de parâmetros"); 
 		try { DebugEnterRule(GrammarFileName, "function_param_list");
 		DebugLocation(94, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:2: ( ID ( ',' ID )* -> ^( PARAM ( ID )* ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:2: ( ID ( ',' ID )* -> ^( PARAM ( ID )* ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:4: ID ( ',' ID )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:4: ID ( ',' ID )*
 			{
 			DebugLocation(95, 4);
 			ID17=(IToken)Match(input,ID,Follow._ID_in_function_param_list295); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_ID.Add(ID17);
 
 			DebugLocation(95, 7);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:7: ( ',' ID )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:7: ( ',' ID )*
 			try { DebugEnterSubRule(5);
 			while (true)
 			{
@@ -835,7 +837,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(5, false);
 				int LA5_0 = input.LA(1);
 
-				if ((LA5_0==44))
+				if ((LA5_0==46))
 				{
 					alt5 = 1;
 				}
@@ -846,11 +848,11 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:8: ',' ID
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:8: ',' ID
 					{
 					DebugLocation(95, 8);
-					char_literal18=(IToken)Match(input,44,Follow._44_in_function_param_list298); if (state.failed) return retval; 
-					if (state.backtracking == 0) stream_44.Add(char_literal18);
+					char_literal18=(IToken)Match(input,46,Follow._46_in_function_param_list298); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_46.Add(char_literal18);
 
 					DebugLocation(95, 12);
 					ID19=(IToken)Match(input,ID,Follow._ID_in_function_param_list300); if (state.failed) return retval; 
@@ -888,14 +890,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 95:17: -> ^( PARAM ( ID )* )
 			{
 				DebugLocation(95, 20);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:20: ^( PARAM ( ID )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:20: ^( PARAM ( ID )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(95, 22);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(PARAM, "PARAM"), root_1);
 
 				DebugLocation(95, 28);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:28: ( ID )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:95:28: ( ID )*
 				while ( stream_ID.HasNext )
 				{
 					DebugLocation(95, 28);
@@ -948,7 +950,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_declare_local();
 
 	// $ANTLR start "declare_local"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:105:1: declare_local : 'variável' i+= ID ( ',' i+= ID )* -> ^( VAR ( ID )* ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:105:1: declare_local : 'variável' i+= ID ( ',' i+= ID )* -> ^( VAR ( ID )* ) ;
 	[GrammarRule("declare_local")]
 	private AstParserRuleReturnScope<object, IToken> declare_local()
 	{
@@ -968,21 +970,21 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object string_literal20_tree = default(object);
 		object char_literal21_tree = default(object);
 		object i_tree = default(object);
-		RewriteRuleITokenStream stream_44=new RewriteRuleITokenStream(adaptor,"token 44");
+		RewriteRuleITokenStream stream_46=new RewriteRuleITokenStream(adaptor,"token 46");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_70=new RewriteRuleITokenStream(adaptor,"token 70");
+		RewriteRuleITokenStream stream_72=new RewriteRuleITokenStream(adaptor,"token 72");
 		 paraphrases.Push("na definição de variável"); 
 		try { DebugEnterRule(GrammarFileName, "declare_local");
 		DebugLocation(105, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:106:2: ( 'variável' i+= ID ( ',' i+= ID )* -> ^( VAR ( ID )* ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:106:2: ( 'variável' i+= ID ( ',' i+= ID )* -> ^( VAR ( ID )* ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:106:4: 'variável' i+= ID ( ',' i+= ID )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:106:4: 'variável' i+= ID ( ',' i+= ID )*
 			{
 			DebugLocation(106, 4);
-			string_literal20=(IToken)Match(input,70,Follow._70_in_declare_local348); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_70.Add(string_literal20);
+			string_literal20=(IToken)Match(input,72,Follow._72_in_declare_local348); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_72.Add(string_literal20);
 
 			DebugLocation(106, 16);
 			i=(IToken)Match(input,ID,Follow._ID_in_declare_local352); if (state.failed) return retval; 
@@ -992,7 +994,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			list_i.Add(i);
 
 			DebugLocation(106, 21);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:106:21: ( ',' i+= ID )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:106:21: ( ',' i+= ID )*
 			try { DebugEnterSubRule(6);
 			while (true)
 			{
@@ -1000,7 +1002,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(6, false);
 				int LA6_0 = input.LA(1);
 
-				if ((LA6_0==44))
+				if ((LA6_0==46))
 				{
 					alt6 = 1;
 				}
@@ -1011,11 +1013,11 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:106:22: ',' i+= ID
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:106:22: ',' i+= ID
 					{
 					DebugLocation(106, 22);
-					char_literal21=(IToken)Match(input,44,Follow._44_in_declare_local355); if (state.failed) return retval; 
-					if (state.backtracking == 0) stream_44.Add(char_literal21);
+					char_literal21=(IToken)Match(input,46,Follow._46_in_declare_local355); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_46.Add(char_literal21);
 
 					DebugLocation(106, 27);
 					i=(IToken)Match(input,ID,Follow._ID_in_declare_local359); if (state.failed) return retval; 
@@ -1061,14 +1063,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 108:2: -> ^( VAR ( ID )* )
 			{
 				DebugLocation(108, 5);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:108:5: ^( VAR ( ID )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:108:5: ^( VAR ( ID )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(108, 7);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(VAR, "VAR"), root_1);
 
 				DebugLocation(108, 11);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:108:11: ( ID )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:108:11: ( ID )*
 				while ( stream_ID.HasNext )
 				{
 					DebugLocation(108, 11);
@@ -1121,7 +1123,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_if_stat();
 
 	// $ANTLR start "if_stat"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:116:1: if_stat : 'se' p= logic_expression 'então' (s1+= statement )* (s2= senao_stat -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) ) | 'fim' -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) ) ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:116:1: if_stat : 'se' p= logic_expression 'então' (s1+= statement )* (s2= senao_stat -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) ) | 'fim' -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) ) ) ;
 	[GrammarRule("if_stat")]
 	private AstParserRuleReturnScope<object, IToken> if_stat()
 	{
@@ -1143,9 +1145,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object string_literal22_tree = default(object);
 		object string_literal23_tree = default(object);
 		object string_literal24_tree = default(object);
-		RewriteRuleITokenStream stream_68=new RewriteRuleITokenStream(adaptor,"token 68");
-		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
-		RewriteRuleITokenStream stream_61=new RewriteRuleITokenStream(adaptor,"token 61");
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleITokenStream stream_70=new RewriteRuleITokenStream(adaptor,"token 70");
+		RewriteRuleITokenStream stream_63=new RewriteRuleITokenStream(adaptor,"token 63");
 		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
 		RewriteRuleSubtreeStream stream_logic_expression=new RewriteRuleSubtreeStream(adaptor,"rule logic_expression");
 		RewriteRuleSubtreeStream stream_senao_stat=new RewriteRuleSubtreeStream(adaptor,"rule senao_stat");
@@ -1154,13 +1156,13 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(116, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:118:2: ( 'se' p= logic_expression 'então' (s1+= statement )* (s2= senao_stat -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) ) | 'fim' -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:118:2: ( 'se' p= logic_expression 'então' (s1+= statement )* (s2= senao_stat -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) ) | 'fim' -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) ) ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:118:4: 'se' p= logic_expression 'então' (s1+= statement )* (s2= senao_stat -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) ) | 'fim' -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:118:4: 'se' p= logic_expression 'então' (s1+= statement )* (s2= senao_stat -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) ) | 'fim' -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) ) )
 			{
 			DebugLocation(118, 4);
-			string_literal22=(IToken)Match(input,68,Follow._68_in_if_stat405); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_68.Add(string_literal22);
+			string_literal22=(IToken)Match(input,70,Follow._70_in_if_stat405); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_70.Add(string_literal22);
 
 			DebugLocation(118, 10);
 			PushFollow(Follow._logic_expression_in_if_stat409);
@@ -1169,11 +1171,11 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_logic_expression.Add(p.Tree);
 			DebugLocation(118, 28);
-			string_literal23=(IToken)Match(input,61,Follow._61_in_if_stat411); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_61.Add(string_literal23);
+			string_literal23=(IToken)Match(input,63,Follow._63_in_if_stat411); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_63.Add(string_literal23);
 
 			DebugLocation(118, 38);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:118:38: (s1+= statement )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:118:38: (s1+= statement )*
 			try { DebugEnterSubRule(7);
 			while (true)
 			{
@@ -1181,7 +1183,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(7, false);
 				int LA7_0 = input.LA(1);
 
-				if ((LA7_0==ID||LA7_0==38||LA7_0==60||(LA7_0>=65 && LA7_0<=68)||LA7_0==70))
+				if ((LA7_0==ID||LA7_0==40||LA7_0==62||(LA7_0>=67 && LA7_0<=70)||LA7_0==72))
 				{
 					alt7 = 1;
 				}
@@ -1192,7 +1194,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:118:38: s1+= statement
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:118:38: s1+= statement
 					{
 					DebugLocation(118, 38);
 					PushFollow(Follow._statement_in_if_stat415);
@@ -1218,17 +1220,17 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(7); }
 
 			DebugLocation(119, 2);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:2: (s2= senao_stat -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) ) | 'fim' -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:2: (s2= senao_stat -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) ) | 'fim' -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) ) )
 			int alt8=2;
 			try { DebugEnterSubRule(8);
 			try { DebugEnterDecision(8, false);
 			int LA8_0 = input.LA(1);
 
-			if ((LA8_0==69))
+			if ((LA8_0==71))
 			{
 				alt8 = 1;
 			}
-			else if ((LA8_0==62))
+			else if ((LA8_0==64))
 			{
 				alt8 = 2;
 			}
@@ -1244,7 +1246,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:4: s2= senao_stat
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:4: s2= senao_stat
 				{
 				DebugLocation(119, 6);
 				PushFollow(Follow._senao_stat_in_if_stat423);
@@ -1256,7 +1258,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: p, s2, s1
+				// elements: s2, s1, p
 				// token labels: 
 				// rule labels: retval, s2, p
 				// token list labels: 
@@ -1272,14 +1274,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				// 119:18: -> ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) )
 				{
 					DebugLocation(119, 21);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:21: ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:21: ^( SJMP ^( LEXP $p) ^( SLIST $s1 $s2) )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(119, 23);
 					root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(SJMP, "SJMP"), root_1);
 
 					DebugLocation(119, 28);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:28: ^( LEXP $p)
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:28: ^( LEXP $p)
 					{
 					object root_2 = (object)adaptor.Nil();
 					DebugLocation(119, 30);
@@ -1291,7 +1293,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					adaptor.AddChild(root_1, root_2);
 					}
 					DebugLocation(119, 39);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:39: ^( SLIST $s1 $s2)
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:119:39: ^( SLIST $s1 $s2)
 					{
 					object root_2 = (object)adaptor.Nil();
 					DebugLocation(119, 41);
@@ -1318,17 +1320,17 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:4: 'fim'
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:4: 'fim'
 				{
 				DebugLocation(120, 4);
-				string_literal24=(IToken)Match(input,62,Follow._62_in_if_stat451); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_62.Add(string_literal24);
+				string_literal24=(IToken)Match(input,64,Follow._64_in_if_stat451); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_64.Add(string_literal24);
 
 
 
 				{
 				// AST REWRITE
-				// elements: p, s1
+				// elements: s1, p
 				// token labels: 
 				// rule labels: retval, p
 				// token list labels: 
@@ -1343,14 +1345,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				// 120:10: -> ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) )
 				{
 					DebugLocation(120, 13);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:13: ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:13: ^( JMP ^( LEXP $p) ^( SLIST ( $s1)* ) )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(120, 15);
 					root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(JMP, "JMP"), root_1);
 
 					DebugLocation(120, 19);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:19: ^( LEXP $p)
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:19: ^( LEXP $p)
 					{
 					object root_2 = (object)adaptor.Nil();
 					DebugLocation(120, 21);
@@ -1362,14 +1364,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					adaptor.AddChild(root_1, root_2);
 					}
 					DebugLocation(120, 30);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:30: ^( SLIST ( $s1)* )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:30: ^( SLIST ( $s1)* )
 					{
 					object root_2 = (object)adaptor.Nil();
 					DebugLocation(120, 32);
 					root_2 = (object)adaptor.BecomeRoot((object)adaptor.Create(SLIST, "SLIST"), root_2);
 
 					DebugLocation(120, 39);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:39: ( $s1)*
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:120:39: ( $s1)*
 					while ( stream_s1.HasNext )
 					{
 						DebugLocation(120, 39);
@@ -1432,7 +1434,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_senao_stat();
 
 	// $ANTLR start "senao_stat"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:124:1: senao_stat : 'senão' (s2+= statement )* 'fim' -> ^( SLIST ( statement )* ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:124:1: senao_stat : 'senão' (s2+= statement )* 'fim' -> ^( SLIST ( statement )* ) ;
 	[GrammarRule("senao_stat")]
 	private AstParserRuleReturnScope<object, IToken> senao_stat()
 	{
@@ -1450,23 +1452,23 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		AstParserRuleReturnScope<object, IToken> s2 = default(AstParserRuleReturnScope<object, IToken>);
 		object string_literal25_tree = default(object);
 		object string_literal26_tree = default(object);
-		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
-		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleITokenStream stream_71=new RewriteRuleITokenStream(adaptor,"token 71");
 		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
 		try { DebugEnterRule(GrammarFileName, "senao_stat");
 		DebugLocation(124, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:2: ( 'senão' (s2+= statement )* 'fim' -> ^( SLIST ( statement )* ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:2: ( 'senão' (s2+= statement )* 'fim' -> ^( SLIST ( statement )* ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:4: 'senão' (s2+= statement )* 'fim'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:4: 'senão' (s2+= statement )* 'fim'
 			{
 			DebugLocation(125, 4);
-			string_literal25=(IToken)Match(input,69,Follow._69_in_senao_stat487); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_69.Add(string_literal25);
+			string_literal25=(IToken)Match(input,71,Follow._71_in_senao_stat487); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_71.Add(string_literal25);
 
 			DebugLocation(125, 14);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:14: (s2+= statement )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:14: (s2+= statement )*
 			try { DebugEnterSubRule(9);
 			while (true)
 			{
@@ -1474,7 +1476,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(9, false);
 				int LA9_0 = input.LA(1);
 
-				if ((LA9_0==ID||LA9_0==38||LA9_0==60||(LA9_0>=65 && LA9_0<=68)||LA9_0==70))
+				if ((LA9_0==ID||LA9_0==40||LA9_0==62||(LA9_0>=67 && LA9_0<=70)||LA9_0==72))
 				{
 					alt9 = 1;
 				}
@@ -1485,7 +1487,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:14: s2+= statement
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:14: s2+= statement
 					{
 					DebugLocation(125, 14);
 					PushFollow(Follow._statement_in_senao_stat491);
@@ -1511,8 +1513,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(9); }
 
 			DebugLocation(125, 27);
-			string_literal26=(IToken)Match(input,62,Follow._62_in_senao_stat494); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_62.Add(string_literal26);
+			string_literal26=(IToken)Match(input,64,Follow._64_in_senao_stat494); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_64.Add(string_literal26);
 
 
 
@@ -1532,14 +1534,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 125:33: -> ^( SLIST ( statement )* )
 			{
 				DebugLocation(125, 36);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:36: ^( SLIST ( statement )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:36: ^( SLIST ( statement )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(125, 38);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(SLIST, "SLIST"), root_1);
 
 				DebugLocation(125, 44);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:44: ( statement )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:125:44: ( statement )*
 				while ( stream_statement.HasNext )
 				{
 					DebugLocation(125, 44);
@@ -1588,7 +1590,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_for_stat();
 
 	// $ANTLR start "for_stat"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:128:1: for_stat : 'para' assign_var 'até' index ( 'dec' ( statement )* 'fim' -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) ) | ( statement )* 'fim' -> ^( LOOP assign_var index ^( SLIST ( statement )* ) ) ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:128:1: for_stat : 'para' assign_var 'até' index ( 'decrescente' ( statement )* 'fim' -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) ) | ( statement )* 'fim' -> ^( LOOP assign_var index ^( SLIST ( statement )* ) ) ) ;
 	[GrammarRule("for_stat")]
 	private AstParserRuleReturnScope<object, IToken> for_stat()
 	{
@@ -1615,10 +1617,10 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object string_literal31_tree = default(object);
 		object string_literal33_tree = default(object);
 		object string_literal35_tree = default(object);
-		RewriteRuleITokenStream stream_58=new RewriteRuleITokenStream(adaptor,"token 58");
-		RewriteRuleITokenStream stream_57=new RewriteRuleITokenStream(adaptor,"token 57");
-		RewriteRuleITokenStream stream_65=new RewriteRuleITokenStream(adaptor,"token 65");
-		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
+		RewriteRuleITokenStream stream_67=new RewriteRuleITokenStream(adaptor,"token 67");
+		RewriteRuleITokenStream stream_59=new RewriteRuleITokenStream(adaptor,"token 59");
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
+		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
 		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
 		RewriteRuleSubtreeStream stream_index=new RewriteRuleSubtreeStream(adaptor,"rule index");
 		RewriteRuleSubtreeStream stream_assign_var=new RewriteRuleSubtreeStream(adaptor,"rule assign_var");
@@ -1626,13 +1628,13 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(128, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:128:9: ( 'para' assign_var 'até' index ( 'dec' ( statement )* 'fim' -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) ) | ( statement )* 'fim' -> ^( LOOP assign_var index ^( SLIST ( statement )* ) ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:128:9: ( 'para' assign_var 'até' index ( 'decrescente' ( statement )* 'fim' -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) ) | ( statement )* 'fim' -> ^( LOOP assign_var index ^( SLIST ( statement )* ) ) ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:128:11: 'para' assign_var 'até' index ( 'dec' ( statement )* 'fim' -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) ) | ( statement )* 'fim' -> ^( LOOP assign_var index ^( SLIST ( statement )* ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:128:11: 'para' assign_var 'até' index ( 'decrescente' ( statement )* 'fim' -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) ) | ( statement )* 'fim' -> ^( LOOP assign_var index ^( SLIST ( statement )* ) ) )
 			{
 			DebugLocation(128, 11);
-			string_literal27=(IToken)Match(input,65,Follow._65_in_for_stat514); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_65.Add(string_literal27);
+			string_literal27=(IToken)Match(input,67,Follow._67_in_for_stat514); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_67.Add(string_literal27);
 
 			DebugLocation(128, 18);
 			PushFollow(Follow._assign_var_in_for_stat516);
@@ -1641,8 +1643,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_assign_var.Add(assign_var28.Tree);
 			DebugLocation(128, 29);
-			string_literal29=(IToken)Match(input,57,Follow._57_in_for_stat518); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_57.Add(string_literal29);
+			string_literal29=(IToken)Match(input,59,Follow._59_in_for_stat518); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_59.Add(string_literal29);
 
 			DebugLocation(128, 35);
 			PushFollow(Follow._index_in_for_stat520);
@@ -1651,17 +1653,17 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_index.Add(index30.Tree);
 			DebugLocation(130, 3);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:3: ( 'dec' ( statement )* 'fim' -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) ) | ( statement )* 'fim' -> ^( LOOP assign_var index ^( SLIST ( statement )* ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:3: ( 'decrescente' ( statement )* 'fim' -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) ) | ( statement )* 'fim' -> ^( LOOP assign_var index ^( SLIST ( statement )* ) ) )
 			int alt12=2;
 			try { DebugEnterSubRule(12);
 			try { DebugEnterDecision(12, false);
 			int LA12_0 = input.LA(1);
 
-			if ((LA12_0==58))
+			if ((LA12_0==60))
 			{
 				alt12 = 1;
 			}
-			else if ((LA12_0==ID||LA12_0==38||LA12_0==60||LA12_0==62||(LA12_0>=65 && LA12_0<=68)||LA12_0==70))
+			else if ((LA12_0==ID||LA12_0==40||LA12_0==62||LA12_0==64||(LA12_0>=67 && LA12_0<=70)||LA12_0==72))
 			{
 				alt12 = 2;
 			}
@@ -1677,14 +1679,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:5: 'dec' ( statement )* 'fim'
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:5: 'decrescente' ( statement )* 'fim'
 				{
 				DebugLocation(130, 5);
-				string_literal31=(IToken)Match(input,58,Follow._58_in_for_stat528); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_58.Add(string_literal31);
+				string_literal31=(IToken)Match(input,60,Follow._60_in_for_stat528); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_60.Add(string_literal31);
 
-				DebugLocation(130, 11);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:11: ( statement )*
+				DebugLocation(130, 19);
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:19: ( statement )*
 				try { DebugEnterSubRule(10);
 				while (true)
 				{
@@ -1692,7 +1694,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					try { DebugEnterDecision(10, false);
 					int LA10_0 = input.LA(1);
 
-					if ((LA10_0==ID||LA10_0==38||LA10_0==60||(LA10_0>=65 && LA10_0<=68)||LA10_0==70))
+					if ((LA10_0==ID||LA10_0==40||LA10_0==62||(LA10_0>=67 && LA10_0<=70)||LA10_0==72))
 					{
 						alt10 = 1;
 					}
@@ -1703,9 +1705,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:11: statement
+						// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:19: statement
 						{
-						DebugLocation(130, 11);
+						DebugLocation(130, 19);
 						PushFollow(Follow._statement_in_for_stat530);
 						statement32=statement();
 						PopFollow();
@@ -1725,15 +1727,15 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				} finally { DebugExitSubRule(10); }
 
-				DebugLocation(130, 22);
-				string_literal33=(IToken)Match(input,62,Follow._62_in_for_stat533); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_62.Add(string_literal33);
+				DebugLocation(130, 30);
+				string_literal33=(IToken)Match(input,64,Follow._64_in_for_stat533); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_64.Add(string_literal33);
 
 
 
 				{
 				// AST REWRITE
-				// elements: assign_var, statement, index
+				// elements: assign_var, index, statement
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -1744,33 +1746,33 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (object)adaptor.Nil();
-				// 130:28: -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) )
+				// 130:36: -> ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) )
 				{
-					DebugLocation(130, 31);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:31: ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) )
+					DebugLocation(130, 39);
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:39: ^( LOOP DEC assign_var index ^( SLIST ( statement )* ) )
 					{
 					object root_1 = (object)adaptor.Nil();
-					DebugLocation(130, 33);
+					DebugLocation(130, 41);
 					root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(LOOP, "LOOP"), root_1);
 
-					DebugLocation(130, 38);
+					DebugLocation(130, 46);
 					adaptor.AddChild(root_1, (object)adaptor.Create(DEC, "DEC"));
-					DebugLocation(130, 42);
+					DebugLocation(130, 50);
 					adaptor.AddChild(root_1, stream_assign_var.NextTree());
-					DebugLocation(130, 53);
+					DebugLocation(130, 61);
 					adaptor.AddChild(root_1, stream_index.NextTree());
-					DebugLocation(130, 59);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:59: ^( SLIST ( statement )* )
+					DebugLocation(130, 67);
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:67: ^( SLIST ( statement )* )
 					{
 					object root_2 = (object)adaptor.Nil();
-					DebugLocation(130, 61);
+					DebugLocation(130, 69);
 					root_2 = (object)adaptor.BecomeRoot((object)adaptor.Create(SLIST, "SLIST"), root_2);
 
-					DebugLocation(130, 67);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:67: ( statement )*
+					DebugLocation(130, 75);
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:130:75: ( statement )*
 					while ( stream_statement.HasNext )
 					{
-						DebugLocation(130, 67);
+						DebugLocation(130, 75);
 						adaptor.AddChild(root_2, stream_statement.NextTree());
 
 					}
@@ -1792,10 +1794,10 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:5: ( statement )* 'fim'
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:5: ( statement )* 'fim'
 				{
 				DebugLocation(131, 5);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:5: ( statement )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:5: ( statement )*
 				try { DebugEnterSubRule(11);
 				while (true)
 				{
@@ -1803,7 +1805,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					try { DebugEnterDecision(11, false);
 					int LA11_0 = input.LA(1);
 
-					if ((LA11_0==ID||LA11_0==38||LA11_0==60||(LA11_0>=65 && LA11_0<=68)||LA11_0==70))
+					if ((LA11_0==ID||LA11_0==40||LA11_0==62||(LA11_0>=67 && LA11_0<=70)||LA11_0==72))
 					{
 						alt11 = 1;
 					}
@@ -1814,7 +1816,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:5: statement
+						// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:5: statement
 						{
 						DebugLocation(131, 5);
 						PushFollow(Follow._statement_in_for_stat558);
@@ -1837,14 +1839,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				} finally { DebugExitSubRule(11); }
 
 				DebugLocation(131, 16);
-				string_literal35=(IToken)Match(input,62,Follow._62_in_for_stat561); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_62.Add(string_literal35);
+				string_literal35=(IToken)Match(input,64,Follow._64_in_for_stat561); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_64.Add(string_literal35);
 
 
 
 				{
 				// AST REWRITE
-				// elements: index, statement, assign_var
+				// elements: index, assign_var, statement
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -1858,7 +1860,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				// 131:22: -> ^( LOOP assign_var index ^( SLIST ( statement )* ) )
 				{
 					DebugLocation(131, 25);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:25: ^( LOOP assign_var index ^( SLIST ( statement )* ) )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:25: ^( LOOP assign_var index ^( SLIST ( statement )* ) )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(131, 27);
@@ -1869,14 +1871,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					DebugLocation(131, 43);
 					adaptor.AddChild(root_1, stream_index.NextTree());
 					DebugLocation(131, 49);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:49: ^( SLIST ( statement )* )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:49: ^( SLIST ( statement )* )
 					{
 					object root_2 = (object)adaptor.Nil();
 					DebugLocation(131, 51);
 					root_2 = (object)adaptor.BecomeRoot((object)adaptor.Create(SLIST, "SLIST"), root_2);
 
 					DebugLocation(131, 57);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:57: ( statement )*
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:131:57: ( statement )*
 					while ( stream_statement.HasNext )
 					{
 						DebugLocation(131, 57);
@@ -1935,7 +1937,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_while_stat();
 
 	// $ANTLR start "while_stat"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:135:1: while_stat : 'enquanto' logic_expression ( statement )* 'fim' -> ^( LOOP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:135:1: while_stat : 'enquanto' logic_expression ( statement )* 'fim' -> ^( LOOP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) ) ;
 	[GrammarRule("while_stat")]
 	private AstParserRuleReturnScope<object, IToken> while_stat()
 	{
@@ -1954,21 +1956,21 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 		object string_literal36_tree = default(object);
 		object string_literal39_tree = default(object);
+		RewriteRuleITokenStream stream_64=new RewriteRuleITokenStream(adaptor,"token 64");
 		RewriteRuleITokenStream stream_62=new RewriteRuleITokenStream(adaptor,"token 62");
-		RewriteRuleITokenStream stream_60=new RewriteRuleITokenStream(adaptor,"token 60");
 		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
 		RewriteRuleSubtreeStream stream_logic_expression=new RewriteRuleSubtreeStream(adaptor,"rule logic_expression");
 		try { DebugEnterRule(GrammarFileName, "while_stat");
 		DebugLocation(135, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:136:2: ( 'enquanto' logic_expression ( statement )* 'fim' -> ^( LOOP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:136:2: ( 'enquanto' logic_expression ( statement )* 'fim' -> ^( LOOP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:136:4: 'enquanto' logic_expression ( statement )* 'fim'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:136:4: 'enquanto' logic_expression ( statement )* 'fim'
 			{
 			DebugLocation(136, 4);
-			string_literal36=(IToken)Match(input,60,Follow._60_in_while_stat594); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_60.Add(string_literal36);
+			string_literal36=(IToken)Match(input,62,Follow._62_in_while_stat594); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_62.Add(string_literal36);
 
 			DebugLocation(136, 15);
 			PushFollow(Follow._logic_expression_in_while_stat596);
@@ -1977,7 +1979,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_logic_expression.Add(logic_expression37.Tree);
 			DebugLocation(136, 32);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:136:32: ( statement )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:136:32: ( statement )*
 			try { DebugEnterSubRule(13);
 			while (true)
 			{
@@ -1985,7 +1987,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(13, false);
 				int LA13_0 = input.LA(1);
 
-				if ((LA13_0==ID||LA13_0==38||LA13_0==60||(LA13_0>=65 && LA13_0<=68)||LA13_0==70))
+				if ((LA13_0==ID||LA13_0==40||LA13_0==62||(LA13_0>=67 && LA13_0<=70)||LA13_0==72))
 				{
 					alt13 = 1;
 				}
@@ -1996,7 +1998,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:136:32: statement
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:136:32: statement
 					{
 					DebugLocation(136, 32);
 					PushFollow(Follow._statement_in_while_stat598);
@@ -2019,14 +2021,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(13); }
 
 			DebugLocation(136, 43);
-			string_literal39=(IToken)Match(input,62,Follow._62_in_while_stat601); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_62.Add(string_literal39);
+			string_literal39=(IToken)Match(input,64,Follow._64_in_while_stat601); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_64.Add(string_literal39);
 
 
 
 			{
 			// AST REWRITE
-			// elements: statement, logic_expression
+			// elements: logic_expression, statement
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -2040,14 +2042,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 137:3: -> ^( LOOP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) )
 			{
 				DebugLocation(137, 6);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:137:6: ^( LOOP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:137:6: ^( LOOP ^( LEXP logic_expression ) ^( SLIST ( statement )* ) )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(137, 8);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(LOOP, "LOOP"), root_1);
 
 				DebugLocation(137, 13);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:137:13: ^( LEXP logic_expression )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:137:13: ^( LEXP logic_expression )
 				{
 				object root_2 = (object)adaptor.Nil();
 				DebugLocation(137, 15);
@@ -2059,14 +2061,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				adaptor.AddChild(root_1, root_2);
 				}
 				DebugLocation(137, 38);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:137:38: ^( SLIST ( statement )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:137:38: ^( SLIST ( statement )* )
 				{
 				object root_2 = (object)adaptor.Nil();
 				DebugLocation(137, 40);
 				root_2 = (object)adaptor.BecomeRoot((object)adaptor.Create(SLIST, "SLIST"), root_2);
 
 				DebugLocation(137, 46);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:137:46: ( statement )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:137:46: ( statement )*
 				while ( stream_statement.HasNext )
 				{
 					DebugLocation(137, 46);
@@ -2118,7 +2120,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_repeat_stat();
 
 	// $ANTLR start "repeat_stat"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:1: repeat_stat : 'repita' ( statement )* 'até' logic_expression -> ^( LOOP ^( SLIST ( statement )* ) ^( LEXP logic_expression ) ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:1: repeat_stat : 'repita' ( statement )* 'até' logic_expression -> ^( LOOP ^( SLIST ( statement )* ) ^( LEXP logic_expression ) ) ;
 	[GrammarRule("repeat_stat")]
 	private AstParserRuleReturnScope<object, IToken> repeat_stat()
 	{
@@ -2137,24 +2139,24 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 		object string_literal40_tree = default(object);
 		object string_literal42_tree = default(object);
-		RewriteRuleITokenStream stream_66=new RewriteRuleITokenStream(adaptor,"token 66");
-		RewriteRuleITokenStream stream_57=new RewriteRuleITokenStream(adaptor,"token 57");
+		RewriteRuleITokenStream stream_59=new RewriteRuleITokenStream(adaptor,"token 59");
+		RewriteRuleITokenStream stream_68=new RewriteRuleITokenStream(adaptor,"token 68");
 		RewriteRuleSubtreeStream stream_statement=new RewriteRuleSubtreeStream(adaptor,"rule statement");
 		RewriteRuleSubtreeStream stream_logic_expression=new RewriteRuleSubtreeStream(adaptor,"rule logic_expression");
 		try { DebugEnterRule(GrammarFileName, "repeat_stat");
 		DebugLocation(140, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:13: ( 'repita' ( statement )* 'até' logic_expression -> ^( LOOP ^( SLIST ( statement )* ) ^( LEXP logic_expression ) ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:13: ( 'repita' ( statement )* 'até' logic_expression -> ^( LOOP ^( SLIST ( statement )* ) ^( LEXP logic_expression ) ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:15: 'repita' ( statement )* 'até' logic_expression
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:15: 'repita' ( statement )* 'até' logic_expression
 			{
 			DebugLocation(140, 15);
-			string_literal40=(IToken)Match(input,66,Follow._66_in_repeat_stat633); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_66.Add(string_literal40);
+			string_literal40=(IToken)Match(input,68,Follow._68_in_repeat_stat633); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_68.Add(string_literal40);
 
 			DebugLocation(140, 24);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:24: ( statement )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:24: ( statement )*
 			try { DebugEnterSubRule(14);
 			while (true)
 			{
@@ -2162,7 +2164,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(14, false);
 				int LA14_0 = input.LA(1);
 
-				if ((LA14_0==ID||LA14_0==38||LA14_0==60||(LA14_0>=65 && LA14_0<=68)||LA14_0==70))
+				if ((LA14_0==ID||LA14_0==40||LA14_0==62||(LA14_0>=67 && LA14_0<=70)||LA14_0==72))
 				{
 					alt14 = 1;
 				}
@@ -2173,7 +2175,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:24: statement
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:140:24: statement
 					{
 					DebugLocation(140, 24);
 					PushFollow(Follow._statement_in_repeat_stat635);
@@ -2196,8 +2198,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(14); }
 
 			DebugLocation(140, 35);
-			string_literal42=(IToken)Match(input,57,Follow._57_in_repeat_stat638); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_57.Add(string_literal42);
+			string_literal42=(IToken)Match(input,59,Follow._59_in_repeat_stat638); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_59.Add(string_literal42);
 
 			DebugLocation(140, 41);
 			PushFollow(Follow._logic_expression_in_repeat_stat640);
@@ -2223,21 +2225,21 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 141:3: -> ^( LOOP ^( SLIST ( statement )* ) ^( LEXP logic_expression ) )
 			{
 				DebugLocation(141, 6);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:141:6: ^( LOOP ^( SLIST ( statement )* ) ^( LEXP logic_expression ) )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:141:6: ^( LOOP ^( SLIST ( statement )* ) ^( LEXP logic_expression ) )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(141, 8);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(LOOP, "LOOP"), root_1);
 
 				DebugLocation(141, 13);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:141:13: ^( SLIST ( statement )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:141:13: ^( SLIST ( statement )* )
 				{
 				object root_2 = (object)adaptor.Nil();
 				DebugLocation(141, 15);
 				root_2 = (object)adaptor.BecomeRoot((object)adaptor.Create(SLIST, "SLIST"), root_2);
 
 				DebugLocation(141, 21);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:141:21: ( statement )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:141:21: ( statement )*
 				while ( stream_statement.HasNext )
 				{
 					DebugLocation(141, 21);
@@ -2249,7 +2251,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				adaptor.AddChild(root_1, root_2);
 				}
 				DebugLocation(141, 33);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:141:33: ^( LEXP logic_expression )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:141:33: ^( LEXP logic_expression )
 				{
 				object root_2 = (object)adaptor.Nil();
 				DebugLocation(141, 35);
@@ -2301,7 +2303,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_function_call();
 
 	// $ANTLR start "function_call"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:144:1: function_call : ID '(' ( function_arg_list )* ')' -> ^( CALL ID ( function_arg_list )* ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:144:1: function_call : ID '(' ( function_arg_list )* ')' -> ^( CALL ID ( function_arg_list )* ) ;
 	[GrammarRule("function_call")]
 	private AstParserRuleReturnScope<object, IToken> function_call()
 	{
@@ -2321,8 +2323,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object ID44_tree = default(object);
 		object char_literal45_tree = default(object);
 		object char_literal47_tree = default(object);
-		RewriteRuleITokenStream stream_41=new RewriteRuleITokenStream(adaptor,"token 41");
-		RewriteRuleITokenStream stream_40=new RewriteRuleITokenStream(adaptor,"token 40");
+		RewriteRuleITokenStream stream_43=new RewriteRuleITokenStream(adaptor,"token 43");
+		RewriteRuleITokenStream stream_42=new RewriteRuleITokenStream(adaptor,"token 42");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		RewriteRuleSubtreeStream stream_function_arg_list=new RewriteRuleSubtreeStream(adaptor,"rule function_arg_list");
 		 paraphrases.Push("na chamada de função"); 
@@ -2330,20 +2332,20 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(144, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:2: ( ID '(' ( function_arg_list )* ')' -> ^( CALL ID ( function_arg_list )* ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:2: ( ID '(' ( function_arg_list )* ')' -> ^( CALL ID ( function_arg_list )* ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:4: ID '(' ( function_arg_list )* ')'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:4: ID '(' ( function_arg_list )* ')'
 			{
 			DebugLocation(145, 4);
 			ID44=(IToken)Match(input,ID,Follow._ID_in_function_call688); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_ID.Add(ID44);
 
 			DebugLocation(145, 7);
-			char_literal45=(IToken)Match(input,40,Follow._40_in_function_call690); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_40.Add(char_literal45);
+			char_literal45=(IToken)Match(input,42,Follow._42_in_function_call690); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_42.Add(char_literal45);
 
 			DebugLocation(145, 11);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:11: ( function_arg_list )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:11: ( function_arg_list )*
 			try { DebugEnterSubRule(15);
 			while (true)
 			{
@@ -2351,7 +2353,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(15, false);
 				int LA15_0 = input.LA(1);
 
-				if ((LA15_0==FLOAT||LA15_0==ID||LA15_0==INT||LA15_0==STRING||LA15_0==40))
+				if (((LA15_0>=F && LA15_0<=FLOAT)||LA15_0==ID||LA15_0==INT||(LA15_0>=STRING && LA15_0<=T)||LA15_0==42))
 				{
 					alt15 = 1;
 				}
@@ -2362,7 +2364,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:11: function_arg_list
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:11: function_arg_list
 					{
 					DebugLocation(145, 11);
 					PushFollow(Follow._function_arg_list_in_function_call692);
@@ -2385,8 +2387,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(15); }
 
 			DebugLocation(145, 30);
-			char_literal47=(IToken)Match(input,41,Follow._41_in_function_call695); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_41.Add(char_literal47);
+			char_literal47=(IToken)Match(input,43,Follow._43_in_function_call695); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_43.Add(char_literal47);
 
 
 
@@ -2406,7 +2408,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 145:34: -> ^( CALL ID ( function_arg_list )* )
 			{
 				DebugLocation(145, 37);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:37: ^( CALL ID ( function_arg_list )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:37: ^( CALL ID ( function_arg_list )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(145, 39);
@@ -2415,7 +2417,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				DebugLocation(145, 44);
 				adaptor.AddChild(root_1, stream_ID.NextNode());
 				DebugLocation(145, 47);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:47: ( function_arg_list )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:47: ( function_arg_list )*
 				while ( stream_function_arg_list.HasNext )
 				{
 					DebugLocation(145, 47);
@@ -2468,7 +2470,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_property_call();
 
 	// $ANTLR start "property_call"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:148:1: property_call : o= ID '.' p= ID -> ^( PCALL $o $p) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:148:1: property_call : o= ID '.' p= ID -> ^( PCALL $o $p) ;
 	[GrammarRule("property_call")]
 	private AstParserRuleReturnScope<object, IToken> property_call()
 	{
@@ -2487,24 +2489,24 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object o_tree = default(object);
 		object p_tree = default(object);
 		object char_literal48_tree = default(object);
-		RewriteRuleITokenStream stream_46=new RewriteRuleITokenStream(adaptor,"token 46");
+		RewriteRuleITokenStream stream_48=new RewriteRuleITokenStream(adaptor,"token 48");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		 paraphrases.Push("na chamada de propriedade"); 
 		try { DebugEnterRule(GrammarFileName, "property_call");
 		DebugLocation(148, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:149:2: (o= ID '.' p= ID -> ^( PCALL $o $p) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:149:2: (o= ID '.' p= ID -> ^( PCALL $o $p) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:149:4: o= ID '.' p= ID
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:149:4: o= ID '.' p= ID
 			{
 			DebugLocation(149, 5);
 			o=(IToken)Match(input,ID,Follow._ID_in_property_call736); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_ID.Add(o);
 
 			DebugLocation(149, 8);
-			char_literal48=(IToken)Match(input,46,Follow._46_in_property_call737); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_46.Add(char_literal48);
+			char_literal48=(IToken)Match(input,48,Follow._48_in_property_call737); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_48.Add(char_literal48);
 
 			DebugLocation(149, 12);
 			p=(IToken)Match(input,ID,Follow._ID_in_property_call740); if (state.failed) return retval; 
@@ -2530,7 +2532,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 149:17: -> ^( PCALL $o $p)
 			{
 				DebugLocation(149, 20);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:149:20: ^( PCALL $o $p)
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:149:20: ^( PCALL $o $p)
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(149, 22);
@@ -2585,7 +2587,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_method_call();
 
 	// $ANTLR start "method_call"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:152:1: method_call : o= ID '.' p= ID '(' ( function_arg_list )* ')' -> ^( MCALL $o $p ( function_arg_list )* ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:152:1: method_call : o= ID '.' p= ID '(' ( function_arg_list )* ')' -> ^( MCALL $o $p ( function_arg_list )* ) ;
 	[GrammarRule("method_call")]
 	private AstParserRuleReturnScope<object, IToken> method_call()
 	{
@@ -2609,9 +2611,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object char_literal49_tree = default(object);
 		object char_literal50_tree = default(object);
 		object char_literal52_tree = default(object);
-		RewriteRuleITokenStream stream_41=new RewriteRuleITokenStream(adaptor,"token 41");
-		RewriteRuleITokenStream stream_46=new RewriteRuleITokenStream(adaptor,"token 46");
-		RewriteRuleITokenStream stream_40=new RewriteRuleITokenStream(adaptor,"token 40");
+		RewriteRuleITokenStream stream_48=new RewriteRuleITokenStream(adaptor,"token 48");
+		RewriteRuleITokenStream stream_43=new RewriteRuleITokenStream(adaptor,"token 43");
+		RewriteRuleITokenStream stream_42=new RewriteRuleITokenStream(adaptor,"token 42");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		RewriteRuleSubtreeStream stream_function_arg_list=new RewriteRuleSubtreeStream(adaptor,"rule function_arg_list");
 		 paraphrases.Push("na chamada de propriedade"); 
@@ -2619,28 +2621,28 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(152, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:2: (o= ID '.' p= ID '(' ( function_arg_list )* ')' -> ^( MCALL $o $p ( function_arg_list )* ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:2: (o= ID '.' p= ID '(' ( function_arg_list )* ')' -> ^( MCALL $o $p ( function_arg_list )* ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:4: o= ID '.' p= ID '(' ( function_arg_list )* ')'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:4: o= ID '.' p= ID '(' ( function_arg_list )* ')'
 			{
 			DebugLocation(153, 5);
 			o=(IToken)Match(input,ID,Follow._ID_in_method_call784); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_ID.Add(o);
 
 			DebugLocation(153, 8);
-			char_literal49=(IToken)Match(input,46,Follow._46_in_method_call785); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_46.Add(char_literal49);
+			char_literal49=(IToken)Match(input,48,Follow._48_in_method_call785); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_48.Add(char_literal49);
 
 			DebugLocation(153, 12);
 			p=(IToken)Match(input,ID,Follow._ID_in_method_call788); if (state.failed) return retval; 
 			if (state.backtracking == 0) stream_ID.Add(p);
 
 			DebugLocation(153, 16);
-			char_literal50=(IToken)Match(input,40,Follow._40_in_method_call790); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_40.Add(char_literal50);
+			char_literal50=(IToken)Match(input,42,Follow._42_in_method_call790); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_42.Add(char_literal50);
 
 			DebugLocation(153, 20);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:20: ( function_arg_list )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:20: ( function_arg_list )*
 			try { DebugEnterSubRule(16);
 			while (true)
 			{
@@ -2648,7 +2650,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(16, false);
 				int LA16_0 = input.LA(1);
 
-				if ((LA16_0==FLOAT||LA16_0==ID||LA16_0==INT||LA16_0==STRING||LA16_0==40))
+				if (((LA16_0>=F && LA16_0<=FLOAT)||LA16_0==ID||LA16_0==INT||(LA16_0>=STRING && LA16_0<=T)||LA16_0==42))
 				{
 					alt16 = 1;
 				}
@@ -2659,7 +2661,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:20: function_arg_list
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:20: function_arg_list
 					{
 					DebugLocation(153, 20);
 					PushFollow(Follow._function_arg_list_in_method_call792);
@@ -2682,14 +2684,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(16); }
 
 			DebugLocation(153, 39);
-			char_literal52=(IToken)Match(input,41,Follow._41_in_method_call795); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_41.Add(char_literal52);
+			char_literal52=(IToken)Match(input,43,Follow._43_in_method_call795); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_43.Add(char_literal52);
 
 
 
 			{
 			// AST REWRITE
-			// elements: function_arg_list, p, o
+			// elements: o, function_arg_list, p
 			// token labels: p, o
 			// rule labels: retval
 			// token list labels: 
@@ -2705,7 +2707,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 153:43: -> ^( MCALL $o $p ( function_arg_list )* )
 			{
 				DebugLocation(153, 46);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:46: ^( MCALL $o $p ( function_arg_list )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:46: ^( MCALL $o $p ( function_arg_list )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(153, 48);
@@ -2716,7 +2718,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				DebugLocation(153, 58);
 				adaptor.AddChild(root_1, stream_p.NextNode());
 				DebugLocation(153, 60);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:60: ( function_arg_list )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:60: ( function_arg_list )*
 				while ( stream_function_arg_list.HasNext )
 				{
 					DebugLocation(153, 60);
@@ -2769,7 +2771,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_function_arg_list();
 
 	// $ANTLR start "function_arg_list"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:156:1: function_arg_list : plus_expression ( ',' plus_expression )* -> ^( ARG ( plus_expression )* ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:156:1: function_arg_list : plus_expression ( ',' plus_expression )* -> ^( ARG ( plus_expression )* ) ;
 	[GrammarRule("function_arg_list")]
 	private AstParserRuleReturnScope<object, IToken> function_arg_list()
 	{
@@ -2786,16 +2788,16 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		AstParserRuleReturnScope<object, IToken> plus_expression55 = default(AstParserRuleReturnScope<object, IToken>);
 
 		object char_literal54_tree = default(object);
-		RewriteRuleITokenStream stream_44=new RewriteRuleITokenStream(adaptor,"token 44");
+		RewriteRuleITokenStream stream_46=new RewriteRuleITokenStream(adaptor,"token 46");
 		RewriteRuleSubtreeStream stream_plus_expression=new RewriteRuleSubtreeStream(adaptor,"rule plus_expression");
 		 paraphrases.Push("nos argumentos da função"); 
 		try { DebugEnterRule(GrammarFileName, "function_arg_list");
 		DebugLocation(156, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:2: ( plus_expression ( ',' plus_expression )* -> ^( ARG ( plus_expression )* ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:2: ( plus_expression ( ',' plus_expression )* -> ^( ARG ( plus_expression )* ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:4: plus_expression ( ',' plus_expression )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:4: plus_expression ( ',' plus_expression )*
 			{
 			DebugLocation(158, 4);
 			PushFollow(Follow._plus_expression_in_function_arg_list840);
@@ -2804,7 +2806,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			if (state.failed) return retval;
 			if (state.backtracking == 0) stream_plus_expression.Add(plus_expression53.Tree);
 			DebugLocation(158, 20);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:20: ( ',' plus_expression )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:20: ( ',' plus_expression )*
 			try { DebugEnterSubRule(17);
 			while (true)
 			{
@@ -2812,7 +2814,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(17, false);
 				int LA17_0 = input.LA(1);
 
-				if ((LA17_0==44))
+				if ((LA17_0==46))
 				{
 					alt17 = 1;
 				}
@@ -2823,11 +2825,11 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:21: ',' plus_expression
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:21: ',' plus_expression
 					{
 					DebugLocation(158, 21);
-					char_literal54=(IToken)Match(input,44,Follow._44_in_function_arg_list843); if (state.failed) return retval; 
-					if (state.backtracking == 0) stream_44.Add(char_literal54);
+					char_literal54=(IToken)Match(input,46,Follow._46_in_function_arg_list843); if (state.failed) return retval; 
+					if (state.backtracking == 0) stream_46.Add(char_literal54);
 
 					DebugLocation(158, 25);
 					PushFollow(Follow._plus_expression_in_function_arg_list845);
@@ -2867,14 +2869,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 158:43: -> ^( ARG ( plus_expression )* )
 			{
 				DebugLocation(158, 46);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:46: ^( ARG ( plus_expression )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:46: ^( ARG ( plus_expression )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(158, 48);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(ARG, "ARG"), root_1);
 
 				DebugLocation(158, 52);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:52: ( plus_expression )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:158:52: ( plus_expression )*
 				while ( stream_plus_expression.HasNext )
 				{
 					DebugLocation(158, 52);
@@ -2927,7 +2929,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_assign_var();
 
 	// $ANTLR start "assign_var"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:161:1: assign_var : ( ID '=' '[' INT '..' INT ']' -> ^( ASGN ID INT INT ) | ID '=' '{' INT ( ',' INT )* '}' -> ^( ASGN ID ^( ILIST ( INT )* ) ) | ID '[' index ']' '=' assign_expression -> ^( ASGN ^( AR index ) ID assign_expression ) | ID '=' assign_expression -> ^( ASGN ID assign_expression ) );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:161:1: assign_var : ( ID '=' '[' INT '..' INT ']' -> ^( ASGN ID INT INT ) | ID '=' '{' INT ( ',' INT )* '}' -> ^( ASGN ID ^( ILIST ( INT )* ) ) | ID '[' index ']' '=' assign_expression -> ^( ASGN ^( AR index ) ID assign_expression ) | ID '=' assign_expression -> ^( ASGN ID assign_expression ) );
 	[GrammarRule("assign_var")]
 	private AstParserRuleReturnScope<object, IToken> assign_var()
 	{
@@ -2983,15 +2985,15 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object char_literal74_tree = default(object);
 		object ID76_tree = default(object);
 		object char_literal77_tree = default(object);
+		RewriteRuleITokenStream stream_49=new RewriteRuleITokenStream(adaptor,"token 49");
+		RewriteRuleITokenStream stream_58=new RewriteRuleITokenStream(adaptor,"token 58");
 		RewriteRuleITokenStream stream_INT=new RewriteRuleITokenStream(adaptor,"token INT");
-		RewriteRuleITokenStream stream_44=new RewriteRuleITokenStream(adaptor,"token 44");
-		RewriteRuleITokenStream stream_56=new RewriteRuleITokenStream(adaptor,"token 56");
-		RewriteRuleITokenStream stream_47=new RewriteRuleITokenStream(adaptor,"token 47");
-		RewriteRuleITokenStream stream_55=new RewriteRuleITokenStream(adaptor,"token 55");
+		RewriteRuleITokenStream stream_57=new RewriteRuleITokenStream(adaptor,"token 57");
+		RewriteRuleITokenStream stream_46=new RewriteRuleITokenStream(adaptor,"token 46");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
-		RewriteRuleITokenStream stream_51=new RewriteRuleITokenStream(adaptor,"token 51");
-		RewriteRuleITokenStream stream_71=new RewriteRuleITokenStream(adaptor,"token 71");
-		RewriteRuleITokenStream stream_72=new RewriteRuleITokenStream(adaptor,"token 72");
+		RewriteRuleITokenStream stream_53=new RewriteRuleITokenStream(adaptor,"token 53");
+		RewriteRuleITokenStream stream_73=new RewriteRuleITokenStream(adaptor,"token 73");
+		RewriteRuleITokenStream stream_74=new RewriteRuleITokenStream(adaptor,"token 74");
 		RewriteRuleSubtreeStream stream_assign_expression=new RewriteRuleSubtreeStream(adaptor,"rule assign_expression");
 		RewriteRuleSubtreeStream stream_index=new RewriteRuleSubtreeStream(adaptor,"rule index");
 		 paraphrases.Push("na atribuição de variável"); 
@@ -2999,7 +3001,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(161, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:162:2: ( ID '=' '[' INT '..' INT ']' -> ^( ASGN ID INT INT ) | ID '=' '{' INT ( ',' INT )* '}' -> ^( ASGN ID ^( ILIST ( INT )* ) ) | ID '[' index ']' '=' assign_expression -> ^( ASGN ^( AR index ) ID assign_expression ) | ID '=' assign_expression -> ^( ASGN ID assign_expression ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:162:2: ( ID '=' '[' INT '..' INT ']' -> ^( ASGN ID INT INT ) | ID '=' '{' INT ( ',' INT )* '}' -> ^( ASGN ID ^( ILIST ( INT )* ) ) | ID '[' index ']' '=' assign_expression -> ^( ASGN ^( AR index ) ID assign_expression ) | ID '=' assign_expression -> ^( ASGN ID assign_expression ) )
 			int alt19=4;
 			try { DebugEnterDecision(19, false);
 			int LA19_0 = input.LA(1);
@@ -3008,7 +3010,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			{
 				int LA19_1 = input.LA(2);
 
-				if ((LA19_1==51))
+				if ((LA19_1==53))
 				{
 					int LA19_2 = input.LA(3);
 
@@ -3032,7 +3034,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 						throw nvae;
 					}
 				}
-				else if ((LA19_1==55))
+				else if ((LA19_1==57))
 				{
 					alt19 = 3;
 				}
@@ -3056,35 +3058,35 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:163:9: ID '=' '[' INT '..' INT ']'
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:163:9: ID '=' '[' INT '..' INT ']'
 				{
 				DebugLocation(163, 9);
 				ID56=(IToken)Match(input,ID,Follow._ID_in_assign_var897); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_ID.Add(ID56);
 
 				DebugLocation(163, 12);
-				char_literal57=(IToken)Match(input,51,Follow._51_in_assign_var899); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_51.Add(char_literal57);
+				char_literal57=(IToken)Match(input,53,Follow._53_in_assign_var899); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_53.Add(char_literal57);
 
 				DebugLocation(163, 16);
-				char_literal58=(IToken)Match(input,55,Follow._55_in_assign_var901); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_55.Add(char_literal58);
+				char_literal58=(IToken)Match(input,57,Follow._57_in_assign_var901); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_57.Add(char_literal58);
 
 				DebugLocation(163, 20);
 				INT59=(IToken)Match(input,INT,Follow._INT_in_assign_var903); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_INT.Add(INT59);
 
 				DebugLocation(163, 24);
-				string_literal60=(IToken)Match(input,47,Follow._47_in_assign_var905); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_47.Add(string_literal60);
+				string_literal60=(IToken)Match(input,49,Follow._49_in_assign_var905); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_49.Add(string_literal60);
 
 				DebugLocation(163, 29);
 				INT61=(IToken)Match(input,INT,Follow._INT_in_assign_var907); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_INT.Add(INT61);
 
 				DebugLocation(163, 33);
-				char_literal62=(IToken)Match(input,56,Follow._56_in_assign_var909); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_56.Add(char_literal62);
+				char_literal62=(IToken)Match(input,58,Follow._58_in_assign_var909); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_58.Add(char_literal62);
 
 
 
@@ -3104,7 +3106,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				// 163:37: -> ^( ASGN ID INT INT )
 				{
 					DebugLocation(163, 40);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:163:40: ^( ASGN ID INT INT )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:163:40: ^( ASGN ID INT INT )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(163, 42);
@@ -3130,26 +3132,26 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:10: ID '=' '{' INT ( ',' INT )* '}'
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:10: ID '=' '{' INT ( ',' INT )* '}'
 				{
 				DebugLocation(164, 10);
 				ID63=(IToken)Match(input,ID,Follow._ID_in_assign_var932); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_ID.Add(ID63);
 
 				DebugLocation(164, 13);
-				char_literal64=(IToken)Match(input,51,Follow._51_in_assign_var934); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_51.Add(char_literal64);
+				char_literal64=(IToken)Match(input,53,Follow._53_in_assign_var934); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_53.Add(char_literal64);
 
 				DebugLocation(164, 17);
-				char_literal65=(IToken)Match(input,71,Follow._71_in_assign_var936); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_71.Add(char_literal65);
+				char_literal65=(IToken)Match(input,73,Follow._73_in_assign_var936); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_73.Add(char_literal65);
 
 				DebugLocation(164, 21);
 				INT66=(IToken)Match(input,INT,Follow._INT_in_assign_var938); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_INT.Add(INT66);
 
 				DebugLocation(164, 25);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:25: ( ',' INT )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:25: ( ',' INT )*
 				try { DebugEnterSubRule(18);
 				while (true)
 				{
@@ -3157,7 +3159,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					try { DebugEnterDecision(18, false);
 					int LA18_0 = input.LA(1);
 
-					if ((LA18_0==44))
+					if ((LA18_0==46))
 					{
 						alt18 = 1;
 					}
@@ -3168,11 +3170,11 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:26: ',' INT
+						// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:26: ',' INT
 						{
 						DebugLocation(164, 26);
-						char_literal67=(IToken)Match(input,44,Follow._44_in_assign_var941); if (state.failed) return retval; 
-						if (state.backtracking == 0) stream_44.Add(char_literal67);
+						char_literal67=(IToken)Match(input,46,Follow._46_in_assign_var941); if (state.failed) return retval; 
+						if (state.backtracking == 0) stream_46.Add(char_literal67);
 
 						DebugLocation(164, 30);
 						INT68=(IToken)Match(input,INT,Follow._INT_in_assign_var943); if (state.failed) return retval; 
@@ -3193,8 +3195,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				} finally { DebugExitSubRule(18); }
 
 				DebugLocation(164, 36);
-				char_literal69=(IToken)Match(input,72,Follow._72_in_assign_var947); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_72.Add(char_literal69);
+				char_literal69=(IToken)Match(input,74,Follow._74_in_assign_var947); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_74.Add(char_literal69);
 
 
 
@@ -3214,7 +3216,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				// 164:40: -> ^( ASGN ID ^( ILIST ( INT )* ) )
 				{
 					DebugLocation(164, 43);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:43: ^( ASGN ID ^( ILIST ( INT )* ) )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:43: ^( ASGN ID ^( ILIST ( INT )* ) )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(164, 45);
@@ -3223,14 +3225,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					DebugLocation(164, 50);
 					adaptor.AddChild(root_1, stream_ID.NextNode());
 					DebugLocation(164, 53);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:53: ^( ILIST ( INT )* )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:53: ^( ILIST ( INT )* )
 					{
 					object root_2 = (object)adaptor.Nil();
 					DebugLocation(164, 55);
 					root_2 = (object)adaptor.BecomeRoot((object)adaptor.Create(ILIST, "ILIST"), root_2);
 
 					DebugLocation(164, 61);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:61: ( INT )*
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:61: ( INT )*
 					while ( stream_INT.HasNext )
 					{
 						DebugLocation(164, 61);
@@ -3255,15 +3257,15 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:165:4: ID '[' index ']' '=' assign_expression
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:165:4: ID '[' index ']' '=' assign_expression
 				{
 				DebugLocation(165, 4);
 				ID70=(IToken)Match(input,ID,Follow._ID_in_assign_var967); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_ID.Add(ID70);
 
 				DebugLocation(165, 7);
-				char_literal71=(IToken)Match(input,55,Follow._55_in_assign_var969); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_55.Add(char_literal71);
+				char_literal71=(IToken)Match(input,57,Follow._57_in_assign_var969); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_57.Add(char_literal71);
 
 				DebugLocation(165, 11);
 				PushFollow(Follow._index_in_assign_var971);
@@ -3272,12 +3274,12 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				if (state.failed) return retval;
 				if (state.backtracking == 0) stream_index.Add(index72.Tree);
 				DebugLocation(165, 17);
-				char_literal73=(IToken)Match(input,56,Follow._56_in_assign_var973); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_56.Add(char_literal73);
+				char_literal73=(IToken)Match(input,58,Follow._58_in_assign_var973); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_58.Add(char_literal73);
 
 				DebugLocation(165, 21);
-				char_literal74=(IToken)Match(input,51,Follow._51_in_assign_var975); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_51.Add(char_literal74);
+				char_literal74=(IToken)Match(input,53,Follow._53_in_assign_var975); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_53.Add(char_literal74);
 
 				DebugLocation(165, 25);
 				PushFollow(Follow._assign_expression_in_assign_var977);
@@ -3289,7 +3291,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: ID, index, assign_expression
+				// elements: assign_expression, ID, index
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -3303,14 +3305,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				// 165:44: -> ^( ASGN ^( AR index ) ID assign_expression )
 				{
 					DebugLocation(165, 47);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:165:47: ^( ASGN ^( AR index ) ID assign_expression )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:165:47: ^( ASGN ^( AR index ) ID assign_expression )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(165, 49);
 					root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(ASGN, "ASGN"), root_1);
 
 					DebugLocation(165, 54);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:165:54: ^( AR index )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:165:54: ^( AR index )
 					{
 					object root_2 = (object)adaptor.Nil();
 					DebugLocation(165, 56);
@@ -3339,15 +3341,15 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:166:11: ID '=' assign_expression
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:166:11: ID '=' assign_expression
 				{
 				DebugLocation(166, 11);
 				ID76=(IToken)Match(input,ID,Follow._ID_in_assign_var1006); if (state.failed) return retval; 
 				if (state.backtracking == 0) stream_ID.Add(ID76);
 
 				DebugLocation(166, 14);
-				char_literal77=(IToken)Match(input,51,Follow._51_in_assign_var1008); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_51.Add(char_literal77);
+				char_literal77=(IToken)Match(input,53,Follow._53_in_assign_var1008); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_53.Add(char_literal77);
 
 				DebugLocation(166, 18);
 				PushFollow(Follow._assign_expression_in_assign_var1010);
@@ -3359,7 +3361,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: assign_expression, ID
+				// elements: ID, assign_expression
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -3373,7 +3375,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				// 166:37: -> ^( ASGN ID assign_expression )
 				{
 					DebugLocation(166, 40);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:166:40: ^( ASGN ID assign_expression )
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:166:40: ^( ASGN ID assign_expression )
 					{
 					object root_1 = (object)adaptor.Nil();
 					DebugLocation(166, 42);
@@ -3430,7 +3432,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_return_stat();
 
 	// $ANTLR start "return_stat"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:169:1: return_stat : 'retorne' assign_expression -> ^( RET assign_expression ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:169:1: return_stat : 'retorne' assign_expression -> ^( RET assign_expression ) ;
 	[GrammarRule("return_stat")]
 	private AstParserRuleReturnScope<object, IToken> return_stat()
 	{
@@ -3446,19 +3448,19 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		AstParserRuleReturnScope<object, IToken> assign_expression80 = default(AstParserRuleReturnScope<object, IToken>);
 
 		object string_literal79_tree = default(object);
-		RewriteRuleITokenStream stream_67=new RewriteRuleITokenStream(adaptor,"token 67");
+		RewriteRuleITokenStream stream_69=new RewriteRuleITokenStream(adaptor,"token 69");
 		RewriteRuleSubtreeStream stream_assign_expression=new RewriteRuleSubtreeStream(adaptor,"rule assign_expression");
 		try { DebugEnterRule(GrammarFileName, "return_stat");
 		DebugLocation(169, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:170:2: ( 'retorne' assign_expression -> ^( RET assign_expression ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:170:2: ( 'retorne' assign_expression -> ^( RET assign_expression ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:170:4: 'retorne' assign_expression
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:170:4: 'retorne' assign_expression
 			{
 			DebugLocation(170, 4);
-			string_literal79=(IToken)Match(input,67,Follow._67_in_return_stat1033); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_67.Add(string_literal79);
+			string_literal79=(IToken)Match(input,69,Follow._69_in_return_stat1033); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_69.Add(string_literal79);
 
 			DebugLocation(170, 14);
 			PushFollow(Follow._assign_expression_in_return_stat1035);
@@ -3484,7 +3486,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 170:33: -> ^( RET assign_expression )
 			{
 				DebugLocation(170, 36);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:170:36: ^( RET assign_expression )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:170:36: ^( RET assign_expression )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(170, 38);
@@ -3533,7 +3535,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_asm_code();
 
 	// $ANTLR start "asm_code"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:1: asm_code : '#' ( STRING )* '#' -> ^( ASM ( STRING )* ) ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:1: asm_code : '#' ( STRING )* '#' -> ^( ASM ( STRING )* ) ;
 	[GrammarRule("asm_code")]
 	private AstParserRuleReturnScope<object, IToken> asm_code()
 	{
@@ -3552,22 +3554,22 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object char_literal81_tree = default(object);
 		object STRING82_tree = default(object);
 		object char_literal83_tree = default(object);
+		RewriteRuleITokenStream stream_40=new RewriteRuleITokenStream(adaptor,"token 40");
 		RewriteRuleITokenStream stream_STRING=new RewriteRuleITokenStream(adaptor,"token STRING");
-		RewriteRuleITokenStream stream_38=new RewriteRuleITokenStream(adaptor,"token 38");
 		try { DebugEnterRule(GrammarFileName, "asm_code");
 		DebugLocation(174, 8);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:9: ( '#' ( STRING )* '#' -> ^( ASM ( STRING )* ) )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:9: ( '#' ( STRING )* '#' -> ^( ASM ( STRING )* ) )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:11: '#' ( STRING )* '#'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:11: '#' ( STRING )* '#'
 			{
 			DebugLocation(174, 11);
-			char_literal81=(IToken)Match(input,38,Follow._38_in_asm_code1054); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_38.Add(char_literal81);
+			char_literal81=(IToken)Match(input,40,Follow._40_in_asm_code1054); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_40.Add(char_literal81);
 
 			DebugLocation(174, 15);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:15: ( STRING )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:15: ( STRING )*
 			try { DebugEnterSubRule(20);
 			while (true)
 			{
@@ -3586,7 +3588,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:15: STRING
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:15: STRING
 					{
 					DebugLocation(174, 15);
 					STRING82=(IToken)Match(input,STRING,Follow._STRING_in_asm_code1056); if (state.failed) return retval; 
@@ -3607,8 +3609,8 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(20); }
 
 			DebugLocation(174, 23);
-			char_literal83=(IToken)Match(input,38,Follow._38_in_asm_code1059); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_38.Add(char_literal83);
+			char_literal83=(IToken)Match(input,40,Follow._40_in_asm_code1059); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_40.Add(char_literal83);
 
 
 
@@ -3628,14 +3630,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			// 174:27: -> ^( ASM ( STRING )* )
 			{
 				DebugLocation(174, 30);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:30: ^( ASM ( STRING )* )
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:30: ^( ASM ( STRING )* )
 				{
 				object root_1 = (object)adaptor.Nil();
 				DebugLocation(174, 32);
 				root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(ASM, "ASM"), root_1);
 
 				DebugLocation(174, 36);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:36: ( STRING )*
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:174:36: ( STRING )*
 				while ( stream_STRING.HasNext )
 				{
 					DebugLocation(174, 36);
@@ -3684,7 +3686,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_logic_expression();
 
 	// $ANTLR start "logic_expression"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:181:1: logic_expression : ( plus_expression ) ( binop ^ plus_expression )* ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:181:1: logic_expression : ( plus_expression ) ( binop ^ plus_expression )* ;
 	[GrammarRule("logic_expression")]
 	private AstParserRuleReturnScope<object, IToken> logic_expression()
 	{
@@ -3704,16 +3706,16 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(181, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:2: ( ( plus_expression ) ( binop ^ plus_expression )* )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:2: ( ( plus_expression ) ( binop ^ plus_expression )* )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:4: ( plus_expression ) ( binop ^ plus_expression )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:4: ( plus_expression ) ( binop ^ plus_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(182, 4);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:4: ( plus_expression )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:4: ( plus_expression )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:5: plus_expression
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:5: plus_expression
 			{
 			DebugLocation(182, 5);
 			PushFollow(Follow._plus_expression_in_logic_expression1091);
@@ -3725,7 +3727,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			}
 
 			DebugLocation(182, 22);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:22: ( binop ^ plus_expression )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:22: ( binop ^ plus_expression )*
 			try { DebugEnterSubRule(21);
 			while (true)
 			{
@@ -3733,7 +3735,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(21, false);
 				int LA21_0 = input.LA(1);
 
-				if ((LA21_0==37||(LA21_0>=49 && LA21_0<=50)||(LA21_0>=52 && LA21_0<=54)||LA21_0==59||LA21_0==64))
+				if ((LA21_0==39||(LA21_0>=51 && LA21_0<=52)||(LA21_0>=54 && LA21_0<=56)||LA21_0==61||LA21_0==66))
 				{
 					alt21 = 1;
 				}
@@ -3744,7 +3746,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:23: binop ^ plus_expression
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:182:23: binop ^ plus_expression
 					{
 					DebugLocation(182, 28);
 					PushFollow(Follow._binop_in_logic_expression1095);
@@ -3804,7 +3806,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_binop();
 
 	// $ANTLR start "binop"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:185:1: binop : ( '<' | '>' | '<=' | '>=' | '==' | '!=' | 'e' | 'ou' );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:185:1: binop : ( '<' | '>' | '<=' | '>=' | '==' | '!=' | 'e' | 'ou' );
 	[GrammarRule("binop")]
 	private AstParserRuleReturnScope<object, IToken> binop()
 	{
@@ -3823,16 +3825,16 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(185, 59);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:185:7: ( '<' | '>' | '<=' | '>=' | '==' | '!=' | 'e' | 'ou' )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:185:7: ( '<' | '>' | '<=' | '>=' | '==' | '!=' | 'e' | 'ou' )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(185, 7);
 
 			set87=(IToken)input.LT(1);
-			if (input.LA(1)==37||(input.LA(1)>=49 && input.LA(1)<=50)||(input.LA(1)>=52 && input.LA(1)<=54)||input.LA(1)==59||input.LA(1)==64)
+			if (input.LA(1)==39||(input.LA(1)>=51 && input.LA(1)<=52)||(input.LA(1)>=54 && input.LA(1)<=56)||input.LA(1)==61||input.LA(1)==66)
 			{
 				input.Consume();
 				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set87));
@@ -3878,7 +3880,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_assign_expression();
 
 	// $ANTLR start "assign_expression"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:188:1: assign_expression options {k=3; } : plus_expression ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:188:1: assign_expression options {k=3; } : plus_expression ;
 	[GrammarRule("assign_expression")]
 	private AstParserRuleReturnScope<object, IToken> assign_expression()
 	{
@@ -3896,9 +3898,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(188, 19);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:190:2: ( plus_expression )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:190:2: ( plus_expression )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:190:5: plus_expression
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:190:5: plus_expression
 			{
 			root_0 = (object)adaptor.Nil();
 
@@ -3940,7 +3942,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_plus_expression();
 
 	// $ANTLR start "plus_expression"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:192:1: plus_expression : ( mul_expression ) ( '+' ^ mul_expression | '-' ^ mul_expression )* ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:192:1: plus_expression : ( mul_expression ) ( '+' ^ mul_expression | '-' ^ mul_expression )* ;
 	[GrammarRule("plus_expression")]
 	private AstParserRuleReturnScope<object, IToken> plus_expression()
 	{
@@ -3964,16 +3966,16 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(192, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:2: ( ( mul_expression ) ( '+' ^ mul_expression | '-' ^ mul_expression )* )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:2: ( ( mul_expression ) ( '+' ^ mul_expression | '-' ^ mul_expression )* )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:4: ( mul_expression ) ( '+' ^ mul_expression | '-' ^ mul_expression )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:4: ( mul_expression ) ( '+' ^ mul_expression | '-' ^ mul_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(193, 4);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:4: ( mul_expression )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:4: ( mul_expression )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:5: mul_expression
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:5: mul_expression
 			{
 			DebugLocation(193, 5);
 			PushFollow(Follow._mul_expression_in_plus_expression1169);
@@ -3985,7 +3987,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			}
 
 			DebugLocation(193, 21);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:21: ( '+' ^ mul_expression | '-' ^ mul_expression )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:21: ( '+' ^ mul_expression | '-' ^ mul_expression )*
 			try { DebugEnterSubRule(22);
 			while (true)
 			{
@@ -3993,11 +3995,11 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(22, false);
 				int LA22_0 = input.LA(1);
 
-				if ((LA22_0==43))
+				if ((LA22_0==45))
 				{
 					alt22 = 1;
 				}
-				else if ((LA22_0==45))
+				else if ((LA22_0==47))
 				{
 					alt22 = 2;
 				}
@@ -4008,10 +4010,10 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:22: '+' ^ mul_expression
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:22: '+' ^ mul_expression
 					{
 					DebugLocation(193, 25);
-					char_literal90=(IToken)Match(input,43,Follow._43_in_plus_expression1173); if (state.failed) return retval;
+					char_literal90=(IToken)Match(input,45,Follow._45_in_plus_expression1173); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal90_tree = (object)adaptor.Create(char_literal90);
 					root_0 = (object)adaptor.BecomeRoot(char_literal90_tree, root_0);
@@ -4027,10 +4029,10 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:44: '-' ^ mul_expression
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:193:44: '-' ^ mul_expression
 					{
 					DebugLocation(193, 47);
-					char_literal92=(IToken)Match(input,45,Follow._45_in_plus_expression1180); if (state.failed) return retval;
+					char_literal92=(IToken)Match(input,47,Follow._47_in_plus_expression1180); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal92_tree = (object)adaptor.Create(char_literal92);
 					root_0 = (object)adaptor.BecomeRoot(char_literal92_tree, root_0);
@@ -4087,7 +4089,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_mul_expression();
 
 	// $ANTLR start "mul_expression"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:196:1: mul_expression : ( primary_ar_expression ) ( '/' ^ primary_ar_expression | '%' ^ primary_ar_expression | '*' ^ primary_ar_expression )* ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:196:1: mul_expression : ( primary_ar_expression ) ( '/' ^ primary_ar_expression | '%' ^ primary_ar_expression | '*' ^ primary_ar_expression )* ;
 	[GrammarRule("mul_expression")]
 	private AstParserRuleReturnScope<object, IToken> mul_expression()
 	{
@@ -4114,16 +4116,16 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		DebugLocation(196, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:2: ( ( primary_ar_expression ) ( '/' ^ primary_ar_expression | '%' ^ primary_ar_expression | '*' ^ primary_ar_expression )* )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:2: ( ( primary_ar_expression ) ( '/' ^ primary_ar_expression | '%' ^ primary_ar_expression | '*' ^ primary_ar_expression )* )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:4: ( primary_ar_expression ) ( '/' ^ primary_ar_expression | '%' ^ primary_ar_expression | '*' ^ primary_ar_expression )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:4: ( primary_ar_expression ) ( '/' ^ primary_ar_expression | '%' ^ primary_ar_expression | '*' ^ primary_ar_expression )*
 			{
 			root_0 = (object)adaptor.Nil();
 
 			DebugLocation(197, 4);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:4: ( primary_ar_expression )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:4: ( primary_ar_expression )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:5: primary_ar_expression
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:5: primary_ar_expression
 			{
 			DebugLocation(197, 5);
 			PushFollow(Follow._primary_ar_expression_in_mul_expression1198);
@@ -4135,7 +4137,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			}
 
 			DebugLocation(197, 28);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:28: ( '/' ^ primary_ar_expression | '%' ^ primary_ar_expression | '*' ^ primary_ar_expression )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:28: ( '/' ^ primary_ar_expression | '%' ^ primary_ar_expression | '*' ^ primary_ar_expression )*
 			try { DebugEnterSubRule(23);
 			while (true)
 			{
@@ -4143,17 +4145,17 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(23, false);
 				switch (input.LA(1))
 				{
-				case 48:
+				case 50:
 					{
 					alt23 = 1;
 					}
 					break;
-				case 39:
+				case 41:
 					{
 					alt23 = 2;
 					}
 					break;
-				case 42:
+				case 44:
 					{
 					alt23 = 3;
 					}
@@ -4165,10 +4167,10 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:30: '/' ^ primary_ar_expression
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:30: '/' ^ primary_ar_expression
 					{
 					DebugLocation(197, 33);
-					char_literal95=(IToken)Match(input,48,Follow._48_in_mul_expression1203); if (state.failed) return retval;
+					char_literal95=(IToken)Match(input,50,Follow._50_in_mul_expression1203); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal95_tree = (object)adaptor.Create(char_literal95);
 					root_0 = (object)adaptor.BecomeRoot(char_literal95_tree, root_0);
@@ -4184,10 +4186,10 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:59: '%' ^ primary_ar_expression
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:59: '%' ^ primary_ar_expression
 					{
 					DebugLocation(197, 62);
-					char_literal97=(IToken)Match(input,39,Follow._39_in_mul_expression1210); if (state.failed) return retval;
+					char_literal97=(IToken)Match(input,41,Follow._41_in_mul_expression1210); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal97_tree = (object)adaptor.Create(char_literal97);
 					root_0 = (object)adaptor.BecomeRoot(char_literal97_tree, root_0);
@@ -4203,10 +4205,10 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					break;
 				case 3:
 					DebugEnterAlt(3);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:88: '*' ^ primary_ar_expression
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:197:88: '*' ^ primary_ar_expression
 					{
 					DebugLocation(197, 91);
-					char_literal99=(IToken)Match(input,42,Follow._42_in_mul_expression1217); if (state.failed) return retval;
+					char_literal99=(IToken)Match(input,44,Follow._44_in_mul_expression1217); if (state.failed) return retval;
 					if (state.backtracking == 0) {
 					char_literal99_tree = (object)adaptor.Create(char_literal99);
 					root_0 = (object)adaptor.BecomeRoot(char_literal99_tree, root_0);
@@ -4263,7 +4265,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_primary_ar_expression();
 
 	// $ANTLR start "primary_ar_expression"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:200:1: primary_ar_expression : ({...}? => function_call | ID | ID '[' index ']' -> ^( INDEX index ) ID | method_call | property_call | constant | parenthesisExpression );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:200:1: primary_ar_expression : ({...}? => function_call | ID | T | F | ID '[' index ']' -> ^( INDEX index ) ID | method_call | property_call | constant | parenthesisExpression );
 	[GrammarRule("primary_ar_expression")]
 	private AstParserRuleReturnScope<object, IToken> primary_ar_expression()
 	{
@@ -4276,30 +4278,34 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		object root_0 = default(object);
 
 		IToken ID102 = default(IToken);
-		IToken ID103 = default(IToken);
-		IToken char_literal104 = default(IToken);
+		IToken T103 = default(IToken);
+		IToken F104 = default(IToken);
+		IToken ID105 = default(IToken);
 		IToken char_literal106 = default(IToken);
+		IToken char_literal108 = default(IToken);
 		AstParserRuleReturnScope<object, IToken> function_call101 = default(AstParserRuleReturnScope<object, IToken>);
-		AstParserRuleReturnScope<object, IToken> index105 = default(AstParserRuleReturnScope<object, IToken>);
-		AstParserRuleReturnScope<object, IToken> method_call107 = default(AstParserRuleReturnScope<object, IToken>);
-		AstParserRuleReturnScope<object, IToken> property_call108 = default(AstParserRuleReturnScope<object, IToken>);
-		AstParserRuleReturnScope<object, IToken> constant109 = default(AstParserRuleReturnScope<object, IToken>);
-		AstParserRuleReturnScope<object, IToken> parenthesisExpression110 = default(AstParserRuleReturnScope<object, IToken>);
+		AstParserRuleReturnScope<object, IToken> index107 = default(AstParserRuleReturnScope<object, IToken>);
+		AstParserRuleReturnScope<object, IToken> method_call109 = default(AstParserRuleReturnScope<object, IToken>);
+		AstParserRuleReturnScope<object, IToken> property_call110 = default(AstParserRuleReturnScope<object, IToken>);
+		AstParserRuleReturnScope<object, IToken> constant111 = default(AstParserRuleReturnScope<object, IToken>);
+		AstParserRuleReturnScope<object, IToken> parenthesisExpression112 = default(AstParserRuleReturnScope<object, IToken>);
 
 		object ID102_tree = default(object);
-		object ID103_tree = default(object);
-		object char_literal104_tree = default(object);
+		object T103_tree = default(object);
+		object F104_tree = default(object);
+		object ID105_tree = default(object);
 		object char_literal106_tree = default(object);
-		RewriteRuleITokenStream stream_56=new RewriteRuleITokenStream(adaptor,"token 56");
-		RewriteRuleITokenStream stream_55=new RewriteRuleITokenStream(adaptor,"token 55");
+		object char_literal108_tree = default(object);
+		RewriteRuleITokenStream stream_58=new RewriteRuleITokenStream(adaptor,"token 58");
+		RewriteRuleITokenStream stream_57=new RewriteRuleITokenStream(adaptor,"token 57");
 		RewriteRuleITokenStream stream_ID=new RewriteRuleITokenStream(adaptor,"token ID");
 		RewriteRuleSubtreeStream stream_index=new RewriteRuleSubtreeStream(adaptor,"rule index");
 		try { DebugEnterRule(GrammarFileName, "primary_ar_expression");
 		DebugLocation(200, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:201:2: ({...}? => function_call | ID | ID '[' index ']' -> ^( INDEX index ) ID | method_call | property_call | constant | parenthesisExpression )
-			int alt24=7;
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:201:2: ({...}? => function_call | ID | T | F | ID '[' index ']' -> ^( INDEX index ) ID | method_call | property_call | constant | parenthesisExpression )
+			int alt24=9;
 			try { DebugEnterDecision(24, false);
 			switch (input.LA(1))
 			{
@@ -4307,9 +4313,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				switch (input.LA(2))
 				{
-				case 40:
+				case 42:
 					{
-					int LA24_4 = input.LA(3);
+					int LA24_6 = input.LA(3);
 
 					if ((((( (!IsDefinedID(input.LT(1).Text)) && input.LT(2).Text =="(" )&&( (!IsDefinedID(input.LT(1).Text)) && input.LT(2).Text =="(" ))&&EvaluatePredicate(synpred43_NPortugol_fragment))))
 					{
@@ -4322,69 +4328,71 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 					else
 					{
 						if (state.backtracking>0) {state.failed=true; return retval;}
-						NoViableAltException nvae = new NoViableAltException("", 24, 4, input);
-						DebugRecognitionException(nvae);
-						throw nvae;
-					}
-					}
-					break;
-				case 55:
-					{
-					alt24 = 3;
-					}
-					break;
-				case 46:
-					{
-					int LA24_6 = input.LA(3);
-
-					if ((EvaluatePredicate(synpred46_NPortugol_fragment)))
-					{
-						alt24 = 4;
-					}
-					else if ((EvaluatePredicate(synpred47_NPortugol_fragment)))
-					{
-						alt24 = 5;
-					}
-					else
-					{
-						if (state.backtracking>0) {state.failed=true; return retval;}
 						NoViableAltException nvae = new NoViableAltException("", 24, 6, input);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
 					}
 					break;
+				case 57:
+					{
+					alt24 = 5;
+					}
+					break;
+				case 48:
+					{
+					int LA24_8 = input.LA(3);
+
+					if ((EvaluatePredicate(synpred48_NPortugol_fragment)))
+					{
+						alt24 = 6;
+					}
+					else if ((EvaluatePredicate(synpred49_NPortugol_fragment)))
+					{
+						alt24 = 7;
+					}
+					else
+					{
+						if (state.backtracking>0) {state.failed=true; return retval;}
+						NoViableAltException nvae = new NoViableAltException("", 24, 8, input);
+						DebugRecognitionException(nvae);
+						throw nvae;
+					}
+					}
+					break;
 				case EOF:
+				case F:
 				case FLOAT:
 				case ID:
 				case INT:
 				case STRING:
-				case 37:
-				case 38:
+				case T:
 				case 39:
+				case 40:
 				case 41:
-				case 42:
 				case 43:
 				case 44:
 				case 45:
-				case 48:
-				case 49:
+				case 46:
+				case 47:
 				case 50:
+				case 51:
 				case 52:
-				case 53:
 				case 54:
-				case 57:
+				case 55:
+				case 56:
 				case 59:
-				case 60:
 				case 61:
 				case 62:
+				case 63:
 				case 64:
-				case 65:
 				case 66:
 				case 67:
 				case 68:
 				case 69:
 				case 70:
+				case 71:
+				case 72:
 					{
 					alt24 = 2;
 					}
@@ -4400,16 +4408,26 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				}
 				break;
+			case T:
+				{
+				alt24 = 3;
+				}
+				break;
+			case F:
+				{
+				alt24 = 4;
+				}
+				break;
 			case FLOAT:
 			case INT:
 			case STRING:
 				{
-				alt24 = 6;
+				alt24 = 8;
 				}
 				break;
-			case 40:
+			case 42:
 				{
-				alt24 = 7;
+				alt24 = 9;
 				}
 				break;
 			default:
@@ -4426,7 +4444,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:201:4: {...}? => function_call
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:201:4: {...}? => function_call
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -4447,7 +4465,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:202:4: ID
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:202:4: ID
 				{
 				root_0 = (object)adaptor.Nil();
 
@@ -4462,31 +4480,61 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:203:4: ID '[' index ']'
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:203:4: T
 				{
+				root_0 = (object)adaptor.Nil();
+
 				DebugLocation(203, 4);
-				ID103=(IToken)Match(input,ID,Follow._ID_in_primary_ar_expression1248); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_ID.Add(ID103);
+				T103=(IToken)Match(input,T,Follow._T_in_primary_ar_expression1248); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				T103_tree = (object)adaptor.Create(T103);
+				adaptor.AddChild(root_0, T103_tree);
+				}
 
-				DebugLocation(203, 7);
-				char_literal104=(IToken)Match(input,55,Follow._55_in_primary_ar_expression1250); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_55.Add(char_literal104);
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:204:4: F
+				{
+				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(203, 11);
-				PushFollow(Follow._index_in_primary_ar_expression1252);
-				index105=index();
+				DebugLocation(204, 4);
+				F104=(IToken)Match(input,F,Follow._F_in_primary_ar_expression1253); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				F104_tree = (object)adaptor.Create(F104);
+				adaptor.AddChild(root_0, F104_tree);
+				}
+
+				}
+				break;
+			case 5:
+				DebugEnterAlt(5);
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:205:4: ID '[' index ']'
+				{
+				DebugLocation(205, 4);
+				ID105=(IToken)Match(input,ID,Follow._ID_in_primary_ar_expression1258); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_ID.Add(ID105);
+
+				DebugLocation(205, 7);
+				char_literal106=(IToken)Match(input,57,Follow._57_in_primary_ar_expression1260); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_57.Add(char_literal106);
+
+				DebugLocation(205, 11);
+				PushFollow(Follow._index_in_primary_ar_expression1262);
+				index107=index();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) stream_index.Add(index105.Tree);
-				DebugLocation(203, 17);
-				char_literal106=(IToken)Match(input,56,Follow._56_in_primary_ar_expression1254); if (state.failed) return retval; 
-				if (state.backtracking == 0) stream_56.Add(char_literal106);
+				if (state.backtracking == 0) stream_index.Add(index107.Tree);
+				DebugLocation(205, 17);
+				char_literal108=(IToken)Match(input,58,Follow._58_in_primary_ar_expression1264); if (state.failed) return retval; 
+				if (state.backtracking == 0) stream_58.Add(char_literal108);
 
 
 
 				{
 				// AST REWRITE
-				// elements: ID, index
+				// elements: index, ID
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -4497,21 +4545,21 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 				root_0 = (object)adaptor.Nil();
-				// 203:21: -> ^( INDEX index ) ID
+				// 205:21: -> ^( INDEX index ) ID
 				{
-					DebugLocation(203, 24);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:203:24: ^( INDEX index )
+					DebugLocation(205, 24);
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:205:24: ^( INDEX index )
 					{
 					object root_1 = (object)adaptor.Nil();
-					DebugLocation(203, 26);
+					DebugLocation(205, 26);
 					root_1 = (object)adaptor.BecomeRoot((object)adaptor.Create(INDEX, "INDEX"), root_1);
 
-					DebugLocation(203, 32);
+					DebugLocation(205, 32);
 					adaptor.AddChild(root_1, stream_index.NextTree());
 
 					adaptor.AddChild(root_0, root_1);
 					}
-					DebugLocation(203, 39);
+					DebugLocation(205, 39);
 					adaptor.AddChild(root_0, stream_ID.NextNode());
 
 				}
@@ -4522,63 +4570,63 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				}
 				break;
-			case 4:
-				DebugEnterAlt(4);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:204:4: method_call
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(204, 4);
-				PushFollow(Follow._method_call_in_primary_ar_expression1269);
-				method_call107=method_call();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, method_call107.Tree);
-
-				}
-				break;
-			case 5:
-				DebugEnterAlt(5);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:205:4: property_call
-				{
-				root_0 = (object)adaptor.Nil();
-
-				DebugLocation(205, 4);
-				PushFollow(Follow._property_call_in_primary_ar_expression1275);
-				property_call108=property_call();
-				PopFollow();
-				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, property_call108.Tree);
-
-				}
-				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:206:4: constant
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:206:4: method_call
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(206, 4);
-				PushFollow(Follow._constant_in_primary_ar_expression1280);
-				constant109=constant();
+				PushFollow(Follow._method_call_in_primary_ar_expression1279);
+				method_call109=method_call();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant109.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, method_call109.Tree);
 
 				}
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:207:4: parenthesisExpression
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:207:4: property_call
 				{
 				root_0 = (object)adaptor.Nil();
 
 				DebugLocation(207, 4);
-				PushFollow(Follow._parenthesisExpression_in_primary_ar_expression1285);
-				parenthesisExpression110=parenthesisExpression();
+				PushFollow(Follow._property_call_in_primary_ar_expression1285);
+				property_call110=property_call();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, parenthesisExpression110.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, property_call110.Tree);
+
+				}
+				break;
+			case 8:
+				DebugEnterAlt(8);
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:208:4: constant
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(208, 4);
+				PushFollow(Follow._constant_in_primary_ar_expression1290);
+				constant111=constant();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant111.Tree);
+
+				}
+				break;
+			case 9:
+				DebugEnterAlt(9);
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:209:4: parenthesisExpression
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(209, 4);
+				PushFollow(Follow._parenthesisExpression_in_primary_ar_expression1295);
+				parenthesisExpression112=parenthesisExpression();
+				PopFollow();
+				if (state.failed) return retval;
+				if (state.backtracking == 0) adaptor.AddChild(root_0, parenthesisExpression112.Tree);
 
 				}
 				break;
@@ -4602,7 +4650,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			LeaveRule("primary_ar_expression", 23);
 			LeaveRule_primary_ar_expression();
 		}
-		DebugLocation(208, 1);
+		DebugLocation(210, 1);
 		} finally { DebugExitRule(GrammarFileName, "primary_ar_expression"); }
 		return retval;
 
@@ -4613,7 +4661,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_parenthesisExpression();
 
 	// $ANTLR start "parenthesisExpression"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:210:1: parenthesisExpression : '(' plus_expression ')' -> plus_expression ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:212:1: parenthesisExpression : '(' plus_expression ')' -> plus_expression ;
 	[GrammarRule("parenthesisExpression")]
 	private AstParserRuleReturnScope<object, IToken> parenthesisExpression()
 	{
@@ -4625,36 +4673,36 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 		object root_0 = default(object);
 
-		IToken char_literal111 = default(IToken);
 		IToken char_literal113 = default(IToken);
-		AstParserRuleReturnScope<object, IToken> plus_expression112 = default(AstParserRuleReturnScope<object, IToken>);
+		IToken char_literal115 = default(IToken);
+		AstParserRuleReturnScope<object, IToken> plus_expression114 = default(AstParserRuleReturnScope<object, IToken>);
 
-		object char_literal111_tree = default(object);
 		object char_literal113_tree = default(object);
-		RewriteRuleITokenStream stream_41=new RewriteRuleITokenStream(adaptor,"token 41");
-		RewriteRuleITokenStream stream_40=new RewriteRuleITokenStream(adaptor,"token 40");
+		object char_literal115_tree = default(object);
+		RewriteRuleITokenStream stream_43=new RewriteRuleITokenStream(adaptor,"token 43");
+		RewriteRuleITokenStream stream_42=new RewriteRuleITokenStream(adaptor,"token 42");
 		RewriteRuleSubtreeStream stream_plus_expression=new RewriteRuleSubtreeStream(adaptor,"rule plus_expression");
 		try { DebugEnterRule(GrammarFileName, "parenthesisExpression");
-		DebugLocation(210, 1);
+		DebugLocation(212, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:210:22: ( '(' plus_expression ')' -> plus_expression )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:212:22: ( '(' plus_expression ')' -> plus_expression )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:210:24: '(' plus_expression ')'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:212:24: '(' plus_expression ')'
 			{
-			DebugLocation(210, 24);
-			char_literal111=(IToken)Match(input,40,Follow._40_in_parenthesisExpression1300); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_40.Add(char_literal111);
+			DebugLocation(212, 24);
+			char_literal113=(IToken)Match(input,42,Follow._42_in_parenthesisExpression1310); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_42.Add(char_literal113);
 
-			DebugLocation(210, 28);
-			PushFollow(Follow._plus_expression_in_parenthesisExpression1302);
-			plus_expression112=plus_expression();
+			DebugLocation(212, 28);
+			PushFollow(Follow._plus_expression_in_parenthesisExpression1312);
+			plus_expression114=plus_expression();
 			PopFollow();
 			if (state.failed) return retval;
-			if (state.backtracking == 0) stream_plus_expression.Add(plus_expression112.Tree);
-			DebugLocation(210, 44);
-			char_literal113=(IToken)Match(input,41,Follow._41_in_parenthesisExpression1304); if (state.failed) return retval; 
-			if (state.backtracking == 0) stream_41.Add(char_literal113);
+			if (state.backtracking == 0) stream_plus_expression.Add(plus_expression114.Tree);
+			DebugLocation(212, 44);
+			char_literal115=(IToken)Match(input,43,Follow._43_in_parenthesisExpression1314); if (state.failed) return retval; 
+			if (state.backtracking == 0) stream_43.Add(char_literal115);
 
 
 
@@ -4671,9 +4719,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.Tree:null);
 
 			root_0 = (object)adaptor.Nil();
-			// 210:48: -> plus_expression
+			// 212:48: -> plus_expression
 			{
-				DebugLocation(210, 51);
+				DebugLocation(212, 51);
 				adaptor.AddChild(root_0, stream_plus_expression.NextTree());
 
 			}
@@ -4702,7 +4750,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			LeaveRule("parenthesisExpression", 24);
 			LeaveRule_parenthesisExpression();
 		}
-		DebugLocation(211, 1);
+		DebugLocation(213, 1);
 		} finally { DebugExitRule(GrammarFileName, "parenthesisExpression"); }
 		return retval;
 
@@ -4713,7 +4761,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_constant();
 
 	// $ANTLR start "constant"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:213:1: constant : ( INT | FLOAT | STRING );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:215:1: constant : ( INT | FLOAT | STRING );
 	[GrammarRule("constant")]
 	private AstParserRuleReturnScope<object, IToken> constant()
 	{
@@ -4725,26 +4773,26 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 		object root_0 = default(object);
 
-		IToken set114 = default(IToken);
+		IToken set116 = default(IToken);
 
-		object set114_tree = default(object);
+		object set116_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "constant");
-		DebugLocation(213, 30);
+		DebugLocation(215, 30);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:213:9: ( INT | FLOAT | STRING )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:215:9: ( INT | FLOAT | STRING )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(213, 9);
+			DebugLocation(215, 9);
 
-			set114=(IToken)input.LT(1);
+			set116=(IToken)input.LT(1);
 			if (input.LA(1)==FLOAT||input.LA(1)==INT||input.LA(1)==STRING)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set114));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set116));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4776,7 +4824,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			LeaveRule("constant", 25);
 			LeaveRule_constant();
 		}
-		DebugLocation(213, 30);
+		DebugLocation(215, 30);
 		} finally { DebugExitRule(GrammarFileName, "constant"); }
 		return retval;
 
@@ -4787,7 +4835,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_atom();
 
 	// $ANTLR start "atom"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:215:1: atom : ( constant | ID );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:217:1: atom : ( constant | ID | T | F );
 	[GrammarRule("atom")]
 	private AstParserRuleReturnScope<object, IToken> atom()
 	{
@@ -4799,63 +4847,113 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 		object root_0 = default(object);
 
-		IToken ID116 = default(IToken);
-		AstParserRuleReturnScope<object, IToken> constant115 = default(AstParserRuleReturnScope<object, IToken>);
+		IToken ID118 = default(IToken);
+		IToken T119 = default(IToken);
+		IToken F120 = default(IToken);
+		AstParserRuleReturnScope<object, IToken> constant117 = default(AstParserRuleReturnScope<object, IToken>);
 
-		object ID116_tree = default(object);
+		object ID118_tree = default(object);
+		object T119_tree = default(object);
+		object F120_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "atom");
-		DebugLocation(215, 20);
+		DebugLocation(217, 28);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:215:6: ( constant | ID )
-			int alt25=2;
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:217:6: ( constant | ID | T | F )
+			int alt25=4;
 			try { DebugEnterDecision(25, false);
-			int LA25_0 = input.LA(1);
-
-			if ((LA25_0==FLOAT||LA25_0==INT||LA25_0==STRING))
+			switch (input.LA(1))
 			{
+			case FLOAT:
+			case INT:
+			case STRING:
+				{
 				alt25 = 1;
-			}
-			else if ((LA25_0==ID))
-			{
+				}
+				break;
+			case ID:
+				{
 				alt25 = 2;
+				}
+				break;
+			case T:
+				{
+				alt25 = 3;
+				}
+				break;
+			case F:
+				{
+				alt25 = 4;
+				}
+				break;
+			default:
+				{
+					if (state.backtracking>0) {state.failed=true; return retval;}
+					NoViableAltException nvae = new NoViableAltException("", 25, 0, input);
+					DebugRecognitionException(nvae);
+					throw nvae;
+				}
 			}
-			else
-			{
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae = new NoViableAltException("", 25, 0, input);
-				DebugRecognitionException(nvae);
-				throw nvae;
-			}
+
 			} finally { DebugExitDecision(25); }
 			switch (alt25)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:215:8: constant
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:217:8: constant
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(215, 8);
-				PushFollow(Follow._constant_in_atom1335);
-				constant115=constant();
+				DebugLocation(217, 8);
+				PushFollow(Follow._constant_in_atom1345);
+				constant117=constant();
 				PopFollow();
 				if (state.failed) return retval;
-				if (state.backtracking == 0) adaptor.AddChild(root_0, constant115.Tree);
+				if (state.backtracking == 0) adaptor.AddChild(root_0, constant117.Tree);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:215:19: ID
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:217:19: ID
 				{
 				root_0 = (object)adaptor.Nil();
 
-				DebugLocation(215, 19);
-				ID116=(IToken)Match(input,ID,Follow._ID_in_atom1339); if (state.failed) return retval;
+				DebugLocation(217, 19);
+				ID118=(IToken)Match(input,ID,Follow._ID_in_atom1349); if (state.failed) return retval;
 				if (state.backtracking == 0) {
-				ID116_tree = (object)adaptor.Create(ID116);
-				adaptor.AddChild(root_0, ID116_tree);
+				ID118_tree = (object)adaptor.Create(ID118);
+				adaptor.AddChild(root_0, ID118_tree);
+				}
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:217:24: T
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(217, 24);
+				T119=(IToken)Match(input,T,Follow._T_in_atom1353); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				T119_tree = (object)adaptor.Create(T119);
+				adaptor.AddChild(root_0, T119_tree);
+				}
+
+				}
+				break;
+			case 4:
+				DebugEnterAlt(4);
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:217:28: F
+				{
+				root_0 = (object)adaptor.Nil();
+
+				DebugLocation(217, 28);
+				F120=(IToken)Match(input,F,Follow._F_in_atom1357); if (state.failed) return retval;
+				if (state.backtracking == 0) {
+				F120_tree = (object)adaptor.Create(F120);
+				adaptor.AddChild(root_0, F120_tree);
 				}
 
 				}
@@ -4880,7 +4978,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			LeaveRule("atom", 26);
 			LeaveRule_atom();
 		}
-		DebugLocation(215, 20);
+		DebugLocation(217, 28);
 		} finally { DebugExitRule(GrammarFileName, "atom"); }
 		return retval;
 
@@ -4891,7 +4989,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_index();
 
 	// $ANTLR start "index"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:217:1: index : ( INT | ID );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:219:1: index : ( INT | ID );
 	[GrammarRule("index")]
 	private AstParserRuleReturnScope<object, IToken> index()
 	{
@@ -4903,26 +5001,26 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 		object root_0 = default(object);
 
-		IToken set117 = default(IToken);
+		IToken set121 = default(IToken);
 
-		object set117_tree = default(object);
+		object set121_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "index");
-		DebugLocation(217, 16);
+		DebugLocation(219, 16);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:217:7: ( INT | ID )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:219:7: ( INT | ID )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(217, 7);
+			DebugLocation(219, 7);
 
-			set117=(IToken)input.LT(1);
+			set121=(IToken)input.LT(1);
 			if (input.LA(1)==ID||input.LA(1)==INT)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set117));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set121));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -4954,7 +5052,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			LeaveRule("index", 27);
 			LeaveRule_index();
 		}
-		DebugLocation(217, 16);
+		DebugLocation(219, 16);
 		} finally { DebugExitRule(GrammarFileName, "index"); }
 		return retval;
 
@@ -4965,7 +5063,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	partial void LeaveRule_number();
 
 	// $ANTLR start "number"
-	// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:219:1: number : ( INT | FLOAT );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:221:1: number : ( INT | FLOAT );
 	[GrammarRule("number")]
 	private AstParserRuleReturnScope<object, IToken> number()
 	{
@@ -4977,26 +5075,26 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 		object root_0 = default(object);
 
-		IToken set118 = default(IToken);
+		IToken set122 = default(IToken);
 
-		object set118_tree = default(object);
+		object set122_tree = default(object);
 		try { DebugEnterRule(GrammarFileName, "number");
-		DebugLocation(219, 20);
+		DebugLocation(221, 20);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:219:8: ( INT | FLOAT )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:221:8: ( INT | FLOAT )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:
 			{
 			root_0 = (object)adaptor.Nil();
 
-			DebugLocation(219, 8);
+			DebugLocation(221, 8);
 
-			set118=(IToken)input.LT(1);
+			set122=(IToken)input.LT(1);
 			if (input.LA(1)==FLOAT||input.LA(1)==INT)
 			{
 				input.Consume();
-				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set118));
+				if (state.backtracking == 0) adaptor.AddChild(root_0, (object)adaptor.Create(set122));
 				state.errorRecovery=false;state.failed=false;
 			}
 			else
@@ -5028,7 +5126,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			LeaveRule("number", 28);
 			LeaveRule_number();
 		}
-		DebugLocation(219, 20);
+		DebugLocation(221, 20);
 		} finally { DebugExitRule(GrammarFileName, "number"); }
 		return retval;
 
@@ -5046,9 +5144,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		TraceIn("synpred22_NPortugol_fragment", 50);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:11: ( function_arg_list )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:11: ( function_arg_list )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:11: function_arg_list
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:145:11: function_arg_list
 			{
 			DebugLocation(145, 11);
 			PushFollow(Follow._function_arg_list_in_synpred22_NPortugol692);
@@ -5079,9 +5177,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		TraceIn("synpred23_NPortugol_fragment", 51);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:20: ( function_arg_list )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:20: ( function_arg_list )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:20: function_arg_list
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:153:20: function_arg_list
 			{
 			DebugLocation(153, 20);
 			PushFollow(Follow._function_arg_list_in_synpred23_NPortugol792);
@@ -5112,24 +5210,24 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		TraceIn("synpred25_NPortugol_fragment", 53);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:163:9: ( ID '=' '[' INT '..' INT ']' )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:163:9: ( ID '=' '[' INT '..' INT ']' )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:163:9: ID '=' '[' INT '..' INT ']'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:163:9: ID '=' '[' INT '..' INT ']'
 			{
 			DebugLocation(163, 9);
 			Match(input,ID,Follow._ID_in_synpred25_NPortugol897); if (state.failed) return;
 			DebugLocation(163, 12);
-			Match(input,51,Follow._51_in_synpred25_NPortugol899); if (state.failed) return;
+			Match(input,53,Follow._53_in_synpred25_NPortugol899); if (state.failed) return;
 			DebugLocation(163, 16);
-			Match(input,55,Follow._55_in_synpred25_NPortugol901); if (state.failed) return;
+			Match(input,57,Follow._57_in_synpred25_NPortugol901); if (state.failed) return;
 			DebugLocation(163, 20);
 			Match(input,INT,Follow._INT_in_synpred25_NPortugol903); if (state.failed) return;
 			DebugLocation(163, 24);
-			Match(input,47,Follow._47_in_synpred25_NPortugol905); if (state.failed) return;
+			Match(input,49,Follow._49_in_synpred25_NPortugol905); if (state.failed) return;
 			DebugLocation(163, 29);
 			Match(input,INT,Follow._INT_in_synpred25_NPortugol907); if (state.failed) return;
 			DebugLocation(163, 33);
-			Match(input,56,Follow._56_in_synpred25_NPortugol909); if (state.failed) return;
+			Match(input,58,Follow._58_in_synpred25_NPortugol909); if (state.failed) return;
 
 			}
 
@@ -5154,20 +5252,20 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		TraceIn("synpred27_NPortugol_fragment", 55);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:10: ( ID '=' '{' INT ( ',' INT )* '}' )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:10: ( ID '=' '{' INT ( ',' INT )* '}' )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:10: ID '=' '{' INT ( ',' INT )* '}'
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:10: ID '=' '{' INT ( ',' INT )* '}'
 			{
 			DebugLocation(164, 10);
 			Match(input,ID,Follow._ID_in_synpred27_NPortugol932); if (state.failed) return;
 			DebugLocation(164, 13);
-			Match(input,51,Follow._51_in_synpred27_NPortugol934); if (state.failed) return;
+			Match(input,53,Follow._53_in_synpred27_NPortugol934); if (state.failed) return;
 			DebugLocation(164, 17);
-			Match(input,71,Follow._71_in_synpred27_NPortugol936); if (state.failed) return;
+			Match(input,73,Follow._73_in_synpred27_NPortugol936); if (state.failed) return;
 			DebugLocation(164, 21);
 			Match(input,INT,Follow._INT_in_synpred27_NPortugol938); if (state.failed) return;
 			DebugLocation(164, 25);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:25: ( ',' INT )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:25: ( ',' INT )*
 			try { DebugEnterSubRule(27);
 			while (true)
 			{
@@ -5175,7 +5273,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(27, false);
 				int LA27_0 = input.LA(1);
 
-				if ((LA27_0==44))
+				if ((LA27_0==46))
 				{
 					alt27 = 1;
 				}
@@ -5186,10 +5284,10 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:26: ',' INT
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:164:26: ',' INT
 					{
 					DebugLocation(164, 26);
-					Match(input,44,Follow._44_in_synpred27_NPortugol941); if (state.failed) return;
+					Match(input,46,Follow._46_in_synpred27_NPortugol941); if (state.failed) return;
 					DebugLocation(164, 30);
 					Match(input,INT,Follow._INT_in_synpred27_NPortugol943); if (state.failed) return;
 
@@ -5207,7 +5305,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 			} finally { DebugExitSubRule(27); }
 
 			DebugLocation(164, 36);
-			Match(input,72,Follow._72_in_synpred27_NPortugol947); if (state.failed) return;
+			Match(input,74,Follow._74_in_synpred27_NPortugol947); if (state.failed) return;
 
 			}
 
@@ -5232,9 +5330,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		TraceIn("synpred43_NPortugol_fragment", 71);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:201:4: ({...}? => function_call )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:201:4: ({...}? => function_call )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:201:4: {...}? => function_call
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:201:4: {...}? => function_call
 			{
 			DebugLocation(201, 4);
 			if (!(( (!IsDefinedID(input.LT(1).Text)) && input.LT(2).Text =="(" )))
@@ -5271,9 +5369,9 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		TraceIn("synpred44_NPortugol_fragment", 72);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:202:4: ( ID )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:202:4: ( ID )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:202:4: ID
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:202:4: ID
 			{
 			DebugLocation(202, 4);
 			Match(input,ID,Follow._ID_in_synpred44_NPortugol1243); if (state.failed) return;
@@ -5290,23 +5388,23 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	}
 	// $ANTLR end synpred44_NPortugol
 
-	partial void EnterRule_synpred46_NPortugol_fragment();
-	partial void LeaveRule_synpred46_NPortugol_fragment();
+	partial void EnterRule_synpred48_NPortugol_fragment();
+	partial void LeaveRule_synpred48_NPortugol_fragment();
 
-	// $ANTLR start synpred46_NPortugol
-	public void synpred46_NPortugol_fragment()
+	// $ANTLR start synpred48_NPortugol
+	public void synpred48_NPortugol_fragment()
 	{
-		EnterRule_synpred46_NPortugol_fragment();
-		EnterRule("synpred46_NPortugol_fragment", 74);
-		TraceIn("synpred46_NPortugol_fragment", 74);
+		EnterRule_synpred48_NPortugol_fragment();
+		EnterRule("synpred48_NPortugol_fragment", 76);
+		TraceIn("synpred48_NPortugol_fragment", 76);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:204:4: ( method_call )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:206:4: ( method_call )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:204:4: method_call
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:206:4: method_call
 			{
-			DebugLocation(204, 4);
-			PushFollow(Follow._method_call_in_synpred46_NPortugol1269);
+			DebugLocation(206, 4);
+			PushFollow(Follow._method_call_in_synpred48_NPortugol1279);
 			method_call();
 			PopFollow();
 			if (state.failed) return;
@@ -5316,30 +5414,30 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("synpred46_NPortugol_fragment", 74);
-			LeaveRule("synpred46_NPortugol_fragment", 74);
-			LeaveRule_synpred46_NPortugol_fragment();
+			TraceOut("synpred48_NPortugol_fragment", 76);
+			LeaveRule("synpred48_NPortugol_fragment", 76);
+			LeaveRule_synpred48_NPortugol_fragment();
 		}
 	}
-	// $ANTLR end synpred46_NPortugol
+	// $ANTLR end synpred48_NPortugol
 
-	partial void EnterRule_synpred47_NPortugol_fragment();
-	partial void LeaveRule_synpred47_NPortugol_fragment();
+	partial void EnterRule_synpred49_NPortugol_fragment();
+	partial void LeaveRule_synpred49_NPortugol_fragment();
 
-	// $ANTLR start synpred47_NPortugol
-	public void synpred47_NPortugol_fragment()
+	// $ANTLR start synpred49_NPortugol
+	public void synpred49_NPortugol_fragment()
 	{
-		EnterRule_synpred47_NPortugol_fragment();
-		EnterRule("synpred47_NPortugol_fragment", 75);
-		TraceIn("synpred47_NPortugol_fragment", 75);
+		EnterRule_synpred49_NPortugol_fragment();
+		EnterRule("synpred49_NPortugol_fragment", 77);
+		TraceIn("synpred49_NPortugol_fragment", 77);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:205:4: ( property_call )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:207:4: ( property_call )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:205:4: property_call
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\NPortugol.g:207:4: property_call
 			{
-			DebugLocation(205, 4);
-			PushFollow(Follow._property_call_in_synpred47_NPortugol1275);
+			DebugLocation(207, 4);
+			PushFollow(Follow._property_call_in_synpred49_NPortugol1285);
 			property_call();
 			PopFollow();
 			if (state.failed) return;
@@ -5349,12 +5447,12 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("synpred47_NPortugol_fragment", 75);
-			LeaveRule("synpred47_NPortugol_fragment", 75);
-			LeaveRule_synpred47_NPortugol_fragment();
+			TraceOut("synpred49_NPortugol_fragment", 77);
+			LeaveRule("synpred49_NPortugol_fragment", 77);
+			LeaveRule_synpred49_NPortugol_fragment();
 		}
 	}
-	// $ANTLR end synpred47_NPortugol
+	// $ANTLR end synpred49_NPortugol
 	#endregion Rules
 
 	#region Synpreds
@@ -5385,14 +5483,14 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _declare_function_in_script148 = new BitSet(new ulong[]{0x8000000000000002UL});
-		public static readonly BitSet _63_in_declare_function159 = new BitSet(new ulong[]{0x20000UL});
-		public static readonly BitSet _ID_in_declare_function163 = new BitSet(new ulong[]{0x10000000000UL});
-		public static readonly BitSet _40_in_declare_function165 = new BitSet(new ulong[]{0x20000020000UL});
-		public static readonly BitSet _function_param_list_in_declare_function167 = new BitSet(new ulong[]{0x20000020000UL});
-		public static readonly BitSet _41_in_declare_function170 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _statement_in_declare_function172 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _62_in_declare_function175 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _declare_function_in_script148 = new BitSet(new ulong[]{0x2UL,0x2UL});
+		public static readonly BitSet _65_in_declare_function159 = new BitSet(new ulong[]{0x40000UL});
+		public static readonly BitSet _ID_in_declare_function163 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_declare_function165 = new BitSet(new ulong[]{0x80000040000UL});
+		public static readonly BitSet _function_param_list_in_declare_function167 = new BitSet(new ulong[]{0x80000040000UL});
+		public static readonly BitSet _43_in_declare_function170 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _statement_in_declare_function172 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _64_in_declare_function175 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _declare_local_in_statement222 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _if_stat_in_statement228 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _for_stat_in_statement234 = new BitSet(new ulong[]{0x2UL});
@@ -5402,134 +5500,138 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 		public static readonly BitSet _assign_var_in_statement256 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _return_stat_in_statement262 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _asm_code_in_statement267 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_function_param_list295 = new BitSet(new ulong[]{0x100000000002UL});
-		public static readonly BitSet _44_in_function_param_list298 = new BitSet(new ulong[]{0x20000UL});
-		public static readonly BitSet _ID_in_function_param_list300 = new BitSet(new ulong[]{0x100000000002UL});
-		public static readonly BitSet _70_in_declare_local348 = new BitSet(new ulong[]{0x20000UL});
-		public static readonly BitSet _ID_in_declare_local352 = new BitSet(new ulong[]{0x100000000002UL});
-		public static readonly BitSet _44_in_declare_local355 = new BitSet(new ulong[]{0x20000UL});
-		public static readonly BitSet _ID_in_declare_local359 = new BitSet(new ulong[]{0x100000000002UL});
-		public static readonly BitSet _68_in_if_stat405 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _logic_expression_in_if_stat409 = new BitSet(new ulong[]{0x2000000000000000UL});
-		public static readonly BitSet _61_in_if_stat411 = new BitSet(new ulong[]{0x5000004000020000UL,0x7EUL});
-		public static readonly BitSet _statement_in_if_stat415 = new BitSet(new ulong[]{0x5000004000020000UL,0x7EUL});
+		public static readonly BitSet _ID_in_function_param_list295 = new BitSet(new ulong[]{0x400000000002UL});
+		public static readonly BitSet _46_in_function_param_list298 = new BitSet(new ulong[]{0x40000UL});
+		public static readonly BitSet _ID_in_function_param_list300 = new BitSet(new ulong[]{0x400000000002UL});
+		public static readonly BitSet _72_in_declare_local348 = new BitSet(new ulong[]{0x40000UL});
+		public static readonly BitSet _ID_in_declare_local352 = new BitSet(new ulong[]{0x400000000002UL});
+		public static readonly BitSet _46_in_declare_local355 = new BitSet(new ulong[]{0x40000UL});
+		public static readonly BitSet _ID_in_declare_local359 = new BitSet(new ulong[]{0x400000000002UL});
+		public static readonly BitSet _70_in_if_stat405 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _logic_expression_in_if_stat409 = new BitSet(new ulong[]{0x8000000000000000UL});
+		public static readonly BitSet _63_in_if_stat411 = new BitSet(new ulong[]{0x4000010000040000UL,0x1F9UL});
+		public static readonly BitSet _statement_in_if_stat415 = new BitSet(new ulong[]{0x4000010000040000UL,0x1F9UL});
 		public static readonly BitSet _senao_stat_in_if_stat423 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _62_in_if_stat451 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _69_in_senao_stat487 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _statement_in_senao_stat491 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _62_in_senao_stat494 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _65_in_for_stat514 = new BitSet(new ulong[]{0x20000UL});
-		public static readonly BitSet _assign_var_in_for_stat516 = new BitSet(new ulong[]{0x200000000000000UL});
-		public static readonly BitSet _57_in_for_stat518 = new BitSet(new ulong[]{0x220000UL});
-		public static readonly BitSet _index_in_for_stat520 = new BitSet(new ulong[]{0x5400004000020000UL,0x5EUL});
-		public static readonly BitSet _58_in_for_stat528 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _statement_in_for_stat530 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _62_in_for_stat533 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _statement_in_for_stat558 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _62_in_for_stat561 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _60_in_while_stat594 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _logic_expression_in_while_stat596 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _statement_in_while_stat598 = new BitSet(new ulong[]{0x5000004000020000UL,0x5EUL});
-		public static readonly BitSet _62_in_while_stat601 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _66_in_repeat_stat633 = new BitSet(new ulong[]{0x1200004000020000UL,0x5EUL});
-		public static readonly BitSet _statement_in_repeat_stat635 = new BitSet(new ulong[]{0x1200004000020000UL,0x5EUL});
-		public static readonly BitSet _57_in_repeat_stat638 = new BitSet(new ulong[]{0x10200224000UL});
+		public static readonly BitSet _64_in_if_stat451 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _71_in_senao_stat487 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _statement_in_senao_stat491 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _64_in_senao_stat494 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _67_in_for_stat514 = new BitSet(new ulong[]{0x40000UL});
+		public static readonly BitSet _assign_var_in_for_stat516 = new BitSet(new ulong[]{0x800000000000000UL});
+		public static readonly BitSet _59_in_for_stat518 = new BitSet(new ulong[]{0x440000UL});
+		public static readonly BitSet _index_in_for_stat520 = new BitSet(new ulong[]{0x5000010000040000UL,0x179UL});
+		public static readonly BitSet _60_in_for_stat528 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _statement_in_for_stat530 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _64_in_for_stat533 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_for_stat558 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _64_in_for_stat561 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _62_in_while_stat594 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _logic_expression_in_while_stat596 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _statement_in_while_stat598 = new BitSet(new ulong[]{0x4000010000040000UL,0x179UL});
+		public static readonly BitSet _64_in_while_stat601 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _68_in_repeat_stat633 = new BitSet(new ulong[]{0x4800010000040000UL,0x178UL});
+		public static readonly BitSet _statement_in_repeat_stat635 = new BitSet(new ulong[]{0x4800010000040000UL,0x178UL});
+		public static readonly BitSet _59_in_repeat_stat638 = new BitSet(new ulong[]{0x40C0044C000UL});
 		public static readonly BitSet _logic_expression_in_repeat_stat640 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_function_call688 = new BitSet(new ulong[]{0x10000000000UL});
-		public static readonly BitSet _40_in_function_call690 = new BitSet(new ulong[]{0x30200224000UL});
-		public static readonly BitSet _function_arg_list_in_function_call692 = new BitSet(new ulong[]{0x30200224000UL});
-		public static readonly BitSet _41_in_function_call695 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_property_call736 = new BitSet(new ulong[]{0x400000000000UL});
-		public static readonly BitSet _46_in_property_call737 = new BitSet(new ulong[]{0x20000UL});
+		public static readonly BitSet _ID_in_function_call688 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_function_call690 = new BitSet(new ulong[]{0xC0C0044C000UL});
+		public static readonly BitSet _function_arg_list_in_function_call692 = new BitSet(new ulong[]{0xC0C0044C000UL});
+		public static readonly BitSet _43_in_function_call695 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_property_call736 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_property_call737 = new BitSet(new ulong[]{0x40000UL});
 		public static readonly BitSet _ID_in_property_call740 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_method_call784 = new BitSet(new ulong[]{0x400000000000UL});
-		public static readonly BitSet _46_in_method_call785 = new BitSet(new ulong[]{0x20000UL});
-		public static readonly BitSet _ID_in_method_call788 = new BitSet(new ulong[]{0x10000000000UL});
-		public static readonly BitSet _40_in_method_call790 = new BitSet(new ulong[]{0x30200224000UL});
-		public static readonly BitSet _function_arg_list_in_method_call792 = new BitSet(new ulong[]{0x30200224000UL});
-		public static readonly BitSet _41_in_method_call795 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _plus_expression_in_function_arg_list840 = new BitSet(new ulong[]{0x100000000002UL});
-		public static readonly BitSet _44_in_function_arg_list843 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _plus_expression_in_function_arg_list845 = new BitSet(new ulong[]{0x100000000002UL});
-		public static readonly BitSet _ID_in_assign_var897 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_assign_var899 = new BitSet(new ulong[]{0x80000000000000UL});
-		public static readonly BitSet _55_in_assign_var901 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _INT_in_assign_var903 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_assign_var905 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _INT_in_assign_var907 = new BitSet(new ulong[]{0x100000000000000UL});
-		public static readonly BitSet _56_in_assign_var909 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_assign_var932 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_assign_var934 = new BitSet(new ulong[]{0x0UL,0x80UL});
-		public static readonly BitSet _71_in_assign_var936 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _INT_in_assign_var938 = new BitSet(new ulong[]{0x100000000000UL,0x100UL});
-		public static readonly BitSet _44_in_assign_var941 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _INT_in_assign_var943 = new BitSet(new ulong[]{0x100000000000UL,0x100UL});
-		public static readonly BitSet _72_in_assign_var947 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_assign_var967 = new BitSet(new ulong[]{0x80000000000000UL});
-		public static readonly BitSet _55_in_assign_var969 = new BitSet(new ulong[]{0x220000UL});
-		public static readonly BitSet _index_in_assign_var971 = new BitSet(new ulong[]{0x100000000000000UL});
-		public static readonly BitSet _56_in_assign_var973 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_assign_var975 = new BitSet(new ulong[]{0x10200224000UL});
+		public static readonly BitSet _ID_in_method_call784 = new BitSet(new ulong[]{0x1000000000000UL});
+		public static readonly BitSet _48_in_method_call785 = new BitSet(new ulong[]{0x40000UL});
+		public static readonly BitSet _ID_in_method_call788 = new BitSet(new ulong[]{0x40000000000UL});
+		public static readonly BitSet _42_in_method_call790 = new BitSet(new ulong[]{0xC0C0044C000UL});
+		public static readonly BitSet _function_arg_list_in_method_call792 = new BitSet(new ulong[]{0xC0C0044C000UL});
+		public static readonly BitSet _43_in_method_call795 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _plus_expression_in_function_arg_list840 = new BitSet(new ulong[]{0x400000000002UL});
+		public static readonly BitSet _46_in_function_arg_list843 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _plus_expression_in_function_arg_list845 = new BitSet(new ulong[]{0x400000000002UL});
+		public static readonly BitSet _ID_in_assign_var897 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_assign_var899 = new BitSet(new ulong[]{0x200000000000000UL});
+		public static readonly BitSet _57_in_assign_var901 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INT_in_assign_var903 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _49_in_assign_var905 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INT_in_assign_var907 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _58_in_assign_var909 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_assign_var932 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_assign_var934 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_assign_var936 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INT_in_assign_var938 = new BitSet(new ulong[]{0x400000000000UL,0x400UL});
+		public static readonly BitSet _46_in_assign_var941 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INT_in_assign_var943 = new BitSet(new ulong[]{0x400000000000UL,0x400UL});
+		public static readonly BitSet _74_in_assign_var947 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_assign_var967 = new BitSet(new ulong[]{0x200000000000000UL});
+		public static readonly BitSet _57_in_assign_var969 = new BitSet(new ulong[]{0x440000UL});
+		public static readonly BitSet _index_in_assign_var971 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _58_in_assign_var973 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_assign_var975 = new BitSet(new ulong[]{0x40C0044C000UL});
 		public static readonly BitSet _assign_expression_in_assign_var977 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_assign_var1006 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_assign_var1008 = new BitSet(new ulong[]{0x10200224000UL});
+		public static readonly BitSet _ID_in_assign_var1006 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_assign_var1008 = new BitSet(new ulong[]{0x40C0044C000UL});
 		public static readonly BitSet _assign_expression_in_assign_var1010 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _67_in_return_stat1033 = new BitSet(new ulong[]{0x10200224000UL});
+		public static readonly BitSet _69_in_return_stat1033 = new BitSet(new ulong[]{0x40C0044C000UL});
 		public static readonly BitSet _assign_expression_in_return_stat1035 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _38_in_asm_code1054 = new BitSet(new ulong[]{0x4200000000UL});
-		public static readonly BitSet _STRING_in_asm_code1056 = new BitSet(new ulong[]{0x4200000000UL});
-		public static readonly BitSet _38_in_asm_code1059 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _plus_expression_in_logic_expression1091 = new BitSet(new ulong[]{0x876002000000002UL,0x1UL});
-		public static readonly BitSet _binop_in_logic_expression1095 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _plus_expression_in_logic_expression1098 = new BitSet(new ulong[]{0x876002000000002UL,0x1UL});
+		public static readonly BitSet _40_in_asm_code1054 = new BitSet(new ulong[]{0x10400000000UL});
+		public static readonly BitSet _STRING_in_asm_code1056 = new BitSet(new ulong[]{0x10400000000UL});
+		public static readonly BitSet _40_in_asm_code1059 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _plus_expression_in_logic_expression1091 = new BitSet(new ulong[]{0x21D8008000000002UL,0x4UL});
+		public static readonly BitSet _binop_in_logic_expression1095 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _plus_expression_in_logic_expression1098 = new BitSet(new ulong[]{0x21D8008000000002UL,0x4UL});
 		public static readonly BitSet _plus_expression_in_assign_expression1159 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _mul_expression_in_plus_expression1169 = new BitSet(new ulong[]{0x280000000002UL});
-		public static readonly BitSet _43_in_plus_expression1173 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _mul_expression_in_plus_expression1176 = new BitSet(new ulong[]{0x280000000002UL});
-		public static readonly BitSet _45_in_plus_expression1180 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _mul_expression_in_plus_expression1183 = new BitSet(new ulong[]{0x280000000002UL});
-		public static readonly BitSet _primary_ar_expression_in_mul_expression1198 = new BitSet(new ulong[]{0x1048000000002UL});
-		public static readonly BitSet _48_in_mul_expression1203 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _primary_ar_expression_in_mul_expression1206 = new BitSet(new ulong[]{0x1048000000002UL});
-		public static readonly BitSet _39_in_mul_expression1210 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _primary_ar_expression_in_mul_expression1213 = new BitSet(new ulong[]{0x1048000000002UL});
-		public static readonly BitSet _42_in_mul_expression1217 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _primary_ar_expression_in_mul_expression1220 = new BitSet(new ulong[]{0x1048000000002UL});
+		public static readonly BitSet _mul_expression_in_plus_expression1169 = new BitSet(new ulong[]{0xA00000000002UL});
+		public static readonly BitSet _45_in_plus_expression1173 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _mul_expression_in_plus_expression1176 = new BitSet(new ulong[]{0xA00000000002UL});
+		public static readonly BitSet _47_in_plus_expression1180 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _mul_expression_in_plus_expression1183 = new BitSet(new ulong[]{0xA00000000002UL});
+		public static readonly BitSet _primary_ar_expression_in_mul_expression1198 = new BitSet(new ulong[]{0x4120000000002UL});
+		public static readonly BitSet _50_in_mul_expression1203 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _primary_ar_expression_in_mul_expression1206 = new BitSet(new ulong[]{0x4120000000002UL});
+		public static readonly BitSet _41_in_mul_expression1210 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _primary_ar_expression_in_mul_expression1213 = new BitSet(new ulong[]{0x4120000000002UL});
+		public static readonly BitSet _44_in_mul_expression1217 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _primary_ar_expression_in_mul_expression1220 = new BitSet(new ulong[]{0x4120000000002UL});
 		public static readonly BitSet _function_call_in_primary_ar_expression1238 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _ID_in_primary_ar_expression1243 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_primary_ar_expression1248 = new BitSet(new ulong[]{0x80000000000000UL});
-		public static readonly BitSet _55_in_primary_ar_expression1250 = new BitSet(new ulong[]{0x220000UL});
-		public static readonly BitSet _index_in_primary_ar_expression1252 = new BitSet(new ulong[]{0x100000000000000UL});
-		public static readonly BitSet _56_in_primary_ar_expression1254 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _method_call_in_primary_ar_expression1269 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _property_call_in_primary_ar_expression1275 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _constant_in_primary_ar_expression1280 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _parenthesisExpression_in_primary_ar_expression1285 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _40_in_parenthesisExpression1300 = new BitSet(new ulong[]{0x10200224000UL});
-		public static readonly BitSet _plus_expression_in_parenthesisExpression1302 = new BitSet(new ulong[]{0x20000000000UL});
-		public static readonly BitSet _41_in_parenthesisExpression1304 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _constant_in_atom1335 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_atom1339 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _T_in_primary_ar_expression1248 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _F_in_primary_ar_expression1253 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_primary_ar_expression1258 = new BitSet(new ulong[]{0x200000000000000UL});
+		public static readonly BitSet _57_in_primary_ar_expression1260 = new BitSet(new ulong[]{0x440000UL});
+		public static readonly BitSet _index_in_primary_ar_expression1262 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _58_in_primary_ar_expression1264 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _method_call_in_primary_ar_expression1279 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _property_call_in_primary_ar_expression1285 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _constant_in_primary_ar_expression1290 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _parenthesisExpression_in_primary_ar_expression1295 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _42_in_parenthesisExpression1310 = new BitSet(new ulong[]{0x40C0044C000UL});
+		public static readonly BitSet _plus_expression_in_parenthesisExpression1312 = new BitSet(new ulong[]{0x80000000000UL});
+		public static readonly BitSet _43_in_parenthesisExpression1314 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _constant_in_atom1345 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_atom1349 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _T_in_atom1353 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _F_in_atom1357 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _function_arg_list_in_synpred22_NPortugol692 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _function_arg_list_in_synpred23_NPortugol792 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_synpred25_NPortugol897 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_synpred25_NPortugol899 = new BitSet(new ulong[]{0x80000000000000UL});
-		public static readonly BitSet _55_in_synpred25_NPortugol901 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _INT_in_synpred25_NPortugol903 = new BitSet(new ulong[]{0x800000000000UL});
-		public static readonly BitSet _47_in_synpred25_NPortugol905 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _INT_in_synpred25_NPortugol907 = new BitSet(new ulong[]{0x100000000000000UL});
-		public static readonly BitSet _56_in_synpred25_NPortugol909 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_synpred27_NPortugol932 = new BitSet(new ulong[]{0x8000000000000UL});
-		public static readonly BitSet _51_in_synpred27_NPortugol934 = new BitSet(new ulong[]{0x0UL,0x80UL});
-		public static readonly BitSet _71_in_synpred27_NPortugol936 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _INT_in_synpred27_NPortugol938 = new BitSet(new ulong[]{0x100000000000UL,0x100UL});
-		public static readonly BitSet _44_in_synpred27_NPortugol941 = new BitSet(new ulong[]{0x200000UL});
-		public static readonly BitSet _INT_in_synpred27_NPortugol943 = new BitSet(new ulong[]{0x100000000000UL,0x100UL});
-		public static readonly BitSet _72_in_synpred27_NPortugol947 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_synpred25_NPortugol897 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_synpred25_NPortugol899 = new BitSet(new ulong[]{0x200000000000000UL});
+		public static readonly BitSet _57_in_synpred25_NPortugol901 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INT_in_synpred25_NPortugol903 = new BitSet(new ulong[]{0x2000000000000UL});
+		public static readonly BitSet _49_in_synpred25_NPortugol905 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INT_in_synpred25_NPortugol907 = new BitSet(new ulong[]{0x400000000000000UL});
+		public static readonly BitSet _58_in_synpred25_NPortugol909 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_synpred27_NPortugol932 = new BitSet(new ulong[]{0x20000000000000UL});
+		public static readonly BitSet _53_in_synpred27_NPortugol934 = new BitSet(new ulong[]{0x0UL,0x200UL});
+		public static readonly BitSet _73_in_synpred27_NPortugol936 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INT_in_synpred27_NPortugol938 = new BitSet(new ulong[]{0x400000000000UL,0x400UL});
+		public static readonly BitSet _46_in_synpred27_NPortugol941 = new BitSet(new ulong[]{0x400000UL});
+		public static readonly BitSet _INT_in_synpred27_NPortugol943 = new BitSet(new ulong[]{0x400000000000UL,0x400UL});
+		public static readonly BitSet _74_in_synpred27_NPortugol947 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _function_call_in_synpred43_NPortugol1238 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _ID_in_synpred44_NPortugol1243 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _method_call_in_synpred46_NPortugol1269 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _property_call_in_synpred47_NPortugol1275 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _method_call_in_synpred48_NPortugol1279 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _property_call_in_synpred49_NPortugol1285 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

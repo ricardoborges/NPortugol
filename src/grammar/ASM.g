@@ -18,6 +18,7 @@ tokens {
     DIV='DIV' ;
     SDIV='SDIV' ;    
     MOD='MOD' ;
+    SMOD='SMOD' ;
     POW='POW' ;
     NEG='NEG' ;
     INC='INC' ;
@@ -165,6 +166,7 @@ opcode_no_op returns [OpCode value]
 	| SSUB {$value = OpCode.SSUB;}
 	| SMUL {$value = OpCode.SMUL;}
 	| SDIV {$value = OpCode.SDIV;}			
+	| SMOD {$value = OpCode.SMOD;}			
 	| SCNT {$value = OpCode.SCNT;}	
 	| EMP {$value = OpCode.EMP;}			
 	;
@@ -174,6 +176,8 @@ operand	returns [Operand value]
         $value = $i.value==null? new Operand(OperandType.Variable, $ID.text): new Operand(OperandType.Variable, $ID.text, $i.value);
         }
 	| INT {$value = new Operand(OperandType.Literal, int.Parse($INT.text));}
+	| T  {$value = new Operand(OperandType.Literal, true);}
+	| F  {$value = new Operand(OperandType.Literal, false);}
 	| FLOAT {$value = new Operand(OperandType.Literal, float.Parse($FLOAT.text));}
 	| STRING {$value = new Operand(OperandType.Literal, $STRING.text.Substring(1, $STRING.Text.Length-2));}
 	;	
@@ -183,6 +187,9 @@ index returns[object value]
 	| ID  {$value = $ID.text;}
 	;
 	
+T : 'True';
+
+F	:	'False';
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
     ;
 

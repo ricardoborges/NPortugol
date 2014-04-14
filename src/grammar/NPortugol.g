@@ -127,7 +127,7 @@ senao_stat
 	
 for_stat:	'para' assign_var 'até' index 
 
-		( 'dec' statement* 'fim' -> ^(LOOP DEC assign_var index ^(SLIST statement*))
+		( 'decrescente' statement* 'fim' -> ^(LOOP DEC assign_var index ^(SLIST statement*))
 		| statement* 'fim' -> ^(LOOP assign_var index ^(SLIST statement*))
 		)
 	;
@@ -200,6 +200,8 @@ mul_expression
 primary_ar_expression 
 	: { (!IsDefinedID(input.LT(1).Text)) && input.LT(2).Text =="(" }? => function_call
 	| ID
+	| T
+	| F
 	| ID '[' index ']' -> ^(INDEX index) ID
 	| method_call	
 	| property_call
@@ -212,7 +214,7 @@ parenthesisExpression: '(' plus_expression ')' -> plus_expression
 	
 constant: INT | FLOAT | STRING;	
 
-atom	: constant | ID;
+atom	: constant | ID | T | F;
 
 index	: INT | ID;
 
@@ -222,6 +224,8 @@ number	: INT | FLOAT;
 // ##########################################################################################################################    
 // Lexer    
     
+T 	:	 'verdadeiro';
+F	:	'falso';    
 ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 
 INT : ('0'..'9')+ ;

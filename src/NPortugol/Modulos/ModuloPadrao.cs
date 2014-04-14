@@ -1,14 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using NPortugol.Runtime.Interop;
 
-namespace NPortugol.Modules
+namespace NPortugol.Modulos
 {
-    public class DefaultModule: IModule
+    public class ModuloPadrao: IModulo
     {
         private readonly Dictionary<string, Func<object[], object>> handlers;
 
-        public DefaultModule()
+        public ModuloPadrao()
         {
             handlers = new Dictionary<string, Func<object[], object>>
                            {
@@ -27,9 +28,15 @@ namespace NPortugol.Modules
                 throw new Exception("Nenhum parametro encontrado para vetorizar.");
 
             var value = args[0].ToString();
-            var split = args[1].ToString()[0];
 
-            return value.Split(split);
+            if (args.Length == 2)
+            {
+                var split = args[1].ToString()[0];
+
+                return value.Split(split);
+            }
+
+            return value.ToCharArray().Cast<object>().ToArray();
         }
     }
 }

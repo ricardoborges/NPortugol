@@ -66,6 +66,7 @@
     <None Include="contatos\controle\listagem.np" />
     <None Include="contatos\controle\registro.np" />
     <None Include="inicio\controle\menu.np" />
+    <None Include="indice.np" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">

@@ -29,7 +29,7 @@ public script returns[IList<string> scriptLines] : declare_function*
 declare_function : ^(FUNC ID function_param_list* ^(SLIST statement*))
 	{emitter.EmitFunction($ID.Token);}
 ;
-		
+			
 statement: declare_local
 	| if_stat 
 	| for_stat
@@ -66,7 +66,8 @@ senao_stat
 	;		
 	
 	
-for_stat: ^(LOOP a=assign_var { emitter.SetForInc(a); } i=INT ^(SLIST  {emitter.EmitInitFor($i.Token, true);} statement* ))	 {emitter.EmitEndFor($i.Token, true);}
+for_stat
+: ^(LOOP a=assign_var { emitter.SetForInc(a); } i=INT ^(SLIST  {emitter.EmitInitFor($i.Token, true);} statement* ))	 {emitter.EmitEndFor($i.Token, true);}
 	| ^(LOOP DEC a=assign_var { emitter.SetForInc(a); } i=INT ^(SLIST {emitter.EmitInitFor($i.Token, false);} statement*))  {emitter.EmitEndFor($i.Token, false);}
 	| ^(LOOP a=assign_var { emitter.SetForInc(a); } i=ID ^(SLIST  {emitter.EmitInitFor($i.Token, true);} statement* ))	 {emitter.EmitEndFor($i.Token, true);}
 	| ^(LOOP DEC a=assign_var { emitter.SetForInc(a); } i=ID ^(SLIST {emitter.EmitInitFor($i.Token, false);} statement*))  {emitter.EmitEndFor($i.Token, false);}	
@@ -135,6 +136,7 @@ plus_expression
 | ^('-' plus_expression plus_expression) {emitter.EmitStackSub();}
 | ^('*' plus_expression plus_expression) {emitter.EmitStackPlus();}
 | ^('/' plus_expression plus_expression) {emitter.EmitStackDiv();}
+| ^('%' plus_expression plus_expression) {emitter.EmitStackMod();}
 | ^(INDEX INT) ID {emitter.EmitPush($ID.text, int.Parse($INT.text));}
 | ^(INDEX i2=ID) i1=ID {emitter.EmitPush($i1.text, $i2.text);}
 | function_call
@@ -158,8 +160,10 @@ logic_expression
 //###########################################################################################################################
     
 atom returns[object value]: 
-      a=ID {$value = $a.text; if (inExpression) emitter.EmitPush($value, $a.Token);}
-    | a=INT{$value = int.Parse($a.text); if (inExpression) emitter.EmitPush($value, $a.Token);}
-    | a=FLOAT{$value = float.Parse($a.text); if (inExpression) emitter.EmitPush($value, $a.Token);}
-    | a=STRING{$value = $a.text; if (inExpression) emitter.EmitPush($value, $a.Token);}
+      a=ID {$value = $a.text; emitter.EmitPush($value, $a.Token);}
+    | a=INT{$value = int.Parse($a.text);  emitter.EmitPush($value, $a.Token);}
+    | a=FLOAT{$value = float.Parse($a.text);  emitter.EmitPush($value, $a.Token);}
+    | a=STRING{$value = $a.text;  emitter.EmitPush($value, $a.Token);}
+    | a=T{$value = $a.text;  emitter.EmitPush(true, $a.Token);}    
+    | a=F{$value = $a.text;  emitter.EmitPush(false, $a.Token);}    
     ;  

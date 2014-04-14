@@ -25,6 +25,7 @@ namespace NPortugol
         private static string _stackSub = "SSUB";
         private static string _stackPlus = "SMUL";
         private static string _stackDiv = "SDIV";
+        private static string _stackMod = "SMOD";
 
 
         private static string _jumpNotEquals = "JNE {0}";
@@ -76,6 +77,11 @@ namespace NPortugol
         public static string StackDiv()
         {
             return _stackDiv;
+        }
+
+        public static string StackMod()
+        {
+            return _stackMod;
         }
 
         public static string Declare(object id)

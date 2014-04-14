@@ -32,7 +32,7 @@ namespace NPortugol.Web.App.Classic
 
         private static string GetAsm(string script)
         {
-            var engine = new Engine();
+            var engine = new Motor();
             engine.Compile(script);
 
             return engine.RuntimeContext.Runnable.InstrucStream.ToString();
@@ -40,10 +40,10 @@ namespace NPortugol.Web.App.Classic
 
         private static void Execute(string script)
         {
-            var engine = new Engine();
+            var engine = new Motor();
 
-            engine.Install(new WebModule());
-            engine.Install(new HtmlModule());
+            engine.Install(new WebModulo());
+            engine.Install(new HtmlModulo());
 
             var modules = RetrieveModules();
 

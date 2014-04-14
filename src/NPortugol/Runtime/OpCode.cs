@@ -30,6 +30,7 @@ namespace NPortugol.Runtime
         SSUB,
         SMUL,
         SDIV,
+        SMOD,
         #endregion
 
         //#region Bitwise

@@ -6,7 +6,7 @@ using NPortugol.Web.App.Mvc;
 
 namespace NPortugol.Web.Modules
 {
-    public class WebModule : IModule
+    public class WebModulo : IModulo
     {
         private readonly Dictionary<string, Func<object[], object>> _handlers;
 
@@ -15,7 +15,7 @@ namespace NPortugol.Web.Modules
             get { return _handlers; }
         }
 
-        public WebModule()
+        public WebModulo()
         {
             _handlers = new Dictionary<string, Func<object[], object>>
                            {
