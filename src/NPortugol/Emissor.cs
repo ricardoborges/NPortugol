@@ -223,34 +223,58 @@ namespace NPortugol
 
         #region expression
 
-        public void EmitEqualsExp()
+        public void EmitEqualsExp(bool invertExp)
         {
-            function.Add(AsmTemplate.JumpNotEquals(CreateAndPushLabel()));
+            var inst = invertExp
+                           ? AsmTemplate.JumpNotEquals(CreateAndPushLabel())
+                           : AsmTemplate.JumpEquals(CreateAndPushLabel());
+
+            function.Add(inst);
         }
 
-        public void EmitNotEqExp()
+        public void EmitNotEqExp(bool invertExp)
         {
-            function.Add(AsmTemplate.JumpEquals(CreateAndPushLabel()));
+            var inst = invertExp
+                          ? AsmTemplate.JumpEquals(CreateAndPushLabel())
+                          : AsmTemplate.JumpNotEquals(CreateAndPushLabel());
+
+            function.Add(inst);
         }
 
-        public void EmitGreaterExp()
+        public void EmitGreaterExp(bool invertExp)
         {
-            function.Add(AsmTemplate.JumpLessEquals(CreateAndPushLabel()));
+            var inst = invertExp
+                           ? AsmTemplate.JumpLessEquals(CreateAndPushLabel())
+                           : AsmTemplate.JumpGreater(CreateAndPushLabel());
+
+            function.Add(inst);
         }
 
-        public void EmitGreaterEqExp()
+        public void EmitGreaterEqExp(bool invertExp)
         {
-            function.Add(AsmTemplate.JumpLess(CreateAndPushLabel()));
+            var inst = invertExp
+                        ? AsmTemplate.JumpLess(CreateAndPushLabel())
+                        : AsmTemplate.JumpGreaterEquals(CreateAndPushLabel());
+
+            function.Add(inst);
         }
 
-        public void EmitLessExp()
+        public void EmitLessExp(bool invertExp)
         {
-            function.Add(AsmTemplate.JumpGreaterEquals(CreateAndPushLabel()));
+            var inst = invertExp
+                          ? AsmTemplate.JumpGreaterEquals(CreateAndPushLabel())
+                          : AsmTemplate.JumpLess(CreateAndPushLabel());
+
+            function.Add(inst);
         }
 
-        public void EmitLessEqExp()
+        public void EmitLessEqExp(bool invertExp)
         {
-            function.Add(AsmTemplate.JumpGreater(CreateAndPushLabel()));
+            var inst = invertExp
+                        ? AsmTemplate.JumpGreater(CreateAndPushLabel())
+                        : AsmTemplate.JumpLessEquals(CreateAndPushLabel());
+
+            function.Add(inst);
         }
 
         private void EmitJMP(string slabel)
@@ -313,6 +337,37 @@ namespace NPortugol
 
             EmitJMP(initLoop);
             
+            EmitLabel(endLoop);
+        }
+
+
+        public void EmitInitWhile()
+        {
+            EmitLabel();
+        }
+
+        public void EmitEndWhile()
+        {
+            var endLoop = labels.Pop();
+            var initLoop = labels.Pop();
+
+            EmitJMP(initLoop);
+
+            EmitLabel(endLoop);
+        }
+
+        public void EmitInitRepeat()
+        {
+            EmitLabel();
+        }
+
+        public void EmitEndRepeat()
+        {
+            var endLoop = labels.Pop();
+            var initLoop = labels.Pop();
+
+            EmitJMP(initLoop);
+
             EmitLabel(endLoop);
         }
 

@@ -17,6 +17,8 @@ k=3;
 	
 	bool inExpression;
 	
+	bool invertExp = true;
+	
 	public Dictionary<int, int> SourceMap { get { return emitter.SourceMap; } }
 	
 	public bool DebugInfo {get {return emitter.DebugInfo;} set{emitter.DebugInfo = value;} }
@@ -33,6 +35,8 @@ declare_function : ^(FUNC ID function_param_list* ^(SLIST statement*))
 statement: declare_local
 	| if_stat 
 	| for_stat
+	| while_stat
+	| repeat_stat
 	| function_call 
 	| assign_var
 	| return_stat
@@ -47,12 +51,6 @@ function_param_list
 declare_local 
 	:  ^(VAR i+=ID*)  { foreach(var item in $i) emitter.EmitVar(item.Token); }
 	;
-/*
-initialize_local[string id]
-	:	^(INIT plus_expression)
-		 { EmitVar(id);EmitPop(id);}
-	;	
-*/
 
 if_stat
 	:  ^(SJMP ^(LEXP logic_expression) ^(SLIST statement* {emitter.EmitIf(true);} senao_stat))
@@ -73,16 +71,18 @@ for_stat
 	| ^(LOOP DEC a=assign_var { emitter.SetForInc(a); } i=ID ^(SLIST {emitter.EmitInitFor($i.Token, false);} statement*))  {emitter.EmitEndFor($i.Token, false);}	
 	;
 	
-	
-/*	
+
 while_stat
-	:	 ^(LOOP ^(LEXP logic_expression) ^(SLIST statement*))
+	:	 ^(LOOP ^(LEXP {emitter.EmitInitWhile();} logic_expression) ^(SLIST  statement*)) {emitter.EmitEndWhile();} 
+			
 	;
 	
 repeat_stat	
-	: ^(LOOP ^(SLIST statement*) ^(LEXP logic_expression))
+@init { invertExp = false; }
+@after { invertExp = true; }
+	: ^(LOOP ^(SLIST {emitter.EmitInitRepeat();} statement*) ^(LEXP logic_expression)) {emitter.EmitEndRepeat();}
 	;
-*/
+
 
 function_call   
 	:	 ^(CALL ID function_arg_list*)
@@ -146,12 +146,12 @@ plus_expression
 ;
 
 logic_expression
-	:	  ^('<' plus_expression plus_expression) {emitter.EmitLessExp();}
-	|	  ^('>' plus_expression plus_expression) {emitter.EmitGreaterExp();}
-	|	  ^('<=' plus_expression plus_expression) {emitter.EmitLessEqExp();}
-	|	  ^('>=' plus_expression plus_expression) {emitter.EmitGreaterEqExp();}
-	|	  ^('==' plus_expression plus_expression) {emitter.EmitEqualsExp();}
-	|	  ^('!=' plus_expression plus_expression) {emitter.EmitNotEqExp();}
+	:	  ^('<' plus_expression plus_expression) {emitter.EmitLessExp(invertExp);}
+	|	  ^('>' plus_expression plus_expression) {emitter.EmitGreaterExp(invertExp);}
+	|	  ^('<=' plus_expression plus_expression) {emitter.EmitLessEqExp(invertExp);}
+	|	  ^('>=' plus_expression plus_expression) {emitter.EmitGreaterEqExp(invertExp);}
+	|	  ^('==' plus_expression plus_expression) {emitter.EmitEqualsExp(invertExp);}
+	|	  ^('!=' plus_expression plus_expression) {emitter.EmitNotEqExp(invertExp);}
 	|	  ^('e' plus_expression plus_expression)
 	|	  ^('ou' plus_expression plus_expression)						
 	| plus_expression

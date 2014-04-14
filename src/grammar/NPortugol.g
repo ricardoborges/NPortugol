@@ -98,24 +98,12 @@ statement	@init { paraphrases.Push("na sentença"); } @after { paraphrases.Pop();
 function_param_list     @init { paraphrases.Push("na lista de parâmetros"); }   @after { paraphrases.Pop(); }
 	:	ID (',' ID)* -> ^(PARAM ID*)
 	;	
-/*
-declare_local            @init { paraphrases.Push("na definição de variável"); }   @after { paraphrases.Pop(); }
-	:	'variavel' i+= ID (initialize_local)? (','i+= ID (initialize_local)?)* 
-		{DefineID($i);}
-		-> ^(VAR ID initialize_local?)+
-	;
-	*/
 
 declare_local            @init { paraphrases.Push("na definição de variável"); }   @after { paraphrases.Pop(); }
 	:	'variável' i+=ID (',' i+=ID)* 
 			{DefineID($i);}
 	-> ^(VAR ID*)
 	;
-
-/*
-initialize_local
-	:	'=' plus_expression -> ^(INIT plus_expression)
-	;	*/
 	
 if_stat @init { paraphrases.Push("se"); }   @after { paraphrases.Pop(); }
 
@@ -141,7 +129,7 @@ while_stat
 		-> ^(LOOP ^(LEXP logic_expression) ^(SLIST statement*))
 	;
 	
-repeat_stat	:	'repita' statement* 'até' logic_expression
+repeat_stat:	'repita' statement* 'até' logic_expression
 		-> ^(LOOP ^(SLIST statement*) ^(LEXP logic_expression))
 	;
 

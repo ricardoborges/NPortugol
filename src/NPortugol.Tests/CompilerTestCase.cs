@@ -105,5 +105,18 @@ namespace NPortugol.Tests
             script = Compile("função main() para x = 1 até 10 decrescente fim fim");
             Assert.AreEqual("JLE label_1", script[7]);
         }
+
+        [Test]
+        public void Build_Loop_While()
+        {
+            var script = Compile("função main() enquanto x < 10 x = x + 1 fim fim");
+        /*    Assert.AreEqual(".label_0", script[4]);
+            Assert.AreEqual("JGE label_1", script[7]);
+            Assert.AreEqual("JMP label_0", script[9]);
+            Assert.AreEqual(".label_1", script[10]);
+
+            script = Compile("função main() para x = 1 até 10 decrescente fim fim");
+            Assert.AreEqual("JLE label_1", script[7]);*/
+        }
     }
 }
