@@ -1,33 +1,35 @@
 ﻿função principal()
-   variável vet, tam, resultado
+
+   variável cpf, resultado
  
-   vet = vetorizar("11111111111")
+   cpf = "11111111111"
 
-   resultado = valida(vet)
+   resultado = valida(cpf)
 
-imprima(resultado)
-
+   imprima(resultado)
 fim
 
 função valida(cpf)
 
-	se tamanho(cpf) < 11 retorne falso fim
-	se validaDigito(cpf, cpf[9], 9) == falso retorne falso fim
-	se validaDigito(cpf, cpf[10], 10) == falso retorne falso fim
+      variável vet
+
+      vet = vetorizar(cpf)
+
+	se tamanho(vet) < 11 retorne falso fim
+	se validaDigito(vet, vet[9], 9) == falso retorne falso fim
+	se validaDigito(vet, vet[10], 10) == falso retorne falso fim
 
 	retorne verdadeiro
 fim
 
-
-
-função validaDigito(cpf, dig, tam)
+função validaDigito(vet, dig, tam)
 	variável soma, seq, digcalc, i, num, r
 
         soma = 0
         seq = tam + 1
 
 	para i = 0 até tam
-           num = cpf[i]
+           num = vet[i]
            soma = soma + num * seq
            seq = seq - 1
 	fim

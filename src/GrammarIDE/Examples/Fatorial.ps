@@ -1,10 +1,17 @@
-﻿funcao principal()
-  variavel x
-  x = leia()
-  imprima(fat(x))
+﻿função principal()
+    
+    variável numero
+
+    numero = leia()
+
+    imprima(fatorial(numero))
+
 fim
 
-funcao fat(i)
-  se i == 0 retorne 1 fim
-  retorne i * fat(i-1)
+função fatorial(x)
+
+    se x == 0 retorne 1 fim
+
+    retorne fatorial(x - 1) * x 
 fim
+

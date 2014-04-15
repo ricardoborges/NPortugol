@@ -1,21 +1,22 @@
-﻿funcao principal()
-  variavel ve 
+﻿função principal()
+  variável vetor 
  
-  ve = {8,2,7,3,6,4,5,0,1}
+  vetor = {8,2,7,3,6,4,5,0,1}
   
-  bolha(ve)
+  ordenar(vetor)
   
-  imprimaVetor(ve)
+  imprimaVetor(vetor)
 fim
 
-funcao bolha(v)
-  variavel i, j, tam, t
-  tam = tamanho(v) - 1
+função ordenar(v)
+  variável i, j, t, tam
+
+  tam = v.tamanho
   
-  para t = 1 ate tam
-    para i = 1 ate tam
+  para t = 1 até tam
+    para i = 1 até tam
         j = i-1
-        se v[j] > v[i] entao
+        se v[j] > v[i] então
           aux = v[i]
           v[i] = v[j]
           v[j] = aux         
