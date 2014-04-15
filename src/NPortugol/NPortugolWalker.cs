@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g 2014-04-15 11:12:31
+// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugolWalker.g 2014-04-15 15:22:32
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -34,7 +34,7 @@ namespace NPortugol
 public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AR", "ARG", "ASGN", "ASM", "CALL", "CHAR", "DEC", "ESC_SEQ", "EXP", "EXPONENT", "F", "FLOAT", "FUNC", "HEX_DIGIT", "ID", "ILIST", "INDEX", "INIT", "INT", "JMP", "LEXP", "LOOP", "MCALL", "NEWLINE", "OCTAL_ESC", "PARAM", "PCALL", "RET", "SJMP", "SLIST", "STRING", "T", "UNICODE_ESC", "VAR", "WS", "'!='", "'#'", "'%'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'/'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'['", "']'", "'até'", "'decrescente'", "'e'", "'enquanto'", "'então'", "'fim'", "'função'", "'ou'", "'para'", "'repita'", "'retorne'", "'se'", "'senão'", "'variável'", "'{'", "'}'", "'falso'", "'nulo'", "'verdadeiro'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "AR", "ARG", "ASGN", "ASM", "CALL", "CHAR", "DEC", "ESC_SEQ", "EXP", "EXPONENT", "F", "FLOAT", "FUNC", "HEX_DIGIT", "ID", "ILIST", "INDEX", "INIT", "INT", "JMP", "LEXP", "LOOP", "MCALL", "NEWLINE", "OCTAL_ESC", "PARAM", "PCALL", "RET", "SJMP", "SLIST", "STRING", "T", "UNICODE_ESC", "VAR", "WS", "'!='", "'#'", "'%'", "'('", "')'", "'*'", "'+'", "','", "'-'", "'.'", "'..'", "'/'", "';'", "'<'", "'<='", "'='", "'=='", "'>'", "'>='", "'['", "']'", "'até'", "'decrescente'", "'e'", "'enquanto'", "'então'", "'fim'", "'função'", "'ou'", "'para'", "'repita'", "'retorne'", "'se'", "'senão'", "'variável'", "'{'", "'}'", "'falso'", "'nulo'", "'verdadeiro'"
 	};
 	public const int EOF=-1;
 	public const int T__39=39;
@@ -73,6 +73,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	public const int T__72=72;
 	public const int T__73=73;
 	public const int T__74=74;
+	public const int T__75=75;
 	public const int AR=4;
 	public const int ARG=5;
 	public const int ASGN=6;
@@ -108,9 +109,9 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 	public const int UNICODE_ESC=36;
 	public const int VAR=37;
 	public const int WS=38;
-	public const int T__75=75;
 	public const int T__76=76;
 	public const int T__77=77;
+	public const int T__78=78;
 
 	public NPortugolWalker(ITreeNodeStream input)
 		: this(input, new RecognizerSharedState())
@@ -2614,7 +2615,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				DebugLocation(119, 14);
 				ID7=(CommonTree)Match(input,ID,Follow._ID_in_assign_var767); if (state.failed) return id;
 				DebugLocation(119, 17);
-				Match(input,76,Follow._76_in_assign_var769); if (state.failed) return id;
+				Match(input,77,Follow._77_in_assign_var769); if (state.failed) return id;
 
 				Match(input, TokenTypes.Up, null); if (state.failed) return id;
 
@@ -2638,7 +2639,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				DebugLocation(120, 14);
 				ID8=(CommonTree)Match(input,ID,Follow._ID_in_assign_var784); if (state.failed) return id;
 				DebugLocation(120, 17);
-				Match(input,75,Follow._75_in_assign_var786); if (state.failed) return id;
+				Match(input,76,Follow._76_in_assign_var786); if (state.failed) return id;
 
 				Match(input, TokenTypes.Up, null); if (state.failed) return id;
 
@@ -2662,7 +2663,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				DebugLocation(121, 14);
 				ID9=(CommonTree)Match(input,ID,Follow._ID_in_assign_var801); if (state.failed) return id;
 				DebugLocation(121, 17);
-				Match(input,77,Follow._77_in_assign_var803); if (state.failed) return id;
+				Match(input,78,Follow._78_in_assign_var803); if (state.failed) return id;
 
 				Match(input, TokenTypes.Up, null); if (state.failed) return id;
 
@@ -3265,27 +3266,27 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			try { DebugEnterDecision(25, false);
 			switch (input.LA(1))
 			{
-			case 51:
+			case 52:
 				{
 				alt25 = 1;
 				}
 				break;
-			case 55:
+			case 56:
 				{
 				alt25 = 2;
 				}
 				break;
-			case 52:
+			case 53:
 				{
 				alt25 = 3;
 				}
 				break;
-			case 56:
+			case 57:
 				{
 				alt25 = 4;
 				}
 				break;
-			case 54:
+			case 55:
 				{
 				alt25 = 5;
 				}
@@ -3295,12 +3296,12 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				alt25 = 6;
 				}
 				break;
-			case 61:
+			case 62:
 				{
 				alt25 = 7;
 				}
 				break;
-			case 66:
+			case 67:
 				{
 				alt25 = 8;
 				}
@@ -3342,7 +3343,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				DebugLocation(149, 6);
 				DebugLocation(149, 8);
-				Match(input,51,Follow._51_in_logic_expression1017); if (state.failed) return;
+				Match(input,52,Follow._52_in_logic_expression1017); if (state.failed) return;
 
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(149, 12);
@@ -3372,7 +3373,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				DebugLocation(150, 6);
 				DebugLocation(150, 8);
-				Match(input,55,Follow._55_in_logic_expression1032); if (state.failed) return;
+				Match(input,56,Follow._56_in_logic_expression1032); if (state.failed) return;
 
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(150, 12);
@@ -3402,7 +3403,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				DebugLocation(151, 6);
 				DebugLocation(151, 8);
-				Match(input,52,Follow._52_in_logic_expression1047); if (state.failed) return;
+				Match(input,53,Follow._53_in_logic_expression1047); if (state.failed) return;
 
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(151, 13);
@@ -3432,7 +3433,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				DebugLocation(152, 6);
 				DebugLocation(152, 8);
-				Match(input,56,Follow._56_in_logic_expression1062); if (state.failed) return;
+				Match(input,57,Follow._57_in_logic_expression1062); if (state.failed) return;
 
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(152, 13);
@@ -3462,7 +3463,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				DebugLocation(153, 6);
 				DebugLocation(153, 8);
-				Match(input,54,Follow._54_in_logic_expression1077); if (state.failed) return;
+				Match(input,55,Follow._55_in_logic_expression1077); if (state.failed) return;
 
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(153, 13);
@@ -3522,7 +3523,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				DebugLocation(155, 6);
 				DebugLocation(155, 8);
-				Match(input,61,Follow._61_in_logic_expression1107); if (state.failed) return;
+				Match(input,62,Follow._62_in_logic_expression1107); if (state.failed) return;
 
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(155, 12);
@@ -3547,7 +3548,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 				{
 				DebugLocation(156, 6);
 				DebugLocation(156, 8);
-				Match(input,66,Follow._66_in_logic_expression1120); if (state.failed) return;
+				Match(input,67,Follow._67_in_logic_expression1120); if (state.failed) return;
 
 				Match(input, TokenTypes.Down, null); if (state.failed) return;
 				DebugLocation(156, 13);
@@ -4287,7 +4288,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			DebugLocation(119, 14);
 			Match(input,ID,Follow._ID_in_synpred35_NPortugolWalker767); if (state.failed) return;
 			DebugLocation(119, 17);
-			Match(input,76,Follow._76_in_synpred35_NPortugolWalker769); if (state.failed) return;
+			Match(input,77,Follow._77_in_synpred35_NPortugolWalker769); if (state.failed) return;
 
 			Match(input, TokenTypes.Up, null); if (state.failed) return;
 
@@ -4327,7 +4328,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			DebugLocation(120, 14);
 			Match(input,ID,Follow._ID_in_synpred36_NPortugolWalker784); if (state.failed) return;
 			DebugLocation(120, 17);
-			Match(input,75,Follow._75_in_synpred36_NPortugolWalker786); if (state.failed) return;
+			Match(input,76,Follow._76_in_synpred36_NPortugolWalker786); if (state.failed) return;
 
 			Match(input, TokenTypes.Up, null); if (state.failed) return;
 
@@ -4367,7 +4368,7 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 			DebugLocation(121, 14);
 			Match(input,ID,Follow._ID_in_synpred37_NPortugolWalker801); if (state.failed) return;
 			DebugLocation(121, 17);
-			Match(input,77,Follow._77_in_synpred37_NPortugolWalker803); if (state.failed) return;
+			Match(input,78,Follow._78_in_synpred37_NPortugolWalker803); if (state.failed) return;
 
 			Match(input, TokenTypes.Up, null); if (state.failed) return;
 
@@ -4553,14 +4554,14 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		public static readonly BitSet _ID_in_assign_var750 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_assign_var752 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _ASGN_in_assign_var765 = new BitSet(new ulong[]{0x4UL});
-		public static readonly BitSet _ID_in_assign_var767 = new BitSet(new ulong[]{0x0UL,0x1000UL});
-		public static readonly BitSet _76_in_assign_var769 = new BitSet(new ulong[]{0x8UL});
+		public static readonly BitSet _ID_in_assign_var767 = new BitSet(new ulong[]{0x0UL,0x2000UL});
+		public static readonly BitSet _77_in_assign_var769 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _ASGN_in_assign_var782 = new BitSet(new ulong[]{0x4UL});
-		public static readonly BitSet _ID_in_assign_var784 = new BitSet(new ulong[]{0x0UL,0x800UL});
-		public static readonly BitSet _75_in_assign_var786 = new BitSet(new ulong[]{0x8UL});
+		public static readonly BitSet _ID_in_assign_var784 = new BitSet(new ulong[]{0x0UL,0x1000UL});
+		public static readonly BitSet _76_in_assign_var786 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _ASGN_in_assign_var799 = new BitSet(new ulong[]{0x4UL});
-		public static readonly BitSet _ID_in_assign_var801 = new BitSet(new ulong[]{0x0UL,0x2000UL});
-		public static readonly BitSet _77_in_assign_var803 = new BitSet(new ulong[]{0x8UL});
+		public static readonly BitSet _ID_in_assign_var801 = new BitSet(new ulong[]{0x0UL,0x4000UL});
+		public static readonly BitSet _78_in_assign_var803 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _ASGN_in_assign_var824 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _ID_in_assign_var826 = new BitSet(new ulong[]{0x400000UL});
 		public static readonly BitSet _INT_in_assign_var830 = new BitSet(new ulong[]{0x400000UL});
@@ -4596,28 +4597,28 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		public static readonly BitSet _method_call_in_plus_expression996 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _property_call_in_plus_expression1000 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _atom_in_plus_expression1004 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_logic_expression1017 = new BitSet(new ulong[]{0x4UL});
+		public static readonly BitSet _52_in_logic_expression1017 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1019 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1021 = new BitSet(new ulong[]{0x8UL});
-		public static readonly BitSet _55_in_logic_expression1032 = new BitSet(new ulong[]{0x4UL});
+		public static readonly BitSet _56_in_logic_expression1032 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1034 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1036 = new BitSet(new ulong[]{0x8UL});
-		public static readonly BitSet _52_in_logic_expression1047 = new BitSet(new ulong[]{0x4UL});
+		public static readonly BitSet _53_in_logic_expression1047 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1049 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1051 = new BitSet(new ulong[]{0x8UL});
-		public static readonly BitSet _56_in_logic_expression1062 = new BitSet(new ulong[]{0x4UL});
+		public static readonly BitSet _57_in_logic_expression1062 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1064 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1066 = new BitSet(new ulong[]{0x8UL});
-		public static readonly BitSet _54_in_logic_expression1077 = new BitSet(new ulong[]{0x4UL});
+		public static readonly BitSet _55_in_logic_expression1077 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1079 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1081 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _39_in_logic_expression1092 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1094 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1096 = new BitSet(new ulong[]{0x8UL});
-		public static readonly BitSet _61_in_logic_expression1107 = new BitSet(new ulong[]{0x4UL});
+		public static readonly BitSet _62_in_logic_expression1107 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1109 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1111 = new BitSet(new ulong[]{0x8UL});
-		public static readonly BitSet _66_in_logic_expression1120 = new BitSet(new ulong[]{0x4UL});
+		public static readonly BitSet _67_in_logic_expression1120 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1122 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1124 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _plus_expression_in_logic_expression1136 = new BitSet(new ulong[]{0x2UL});
@@ -4660,14 +4661,14 @@ public partial class NPortugolWalker : Antlr.Runtime.Tree.TreeParser
 		public static readonly BitSet _ID_in_synpred34_NPortugolWalker750 = new BitSet(new ulong[]{0x4B20C4454C100UL});
 		public static readonly BitSet _plus_expression_in_synpred34_NPortugolWalker752 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _ASGN_in_synpred35_NPortugolWalker765 = new BitSet(new ulong[]{0x4UL});
-		public static readonly BitSet _ID_in_synpred35_NPortugolWalker767 = new BitSet(new ulong[]{0x0UL,0x1000UL});
-		public static readonly BitSet _76_in_synpred35_NPortugolWalker769 = new BitSet(new ulong[]{0x8UL});
+		public static readonly BitSet _ID_in_synpred35_NPortugolWalker767 = new BitSet(new ulong[]{0x0UL,0x2000UL});
+		public static readonly BitSet _77_in_synpred35_NPortugolWalker769 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _ASGN_in_synpred36_NPortugolWalker782 = new BitSet(new ulong[]{0x4UL});
-		public static readonly BitSet _ID_in_synpred36_NPortugolWalker784 = new BitSet(new ulong[]{0x0UL,0x800UL});
-		public static readonly BitSet _75_in_synpred36_NPortugolWalker786 = new BitSet(new ulong[]{0x8UL});
+		public static readonly BitSet _ID_in_synpred36_NPortugolWalker784 = new BitSet(new ulong[]{0x0UL,0x1000UL});
+		public static readonly BitSet _76_in_synpred36_NPortugolWalker786 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _ASGN_in_synpred37_NPortugolWalker799 = new BitSet(new ulong[]{0x4UL});
-		public static readonly BitSet _ID_in_synpred37_NPortugolWalker801 = new BitSet(new ulong[]{0x0UL,0x2000UL});
-		public static readonly BitSet _77_in_synpred37_NPortugolWalker803 = new BitSet(new ulong[]{0x8UL});
+		public static readonly BitSet _ID_in_synpred37_NPortugolWalker801 = new BitSet(new ulong[]{0x0UL,0x4000UL});
+		public static readonly BitSet _78_in_synpred37_NPortugolWalker803 = new BitSet(new ulong[]{0x8UL});
 		public static readonly BitSet _ASGN_in_synpred38_NPortugolWalker824 = new BitSet(new ulong[]{0x4UL});
 		public static readonly BitSet _ID_in_synpred38_NPortugolWalker826 = new BitSet(new ulong[]{0x400000UL});
 		public static readonly BitSet _INT_in_synpred38_NPortugolWalker830 = new BitSet(new ulong[]{0x400000UL});
