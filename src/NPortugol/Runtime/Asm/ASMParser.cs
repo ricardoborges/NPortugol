@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\ASM.g 2014-04-15 11:15:09
+// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\ASM.g 2014-04-15 14:49:48
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -31,7 +31,7 @@ namespace NPortugol.Runtime.Asm
 public partial class ASMParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ADD", "CALL", "CNT", "COMMENT", "DCL", "DEC", "DIV", "EMP", "ESC_SEQ", "EXIT", "EXPONENT", "F", "FLOAT", "HEX_DIGIT", "HOST", "ID", "INC", "INT", "JE", "JG", "JGE", "JL", "JLE", "JMP", "JNE", "MOD", "MOV", "MUL", "NEG", "NEWLINE", "OCTAL_ESC", "POP", "POW", "PUSH", "RET", "SADD", "SCNT", "SDIV", "SMOD", "SMUL", "SSUB", "STRING", "SUB", "T", "UNICODE_ESC", "WS", "','", "'.'", "':'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ADD", "CALL", "CNT", "COMMENT", "DCL", "DEC", "DIV", "EMP", "ESC_SEQ", "EXIT", "EXPONENT", "F", "FLOAT", "HEX_DIGIT", "HOST", "ID", "INC", "INT", "JE", "JG", "JGE", "JL", "JLE", "JMP", "JNE", "MOD", "MOV", "MUL", "NEG", "NEWLINE", "OCTAL_ESC", "POP", "POW", "PUSH", "RET", "SADD", "SCNT", "SDIV", "SMOD", "SMUL", "SSUB", "STRING", "SUB", "T", "UNICODE_ESC", "WS", "'.'", "':'", "';'"
 	};
 	public const int EOF=-1;
 	public const int T__50=50;
@@ -173,7 +173,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 						{
 							int LA1_2 = input.LA(2);
 
-							if ((LA1_2==52))
+							if ((LA1_2==51))
 							{
 								int LA1_4 = input.LA(3);
 
@@ -194,7 +194,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 
 
 						}
-						else if (((LA1_0>=ADD && LA1_0<=CNT)||(LA1_0>=DCL && LA1_0<=EMP)||LA1_0==EXIT||LA1_0==HOST||LA1_0==INC||(LA1_0>=JE && LA1_0<=NEG)||(LA1_0>=POP && LA1_0<=SSUB)||LA1_0==SUB||LA1_0==51))
+						else if (((LA1_0>=ADD && LA1_0<=CNT)||(LA1_0>=DCL && LA1_0<=EMP)||LA1_0==EXIT||LA1_0==HOST||LA1_0==INC||(LA1_0>=JE && LA1_0<=NEG)||(LA1_0>=POP && LA1_0<=SSUB)||LA1_0==SUB||LA1_0==50))
 						{
 							alt1 = 1;
 						}
@@ -309,7 +309,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			DebugLocation(68, 8);
 			ID1=(IToken)Match(input,ID,Follow._ID_in_func402); if (state.failed) return;
 			DebugLocation(68, 11);
-			Match(input,52,Follow._52_in_func404); if (state.failed) return;
+			Match(input,51,Follow._51_in_func404); if (state.failed) return;
 			DebugLocation(68, 15);
 			Match(input,NEWLINE,Follow._NEWLINE_in_func406); if (state.failed) return;
 			DebugLocation(68, 22);
@@ -422,7 +422,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				alt3 = 5;
 				}
 				break;
-			case 51:
+			case 50:
 				{
 				alt3 = 6;
 				}
@@ -554,7 +554,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:88:9: '.' ID NEWLINE
 			{
 			DebugLocation(88, 9);
-			Match(input,51,Follow._51_in_label481); if (state.failed) return;
+			Match(input,50,Follow._50_in_label481); if (state.failed) return;
 			DebugLocation(88, 13);
 			ID2=(IToken)Match(input,ID,Follow._ID_in_label483); if (state.failed) return;
 			DebugLocation(88, 16);
@@ -758,7 +758,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_inst_two_op();
 
 	// $ANTLR start "inst_two_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:1: inst_two_op : e= opcode_two_op o= operand ',' p= operand NEWLINE ;
+	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:1: inst_two_op : e= opcode_two_op o= operand ';' p= operand NEWLINE ;
 	[GrammarRule("inst_two_op")]
 	private void inst_two_op()
 	{
@@ -773,9 +773,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(110, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:13: (e= opcode_two_op o= operand ',' p= operand NEWLINE )
+			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:13: (e= opcode_two_op o= operand ';' p= operand NEWLINE )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:15: e= opcode_two_op o= operand ',' p= operand NEWLINE
+			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:15: e= opcode_two_op o= operand ';' p= operand NEWLINE
 			{
 			DebugLocation(110, 16);
 			PushFollow(Follow._opcode_two_op_in_inst_two_op529);
@@ -788,7 +788,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(110, 41);
-			Match(input,50,Follow._50_in_inst_two_op535); if (state.failed) return;
+			Match(input,52,Follow._52_in_inst_two_op535); if (state.failed) return;
 			DebugLocation(110, 46);
 			PushFollow(Follow._operand_in_inst_two_op539);
 			p=operand();
@@ -831,7 +831,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_inst_n_op();
 
 	// $ANTLR start "inst_n_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:1: inst_n_op : e= opcode_n_op o+= ID ( ',' o+= ID )* NEWLINE ;
+	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:1: inst_n_op : e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE ;
 	[GrammarRule("inst_n_op")]
 	private void inst_n_op()
 	{
@@ -846,9 +846,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(116, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:11: (e= opcode_n_op o+= ID ( ',' o+= ID )* NEWLINE )
+			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:11: (e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:13: e= opcode_n_op o+= ID ( ',' o+= ID )* NEWLINE
+			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:13: e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE
 			{
 			DebugLocation(116, 14);
 			PushFollow(Follow._opcode_n_op_in_inst_n_op552);
@@ -861,7 +861,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			list_o.Add(o);
 
 			DebugLocation(116, 33);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:33: ( ',' o+= ID )*
+			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:33: ( ';' o+= ID )*
 			try { DebugEnterSubRule(5);
 			while (true)
 			{
@@ -869,7 +869,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(5, false);
 				int LA5_0 = input.LA(1);
 
-				if ((LA5_0==50))
+				if ((LA5_0==52))
 				{
 					alt5 = 1;
 				}
@@ -880,10 +880,10 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:34: ',' o+= ID
+					// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:34: ';' o+= ID
 					{
 					DebugLocation(116, 34);
-					Match(input,50,Follow._50_in_inst_n_op559); if (state.failed) return;
+					Match(input,52,Follow._52_in_inst_n_op559); if (state.failed) return;
 					DebugLocation(116, 39);
 					o=(IToken)Match(input,ID,Follow._ID_in_inst_n_op563); if (state.failed) return;
 					if (list_o==null) list_o=new List<IToken>();
@@ -1836,7 +1836,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				try { DebugEnterDecision(9, false);
 				int LA9_0 = input.LA(1);
 
-				if ((LA9_0==52))
+				if ((LA9_0==51))
 				{
 					alt9 = 1;
 				}
@@ -1848,7 +1848,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 					// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:175:15: ':' i= index
 					{
 					DebugLocation(175, 15);
-					Match(input,52,Follow._52_in_operand875); if (state.failed) return value;
+					Match(input,51,Follow._51_in_operand875); if (state.failed) return value;
 					DebugLocation(175, 20);
 					PushFollow(Follow._index_in_operand879);
 					i=index();
@@ -2117,10 +2117,10 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _func_in_script387 = new BitSet(new ulong[]{0x85FF9FFDC2F70UL});
-		public static readonly BitSet _instructions_in_script389 = new BitSet(new ulong[]{0x85FF9FFDC2F72UL});
-		public static readonly BitSet _ID_in_func402 = new BitSet(new ulong[]{0x10000000000000UL});
-		public static readonly BitSet _52_in_func404 = new BitSet(new ulong[]{0x200000000UL});
+		public static readonly BitSet _func_in_script387 = new BitSet(new ulong[]{0x45FF9FFDC2F70UL});
+		public static readonly BitSet _instructions_in_script389 = new BitSet(new ulong[]{0x45FF9FFDC2F72UL});
+		public static readonly BitSet _ID_in_func402 = new BitSet(new ulong[]{0x8000000000000UL});
+		public static readonly BitSet _51_in_func404 = new BitSet(new ulong[]{0x200000000UL});
 		public static readonly BitSet _NEWLINE_in_func406 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _func_in_instructions417 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _inst_no_op_in_instructions428 = new BitSet(new ulong[]{0x2UL});
@@ -2128,7 +2128,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		public static readonly BitSet _inst_two_op_in_instructions450 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _inst_n_op_in_instructions461 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _label_in_instructions472 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_label481 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _50_in_label481 = new BitSet(new ulong[]{0x80000UL});
 		public static readonly BitSet _ID_in_label483 = new BitSet(new ulong[]{0x200000000UL});
 		public static readonly BitSet _NEWLINE_in_label485 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _opcode_no_op_in_inst_no_op498 = new BitSet(new ulong[]{0x200000002UL});
@@ -2137,14 +2137,14 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		public static readonly BitSet _operand_in_inst_one_op516 = new BitSet(new ulong[]{0x200000000UL});
 		public static readonly BitSet _NEWLINE_in_inst_one_op518 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _opcode_two_op_in_inst_two_op529 = new BitSet(new ulong[]{0xA00000298000UL});
-		public static readonly BitSet _operand_in_inst_two_op533 = new BitSet(new ulong[]{0x4000000000000UL});
-		public static readonly BitSet _50_in_inst_two_op535 = new BitSet(new ulong[]{0xA00000298000UL});
+		public static readonly BitSet _operand_in_inst_two_op533 = new BitSet(new ulong[]{0x10000000000000UL});
+		public static readonly BitSet _52_in_inst_two_op535 = new BitSet(new ulong[]{0xA00000298000UL});
 		public static readonly BitSet _operand_in_inst_two_op539 = new BitSet(new ulong[]{0x200000000UL});
 		public static readonly BitSet _NEWLINE_in_inst_two_op541 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _opcode_n_op_in_inst_n_op552 = new BitSet(new ulong[]{0x80000UL});
-		public static readonly BitSet _ID_in_inst_n_op556 = new BitSet(new ulong[]{0x4000200000000UL});
-		public static readonly BitSet _50_in_inst_n_op559 = new BitSet(new ulong[]{0x80000UL});
-		public static readonly BitSet _ID_in_inst_n_op563 = new BitSet(new ulong[]{0x4000200000000UL});
+		public static readonly BitSet _ID_in_inst_n_op556 = new BitSet(new ulong[]{0x10000200000000UL});
+		public static readonly BitSet _52_in_inst_n_op559 = new BitSet(new ulong[]{0x80000UL});
+		public static readonly BitSet _ID_in_inst_n_op563 = new BitSet(new ulong[]{0x10000200000000UL});
 		public static readonly BitSet _NEWLINE_in_inst_n_op567 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _MOV_in_opcode_two_op582 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _ADD_in_opcode_two_op589 = new BitSet(new ulong[]{0x2UL});
@@ -2178,8 +2178,8 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		public static readonly BitSet _SMOD_in_opcode_no_op826 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _SCNT_in_opcode_no_op836 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _EMP_in_opcode_no_op844 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_operand872 = new BitSet(new ulong[]{0x10000000000002UL});
-		public static readonly BitSet _52_in_operand875 = new BitSet(new ulong[]{0x280000UL});
+		public static readonly BitSet _ID_in_operand872 = new BitSet(new ulong[]{0x8000000000002UL});
+		public static readonly BitSet _51_in_operand875 = new BitSet(new ulong[]{0x280000UL});
 		public static readonly BitSet _index_in_operand879 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _INT_in_operand888 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _T_in_operand895 = new BitSet(new ulong[]{0x2UL});

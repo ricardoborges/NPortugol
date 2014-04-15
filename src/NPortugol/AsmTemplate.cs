@@ -18,8 +18,8 @@ namespace NPortugol
         private static string _var = "DCL {0}";
         private static string _inc = "INC {0}";
         private static string _dec = "DEC {0}";
-        private static string _assign = "MOV {0}, {1}";
-        private static string _assignIndex = "MOV {0}:{1}, {2}";
+        private static string _assign = "MOV {0}; {1}";
+        private static string _assignIndex = "MOV {0}:{1}; {2}";
 
         private static string _stackAdd = "SADD";
         private static string _stackSub = "SSUB";
@@ -37,7 +37,7 @@ namespace NPortugol
         private static string _jump = "JMP {0}";
 
         private static string _call = "CALL {0}";
-        private static string _phost = "HOST {0}, {1}";
+        private static string _phost = "HOST {0}; {1}";
 
         public static string Function(string name)
         {

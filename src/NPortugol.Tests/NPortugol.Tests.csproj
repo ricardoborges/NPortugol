@@ -79,6 +79,7 @@
     <Compile Include="CompilerTestCase.cs" />
     <Compile Include="GrammarTestCase.cs" />
     <Compile Include="Integration\InteropTestCase.cs" />
+    <Compile Include="Integration\Samples.cs" />
     <Compile Include="Runtime\Asm\Generated\ANTLRParserTestCase.cs" />
     <Compile Include="Runtime\Bootstrap\RuntimeContextTestCase.cs" />
     <Compile Include="Runtime\Instructions\Arithmetic\ArithmeticTestCase.cs" />

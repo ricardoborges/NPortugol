@@ -107,13 +107,13 @@ inst_one_op	:	e=opcode_one_op o=operand NEWLINE{
             _instructions.Add(_instruction);
 };
 
-inst_two_op	:	e=opcode_two_op o=operand ',' p=operand NEWLINE{
+inst_two_op	:	e=opcode_two_op o=operand ';' p=operand NEWLINE{
             var _instruction = new Instruction($e.value, _index, new []{$o.value, $p.value});
             _index++;
             _instructions.Add(_instruction);
 };
 
-inst_n_op	:	e=opcode_n_op o+=ID (',' o+=ID)* NEWLINE{
+inst_n_op	:	e=opcode_n_op o+=ID (';' o+=ID)* NEWLINE{
 
 	    var plist = new List<Operand>();
 				            

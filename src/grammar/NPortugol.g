@@ -153,7 +153,7 @@ function_arg_list
 assign_var	@init { paraphrases.Push("na atribuição de variável"); }   @after { paraphrases.Pop(); }
 	:       
 	       ID '=' '[' INT '..' INT ']' -> ^(ASGN ID INT INT)
-	|       ID '=' '{' INT (',' INT)* '}' -> ^(ASGN ID ^(ILIST INT*))
+	|       ID '=' '{' INT (';' INT)* '}' -> ^(ASGN ID ^(ILIST INT*))
 	|	ID '[' index ']' '=' assign_expression  -> ^(ASGN ^(AR index) ID assign_expression)
         |	ID '=' assign_expression  -> ^(ASGN ID assign_expression)
 	;	
