@@ -66,7 +66,7 @@ namespace GrammarIDE.Presenters
             _motor.Hospedagem.Registrar("imprima", Imprima, true);
             _motor.Hospedagem.Registrar("imprimaVetor", ImprimaVetor, true);
             _motor.Hospedagem.Registrar("leia", Leia, false);
-            _motor.Hospedagem.Registrar("tamanho", Tamanho, false);
+            
         }
 
         private object Imprima(object[] parameters)
@@ -77,7 +77,6 @@ namespace GrammarIDE.Presenters
             value = value.Replace("False", "Falso");
             
             MainPresenter.MainView.WriteOutput(value);
-
             return null;
         }
 
@@ -104,14 +103,6 @@ namespace GrammarIDE.Presenters
             MainPresenter.MainView.WriteOutput(sb.ToString());
 
             return sb.ToString();
-        }
-
-        private object Tamanho(object[] parameters)
-        {
-            var parameter = parameters[0];
-
-            return ((object[])parameter).Length;
-
         }
 
         private object Leia(object[] objects)
@@ -152,7 +143,7 @@ namespace GrammarIDE.Presenters
             //MainPresenter.MainView.WriteOutput("Saída:");
             //MainPresenter.MainView.WriteLine();
 
-            _motor.Execute();
+            _motor.Executar();
 
             Fill();
 
@@ -175,7 +166,7 @@ namespace GrammarIDE.Presenters
 
         public void Step()
         {
-            _motor.Execute();
+            _motor.Executar();
 
             if (_motor.RuntimeContext.Completed)
             {
