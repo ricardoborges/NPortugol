@@ -11,13 +11,12 @@ namespace NPortugol.Runtime
         {
             Name = name;
             EntryPoint = entryPoint;
-            //Parameters = new List<string>();
         }
 
         public string Name { get; private set; }
 
-        [Obsolete]
-        public IList<string> Parameters { get; set; }
+        //[Obsolete]
+        //public IList<string> Parameters { get; set; }
 
         public int EntryPoint { get; private set; }
 

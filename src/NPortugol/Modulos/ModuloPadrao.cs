@@ -13,7 +13,9 @@ namespace NPortugol.Modulos
         {
             handlers = new Dictionary<string, Func<object[], object>>
                            {
-                               {"vetorizar", Vetorizar}
+                               {"vetorizar", Vetorizar},
+                               {"data", Data},
+                               {"nomedia", NomeDoDia}
                            };
         }
 
@@ -37,6 +39,33 @@ namespace NPortugol.Modulos
             }
 
             return value.ToCharArray().Cast<object>().ToArray();
+        }
+
+        private static object Data(object[] parameters)
+        {
+            var parameter = parameters[0].ToString();
+
+            return DateTime.Parse(parameter);
+        }
+
+        private static object NomeDoDia(object[] parameters)
+        {
+            var parameter = Convert.ToDateTime(parameters[0]);
+
+            var name = string.Empty;
+
+            switch (parameter.DayOfWeek)
+            {
+                case DayOfWeek.Sunday: name = "Domingo"; break;
+                case DayOfWeek.Monday: name = "Segunda"; break;
+                case DayOfWeek.Tuesday: name = "Terça"; break;
+                case DayOfWeek.Wednesday: name = "Quarta"; break;
+                case DayOfWeek.Thursday: name = "Quinta"; break;
+                case DayOfWeek.Friday: name = "Sexta"; break;
+                case DayOfWeek.Saturday: name = "Sábado"; break;
+            }
+
+            return name;
         }
     }
 }

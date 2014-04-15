@@ -1,3 +1,4 @@
+using System;
 using Antlr.Runtime;
 using Antlr.Runtime.Tree;
 using NUnit.Framework;
@@ -16,6 +17,12 @@ namespace NPortugol.Tests
             var ast = parser.script();
 
             return (CommonTree) ast.Tree;
+        }
+
+        [Test]
+        public void teste()
+        {
+            var dt = DateTime.Parse("20/04/1982");
         }
     }
 }

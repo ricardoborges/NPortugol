@@ -28,9 +28,9 @@ namespace NPortugol.Tests.Integration
 ";
             var engine = new Motor(new Npc());
 
-            engine.Compile(script);
+            engine.Compilar(script);
 
-            engine.Execute("calcular", new Venda {valor = 20});
+            engine.Executar("calcular", new Venda {valor = 20});
             
             Assert.AreEqual(30, engine.RuntimeContext.GetSymbolValue("calcular_total_0"));
         }
@@ -46,9 +46,9 @@ namespace NPortugol.Tests.Integration
   fim
 ";
             var engine = new Motor(new Npc());
-            engine.Compile(script);
+            engine.Compilar(script);
 
-            engine.Execute("email", new Usuario {Email = "ricardoborgesAtGmailDotCom"});
+            engine.Executar("email", new Usuario {Email = "ricardoborgesAtGmailDotCom"});
 
             Assert.AreEqual("ricardoborgesAtGmailDotCom", engine.RuntimeContext.GetSymbolValue("email_m_0"));
         }

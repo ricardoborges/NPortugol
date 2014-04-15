@@ -14,11 +14,11 @@ namespace NPortugol.Tests.Runtime.Integration.VMEngine
 
             engine.Load(new Bytecode(GetLines()));
 
-            Assert.AreEqual(1, engine.Execute("fat", 0));
-            Assert.AreEqual(6, engine.Execute("fat", 3));
-            Assert.AreEqual(24, engine.Execute("fat", 4));
-            Assert.AreEqual(120, engine.Execute("fat", 5));
-            Assert.AreEqual(720, engine.Execute("fat", 6));
+            Assert.AreEqual(1, engine.Executar("fat", 0));
+            Assert.AreEqual(6, engine.Executar("fat", 3));
+            Assert.AreEqual(24, engine.Executar("fat", 4));
+            Assert.AreEqual(120, engine.Executar("fat", 5));
+            Assert.AreEqual(720, engine.Executar("fat", 6));
         }
 
         private static IList<string> GetLines()

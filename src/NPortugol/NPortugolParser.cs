@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-14 17:00:42
+// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-15 10:25:46
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -437,7 +437,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: ID, statement, function_param_list
+			// elements: statement, ID, function_param_list
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1262,7 +1262,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: s1, s2, p
+				// elements: s2, p, s1
 				// token labels: 
 				// rule labels: retval, s2, p
 				// token list labels: 
@@ -1334,7 +1334,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: s1, p
+				// elements: p, s1
 				// token labels: 
 				// rule labels: retval, p
 				// token list labels: 
@@ -1739,7 +1739,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: assign_var, index, statement
+				// elements: statement, index, assign_var
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -1850,7 +1850,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: index, assign_var, statement
+				// elements: assign_var, statement, index
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -2215,7 +2215,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 			{
 			// AST REWRITE
-			// elements: statement, logic_expression
+			// elements: logic_expression, statement
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -3096,7 +3096,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: INT, INT, ID
+				// elements: INT, ID, INT
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -3206,7 +3206,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: ID, INT
+				// elements: INT, ID
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -3295,7 +3295,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: assign_expression, ID, index
+				// elements: index, assign_expression, ID
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 
@@ -4538,7 +4538,7 @@ public partial class NPortugolParser : Antlr.Runtime.Parser
 
 				{
 				// AST REWRITE
-				// elements: index, ID
+				// elements: ID, index
 				// token labels: 
 				// rule labels: retval
 				// token list labels: 

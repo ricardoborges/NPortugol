@@ -14,10 +14,10 @@ namespace NPortugol.Tests.Runtime.Integration.VMEngine
 
             engine.Load(new Bytecode(GetLines()));
 
-            Assert.AreEqual(9, engine.Execute("pow", new object[] {3, 2} ));
-            Assert.AreEqual(27, engine.Execute("pow", new object[] { 3, 3 } ));
-            Assert.AreEqual(16, engine.Execute("pow", new object[] { 2, 4 } ));
-            Assert.AreEqual(125, engine.Execute("pow", new object[] { 5, 3 } ));
+            Assert.AreEqual(9, engine.Executar("pow", new object[] {3, 2} ));
+            Assert.AreEqual(27, engine.Executar("pow", new object[] { 3, 3 } ));
+            Assert.AreEqual(16, engine.Executar("pow", new object[] { 2, 4 } ));
+            Assert.AreEqual(125, engine.Executar("pow", new object[] { 5, 3 } ));
         }
 
         public static IList<string> GetLines()

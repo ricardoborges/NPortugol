@@ -27,7 +27,7 @@ namespace NPortugol.Runtime
 
             hospedagem = new Hospedagem();
             
-            Install(new ModuloPadrao());
+            Instalar(new ModuloPadrao());
         }
 
         public bool Debug { get; set; }
@@ -69,7 +69,7 @@ namespace NPortugol.Runtime
             RuntimeContext.LoadDebugInfo(info);
         }
 
-        public void Execute()
+        public void Executar()
         {
             RuntimeContext.Debug = Debug;
 
@@ -78,19 +78,19 @@ namespace NPortugol.Runtime
             Debugging = RuntimeContext.Debugging;
         }
 
-        public object Execute(string function, object parameter)
+        public object Executar(string function, object parameter)
         {
-            return Execute(function, new[] {parameter});
+            return Executar(function, new[] {parameter});
         }
 
-        public object Execute(string function, object[] parameters)
+        public object Executar(string function, object[] parameters)
         {
             RuntimeContext.Debug = Debug;
 
             return RuntimeContext.Execute(function, parameters);
         }
 
-        public void Compile(string script)
+        public void Compilar(string script)
         {
             if (_compilador == null)
                 throw new Exception("Nenhum compilador configurado para o engine.");
@@ -98,7 +98,7 @@ namespace NPortugol.Runtime
             Load(_compilador.Compilar(script));
         }
 
-        public void Install(IModulo modulo)
+        public void Instalar(IModulo modulo)
         {
             foreach (var function in modulo.Functions)
             {

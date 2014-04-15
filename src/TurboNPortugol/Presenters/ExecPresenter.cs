@@ -158,7 +158,7 @@ namespace TurboNPortugol.Presenters
             ExecView.WriteOutput("Saída:");
             ExecView.WriteLine();
 
-            _motor.Execute();
+            _motor.Executar();
 
             Fill();
 
@@ -193,7 +193,7 @@ namespace TurboNPortugol.Presenters
 
         public void Step()
         {
-            _motor.Execute();
+            _motor.Executar();
 
             if (_motor.RuntimeContext.Completed)
             {

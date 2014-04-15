@@ -290,8 +290,52 @@ namespace NPortugol.Runtime
         {
             var @object = opResolver.At(0).Value();
             var propertyName = opResolver.At(1).Name();
+
+            if (@object.GetType() == typeof(object[]))
+            {
+                ProcessArrayProp(@object, propertyName);
+
+                return;
+            }
+
+            if (@object.GetType() == typeof(DateTime))
+            {
+                ProcessDateProp(@object, propertyName);
+
+                return;
+            }
+
             var propInfo = @object.GetType().GetProperty(propertyName);
             var value = propInfo.GetValue(@object, null);
+
+            ParamStack.Push(new Operand(OperandType.Literal, value));
+        }
+
+        private void ProcessDateProp(object date, string propertyName)
+        {
+            switch (propertyName)
+            {
+                case "dia": propertyName = "Day"; break;
+                case "mes": propertyName = "Month"; break;
+                case "ano": propertyName = "Year"; break;
+            }
+
+            var propInfo = date.GetType().GetProperty(propertyName);
+            var value = propInfo.GetValue(date, null);
+
+            ParamStack.Push(new Operand(OperandType.Literal, value));
+
+        }
+
+        private void ProcessArrayProp(object array, string propertyName)
+        {
+            switch (propertyName)
+            {
+                case "tamanho": propertyName = "Length"; break;
+            }
+
+            var propInfo = array.GetType().GetProperty(propertyName);
+            var value = propInfo.GetValue(array, null);
 
             ParamStack.Push(new Operand(OperandType.Literal, value));
         }

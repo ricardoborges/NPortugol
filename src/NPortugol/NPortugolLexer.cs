@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-14 17:00:42
+// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-15 10:25:46
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219

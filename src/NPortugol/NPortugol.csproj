@@ -72,6 +72,7 @@
     <Compile Include="AsmTemplate.cs" />
     <Compile Include="Emissor.cs" />
     <Compile Include="ILTranslator.cs" />
+    <Compile Include="Modulos\ModuloCalculo.cs" />
     <Compile Include="Modulos\ModuloPadrao.cs" />
     <Compile Include="NPortugolLexer.cs" />
     <Compile Include="NPortugolParser.cs" />
