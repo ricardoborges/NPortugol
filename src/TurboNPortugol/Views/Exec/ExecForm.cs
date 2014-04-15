@@ -21,7 +21,15 @@ namespace TurboNPortugol.Views.Exec
 
         private void InitAutoComplete()
         {
-            string[] snippets = { "se\nfim", "se\nsenao\nfim", "para var = num ate num\nfim", "para var = num ate num dec\nfim", "funcao principal()\nfim", "funcao ()\nfim", "retorne ", "variavel " };
+            string[] snippets = { "se\nfim", 
+                                    "se\nsenão\nfim", 
+                                    "para i = 0 até x\nfim", 
+                                    "para i = 0 até x decrescente\nfim", 
+                                    "função principal()\nfim", 
+                                    "função ()\nfim", 
+                                    "retorne ", 
+                                    "variável "
+                                };
 
             var items = new List<AutocompleteItem>();
 
