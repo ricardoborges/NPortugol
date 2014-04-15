@@ -222,7 +222,7 @@ ID : ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')* ;
 
 INT : ('0'..'9')+ ;
 
-FLOAT :INT '.' INT ;
+FLOAT :INT ',' INT ;
 
 NEWLINE	: '\r'?'\n'  { $channel = Hidden; };
 

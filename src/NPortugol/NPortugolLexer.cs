@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-15 10:25:46
+// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g 2014-04-15 11:12:26
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -1654,14 +1654,14 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 		{
 			int _type = FLOAT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:225:7: ( INT '.' INT )
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:225:7: ( INT ',' INT )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:225:8: INT '.' INT
+			// C:\\Git\\NPortugol\\src\\grammar\\NPortugol.g:225:8: INT ',' INT
 			{
 			DebugLocation(225, 8);
 			mINT(); 
 			DebugLocation(225, 12);
-			Match('.'); 
+			Match(','); 
 			DebugLocation(225, 16);
 			mINT(); 
 
@@ -2884,7 +2884,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 			"\x75\xFFFF";
 		private const string DFA11_minS =
 			"\x1\x9\x9\xFFFF\x1\x2E\x1\xFFFF\x3\x3D\x2\xFFFF\x1\x74\x1\x65\x1\x30"+
-			"\x1\x61\x1\x75\x1\x61\x2\x65\x1\x61\x3\xFFFF\x1\x2E\x1\xA\x1\x9\xB\xFFFF"+
+			"\x1\x61\x1\x75\x1\x61\x2\x65\x1\x61\x3\xFFFF\x1\x2C\x1\xA\x1\x9\xB\xFFFF"+
 			"\x1\xE9\x1\x63\x1\x71\x1\xFFFF\x1\x6D\x1\x6E\x1\x6C\x1\x30\x1\x72\x1"+
 			"\x70\x1\x30\x2\x72\x4\xFFFF\x1\x72\x1\x75\x1\xE3\x1\x30\x1\xE7\x1\x73"+
 			"\x1\xFFFF\x1\x61\x1\x69\x1\x6F\x1\xE3\x1\xFFFF\x1\x69\x1\x64\x1\x65\x1"+
@@ -2949,7 +2949,7 @@ public partial class NPortugolLexer : Antlr.Runtime.Lexer
 				"",
 				"",
 				"",
-				"\x1\x39\x1\xFFFF\xA\x1D",
+				"\x1\x39\x3\xFFFF\xA\x1D",
 				"\x1\x1F",
 				"\x2\x20\x2\xFFFF\x1\x20\x12\xFFFF\x1\x20",
 				"",
