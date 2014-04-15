@@ -318,10 +318,14 @@ namespace NPortugol.Runtime
                 case "dia": propertyName = "Day"; break;
                 case "mes": propertyName = "Month"; break;
                 case "ano": propertyName = "Year"; break;
+                case "numerodia": propertyName = "DayOfWeek"; break;
             }
 
             var propInfo = date.GetType().GetProperty(propertyName);
             var value = propInfo.GetValue(date, null);
+
+            if (value.GetType() == typeof(DayOfWeek))
+                value = (int) value;
 
             ParamStack.Push(new Operand(OperandType.Literal, value));
 
