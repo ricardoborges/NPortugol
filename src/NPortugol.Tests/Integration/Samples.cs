@@ -11,14 +11,16 @@ namespace NPortugol.Tests.Integration
         [Test]
         public void Fatorial()
         {
+            #region script
             var script =
                 @"
-função fatorial(x)
+                função fatorial(x)
 
-    se x == 0 retorne 1 fim
+                    se x == 0 retorne 1 fim
 
-    retorne fatorial(x - 1) * x 
-fim";
+                    retorne fatorial(x - 1) * x 
+                fim";
+            #endregion
 
             var engine = new Motor(new Npc());
 
@@ -33,45 +35,48 @@ fim";
         [Test]
         public void CPF()
         {
+            #region script
             var script =
-                @"função valida(cpf)
+            @"função valida(cpf)
 
-      variável vet
+                  variável vet
 
-      vet = vetorizar(cpf)
+                  vet = vetorizar(cpf)
 
-	se vet.tamanho < 11 retorne falso fim
-	se validaDigito(vet, vet[9], 9) == falso retorne falso fim
-	se validaDigito(vet, vet[10], 10) == falso retorne falso fim
+	            se vet.tamanho < 11 retorne falso fim
+	            se validaDigito(vet, vet[9], 9) == falso retorne falso fim
+	            se validaDigito(vet, vet[10], 10) == falso retorne falso fim
 
-	retorne verdadeiro
-fim
+	            retorne verdadeiro
+            fim
 
-função validaDigito(vet, dig, tam)
-	variável soma, seq, digcalc, i, num, r
+            função validaDigito(vet, dig, tam)
+	            variável soma, seq, digcalc, i, num, r
 
-        soma = 0
-        seq = tam + 1
+                    soma = 0
+                    seq = tam + 1
 
-	para i = 0 até tam
-           num = vet[i]
-           soma = soma + num * seq
-           seq = seq - 1
-	fim
+	            para i = 0 até tam
+                       num = vet[i]
+                       soma = soma + num * seq
+                       seq = seq - 1
+	            fim
 
-        r = soma % 11
+                    r = soma % 11
 
-        se r < 2 
-            digcalc = 0 
-        senão
-            digcalc = 11 - r
-        fim
+                    se r < 2 
+                        digcalc = 0 
+                    senão
+                        digcalc = 11 - r
+                    fim
 
-        se digcalc == dig retorne verdadeiro fim
+                    se digcalc == dig retorne verdadeiro fim
 
 
-        retorne falso
-fim";
+                    retorne falso
+            fim";
+
+            #endregion
 
             var engine = new Motor(new Npc());
 
@@ -87,6 +92,7 @@ fim";
         [Test]
         public void Bolha()
         {
+            #region script
             var script =
             @"função ordenar(v)
               variável i, j, t, tam
@@ -107,6 +113,8 @@ fim";
               retorne v
             fim";
 
+            #endregion
+
             var engine = new Motor(new Npc());
 
             engine.Compilar(script);
@@ -121,14 +129,14 @@ fim";
         public void Preco()
         {
             var script =
-@"função melhor(a, g)
+                @"função melhor(a, g)
 
-    se a < g * 0,7 
-       retorne ""Álcool""
-    senão
-       retorne ""Gasolina""
-    fim
-fim";
+                    se a < g * 0.7 
+                       retorne ""Álcool""
+                    senão
+                       retorne ""Gasolina""
+                    fim
+                fim";
 
             var engine = new Motor(new Npc());
 
