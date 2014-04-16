@@ -22,7 +22,7 @@ namespace NPortugol.Tests.Integration
                 fim";
             #endregion
 
-            var engine = new Motor(new Npc());
+            var engine = new Motor();
 
 
             engine.Compilar(script);
@@ -78,7 +78,7 @@ namespace NPortugol.Tests.Integration
 
             #endregion
 
-            var engine = new Motor(new Npc());
+            var engine = new Motor();
 
 
             engine.Compilar(script);
@@ -115,7 +115,7 @@ namespace NPortugol.Tests.Integration
 
             #endregion
 
-            var engine = new Motor(new Npc());
+            var engine = new Motor();
 
             engine.Compilar(script);
 
