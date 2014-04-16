@@ -65,7 +65,7 @@ namespace NPortugol.Runtime
             var symbol = ScriptSymbolTable[id];
 
             if (symbol == null) 
-                throw new Exception(string.Format("Variable {0} is not an array", id));
+                throw new Exception(string.Format("Variável {0} não é um vetor.", id));
 
             var array = symbol.Value as object[];
     
@@ -94,6 +94,9 @@ namespace NPortugol.Runtime
 
         public Function RetrieveFunction(string name)
         {
+            if (!functionTable.ContainsKey(name))
+                throw new Exception("Função '"+ name +"' não encontrada.");
+
             return functionTable[name];
         }
     }

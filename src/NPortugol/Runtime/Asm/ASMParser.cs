@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.4 C:\\Git\\NPortugol\\src\\grammar\\ASM.g 2014-04-15 14:49:48
+// $ANTLR 3.4 E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g 2014-04-15 21:37:02
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -95,7 +95,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	}
 
 	public override string[] TokenNames { get { return ASMParser.tokenNames; } }
-	public override string GrammarFileName { get { return "C:\\Git\\NPortugol\\src\\grammar\\ASM.g"; } }
+	public override string GrammarFileName { get { return "E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g"; } }
 
 
 		public bool DebugInfo { get; set; }
@@ -114,7 +114,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_script();
 
 	// $ANTLR start "script"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:8: public script returns [IList<Instruction> value] : ( func ( instructions )+ )* ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:8: public script returns [IList<Instruction> value] : ( func ( instructions )+ )* ;
 	[GrammarRule("script")]
 	public IList<Instruction> script()
 	{
@@ -128,12 +128,12 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(53, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:49: ( ( func ( instructions )+ )* )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:49: ( ( func ( instructions )+ )* )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:51: ( func ( instructions )+ )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:51: ( func ( instructions )+ )*
 			{
 			DebugLocation(53, 51);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:51: ( func ( instructions )+ )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:51: ( func ( instructions )+ )*
 			try { DebugEnterSubRule(2);
 			while (true)
 			{
@@ -152,7 +152,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:52: func ( instructions )+
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:52: func ( instructions )+
 					{
 					DebugLocation(53, 52);
 					PushFollow(Follow._func_in_script387);
@@ -160,7 +160,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 					PopFollow();
 					if (state.failed) return value;
 					DebugLocation(53, 57);
-					// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:57: ( instructions )+
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:57: ( instructions )+
 					int cnt1=0;
 					try { DebugEnterSubRule(1);
 					while (true)
@@ -205,7 +205,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 						{
 						case 1:
 							DebugEnterAlt(1);
-							// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:57: instructions
+							// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:57: instructions
 							{
 							DebugLocation(53, 57);
 							PushFollow(Follow._instructions_in_script389);
@@ -289,7 +289,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_func();
 
 	// $ANTLR start "func"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:68:1: func : ID ':' NEWLINE ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:68:1: func : ID ':' NEWLINE ;
 	[GrammarRule("func")]
 	private void func()
 	{
@@ -302,9 +302,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(68, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:68:6: ( ID ':' NEWLINE )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:68:6: ( ID ':' NEWLINE )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:68:8: ID ':' NEWLINE
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:68:8: ID ':' NEWLINE
 			{
 			DebugLocation(68, 8);
 			ID1=(IToken)Match(input,ID,Follow._ID_in_func402); if (state.failed) return;
@@ -353,7 +353,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_instructions();
 
 	// $ANTLR start "instructions"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:80:1: instructions : ( func | inst_no_op | inst_one_op | inst_two_op | inst_n_op | label );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:80:1: instructions : ( func | inst_no_op | inst_one_op | inst_two_op | inst_n_op | label );
 	[GrammarRule("instructions")]
 	private void instructions()
 	{
@@ -364,7 +364,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(80, 14);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:81:2: ( func | inst_no_op | inst_one_op | inst_two_op | inst_n_op | label )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:81:2: ( func | inst_no_op | inst_one_op | inst_two_op | inst_n_op | label )
 			int alt3=6;
 			try { DebugEnterDecision(3, false);
 			switch (input.LA(1))
@@ -441,7 +441,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:81:4: func
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:81:4: func
 				{
 				DebugLocation(81, 4);
 				PushFollow(Follow._func_in_instructions417);
@@ -453,7 +453,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:82:10: inst_no_op
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:82:10: inst_no_op
 				{
 				DebugLocation(82, 10);
 				PushFollow(Follow._inst_no_op_in_instructions428);
@@ -465,7 +465,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:83:10: inst_one_op
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:83:10: inst_one_op
 				{
 				DebugLocation(83, 10);
 				PushFollow(Follow._inst_one_op_in_instructions439);
@@ -477,7 +477,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:84:10: inst_two_op
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:84:10: inst_two_op
 				{
 				DebugLocation(84, 10);
 				PushFollow(Follow._inst_two_op_in_instructions450);
@@ -489,7 +489,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:85:10: inst_n_op
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:85:10: inst_n_op
 				{
 				DebugLocation(85, 10);
 				PushFollow(Follow._inst_n_op_in_instructions461);
@@ -501,7 +501,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:86:10: label
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:86:10: label
 				{
 				DebugLocation(86, 10);
 				PushFollow(Follow._label_in_instructions472);
@@ -536,7 +536,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_label();
 
 	// $ANTLR start "label"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:88:1: label : '.' ID NEWLINE ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:88:1: label : '.' ID NEWLINE ;
 	[GrammarRule("label")]
 	private void label()
 	{
@@ -549,9 +549,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(88, 2);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:88:7: ( '.' ID NEWLINE )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:88:7: ( '.' ID NEWLINE )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:88:9: '.' ID NEWLINE
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:88:9: '.' ID NEWLINE
 			{
 			DebugLocation(88, 9);
 			Match(input,50,Follow._50_in_label481); if (state.failed) return;
@@ -598,7 +598,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_inst_no_op();
 
 	// $ANTLR start "inst_no_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:98:1: inst_no_op : e= opcode_no_op ( NEWLINE )* ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:98:1: inst_no_op : e= opcode_no_op ( NEWLINE )* ;
 	[GrammarRule("inst_no_op")]
 	private void inst_no_op()
 	{
@@ -611,9 +611,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(98, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:98:12: (e= opcode_no_op ( NEWLINE )* )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:98:12: (e= opcode_no_op ( NEWLINE )* )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:98:14: e= opcode_no_op ( NEWLINE )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:98:14: e= opcode_no_op ( NEWLINE )*
 			{
 			DebugLocation(98, 15);
 			PushFollow(Follow._opcode_no_op_in_inst_no_op498);
@@ -621,7 +621,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			PopFollow();
 			if (state.failed) return;
 			DebugLocation(98, 29);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:98:29: ( NEWLINE )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:98:29: ( NEWLINE )*
 			try { DebugEnterSubRule(4);
 			while (true)
 			{
@@ -640,7 +640,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:98:29: NEWLINE
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:98:29: NEWLINE
 					{
 					DebugLocation(98, 29);
 					Match(input,NEWLINE,Follow._NEWLINE_in_inst_no_op500); if (state.failed) return;
@@ -693,7 +693,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_inst_one_op();
 
 	// $ANTLR start "inst_one_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:104:1: inst_one_op : e= opcode_one_op o= operand NEWLINE ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:104:1: inst_one_op : e= opcode_one_op o= operand NEWLINE ;
 	[GrammarRule("inst_one_op")]
 	private void inst_one_op()
 	{
@@ -707,9 +707,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(104, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:104:13: (e= opcode_one_op o= operand NEWLINE )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:104:13: (e= opcode_one_op o= operand NEWLINE )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:104:15: e= opcode_one_op o= operand NEWLINE
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:104:15: e= opcode_one_op o= operand NEWLINE
 			{
 			DebugLocation(104, 16);
 			PushFollow(Follow._opcode_one_op_in_inst_one_op512);
@@ -758,7 +758,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_inst_two_op();
 
 	// $ANTLR start "inst_two_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:1: inst_two_op : e= opcode_two_op o= operand ';' p= operand NEWLINE ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:110:1: inst_two_op : e= opcode_two_op o= operand ';' p= operand NEWLINE ;
 	[GrammarRule("inst_two_op")]
 	private void inst_two_op()
 	{
@@ -773,9 +773,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(110, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:13: (e= opcode_two_op o= operand ';' p= operand NEWLINE )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:110:13: (e= opcode_two_op o= operand ';' p= operand NEWLINE )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:110:15: e= opcode_two_op o= operand ';' p= operand NEWLINE
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:110:15: e= opcode_two_op o= operand ';' p= operand NEWLINE
 			{
 			DebugLocation(110, 16);
 			PushFollow(Follow._opcode_two_op_in_inst_two_op529);
@@ -831,7 +831,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_inst_n_op();
 
 	// $ANTLR start "inst_n_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:1: inst_n_op : e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:116:1: inst_n_op : e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE ;
 	[GrammarRule("inst_n_op")]
 	private void inst_n_op()
 	{
@@ -846,9 +846,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(116, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:11: (e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:116:11: (e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:13: e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:116:13: e= opcode_n_op o+= ID ( ';' o+= ID )* NEWLINE
 			{
 			DebugLocation(116, 14);
 			PushFollow(Follow._opcode_n_op_in_inst_n_op552);
@@ -861,7 +861,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			list_o.Add(o);
 
 			DebugLocation(116, 33);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:33: ( ';' o+= ID )*
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:116:33: ( ';' o+= ID )*
 			try { DebugEnterSubRule(5);
 			while (true)
 			{
@@ -880,7 +880,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:116:34: ';' o+= ID
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:116:34: ';' o+= ID
 					{
 					DebugLocation(116, 34);
 					Match(input,52,Follow._52_in_inst_n_op559); if (state.failed) return;
@@ -948,7 +948,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_opcode_two_op();
 
 	// $ANTLR start "opcode_two_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:130:1: opcode_two_op returns [OpCode value] : ( MOV | ADD | SUB | MUL | DIV | MOD | POW | CNT );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:130:1: opcode_two_op returns [OpCode value] : ( MOV | ADD | SUB | MUL | DIV | MOD | POW | CNT );
 	[GrammarRule("opcode_two_op")]
 	private OpCode opcode_two_op()
 	{
@@ -962,7 +962,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(130, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:131:2: ( MOV | ADD | SUB | MUL | DIV | MOD | POW | CNT )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:131:2: ( MOV | ADD | SUB | MUL | DIV | MOD | POW | CNT )
 			int alt6=8;
 			try { DebugEnterDecision(6, false);
 			switch (input.LA(1))
@@ -1021,7 +1021,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:131:4: MOV
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:131:4: MOV
 				{
 				DebugLocation(131, 4);
 				Match(input,MOV,Follow._MOV_in_opcode_two_op582); if (state.failed) return value;
@@ -1035,7 +1035,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:132:4: ADD
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:132:4: ADD
 				{
 				DebugLocation(132, 4);
 				Match(input,ADD,Follow._ADD_in_opcode_two_op589); if (state.failed) return value;
@@ -1049,7 +1049,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:133:4: SUB
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:133:4: SUB
 				{
 				DebugLocation(133, 4);
 				Match(input,SUB,Follow._SUB_in_opcode_two_op596); if (state.failed) return value;
@@ -1063,7 +1063,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:134:4: MUL
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:134:4: MUL
 				{
 				DebugLocation(134, 4);
 				Match(input,MUL,Follow._MUL_in_opcode_two_op603); if (state.failed) return value;
@@ -1077,7 +1077,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:135:4: DIV
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:135:4: DIV
 				{
 				DebugLocation(135, 4);
 				Match(input,DIV,Follow._DIV_in_opcode_two_op610); if (state.failed) return value;
@@ -1091,7 +1091,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:136:4: MOD
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:136:4: MOD
 				{
 				DebugLocation(136, 4);
 				Match(input,MOD,Follow._MOD_in_opcode_two_op617); if (state.failed) return value;
@@ -1105,7 +1105,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:137:4: POW
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:137:4: POW
 				{
 				DebugLocation(137, 4);
 				Match(input,POW,Follow._POW_in_opcode_two_op624); if (state.failed) return value;
@@ -1119,7 +1119,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:138:4: CNT
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:138:4: CNT
 				{
 				DebugLocation(138, 4);
 				Match(input,CNT,Follow._CNT_in_opcode_two_op631); if (state.failed) return value;
@@ -1156,7 +1156,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_opcode_one_op();
 
 	// $ANTLR start "opcode_one_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:141:1: opcode_one_op returns [OpCode value] : ( DCL | NEG | INC | DEC | JMP | PUSH | POP | JE | JNE | JG | JL | JGE | JLE | CALL );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:141:1: opcode_one_op returns [OpCode value] : ( DCL | NEG | INC | DEC | JMP | PUSH | POP | JE | JNE | JG | JL | JGE | JLE | CALL );
 	[GrammarRule("opcode_one_op")]
 	private OpCode opcode_one_op()
 	{
@@ -1170,7 +1170,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(141, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:142:2: ( DCL | NEG | INC | DEC | JMP | PUSH | POP | JE | JNE | JG | JL | JGE | JLE | CALL )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:142:2: ( DCL | NEG | INC | DEC | JMP | PUSH | POP | JE | JNE | JG | JL | JGE | JLE | CALL )
 			int alt7=14;
 			try { DebugEnterDecision(7, false);
 			switch (input.LA(1))
@@ -1259,7 +1259,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:142:4: DCL
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:142:4: DCL
 				{
 				DebugLocation(142, 4);
 				Match(input,DCL,Follow._DCL_in_opcode_one_op651); if (state.failed) return value;
@@ -1273,7 +1273,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:143:4: NEG
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:143:4: NEG
 				{
 				DebugLocation(143, 4);
 				Match(input,NEG,Follow._NEG_in_opcode_one_op658); if (state.failed) return value;
@@ -1287,7 +1287,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:144:4: INC
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:144:4: INC
 				{
 				DebugLocation(144, 4);
 				Match(input,INC,Follow._INC_in_opcode_one_op665); if (state.failed) return value;
@@ -1301,7 +1301,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:145:4: DEC
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:145:4: DEC
 				{
 				DebugLocation(145, 4);
 				Match(input,DEC,Follow._DEC_in_opcode_one_op672); if (state.failed) return value;
@@ -1315,7 +1315,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:146:4: JMP
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:146:4: JMP
 				{
 				DebugLocation(146, 4);
 				Match(input,JMP,Follow._JMP_in_opcode_one_op679); if (state.failed) return value;
@@ -1329,7 +1329,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:147:4: PUSH
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:147:4: PUSH
 				{
 				DebugLocation(147, 4);
 				Match(input,PUSH,Follow._PUSH_in_opcode_one_op686); if (state.failed) return value;
@@ -1343,7 +1343,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:148:4: POP
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:148:4: POP
 				{
 				DebugLocation(148, 4);
 				Match(input,POP,Follow._POP_in_opcode_one_op693); if (state.failed) return value;
@@ -1357,7 +1357,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:149:4: JE
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:149:4: JE
 				{
 				DebugLocation(149, 4);
 				Match(input,JE,Follow._JE_in_opcode_one_op700); if (state.failed) return value;
@@ -1371,7 +1371,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:150:4: JNE
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:150:4: JNE
 				{
 				DebugLocation(150, 4);
 				Match(input,JNE,Follow._JNE_in_opcode_one_op707); if (state.failed) return value;
@@ -1385,7 +1385,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 10:
 				DebugEnterAlt(10);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:151:4: JG
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:151:4: JG
 				{
 				DebugLocation(151, 4);
 				Match(input,JG,Follow._JG_in_opcode_one_op714); if (state.failed) return value;
@@ -1399,7 +1399,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 11:
 				DebugEnterAlt(11);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:152:4: JL
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:152:4: JL
 				{
 				DebugLocation(152, 4);
 				Match(input,JL,Follow._JL_in_opcode_one_op721); if (state.failed) return value;
@@ -1413,7 +1413,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 12:
 				DebugEnterAlt(12);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:153:4: JGE
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:153:4: JGE
 				{
 				DebugLocation(153, 4);
 				Match(input,JGE,Follow._JGE_in_opcode_one_op728); if (state.failed) return value;
@@ -1427,7 +1427,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 13:
 				DebugEnterAlt(13);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:154:4: JLE
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:154:4: JLE
 				{
 				DebugLocation(154, 4);
 				Match(input,JLE,Follow._JLE_in_opcode_one_op735); if (state.failed) return value;
@@ -1441,7 +1441,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 14:
 				DebugEnterAlt(14);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:155:4: CALL
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:155:4: CALL
 				{
 				DebugLocation(155, 4);
 				Match(input,CALL,Follow._CALL_in_opcode_one_op743); if (state.failed) return value;
@@ -1478,7 +1478,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_opcode_n_op();
 
 	// $ANTLR start "opcode_n_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:158:1: opcode_n_op returns [OpCode value] : HOST ;
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:158:1: opcode_n_op returns [OpCode value] : HOST ;
 	[GrammarRule("opcode_n_op")]
 	private OpCode opcode_n_op()
 	{
@@ -1492,9 +1492,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(158, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:159:2: ( HOST )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:159:2: ( HOST )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:159:4: HOST
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:159:4: HOST
 			{
 			DebugLocation(159, 4);
 			Match(input,HOST,Follow._HOST_in_opcode_n_op762); if (state.failed) return value;
@@ -1529,7 +1529,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_opcode_no_op();
 
 	// $ANTLR start "opcode_no_op"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:162:1: opcode_no_op returns [OpCode value] : ( EXIT | RET | SADD | SSUB | SMUL | SDIV | SMOD | SCNT | EMP );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:162:1: opcode_no_op returns [OpCode value] : ( EXIT | RET | SADD | SSUB | SMUL | SDIV | SMOD | SCNT | EMP );
 	[GrammarRule("opcode_no_op")]
 	private OpCode opcode_no_op()
 	{
@@ -1543,7 +1543,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(162, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:163:2: ( EXIT | RET | SADD | SSUB | SMUL | SDIV | SMOD | SCNT | EMP )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:163:2: ( EXIT | RET | SADD | SSUB | SMUL | SDIV | SMOD | SCNT | EMP )
 			int alt8=9;
 			try { DebugEnterDecision(8, false);
 			switch (input.LA(1))
@@ -1607,7 +1607,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:163:4: EXIT
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:163:4: EXIT
 				{
 				DebugLocation(163, 4);
 				Match(input,EXIT,Follow._EXIT_in_opcode_no_op781); if (state.failed) return value;
@@ -1621,7 +1621,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:164:4: RET
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:164:4: RET
 				{
 				DebugLocation(164, 4);
 				Match(input,RET,Follow._RET_in_opcode_no_op788); if (state.failed) return value;
@@ -1635,7 +1635,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:165:4: SADD
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:165:4: SADD
 				{
 				DebugLocation(165, 4);
 				Match(input,SADD,Follow._SADD_in_opcode_no_op795); if (state.failed) return value;
@@ -1649,7 +1649,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:166:4: SSUB
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:166:4: SSUB
 				{
 				DebugLocation(166, 4);
 				Match(input,SSUB,Follow._SSUB_in_opcode_no_op802); if (state.failed) return value;
@@ -1663,7 +1663,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:167:4: SMUL
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:167:4: SMUL
 				{
 				DebugLocation(167, 4);
 				Match(input,SMUL,Follow._SMUL_in_opcode_no_op809); if (state.failed) return value;
@@ -1677,7 +1677,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:168:4: SDIV
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:168:4: SDIV
 				{
 				DebugLocation(168, 4);
 				Match(input,SDIV,Follow._SDIV_in_opcode_no_op816); if (state.failed) return value;
@@ -1691,7 +1691,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:169:4: SMOD
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:169:4: SMOD
 				{
 				DebugLocation(169, 4);
 				Match(input,SMOD,Follow._SMOD_in_opcode_no_op826); if (state.failed) return value;
@@ -1705,7 +1705,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:170:4: SCNT
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:170:4: SCNT
 				{
 				DebugLocation(170, 4);
 				Match(input,SCNT,Follow._SCNT_in_opcode_no_op836); if (state.failed) return value;
@@ -1719,7 +1719,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:171:4: EMP
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:171:4: EMP
 				{
 				DebugLocation(171, 4);
 				Match(input,EMP,Follow._EMP_in_opcode_no_op844); if (state.failed) return value;
@@ -1756,7 +1756,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_operand();
 
 	// $ANTLR start "operand"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:174:1: operand returns [Operand value] : ( ID ( ':' i= index )? | INT | T | F | FLOAT | STRING );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:174:1: operand returns [Operand value] : ( ID ( ':' i= index )? | INT | T | F | FLOAT | STRING );
 	[GrammarRule("operand")]
 	private Operand operand()
 	{
@@ -1776,7 +1776,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(174, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:175:9: ( ID ( ':' i= index )? | INT | T | F | FLOAT | STRING )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:175:9: ( ID ( ':' i= index )? | INT | T | F | FLOAT | STRING )
 			int alt10=6;
 			try { DebugEnterDecision(10, false);
 			switch (input.LA(1))
@@ -1825,12 +1825,12 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:175:11: ID ( ':' i= index )?
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:175:11: ID ( ':' i= index )?
 				{
 				DebugLocation(175, 11);
 				ID3=(IToken)Match(input,ID,Follow._ID_in_operand872); if (state.failed) return value;
 				DebugLocation(175, 14);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:175:14: ( ':' i= index )?
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:175:14: ( ':' i= index )?
 				int alt9=2;
 				try { DebugEnterSubRule(9);
 				try { DebugEnterDecision(9, false);
@@ -1845,7 +1845,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:175:15: ':' i= index
+					// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:175:15: ':' i= index
 					{
 					DebugLocation(175, 15);
 					Match(input,51,Follow._51_in_operand875); if (state.failed) return value;
@@ -1873,7 +1873,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:178:4: INT
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:178:4: INT
 				{
 				DebugLocation(178, 4);
 				INT4=(IToken)Match(input,INT,Follow._INT_in_operand888); if (state.failed) return value;
@@ -1887,7 +1887,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:179:4: T
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:179:4: T
 				{
 				DebugLocation(179, 4);
 				Match(input,T,Follow._T_in_operand895); if (state.failed) return value;
@@ -1901,7 +1901,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:180:4: F
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:180:4: F
 				{
 				DebugLocation(180, 4);
 				Match(input,F,Follow._F_in_operand903); if (state.failed) return value;
@@ -1915,7 +1915,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:181:4: FLOAT
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:181:4: FLOAT
 				{
 				DebugLocation(181, 4);
 				FLOAT5=(IToken)Match(input,FLOAT,Follow._FLOAT_in_operand911); if (state.failed) return value;
@@ -1929,7 +1929,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:182:4: STRING
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:182:4: STRING
 				{
 				DebugLocation(182, 4);
 				STRING6=(IToken)Match(input,STRING,Follow._STRING_in_operand918); if (state.failed) return value;
@@ -1966,7 +1966,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 	partial void LeaveRule_index();
 
 	// $ANTLR start "index"
-	// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:185:1: index returns [object value] : ( INT | ID );
+	// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:185:1: index returns [object value] : ( INT | ID );
 	[GrammarRule("index")]
 	private object index()
 	{
@@ -1983,7 +1983,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		DebugLocation(185, 1);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:186:2: ( INT | ID )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:186:2: ( INT | ID )
 			int alt11=2;
 			try { DebugEnterDecision(11, false);
 			int LA11_0 = input.LA(1);
@@ -2008,7 +2008,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:186:4: INT
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:186:4: INT
 				{
 				DebugLocation(186, 4);
 				INT7=(IToken)Match(input,INT,Follow._INT_in_index935); if (state.failed) return value;
@@ -2022,7 +2022,7 @@ public partial class ASMParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:187:4: ID
+				// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:187:4: ID
 				{
 				DebugLocation(187, 4);
 				ID8=(IToken)Match(input,ID,Follow._ID_in_index942); if (state.failed) return value;
@@ -2066,9 +2066,9 @@ public partial class ASMParser : Antlr.Runtime.Parser
 		TraceIn("synpred1_ASM_fragment", 15);
 		try
 		{
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:57: ( instructions )
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:57: ( instructions )
 			DebugEnterAlt(1);
-			// C:\\Git\\NPortugol\\src\\grammar\\ASM.g:53:57: instructions
+			// E:\\Dev\\Git\\NPortugol\\src\\grammar\\ASM.g:53:57: instructions
 			{
 			DebugLocation(53, 57);
 			PushFollow(Follow._instructions_in_synpred1_ASM389);

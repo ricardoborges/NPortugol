@@ -162,7 +162,7 @@ logic_expression
 atom returns[object value]: 
       a=ID {$value = $a.text; emitter.EmitPush($value, $a.Token);}
     | a=INT{$value = int.Parse($a.text);  emitter.EmitPush($value, $a.Token);}
-    | a=FLOAT{$value = float.Parse($a.text);  emitter.EmitPush($value, $a.Token);}
+    | a=FLOAT{$value = float.Parse($a.text.Replace(".",","));  emitter.EmitPush($value, $a.Token);}
     | a=STRING{$value = $a.text;  emitter.EmitPush($value, $a.Token);}
     | a=T{$value = $a.text;  emitter.EmitPush(true, $a.Token);}    
     | a=F{$value = $a.text;  emitter.EmitPush(false, $a.Token);}    
