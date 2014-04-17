@@ -112,10 +112,10 @@ namespace Npc
             var engine = new Motor();
             engine.Load(new NPortugol.Npc().CompilarArquivo(filename));
 
-            engine.Install(new ConsoleModulo());
+            engine.Instalar(new ConsoleModulo());
 
             if (string.IsNullOrEmpty(function))
-                engine.Execute();
+                engine.Executar();
             else
             {
                 var list = new List<object>();
@@ -125,7 +125,7 @@ namespace Npc
                     list.Add(parameter.Trim());
                 }
 
-                engine.Execute(function, list.ToArray());
+                engine.Executar(function, list.ToArray());
             }
 
             Console.WriteLine("");
@@ -138,10 +138,10 @@ namespace Npc
         {
             var engine = new Motor();
             engine.Load(new NPortugol.Npc().LerNoDisco(filename));
-            engine.Install(new ConsoleModulo());
+            engine.Instalar(new ConsoleModulo());
 
             if (string.IsNullOrEmpty(function))
-                engine.Execute();
+                engine.Executar();
             else
             {
                 var list = new List<object>();
@@ -151,7 +151,7 @@ namespace Npc
                     list.Add(parameter.Trim());
                 }
 
-                engine.Execute(function, list.ToArray());
+                engine.Executar(function, list.ToArray());
             }
 
             Console.WriteLine("");

@@ -15,7 +15,7 @@ função valida(cpf)
 
       vet = vetorizar(cpf)
 
-	se tamanho(vet) < 11 retorne falso fim
+	se vet.tamanho < 11 retorne falso fim
 	se validaDigito(vet, vet[9], 9) == falso retorne falso fim
 	se validaDigito(vet, vet[10], 10) == falso retorne falso fim
 
