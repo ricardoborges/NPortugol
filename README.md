@@ -1,8 +1,9 @@
 NPortugol
 =========
 
-NPortugol é uma biblioteca de linguagem estruturada baseada numa variação da sintaxe popularmente conhecida como Portugol (utilizada para representação e ensino de algoritmos sem o rigor de uma linguagem formal).
+NPortugol é uma linguagem de programação para elaboração de scripts com sintaxe em língua portuguesa e utilização hospedada em aplicações nas plataformas .NET e Mono. 
 
-[Acesse o wiki para mais informações](https://github.com/ricardoborges/NPortugol/wiki)
+A linguagem utiliza como base o paradigma de programação estruturada, priorizando a simplicidade na sua codificação. A linguagem inclui recursos de interoperabilidade entre o script e a plataforma .NET permitindo a utilização indireta da API nativa C#.
 
-Website: http://ricardoborges.github.com/NPortugol/
+
+Website: http://ricardoborges.github.io/NPortugol/
