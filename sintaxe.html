@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>NPortugol</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>NPortugol</h1>
+        <p>Linguagem de Script para .NET/Mono.</p>
+        <p class="view"><a href="https://github.com/ricardoborges/NPortugol">View the Project on GitHub <small>ricardoborges/NPortugol</small></a></p>
+        <ul>
+          <li><a href="https://github.com/ricardoborges/NPortugol/releases/tag/v0.5-beta">Beta Release <strong>Download</strong></a></li>
+          <li><a href="http://teamcity.codebetter.com/project.html?projectId=project197&tab=projectOverview">Build <strong>Server</strong></a></li>
+          <li><a href="https://github.com/ricardoborges/NPortugol">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3 style="text-align:">Regras de Sintaxe.</h3>
+        
+          <p style="text-align:justify">
+              <ul>
+                <li><a href="sintaxe.html">Regras de Sintaxe.</a></li>
+                <li><a target="_blank" href="https://github.com/ricardoborges/NPortugol/tree/master/src/TurboNPortugol/Exemplos">Exemplos.</a></li>
+                <li><a href="#">IDE.</a></li>
+              </ul>
+          </p>        
+        
+  
+<h4 style="text-align:">Funções.</h4>
+
+  <p style="text-align:justify">
+  O mesmo script pode conter a declaração de uma ou mais funções. O script pode ser executado através da função 'principal' que não precisa retorno de valor, ou 
+  uma função especificada, neste caso obrigando retorno de valor.
+  </p>
+
+<pre>
+<code>
+
+função principal()
+    
+    variável valor
+    
+    valor = fatorial(10)
+fim
+
+função fatorial(x) 
+
+        se x == 0 retorne 1 fim 
+
+        retorne fatorial(x - 1) * x 
+fim 
+
+</code>
+</pre>
+
+
+<h4 style="text-align:">Variáveis.</h4>
+
+  <p style="text-align:justify">
+  A declaração de variáveis pode ser feita em qualquer lugar dentro da função. Sempre terá escopo local e o tipo será determinado em tempo de execução.
+  </p>
+
+<pre>
+<code>
+variável nome, idade, flag, aniversario, valor
+
+nome = "Brasil"     // cadeira de caracteres
+
+idade = 500         // Número
+
+flag = falso        // Booleano
+
+aniversario = data("01/01/2014") // Data
+
+valor = 100.50      // Decimal
+
+</code>
+</pre>
+
+
+<h4 style="text-align:">Bloco de repetição PARA-ATÉ</h4>
+
+  <p style="text-align:justify">
+  Este bloco de repetição permite definir a ordem incremental da variável utilizada. Por padrão, será crescente ou pode ser modificada através da palavra reservada DECRESCENTE após o valor limite.
+  </p>
+
+<pre>
+<code>
+variável i
+
+para i = 0 até 10
+   imprima(i)
+fim
+
+para i = 10 até 0 decrescente
+   imprima(i)
+fim
+</code>
+</pre>
+
+<h4 style="text-align:">Bloco de repetição REPITA-ATÉ</h4>
+
+  <p style="text-align:justify">
+  O bloco REPITA testa a validade de uma expressão lógica no comando final ATÉ.
+  </p>
+<pre>
+<code>
+variável i
+
+repita
+    
+    imprima(i)
+    
+    i = i + 1
+    
+até i <= 10
+</code>
+</pre>
+
+<h4 style="text-align:">Bloco de repetição ENQUANTO</h4>
+
+  <p style="text-align:justify">
+  A estrutura ENQUANTO primeiramente testa a validade de uma expressão lógica para execução das sentenças declaradas.
+  </p>
+<pre>
+<code>
+variável i
+
+enquanto i <= 10
+    
+    imprima(i)
+    
+    i = i + 1
+    
+fim
+</code>
+</pre>
+
+<h4 style="text-align:">Bloco de condição SE-SENÃO</h4>
+
+  <p style="text-align:justify">
+  A condição SE pode ser declarada com ou sem o caminho alternativo SENÃO.
+  </p>
+
+<pre>
+<code>
+se x == 0
+
+   retorne falso
+fim
+
+
+se y != 0
+
+   retorne falso
+senão
+
+   retorne verdadeiro
+fim
+</code>
+</pre>
+
+
+<h4 style="text-align:">Vetores</h4>
+  <p style="text-align:justify">
+  Uma variável do tipo vetor é declarada normalmente como as demais. Porém, a inicialização dispõe de alguns recursos para tornar mais ágil a definição de elementos.
+  Estes recursos permitem inicializar uma sequência numérica ou um conjunto de elementos.
+  </p>
+<pre>
+<code>
+variável conj, seq, indice
+
+conj = { 10; 5; 4; 2 } // Inicializa conjunto de elementos.
+
+seq = [ 0 .. 100 ] // Inicializa uma sequencia numérica.
+
+indice[0] = 10; // Cria elemento a elemento.
+indice[1] = 20;
+indice[2] = 30;
+</code>
+</pre>
+
+<h4 style="text-align:">Expressões Aritméticas</h4>
+  <p style="text-align:justify">
+  As expressões aritméticas podem incluir as operações básicas soma +, multiplicação *, divisão /, subtração -, potência ^, resto da divisão %, parenteses, variáveis,
+  valores literais e chamadas de função.
+  </p>
+<pre>
+<code>
+variável a, b, total
+
+
+soma = a + b
+
+multiplicacao = a * b
+
+divisao = a / b
+
+potencia = a ^ b
+
+restoDaDivisao = a % b
+
+expressao = (a + b) * (b / fat(a))
+
+</code>
+</pre>
+
+
+<h4 style="text-align:">Expressões Lógicas</h4>
+  <p style="text-align:justify">
+  Expressões lógicas são compostas pelos operadores lógicos menor <, menor ou igual <=, maior >, maior ou igual >=, igualdade ==, diferença !=, e, ou.
+  </p>
+<pre>
+<code>
+
+se x < 10 
+
+se testa(a) ou testa(b)
+
+</code>
+</pre>
+
+<div style="background: #00578e url('http://www.jetbrains.com/img/banners/Codebetter.png') no-repeat 0 50%; margin:0;padding:0;text-decoration:none;text-indent:0;letter-spacing:-0.001em; "> <a href="http://www.jetbrains.com/youtrack" title="YouTrack by JetBrains" style="margin: 60px 0 0 190px;padding: 0; float: left;font-size: 14px; background-image:none;border:0;color: #acc4f9; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">keyboard-centric bug tracker</a> <a href="http://www.jetbrains.com/teamcity" title="TeamCity by JetBrains" style="margin:0 0 0 400px;padding:60px 0 2px 0;font-size:14px; background-image:none;border:0;display:block; color: #acc4f9; font-family: trebuchet ms,arial,sans-serif;font-weight: normal;text-align:left;">continuous integration server</a> </div>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/ricardoborges">ricardoborges</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-31730207-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
