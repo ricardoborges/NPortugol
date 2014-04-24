@@ -60,13 +60,13 @@
     <Content Include="images\t_debug.png" />
     <Content Include="images\t_grammar.png" />
     <Content Include="images\t_turbonportugol.png" />
-    <Content Include="index.html" />
     <Content Include="javascripts\scale.fix.js" />
     <Content Include="stylesheets\pygment_trac.css" />
     <Content Include="stylesheets\styles.css" />
   </ItemGroup>
   <ItemGroup>
     <None Include="params.json" />
+    <Content Include="sintaxe.html" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
