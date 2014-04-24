@@ -15,6 +15,7 @@ namespace NPortugol.Modulos
                            {
                                {"vetorizar", Vetorizar},
                                {"data", Data},
+                               {"hoje", Hoje},
                                {"nomedia", NomeDoDia}
                            };
         }
@@ -46,6 +47,11 @@ namespace NPortugol.Modulos
             var parameter = parameters[0].ToString();
 
             return DateTime.Parse(parameter);
+        }
+
+        private static object Hoje(object[] parameters)
+        {
+            return DateTime.Today.ToShortDateString();
         }
 
         private static object NomeDoDia(object[] parameters)

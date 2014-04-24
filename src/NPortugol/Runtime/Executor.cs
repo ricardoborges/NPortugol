@@ -144,37 +144,79 @@ namespace NPortugol.Runtime
             secondOp = (Operand)ParamStack.Pop();
             firstOp = (Operand)ParamStack.Pop();
 
-            var fp = float.Parse(firstOp.Value.ToString());
-            var sp = float.Parse(secondOp.Value.ToString());
-
             var address = opResolver.At(0).IntValue();
-            var jump = false;
+
+            var jump = ProcessJump(firstOp, secondOp);
+
+            if (jump) context.Runnable.IP = address;
+        }
+
+        private bool ProcessJump(Operand firstOp, Operand secondOp)
+        {
+            var fp = firstOp.Value; //float.Parse(firstOp.Value.ToString());
+            var sp = secondOp.Value; // float.Parse(secondOp.Value.ToString());
 
             switch (Instruction.OpCode)
             {
-                case OpCode.JG:
-
-                    if (fp > sp)
-                        jump = true;
-                    break;
-                case OpCode.JL:
-
-                    if (fp < sp)
-                        jump = true;
-                    break;
-                case OpCode.JGE:
-
-                    if (fp >= sp)
-                        jump = true;
-                    break;
-                case OpCode.JLE:
-
-                    if (fp <= sp)
-                        jump = true;
-                    break;
+                case OpCode.JG: if (JG(fp, sp)) return true; break;
+                case OpCode.JL: if (JL(fp, sp)) return true; break;
+                case OpCode.JGE: if (JGE(fp, sp)) return true; break;
+                case OpCode.JLE: if (JLE(fp, sp)) return true; break;
             }
 
-            if (jump) context.Runnable.IP = address;
+            return false;
+        }
+
+        private bool JLE(object fp, object sp)
+        {
+            var type = fp.GetType();
+
+            switch (type.Name)
+            {
+                case "float": return float.Parse(fp.ToString()) <= float.Parse(sp.ToString());
+                case "DateTime": return DateTime.Parse(fp.ToString()) <= DateTime.Parse(sp.ToString());
+                default:
+                    throw new Exception("Tipo na expressão lógica não reconhecido.");
+            }
+        }
+
+        private bool JGE(object fp, object sp)
+        {
+            var type = fp.GetType();
+
+            switch (type.Name)
+            {
+                case "float": return float.Parse(fp.ToString()) >= float.Parse(sp.ToString());
+                case "DateTime": return DateTime.Parse(fp.ToString()) >= DateTime.Parse(sp.ToString());
+                default:
+                    throw new Exception("Tipo na expressão lógica não reconhecido.");
+            }
+        }
+
+        private bool JL(object fp, object sp)
+        {
+            var type = fp.GetType();
+
+            switch (type.Name)
+            {
+                case "float": return float.Parse(fp.ToString()) < float.Parse(sp.ToString());
+                case "DateTime": return DateTime.Parse(fp.ToString()) < DateTime.Parse(sp.ToString());
+                default:
+                    throw new Exception("Tipo na expressão lógica não reconhecido.");
+            }
+        }
+
+        private bool JG(object fp, object sp)
+        {
+            var type = fp.GetType();
+
+            switch (type.Name)
+            {
+                case "float": return float.Parse(fp.ToString()) > float.Parse(sp.ToString());
+                case "DateTime": return DateTime.Parse(fp.ToString()) > DateTime.Parse(sp.ToString());
+                default:
+                    throw new Exception("Tipo na expressão lógica não reconhecido.");
+            }
         }
 
         private void ProcessArithmetic(bool stack)
