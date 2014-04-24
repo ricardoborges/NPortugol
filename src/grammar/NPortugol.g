@@ -29,6 +29,8 @@ tokens{
 	MCALL;
 	PCALL;
 	ASM;
+	SEL;
+	CASE;
 }
 
 @namespace{NPortugol}
@@ -89,6 +91,7 @@ statement	@init { paraphrases.Push("na sentença"); } @after { paraphrases.Pop();
 	| for_stat
 	| while_stat
 	| repeat_stat	
+	| select_stat
 	| function_call 
 	| assign_var 
 	| return_stat
@@ -132,6 +135,15 @@ while_stat
 repeat_stat:	'repita' statement* 'até' logic_expression
 		-> ^(LOOP ^(SLIST statement*) ^(LEXP logic_expression))
 	;
+	
+select_stat
+	:	'selecione' atom 
+	            select_case+
+	        'fim'
+	        
+	        -> ^(SEL atom select_case+)
+	;
+select_case	:	'caso' atom ':' statement* 'fim' -> ^(CASE atom statement*)	;	
 
 function_call     @init { paraphrases.Push("na chamada de função"); }   @after { paraphrases.Pop(); }
 	:	ID '(' function_arg_list* ')' -> ^(CALL ID function_arg_list*)

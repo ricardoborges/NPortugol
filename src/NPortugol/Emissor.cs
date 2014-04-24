@@ -14,6 +14,10 @@ namespace NPortugol
         
         private Stack<string> forIncId = new Stack<string>();
 
+        private Stack<string> forSelectComp = new Stack<string>();
+
+        private int caseCounter = 0;
+
         public List<string> function = new List<string>();
         public List<object> @params = new List<object>();
         public List<string> script = new List<string>();
@@ -389,6 +393,41 @@ namespace NPortugol
         public void SetForInc(string id)
         {
             forIncId.Push(id);
+        }
+
+        public void EmitInitSel(object value)
+        {
+            forSelectComp.Push(value.ToString());
+
+            CreateAndPushLabel();
+        }
+
+        public void EmitEndSel(object value)
+        {
+            forSelectComp.Pop();
+
+            EmitLabel(labels.Pop());
+        }
+
+        public void EmitCase(object value)
+        {
+            caseCounter++;
+
+            if (caseCounter > 1)
+                function.Add(AsmTemplate.Push(forSelectComp.Peek()));
+
+            function.Add(AsmTemplate.JumpNotEquals(CreateAndPushLabel()));
+        }
+
+        public void EmitEndCase(object value)
+        {
+            var endcase = labels.Pop();
+            var endsel = labels.Pop();
+
+            function.Add(AsmTemplate.Jump(endsel));
+            EmitLabel(endcase);
+
+            labels.Push(endsel);
         }
 
         public void EmitDecId()

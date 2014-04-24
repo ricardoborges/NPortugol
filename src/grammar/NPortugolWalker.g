@@ -37,6 +37,7 @@ statement: declare_local
 	| for_stat
 	| while_stat
 	| repeat_stat
+	| select_stat	
 	| function_call 
 	| assign_var
 	| return_stat
@@ -82,6 +83,13 @@ repeat_stat
 @after { invertExp = true; }
 	: ^(LOOP ^(SLIST {emitter.EmitInitRepeat();} statement*) ^(LEXP logic_expression)) {emitter.EmitEndRepeat();}
 	;
+	
+
+select_stat
+	: ^(SEL  a=atom {emitter.EmitInitSel(a); } select_case+)	 {emitter.EmitEndSel(a); };
+	
+select_case
+	: ^(CASE  a=atom {emitter.EmitCase(a); } statement* {emitter.EmitEndCase(a); })  ;
 
 
 function_call   
