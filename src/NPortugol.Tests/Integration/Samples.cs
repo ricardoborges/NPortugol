@@ -8,6 +8,36 @@ namespace NPortugol.Tests.Integration
     [TestFixture]
     public class Samples
     {
+        public class Pessoa
+        {
+            public string Nome { get; set; }
+        }
+
+
+        [Test]
+        public void Teste()
+        {
+            #region script
+
+            var script =
+                @"
+                função teste(lista)
+
+                    retorne lista[1]
+                fim";
+            #endregion
+
+            var engine = new Motor();
+
+
+            engine.Compilar(script);
+
+            var list = new object[] { new Pessoa { Nome = "Teste1" }, new Pessoa { Nome = "Teste2" }, new Pessoa { Nome = "Teste3" } };
+
+        //    var r = engine.Executar("teste", new object[] {list});
+
+        }
+
         [Test]
         public void Fatorial()
         {

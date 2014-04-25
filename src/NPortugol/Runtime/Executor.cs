@@ -173,6 +173,8 @@ namespace NPortugol.Runtime
 
             switch (type.Name)
             {
+                case "Single":
+                case "Int32":
                 case "float": return float.Parse(fp.ToString()) <= float.Parse(sp.ToString());
                 case "DateTime": return DateTime.Parse(fp.ToString()) <= DateTime.Parse(sp.ToString());
                 default:
@@ -186,6 +188,8 @@ namespace NPortugol.Runtime
 
             switch (type.Name)
             {
+                case "Single":
+                case "Int32": 
                 case "float": return float.Parse(fp.ToString()) >= float.Parse(sp.ToString());
                 case "DateTime": return DateTime.Parse(fp.ToString()) >= DateTime.Parse(sp.ToString());
                 default:
@@ -199,6 +203,8 @@ namespace NPortugol.Runtime
 
             switch (type.Name)
             {
+                case "Single":
+                case "Int32": 
                 case "float": return float.Parse(fp.ToString()) < float.Parse(sp.ToString());
                 case "DateTime": return DateTime.Parse(fp.ToString()) < DateTime.Parse(sp.ToString());
                 default:
@@ -212,6 +218,8 @@ namespace NPortugol.Runtime
 
             switch (type.Name)
             {
+                case "Single":
+                case "Int32": 
                 case "float": return float.Parse(fp.ToString()) > float.Parse(sp.ToString());
                 case "DateTime": return DateTime.Parse(fp.ToString()) > DateTime.Parse(sp.ToString());
                 default:

@@ -1,3 +1,4 @@
+using System;
 using NPortugol.Runtime.Exceptions;
 using NPortugol.Runtime.Extensions;
 
@@ -54,7 +55,7 @@ namespace NPortugol.Runtime
                 value = context.Runnable.ScriptSymbolTable[SymbolId()].Value;
             }
 
-            if (target.IndexOffSet != null)
+            if (target.IndexOffSet != null && value is Array)
             {
                 int index;
                 
