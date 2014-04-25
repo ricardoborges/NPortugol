@@ -18,11 +18,5 @@ namespace NPortugol.Tests
 
             return (CommonTree) ast.Tree;
         }
-
-        [Test]
-        public void teste()
-        {
-            var dt = DateTime.Parse("20/04/1982");
-        }
     }
 }

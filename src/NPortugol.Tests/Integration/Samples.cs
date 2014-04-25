@@ -13,29 +13,24 @@ namespace NPortugol.Tests.Integration
             public string Nome { get; set; }
         }
 
-
         [Test]
-        public void Teste()
+        public void Propriedade()
         {
             #region script
 
-            var script =
-                @"
-                função teste(lista)
+            var script = @"função nome(lista, i) variável p p = lista[i] retorne p.Nome fim";
 
-                    retorne lista[1]
-                fim";
             #endregion
 
             var engine = new Motor();
 
-
             engine.Compilar(script);
 
-            var list = new object[] { new Pessoa { Nome = "Teste1" }, new Pessoa { Nome = "Teste2" }, new Pessoa { Nome = "Teste3" } };
+            var lista = new object[] { new Pessoa { Nome = "Teste1" }, new Pessoa { Nome = "Teste2" }, new Pessoa { Nome = "Teste3" } };
 
-        //    var r = engine.Executar("teste", new object[] {list});
+            var nome = engine.Executar("nome", new object[] {lista, 1});
 
+            Assert.AreEqual("Teste2", nome);
         }
 
         [Test]
