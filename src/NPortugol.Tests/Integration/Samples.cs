@@ -1,4 +1,6 @@
 using System;
+using System.Globalization;
+using System.Threading;
 using NPortugol.Modulos;
 using NPortugol.Runtime;
 using NUnit.Framework;
@@ -153,6 +155,8 @@ namespace NPortugol.Tests.Integration
         [Test]
         public void Preco()
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("pt-BR");
+
             var script =
                 @"função melhor(a, g)
 
