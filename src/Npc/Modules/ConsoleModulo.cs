@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using NPortugol.Runtime.Interop;
 
 namespace Npc.Modules
@@ -14,6 +15,7 @@ namespace Npc.Modules
                            {
                                {"imprima", Imprima},
                                {"imprimaLinha", ImprimaLinha},
+                               {"imprimaVetor", ImprimaVetor},
                                {"leia", Leia}
                            };
         }
@@ -49,8 +51,34 @@ namespace Npc.Modules
             return null;
         }
 
+        private object ImprimaVetor(object[] parameters)
+        {
+            var list = parameters[0] as object[];
+
+            if (list == null) return string.Empty;
+
+            var sb = new StringBuilder();
+
+            sb.Append("{");
+
+            foreach (var item in list)
+            {
+                if (sb.Length == 1)
+                    sb.Append(item);
+                else
+                    sb.Append(", " + item);
+            }
+
+            sb.Append("}");
+
+            Console.WriteLine(sb.ToString());
+
+            return sb.ToString();
+        }
+
         private static object Leia(object[] args)
         {
+            Console.WriteLine("Informe a entrada: ");
             return Console.ReadLine();
         }
     }
