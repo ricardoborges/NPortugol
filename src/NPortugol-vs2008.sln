@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NPortugol.Tests", "NPortugo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrammarIDE", "GrammarIDE\GrammarIDE.csproj", "{E1372004-154E-493B-BA4E-2CEE5924C7DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Npc", "Npc\Npc.csproj", "{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,14 @@ Global
 		{E1372004-154E-493B-BA4E-2CEE5924C7DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E1372004-154E-493B-BA4E-2CEE5924C7DE}.Release|x86.ActiveCfg = Release|x86
 		{E1372004-154E-493B-BA4E-2CEE5924C7DE}.Release|x86.Build.0 = Release|x86
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Debug|x86.ActiveCfg = Debug|x86
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Debug|x86.Build.0 = Debug|x86
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Release|x86.ActiveCfg = Release|x86
+		{7A392FE3-E08E-4DEE-A5D4-418A5A3973EF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

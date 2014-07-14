@@ -73,7 +73,7 @@ namespace Npc.Modules
 
             Console.WriteLine(sb.ToString());
 
-            return sb.ToString();
+            return null;
         }
 
         private static object Leia(object[] args)
