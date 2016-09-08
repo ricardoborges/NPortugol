@@ -142,7 +142,9 @@
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Exemplos\Bolha.ps">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

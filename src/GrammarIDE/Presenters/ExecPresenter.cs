@@ -127,7 +127,7 @@ namespace GrammarIDE.Presenters
             ShowAsm(bytecode.Script);
 
             MainPresenter.MainView.WriteLine();
-            MainPresenter.MainView.WriteOutput("Construído com sucesso");
+            MainPresenter.MainView.WriteOutput("Compilado com sucesso");
 
             sourceMap = bytecode.SourceMap;
         }

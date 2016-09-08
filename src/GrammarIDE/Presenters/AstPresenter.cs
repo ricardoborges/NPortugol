@@ -78,6 +78,11 @@ namespace GrammarIDE.Presenters
 
             var dotpath = string.Format("{0}\\dot.exe", Config.DotPath);
 
+            if (!Directory.Exists(Config.DotPath))
+            {
+                throw new Exception("Caminho da ferramenta dot.exe inválido.");
+            }
+
             var gen = new DotTreeGenerator();
             var dotgraph = gen.ToDot(commonTree);
 
