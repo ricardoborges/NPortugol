@@ -167,7 +167,7 @@
             this.ScriptRun.Name = "ScriptRun";
             this.ScriptRun.Size = new System.Drawing.Size(284, 439);
             this.ScriptRun.TabIndex = 5;
-            this.ScriptRun.Text = "funcao principal()\n  imprima(fat(5))\nfim\n\nfuncao fat(x)\n  se x == 0 retorne 1 fim" +
+            this.ScriptRun.Text = "função principal()\n  imprima(fat(5))\nfim\n\nfunção fat(x)\n  se x == 0 retorne 1 fim" +
     "\n  retorne x * fat(x-1)\nfim";
             // 
             // StopBtn
