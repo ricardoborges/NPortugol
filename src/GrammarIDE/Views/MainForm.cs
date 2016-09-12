@@ -23,6 +23,10 @@ namespace GrammarIDE.Views
 
             execForm1.ExecPresenter = new ExecPresenter(configRepo, mainPresenter) {ExecView = execForm1};
             execForm1.Init();
+
+            ajudaGridView.DataSource = mainPresenter.AjudaList();
+            ajudaGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            ajudaGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         public void ClearOutput()

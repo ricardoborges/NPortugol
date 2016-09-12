@@ -44,9 +44,10 @@ namespace NPortugol.Modulos
 
         private static object Data(object[] parameters)
         {
-            var parameter = parameters[0].ToString();
+            if (parameters.Length == 0)
+                throw new Exception("A função data requer o parametro com valor a ser convertido. Ex: data('01/01/2016')");
 
-            return DateTime.Parse(parameter);
+            return EnsureValidDate(parameters);
         }
 
         private static object Hoje(object[] parameters)
@@ -56,11 +57,14 @@ namespace NPortugol.Modulos
 
         private static object NomeDoDia(object[] parameters)
         {
-            var parameter = Convert.ToDateTime(parameters[0]);
+            if (parameters.Length == 0)
+                throw new Exception("A função nomedia requer um valor do tipo data. Ex: nomedia(data('01/01/2016'))");
+
+            var date = EnsureValidDate(parameters);
 
             var name = string.Empty;
 
-            switch (parameter.DayOfWeek)
+            switch (date.DayOfWeek)
             {
                 case DayOfWeek.Sunday: name = "Domingo"; break;
                 case DayOfWeek.Monday: name = "Segunda"; break;
@@ -72,6 +76,18 @@ namespace NPortugol.Modulos
             }
 
             return name;
+        }
+
+        private static DateTime EnsureValidDate(object[] parameters)
+        {
+            DateTime data;
+
+            DateTime.TryParse(parameters[0].ToString(), out data);
+
+            if (data < new DateTime(2, 1, 1))
+                throw new Exception($"Não foi possível converter '{parameters[0]}' em uma data válida.");
+
+            return data;
         }
     }
 }

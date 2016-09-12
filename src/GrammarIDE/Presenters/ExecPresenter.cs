@@ -66,7 +66,6 @@ namespace GrammarIDE.Presenters
             _motor.Hospedagem.Registrar("imprima", Imprima, true);
             _motor.Hospedagem.Registrar("imprimaVetor", ImprimaVetor, true);
             _motor.Hospedagem.Registrar("leia", Leia, false);
-            
         }
 
         private object Imprima(object[] parameters)

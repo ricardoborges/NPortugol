@@ -110,8 +110,8 @@
             this.ScriptText.Name = "ScriptText";
             this.ScriptText.Size = new System.Drawing.Size(351, 439);
             this.ScriptText.TabIndex = 8;
-            this.ScriptText.Text = "função principal()\n  imprima(fat(5))\nfim\n\nfunção fat(x)\n  se x == 0 retorne 1 fim" +
-    "\n  retorne x * fat(x-1)\nfim";
+            this.ScriptText.Text = "função principal()\n  variável x\n\n  x = 5\n\n  imprima(fat(x))\nfim\n\nfunção fat(x)\n  " +
+    "se x == 0 retorne 1 fim\n  retorne x * fat(x-1)\nfim";
             // 
             // AstForm
             // 
