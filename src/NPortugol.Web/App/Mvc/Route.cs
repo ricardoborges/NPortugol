@@ -8,6 +8,8 @@ namespace NPortugol.Web.App.Mvc
 
         public Route(HttpContext context)
         {
+            if (context.Request.Url.AbsolutePath.Length == 1) return;
+
             var parts = context.Request.Url.AbsolutePath.Split('/');
 
             Area = parts[1];
@@ -40,7 +42,7 @@ namespace NPortugol.Web.App.Mvc
             {
                 var appPath = Context.Request.PhysicalApplicationPath;
 
-                return string.Format(@"{0}{1}\controle\{2}.np", appPath, Area, Controller);
+                return string.Format(@"{0}{1}\controles\{2}.np", appPath, Area, Controller);
             }
         }
 
@@ -52,7 +54,7 @@ namespace NPortugol.Web.App.Mvc
             {
                 var appPath = Context.Request.PhysicalApplicationPath;
 
-                return string.Format(@"{0}{1}\visao\{2}.html", appPath, Area, View);
+                return string.Format(@"{0}{1}\visoes\{2}.html", appPath, Area, View);
             }
         }
 

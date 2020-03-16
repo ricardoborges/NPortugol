@@ -25,7 +25,7 @@ namespace NPortugol.Web.Modules
 
         private static object Campo(params object[] parameters)
         {
-            var tmpl = string.Format("<input type='text' id='{0}' name='{0}' value='{1}'>",
+            var tmpl = string.Format("<input type='text' id='{0}' value='{1}'>",
                 parameters[0], parameters[1]);
 
             HttpContext.Current.Response.Write(tmpl);

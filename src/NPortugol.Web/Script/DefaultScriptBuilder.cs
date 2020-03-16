@@ -24,10 +24,16 @@ namespace NPortugol.Web.Script
             var sb = new StringBuilder();
             var sf = new StringBuilder();
 
-            sb.AppendLine("funcao " + name + "(infra)");
+            sb.AppendLine("função " + name + "(infra)");
 
             if (page.IndexOf("<%") < 0)
+            {
                 sb.AppendLine(ToScript(page).Trim());
+                
+                sb.AppendLine("fim");
+
+                return sb.ToString() + sf;
+            }
 
             while (page.IndexOf("<%") > 0)
             {
@@ -38,7 +44,7 @@ namespace NPortugol.Web.Script
 
                 sb.AppendLine(_tab + html.Trim());
 
-                if (slice.StartsWith("funcao"))
+                if (slice.StartsWith("função"))
                     sf.AppendLine(_tab + slice.Trim());
 
 

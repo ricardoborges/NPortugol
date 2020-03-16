@@ -11,6 +11,8 @@ namespace NPortugol.Web.App.Mvc
         {
             if (context.Request.Path == "/favicon.ico") return;
 
+            if (context.Request.Url.AbsolutePath.Length == 1) return;
+
             var route = new Route(context);
 
             Execute(route);
